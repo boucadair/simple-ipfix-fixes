@@ -1,6 +1,6 @@
 ---
 title: "Simple Fixes to the IPFIX IANA Registry"
-abbrev: "IPFIX "
+abbrev: "IPFIX IANA Fixes"
 category: info
 
 docname: draft-boucla-opsawg-ipfix-fixes-latest
