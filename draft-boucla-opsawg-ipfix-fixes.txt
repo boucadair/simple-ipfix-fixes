@@ -86,7 +86,13 @@ Table of Contents
 
 3.  Update the Description
 
-   TBC.
+                       +=============+=============+
+                       | IE          | Description |
+                       +=============+=============+
+                       | ipv4Options | xxx         |
+                       +-------------+-------------+
+
+                               Table 1: XXXXX
 
 4.  Add Pointers to an IANA Registry
 
@@ -97,31 +103,46 @@ Table of Contents
    |IE                     |Additional Information                     |
    +=======================+===========================================+
    |icmpTypeCodeIPv4       |https://www.iana.org/assignments/icmp-     |
-   |                       |parameters/icmp-parameters.xhtml#icmp-     |
-   |                       |parameters-types                           |
+   |                       |parameters/icmp-parameters.xhtml           |
    +-----------------------+-------------------------------------------+
    |igmpType               |https://www.iana.org/assignments/igmp-type-|
    |                       |numbers/igmp-type-numbers.xhtml#igmp-type- |
    |                       |numbers-1                                  |
    +-----------------------+-------------------------------------------+
-   |icmpTypeCodeIPv6       |xxx                                        |
+   |icmpTypeCodeIPv6       |https://www.iana.org/assignments/icmpv6-   |
+   |                       |parameters/icmpv6-parameters.xhtml         |
    +-----------------------+-------------------------------------------+
-   |icmpTypeIPv4           |xxx                                        |
+   |icmpTypeIPv4           |https://www.iana.org/assignments/icmp-     |
+   |                       |parameters/icmp-parameters.xhtml#icmp-     |
+   |                       |parameters-types                           |
    +-----------------------+-------------------------------------------+
-   |icmpCodeIPv4           |xxx                                        |
+   |icmpCodeIPv4           |https://www.iana.org/assignments/icmp-     |
+   |                       |parameters/icmp-parameters.xhtml#icmp-     |
+   |                       |parameters-codes                           |
    +-----------------------+-------------------------------------------+
-   |icmpTypeIPv6           |xxx                                        |
+   |icmpTypeIPv6           |https://www.iana.org/assignments/icmpv6-   |
+   |                       |parameters/                                |
+   |                       |icmpv6-parameters.xhtml#icmpv6-parameters-2|
    +-----------------------+-------------------------------------------+
-   |ipv4Options            |xxx                                        |
+   |icmpCodeIPv6           |https://www.iana.org/assignments/icmpv6-   |
+   |                       |parameters/                                |
+   |                       |icmpv6-parameters.xhtml#icmpv6-parameters-3|
    +-----------------------+-------------------------------------------+
-   |privateEnterpriseNumber|xxx                                        |
+   |privateEnterpriseNumber|https://www.iana.org/assignments/          |
+   |                       |enterprise-numbers/enterprise-numbers      |
    +-----------------------+-------------------------------------------+
 
-                               Table 1: XXXXX
+                               Table 2: XXXXX
 
 5.  Consistent Pointers to Other IANA Registries
 
-   TBC
+                           +====+=============+
+                           | IE | Description |
+                           +====+=============+
+                           | x  | xxx         |
+                           +----+-------------+
+
+                              Table 3: XXXXX
 
 6.  Security Considerations
 
