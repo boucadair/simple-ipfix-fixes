@@ -47,26 +47,31 @@ This docuement lists a set of fixes to the IPFIX IANA registry.
 
 # Update the Description
 
-TBC.
+
+| IE                     | Description |
+| ipv4Options       |xxx    |
+{: title="XXXXX"}
 
 # Add Pointers to an IANA Registry
 
 IANA is requested to updated the following entries by adding the indicated pointer to an IANA registry under "Additional Information":
 
 | IE                     | Additional Information |
-| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types     |
+| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
 | igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
-| icmpTypeCodeIPv6       |xxx    |
-| icmpTypeIPv4       |xxx    |
-| icmpCodeIPv4       |xxx    |
-| icmpTypeIPv6       |xxx    |
-| ipv4Options       |xxx    |
-| privateEnterpriseNumber       |xxx    |
+| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
+| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
+| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
+| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
+| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
+| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="XXXXX"}
 
 # Consistent Pointers to Other IANA Registries
 
-TBC
+| IE                     | Description |
+| x       |xxx    |
+{: title="XXXXX"}
 
 # Security Considerations
 
