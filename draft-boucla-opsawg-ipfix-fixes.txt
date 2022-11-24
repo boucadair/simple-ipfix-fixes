@@ -4,8 +4,9 @@
 
 Operations and Management Area Working Group                M. Boucadair
 Internet-Draft                                                    Orange
-Intended status: Informational                          17 November 2022
-Expires: 21 May 2023
+Intended status: Informational                                 B. Claise
+Expires: 28 May 2023                                              Huawei
+                                                        24 November 2022
 
 
                 Simple Fixes to the IPFIX IANA Registry
@@ -13,7 +14,7 @@ Expires: 21 May 2023
 
 Abstract
 
-   TODO Abstract
+   This document lists a set of fixex to the IANA IPFIX registry.
 
 Discussion Venues
 
@@ -42,7 +43,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 May 2023.
+   This Internet-Draft will expire on 28 May 2023.
 
 Copyright Notice
 
@@ -62,11 +63,13 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
+   3.  Update the Description
+   4.  Consistent Pointers to Other IANA Registries
+   5.  Security Considerations
+   6.  IANA Considerations
+   7.  Normative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -80,15 +83,23 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Security Considerations
+3.  Update the Description
+
+   TBC.
+
+4.  Consistent Pointers to Other IANA Registries
+
+   TBC
+
+5.  Security Considerations
 
    TODO Security
 
-4.  IANA Considerations
+6.  IANA Considerations
 
-   This document has no IANA actions.
+   Requested IANA actions are described in the main document.
 
-5.  Normative References
+7.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -103,8 +114,13 @@ Acknowledgments
 
    TODO acknowledge.
 
-Author's Address
+Authors' Addresses
 
    Mohamed Boucadair
    Orange
    Email: mohamed.boucadair@orange.com
+
+
+   Benoit Claise
+   Huawei
+   Email: benoit.claise@huawei.com
