@@ -19,6 +19,11 @@ author:
     organization: Orange
     email: mohamed.boucadair@orange.com
 
+ -
+    fullname: Benoit Claise
+    organization: Huawei
+    email: benoit.claise@huawei.com
+    
 normative:
 
 informative:
@@ -26,7 +31,7 @@ informative:
 
 --- abstract
 
-TODO Abstract
+This document lists a set of fixex to the IANA IPFIX registry.
 
 
 --- middle
@@ -40,6 +45,13 @@ This docuement lists a set of fixes to the IPFIX IANA registry.
 
 {::boilerplate bcp14-tagged}
 
+# Update the Description
+
+TBC.
+
+# Consistent Pointers to Other IANA Registries
+
+TBC
 
 # Security Considerations
 
@@ -48,7 +60,7 @@ TODO Security
 
 # IANA Considerations
 
-This document has no IANA actions.
+Requested IANA actions are described in the main document.
 
 
 --- back
