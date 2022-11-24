@@ -49,6 +49,21 @@ This docuement lists a set of fixes to the IPFIX IANA registry.
 
 TBC.
 
+# Add Pointers to an IANA Registry
+
+IANA is requested to updated the following entries by adding the indicated pointer to an IANA registry under "Additional Information":
+
+| IE                     | Additional Information |
+| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types     |
+| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
+| icmpTypeCodeIPv6       |xxx    |
+| icmpTypeIPv4       |xxx    |
+| icmpCodeIPv4       |xxx    |
+| icmpTypeIPv6       |xxx    |
+| ipv4Options       |xxx    |
+| privateEnterpriseNumber       |xxx    |
+{: title="XXXXX"}
+
 # Consistent Pointers to Other IANA Registries
 
 TBC
