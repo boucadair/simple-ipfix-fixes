@@ -64,10 +64,11 @@ Table of Contents
    1.  Introduction
    2.  Conventions and Definitions
    3.  Update the Description
-   4.  Consistent Pointers to Other IANA Registries
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  Normative References
+   4.  Add Pointers to an IANA Registry
+   5.  Consistent Pointers to Other IANA Registries
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -87,19 +88,50 @@ Table of Contents
 
    TBC.
 
-4.  Consistent Pointers to Other IANA Registries
+4.  Add Pointers to an IANA Registry
+
+   IANA is requested to updated the following entries by adding the
+   indicated pointer to an IANA registry under "Additional Information":
+
+   +=======================+===========================================+
+   |IE                     |Additional Information                     |
+   +=======================+===========================================+
+   |icmpTypeCodeIPv4       |https://www.iana.org/assignments/icmp-     |
+   |                       |parameters/icmp-parameters.xhtml#icmp-     |
+   |                       |parameters-types                           |
+   +-----------------------+-------------------------------------------+
+   |igmpType               |https://www.iana.org/assignments/igmp-type-|
+   |                       |numbers/igmp-type-numbers.xhtml#igmp-type- |
+   |                       |numbers-1                                  |
+   +-----------------------+-------------------------------------------+
+   |icmpTypeCodeIPv6       |xxx                                        |
+   +-----------------------+-------------------------------------------+
+   |icmpTypeIPv4           |xxx                                        |
+   +-----------------------+-------------------------------------------+
+   |icmpCodeIPv4           |xxx                                        |
+   +-----------------------+-------------------------------------------+
+   |icmpTypeIPv6           |xxx                                        |
+   +-----------------------+-------------------------------------------+
+   |ipv4Options            |xxx                                        |
+   +-----------------------+-------------------------------------------+
+   |privateEnterpriseNumber|xxx                                        |
+   +-----------------------+-------------------------------------------+
+
+                               Table 1: XXXXX
+
+5.  Consistent Pointers to Other IANA Registries
 
    TBC
 
-5.  Security Considerations
+6.  Security Considerations
 
    TODO Security
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    Requested IANA actions are described in the main document.
 
-7.  Normative References
+8.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
