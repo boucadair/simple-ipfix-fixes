@@ -72,12 +72,16 @@ IANA is requested to update the following entries by adding the indicated pointe
 ## flowEndReason
 
 OLD:
+* Description:  The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
+* Additional Information: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
 | Description                     | Additional Information |
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
 {: title="XXXXX"}
 
 NEW:
+* Description: The reason for Flow termination. Values are listed in the flowEndReason registry.
+* Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
 | Description                     | Additional Information |
 | The reason for Flow termination. Values are listed in the flowEndReason registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. |
