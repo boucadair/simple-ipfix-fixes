@@ -68,7 +68,6 @@ IANA is requested to update the following entries by adding the indicated pointe
 
 # Consistent Citation of Registries
 
-
 ## natOriginatingAddressRealm
 
 OLD:
@@ -76,7 +75,7 @@ OLD:
 | Description                     | Additional Information |
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
 
-Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. | See {{?RFC3022}} for the definition of NAT. |
+Values are listed in the natOriginatingAddressRealm registry. See XXX. | See {{?RFC3022}} for the definition of NAT. |
 {: title="XXXXX"}
 
 NEW:
@@ -84,11 +83,10 @@ NEW:
 | Description                     | Additional Information |
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
 
-Values are listed in the natOriginatingAddressRealm registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
+Values are listed in the natOriginatingAddressRealm registry. | See XXXX.
 
 See {{?RFC3022}} for the definition of NAT. |
 {: title="XXXXX"}
-
 
 
 # Update the Description
