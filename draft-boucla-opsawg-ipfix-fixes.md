@@ -42,13 +42,13 @@ This document describes simple fixes to the IANA IPFIX registry.
 
 # Introduction
 
-This document lists a set of fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
+This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 
-The first two sets of modifications are considered as simple fixes.
+Fixes that require an update to {{!RFC7012}} may be moved to a separate document.
 
 # Conventions and Definitions
 
@@ -408,51 +408,15 @@ NEW:
 
 # Update the Description {#desc}
 
-These IEs cannot echo some values that can be included in a packet. This section can be moved to another document that will updated {{!RFC7012}}.
+These IEs cannot echo some values that can be included in a packet. This section may be moved to another document that will updates {{!RFC7012}}.
 
 ## tcpOptions
 
-OLD:
-
-| Description                     | Additional Information |
-| x       |xxx    |
-{: title="XXXXX"}
-
-NEW:
-
-| Description                     | Additional Information |
-| x       |xxx    |
-{: title="XXXXX"}
-
-## ipv4Options
-
-OLD:
-
-| Description                     | Additional Information |
-| x       |xxx    |
-{: title="XXXXX"}
-
-NEW:
-
-| Description                     | Additional Information |
-| x       |xxx    |
-{: title="XXXXX"}
-
+Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to {{!RFC7012}} to specify how all TCP options can be exported.
 
 ## ipv6ExtensionHeaders
 
-OLD:
-
-| Description                     | Additional Information |
-| x       | xxx |
-{: title="XXXXX"}
-
-NEW:
-
-| Description                     | Additional Information |
-| x       | xxx |
-{: title="XXXXX"}
-
+The description should be updated to reflect recent IPv6 EH, specifically 139, 140, 253, and 254.
 
 # Security Considerations
 
