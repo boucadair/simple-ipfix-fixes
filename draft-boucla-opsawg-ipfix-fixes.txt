@@ -93,7 +93,9 @@ Table of Contents
      5.3.  ipv6ExtensionHeaders
    6.  Security Considerations
    7.  IANA Considerations
-   8.  Normative References
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -157,13 +159,6 @@ Table of Contents
 
    OLD:
 
-   *  Description: he reason for Flow termination.  Values are listed in
-      the flowEndReason registry.  See
-      https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
-      reason.
-
-   *  Additional Information:
-
        +=============================================+=============+
        | Description                                 | Additional  |
        |                                             | Information |
@@ -176,10 +171,7 @@ Table of Contents
 
                                Table 2: XXXXX
 
-   NEW: * Description: he reason for Flow termination.  Values are
-   listed in the flowEndReason registry. * Additional Information: See
-   https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
-   reason.
+   NEW:
 
    +=========================+=========================================+
    | Description             | Additional Information                  |
@@ -1309,7 +1301,7 @@ Table of Contents
    | This Information        | See                                     |
    | Element identifies a    | https://www.iana.org/assignments/ipfix/ |
    | type of a NAT           | ipfix.xhtml#ipfix-nat-threshold-event.  |
-   | Threshold event.        | See [RFC791] for the definition of the  |
+   | Threshold event.        | See [RFC0791] for the definition of the |
    | Values for this         | IPv4 source address field.  See         |
    | Information Element     | [RFC3022] for the definition of NAT.    |
    | are listed in the       | See [RFC3234] for the definition of     |
@@ -1401,7 +1393,9 @@ Table of Contents
    Requested IANA actions are described in the main document.  These
    actions are not repeated here.
 
-8.  Normative References
+8.  References
+
+8.1.  Normative References
 
    [IANA-IPFIX]
               "IP Flow Information Export (IPFIX) Entities", November
@@ -1421,6 +1415,21 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+8.2.  Informative References
+
+   [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
+              DOI 10.17487/RFC0791, September 1981,
+              <https://www.rfc-editor.org/rfc/rfc791>.
+
+   [RFC3022]  Srisuresh, P. and K. Egevang, "Traditional IP Network
+              Address Translator (Traditional NAT)", RFC 3022,
+              DOI 10.17487/RFC3022, January 2001,
+              <https://www.rfc-editor.org/rfc/rfc3022>.
+
+   [RFC3234]  Carpenter, B. and S. Brim, "Middleboxes: Taxonomy and
+              Issues", RFC 3234, DOI 10.17487/RFC3234, February 2002,
+              <https://www.rfc-editor.org/rfc/rfc3234>.
 
 Acknowledgments
 
