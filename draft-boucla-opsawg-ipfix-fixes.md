@@ -155,7 +155,7 @@ OLD:
 NEW:
 
 | Description                     | Additional Information |
-| Type of observation point. Values are listed in the observationPointType registry |. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type. |
+| Type of observation point. Values are listed in the observationPointType registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type. |
 {: title="XXXXX"}
 
 ## anonymizationTechnique
@@ -183,7 +183,7 @@ OLD:
 NEW:
 
 | Description                     | Additional Information |
-| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type
+| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.
 See [RFC3022] for the definition of NAT. See [RFC1631] for the definition of NAT44. See [RFC6144] for the definition of NAT64. See [RFC6146] for the definition of NAT46. See [RFC6296] for the definition of NAT66. See [RFC791] for the definition of IPv4. See [RFC8200] for the definition of IPv6. |
 {: title="XXXXX"}
 
@@ -197,8 +197,7 @@ OLD:
 Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters.
 The methods listed below are defined in [RFC5475]. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier.
 Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters.
-The following packet selection methods identifiers are defined here:
-https://www.iana.org/assignments/psamp-parameters
+The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters.
 There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |  |
 {: title="XXXXX"}
 
@@ -208,7 +207,7 @@ NEW:
 |  This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process.
 Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters.
 The methods listed below are defined in [RFC5475]. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier.
-Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters.
+Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters.
 There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |See https://www.iana.org/assignments/psamp-parameters |
 {: title="XXXXX"}
 
@@ -236,7 +235,6 @@ OLD:
 
 | Description                     | Additional Information |
 | A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model [RFC5102]; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori.
-
 These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action [RFC8126] to modify. | |
 {: title="XXXXX"}
 
@@ -271,8 +269,7 @@ These types are registered in the [IANA IPFIX Information Element Units] subregi
 OLD:
 
 | Description                     | Additional Information |
-| The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way.
-Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
+| The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
 {: title="XXXXX"}
 
 NEW:
@@ -287,8 +284,7 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way.
-Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
+| The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
 {: title="XXXXX"}
 
 NEW:
