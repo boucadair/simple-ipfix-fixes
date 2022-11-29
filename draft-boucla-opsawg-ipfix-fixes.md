@@ -27,7 +27,6 @@ author:
 normative:
     IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
-        author: IANA
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
         date: 2022-11
 
