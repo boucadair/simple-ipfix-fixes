@@ -55,7 +55,7 @@ The first two sets of modifications are considered as simple fixes.
 {::boilerplate bcp14-tagged}
 
 
-# Point to An Existing IANA Registry {{#to-iana}}
+# Point to An Existing IANA Registry {#to-iana}
 
 IANA is requested to update the following entries by adding the indicated pointer to an IANA registry under "Additional Information" of {{IANA-IPFIX}}:
 
@@ -70,7 +70,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 | privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
-# Consistent Citation of Registries {{#consistent}}
+# Consistent Citation of Registries {#consistent}
 
 
 ## flowEndReason
@@ -182,13 +182,13 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| 	Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.        | See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See [RFC6146] for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
+| 	Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.        | See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See {{?RFC6146}} for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
 {: title="OLD natType"}
 
 NEW:
 
 | Description                     | Additional Information |
-| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See [RFC6146] for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
+| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See {{?RFC6146}} for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
 {: title="NEW natType"}
 
 
@@ -408,7 +408,7 @@ NEW:
 {: title="NEW natThresholdEvent"}
 
 
-# Update the Description {{#desc}}
+# Update the Description {#desc}
 
 These IEs cannot echo some values that can be included in a packet. This section can be moved to another document that will updated {{!RFC7012}}.
 
