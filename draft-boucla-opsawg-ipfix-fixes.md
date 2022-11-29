@@ -78,7 +78,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 OLD:
 
 | Description                     | Additional Information |
-|---|---|
+|------|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
 {: title="OLD flowEndReason"}
 
