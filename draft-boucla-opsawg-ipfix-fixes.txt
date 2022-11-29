@@ -110,7 +110,8 @@ Table of Contents
    *  Updates that are meant to ensure a consistent structure when
       calling an existing IANA registry (Section 4).
 
-   *  Updates that update the description (Section 5).
+   *  Updates that fix a shortcoming in the description of an IE
+      (Section 5).
 
    The first two sets of modifications are considered as simple fixes.
 
