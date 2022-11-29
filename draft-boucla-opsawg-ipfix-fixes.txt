@@ -136,21 +136,23 @@ Table of Contents
 
    OLD:
 
-   +====================================================+=============+
-   | Description                                        | Additional  |
-   |                                                    | Information |
-   +====================================================+=============+
-   | Indicates whether the session was created because  | See RFC3022 |
-   | traffic originated in the private or public        | for the     |
-   | address realm. postNATSourceIPv4Address,           | definition  |
-   | postNATDestinationIPv4Address,                     | of NAT.     |
-   | postNAPTSourceTransportPort, and                   |             |
-   | postNAPTDestinationTransportPort are qualified     |             |
-   | with the address realm in perspective.  Values are |             |
-   | listed in the natOriginatingAddressRealm registry. |             |
-   | See https://www.iana.org/assignments/ipfix/        |             |
-   | ipfix.xhtml#ipfix-nat-originating-address-realm.   |             |
-   +----------------------------------------------------+-------------+
+    +==================================================+=============+
+    | Description                                      | Additional  |
+    |                                                  | Information |
+    +==================================================+=============+
+    | Indicates whether the session was created        |             |
+    | because traffic originated in the private or     |             |
+    | public address realm. postNATSourceIPv4Address,  |             |
+    | postNATDestinationIPv4Address,                   |             |
+    | postNAPTSourceTransportPort, and                 |             |
+    | postNAPTDestinationTransportPort are qualified   |             |
+    | with the address realm in perspective.           |             |
+    +--------------------------------------------------+-------------+
+    | Values are listed in the                         | See RFC3022 |
+    | natOriginatingAddressRealm registry.  See        | for the     |
+    | https://www.iana.org/assignments/ipfix/          | definition  |
+    | ipfix.xhtml#ipfix-nat-originating-address-realm. | of NAT.     |
+    +--------------------------------------------------+-------------+
 
                               Table 2: XXXXX
 
@@ -159,19 +161,24 @@ Table of Contents
    +================================+=======================================+
    |Description                     |Additional Information                 |
    +================================+=======================================+
-   |Indicates whether the session   |See                                    |
-   |was created because traffic     |https://www.iana.org/assignments/ipfix/|
-   |originated in the private or    |ipfix.xhtml#ipfix-nat-originating-     |
-   |public address realm.           |address-realm.  See RFC3022 for the    |
-   |postNATSourceIPv4Address,       |definition of NAT.                     |
+   |Indicates whether the session   |                                       |
+   |was created because traffic     |                                       |
+   |originated in the private or    |                                       |
+   |public address realm.           |                                       |
+   |postNATSourceIPv4Address,       |                                       |
    |postNATDestinationIPv4Address,  |                                       |
    |postNAPTSourceTransportPort, and|                                       |
    |postNAPTDestinationTransportPort|                                       |
    |are qualified with the address  |                                       |
-   |realm in perspective.  Values   |                                       |
-   |are listed in the               |                                       |
-   |natOriginatingAddressRealm      |                                       |
-   |registry.                       |                                       |
+   |realm in perspective.           |                                       |
+   +--------------------------------+---------------------------------------+
+   |Values are listed in the        |See                                    |
+   |natOriginatingAddressRealm      |https://www.iana.org/assignments/ipfix/|
+   |registry.                       |ipfix.xhtml#ipfix-nat-originating-     |
+   |                                |address-realm.                         |
+   +--------------------------------+---------------------------------------+
+   |See RFC3022 for the definition  |                                       |
+   |of NAT.                         |                                       |
    +--------------------------------+---------------------------------------+
 
                                Table 3: XXXXX
