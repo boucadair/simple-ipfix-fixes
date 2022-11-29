@@ -81,6 +81,7 @@ OLD:
 NEW:
 
 | Description                     | Additional Information |
+|---|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. |
 {: title="XXXXX" cols="50%l 50%l"}
 
@@ -90,12 +91,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
+|---|---|
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. | See [RFC3022] for the definition of NAT. |
 {: title="XXXXX" cols="50%l 50%l"}
 
 NEW:
 
 | Description                     | Additional Information |
+|---|---|
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
 See [RFC3022] for the definition of NAT.     |
 {: title="XXXXX" cols="50%l 50%l"}
