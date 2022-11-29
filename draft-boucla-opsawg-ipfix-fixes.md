@@ -79,9 +79,7 @@ OLD:
 NEW:
 
 | Description                     | Additional Information |
-|   | See XXXX.
-
-See RFC3022 for the definition of NAT. |
+| vvvv | See XXXX. See RFC3022 for the definition of NAT. |
 {: title="XXXXX"}
 
 
