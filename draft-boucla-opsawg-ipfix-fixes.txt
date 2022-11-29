@@ -155,39 +155,30 @@ Table of Contents
 
 4.1.  flowEndReason
 
-   OLD: * Description: The reason for Flow termination.  Values are
-   listed in the flowEndReason registry.  See
-   https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
-   reason. * Additional Information: The reason for Flow termination.
-   Values are listed in the flowEndReason registry.  See
-   https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
-   reason.
+   OLD:
 
        +=============================================+=============+
-       | Description                                 | Additional  |
+       |                                 Description |  Additional |
        |                                             | Information |
        +=============================================+=============+
-       | The reason for Flow termination.  Values    |             |
-       | are listed in the flowEndReason registry.   |             |
+       |    The reason for Flow termination.  Values |             |
+       |   are listed in the flowEndReason registry. |             |
        | See https://www.iana.org/assignments/ipfix/ |             |
-       | ipfix.xhtml#ipfix-flow-end-reason.          |             |
+       |          ipfix.xhtml#ipfix-flow-end-reason. |             |
        +---------------------------------------------+-------------+
 
                                Table 2: XXXXX
 
-   NEW: * Description: The reason for Flow termination.  Values are
-   listed in the flowEndReason registry. * Additional Information: See
-   https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
-   reason.
+   NEW:
 
    +=========================+=========================================+
-   | Description             | Additional Information                  |
+   |             Description |                  Additional Information |
    +=========================+=========================================+
-   | The reason for Flow     | See                                     |
-   | termination.  Values    | https://www.iana.org/assignments/ipfix/ |
-   | are listed in the       | ipfix.xhtml#ipfix-flow-end-reason.      |
-   | flowEndReason           |                                         |
-   | registry.               |                                         |
+   |     The reason for Flow |                                     See |
+   |    termination.  Values | https://www.iana.org/assignments/ipfix/ |
+   |       are listed in the |      ipfix.xhtml#ipfix-flow-end-reason. |
+   |           flowEndReason |                                         |
+   |               registry. |                                         |
    +-------------------------+-----------------------------------------+
 
                                Table 3: XXXXX
@@ -197,19 +188,19 @@ Table of Contents
    OLD:
 
    +====================================================+=============+
-   | Description                                        | Additional  |
+   |                                        Description |  Additional |
    |                                                    | Information |
    +====================================================+=============+
-   | Indicates whether the session was created because  | See         |
-   | traffic originated in the private or public        | [RFC3022]   |
-   | address realm. postNATSourceIPv4Address,           | for the     |
-   | postNATDestinationIPv4Address,                     | definition  |
-   | postNAPTSourceTransportPort, and                   | of NAT.     |
-   | postNAPTDestinationTransportPort are qualified     |             |
+   |  Indicates whether the session was created because |         See |
+   |        traffic originated in the private or public |   [RFC3022] |
+   |           address realm. postNATSourceIPv4Address, |     for the |
+   |                     postNATDestinationIPv4Address, |  definition |
+   |                   postNAPTSourceTransportPort, and |     of NAT. |
+   |     postNAPTDestinationTransportPort are qualified |             |
    | with the address realm in perspective.  Values are |             |
    | listed in the natOriginatingAddressRealm registry. |             |
-   | See https://www.iana.org/assignments/ipfix/        |             |
-   | ipfix.xhtml#ipfix-nat-originating-address-realm.   |             |
+   |        See https://www.iana.org/assignments/ipfix/ |             |
+   |   ipfix.xhtml#ipfix-nat-originating-address-realm. |             |
    +----------------------------------------------------+-------------+
 
                               Table 4: XXXXX
@@ -217,24 +208,24 @@ Table of Contents
    NEW:
 
    +================================+=======================================+
-   |Description                     |Additional Information                 |
+   |                     Description|                 Additional Information|
    +================================+=======================================+
-   |Indicates whether the session   |See                                    |
-   |was created because traffic     |https://www.iana.org/assignments/ipfix/|
-   |originated in the private or    |ipfix.xhtml#ipfix-nat-originating-     |
-   |public address realm.           |address-realm.                         |
-   |postNATSourceIPv4Address,       |                                       |
-   |postNATDestinationIPv4Address,  |                                       |
+   |   Indicates whether the session|                                    See|
+   |     was created because traffic|https://www.iana.org/assignments/ipfix/|
+   |    originated in the private or|     ipfix.xhtml#ipfix-nat-originating-|
+   |           public address realm.|                         address-realm.|
+   |       postNATSourceIPv4Address,|                                       |
+   |  postNATDestinationIPv4Address,|                                       |
    |postNAPTSourceTransportPort, and|                                       |
    |postNAPTDestinationTransportPort|                                       |
-   |are qualified with the address  |                                       |
-   |realm in perspective.  Values   |                                       |
-   |are listed in the               |                                       |
-   |natOriginatingAddressRealm      |                                       |
-   |registry.                       |                                       |
+   |  are qualified with the address|                                       |
+   |   realm in perspective.  Values|                                       |
+   |               are listed in the|                                       |
+   |      natOriginatingAddressRealm|                                       |
+   |                       registry.|                                       |
    +--------------------------------+---------------------------------------+
    |See [RFC3022] for the definition|                                       |
-   |of NAT.                         |                                       |
+   |                         of NAT.|                                       |
    +--------------------------------+---------------------------------------+
 
                                Table 5: XXXXX
