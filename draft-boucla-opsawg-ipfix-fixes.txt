@@ -157,6 +157,13 @@ Table of Contents
 
    OLD:
 
+   *  Description: he reason for Flow termination.  Values are listed in
+      the flowEndReason registry.  See
+      https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
+      reason.
+
+   *  Additional Information:
+
        +=============================================+=============+
        | Description                                 | Additional  |
        |                                             | Information |
@@ -169,7 +176,10 @@ Table of Contents
 
                                Table 2: XXXXX
 
-   NEW:
+   NEW: * Description: he reason for Flow termination.  Values are
+   listed in the flowEndReason registry. * Additional Information: See
+   https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-
+   reason.
 
    +=========================+=========================================+
    | Description             | Additional Information                  |
