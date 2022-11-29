@@ -66,6 +66,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 | privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
+
 # Update the Description
 
 These IEs cannot echo some values that can be included in a packet. This section can be moved to another document that will updated RFC7012.
@@ -73,11 +74,13 @@ These IEs cannot echo some values that can be included in a packet. This section
 ## tcpOptions
 
 OLD:
+
 | Description                     | Additional Information |
 | x       |xxx    |
 {: title="XXXXX"}
 
 NEW:
+
 | Description                     | Additional Information |
 | x       |xxx    |
 {: title="XXXXX"}
@@ -85,11 +88,13 @@ NEW:
 ## ipv4Options
 
 OLD:
+
 | Description                     | Additional Information |
 | x       |xxx    |
 {: title="XXXXX"}
 
 NEW:
+
 | Description                     | Additional Information |
 | x       |xxx    |
 {: title="XXXXX"}
@@ -98,11 +103,13 @@ NEW:
 ## ipv6ExtensionHeaders
 
 OLD:
+
 | Description                     | Additional Information |
 | x       | xxx |
 {: title="XXXXX"}
 
 NEW:
+
 | Description                     | Additional Information |
 | x       | xxx |
 {: title="XXXXX"}
