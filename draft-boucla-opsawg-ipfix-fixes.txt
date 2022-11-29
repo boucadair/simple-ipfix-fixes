@@ -89,8 +89,7 @@ Table of Contents
      4.22. natThresholdEvent
    5.  Update the Description
      5.1.  tcpOptions
-     5.2.  ipv4Options
-     5.3.  ipv6ExtensionHeaders
+     5.2.  ipv6ExtensionHeaders
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -101,7 +100,7 @@ Table of Contents
 
 1.  Introduction
 
-   This document lists a set of fixes to the IPFIX IANA registry
+   This document lists a set of simple fixes to the IPFIX IANA registry
    [IANA-IPFIX].  These fixes are classified as follows:
 
    *  Updates that require adding a pointer to an existing IANA registry
@@ -113,7 +112,8 @@ Table of Contents
    *  Updates that fix a shortcoming in the description of an IE
       (Section 5).
 
-   The first two sets of modifications are considered as simple fixes.
+   Fixes that require an update to [RFC7012] may be moved to a separate
+   document.
 
 2.  Conventions and Definitions
 
@@ -1317,74 +1317,19 @@ Table of Contents
 5.  Update the Description
 
    These IEs cannot echo some values that can be included in a packet.
-   This section can be moved to another document that will updated
+   This section may be moved to another document that will updates
    [RFC7012].
 
 5.1.  tcpOptions
 
-   OLD:
+   Only options having a kind =< 56 can be included in a tcpOptions IE.
+   An update is required to [RFC7012] to specify how all TCP options can
+   be exported.
 
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
+5.2.  ipv6ExtensionHeaders
 
-                             Table 46: XXXXX
-
-   NEW:
-
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
-
-                             Table 47: XXXXX
-
-5.2.  ipv4Options
-
-   OLD:
-
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
-
-                             Table 48: XXXXX
-
-   NEW:
-
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
-
-                             Table 49: XXXXX
-
-5.3.  ipv6ExtensionHeaders
-
-   OLD:
-
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
-
-                             Table 50: XXXXX
-
-   NEW:
-
-                 +=============+========================+
-                 | Description | Additional Information |
-                 +=============+========================+
-                 | x           | xxx                    |
-                 +-------------+------------------------+
-
-                             Table 51: XXXXX
+   The description should be updated to reflect recent IPv6 EH,
+   specifically 139, 140, 253, and 254.
 
 6.  Security Considerations
 
