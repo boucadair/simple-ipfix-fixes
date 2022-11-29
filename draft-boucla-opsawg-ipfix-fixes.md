@@ -72,20 +72,16 @@ IANA is requested to update the following entries by adding the indicated pointe
 ## flowEndReason
 
 OLD:
-* Description:  The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
-* Additional Information: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
 | Description                     | Additional Information |
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
-{: title="XXXXX"}
+{: title="XXXXX" cols="50%r 50%r"}
 
 NEW:
-* Description: The reason for Flow termination. Values are listed in the flowEndReason registry.
-* Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
 | Description                     | Additional Information |
 | The reason for Flow termination. Values are listed in the flowEndReason registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. |
-{: title="XXXXX"}
+{: title="XXXXX" cols="50%r 50%r"}
 
 
 ## natOriginatingAddressRealm
@@ -94,14 +90,14 @@ OLD:
 
 | Description                     | Additional Information |
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. | See [RFC3022] for the definition of NAT. |
-{: title="XXXXX"}
+{: title="XXXXX" cols="50%r 50%r"}
 
 NEW:
 
 | Description                     | Additional Information |
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
 See [RFC3022] for the definition of NAT.     |
-{: title="XXXXX"}
+{: title="XXXXX" cols="50%r 50%r"}
 
 ## natEvent
 
