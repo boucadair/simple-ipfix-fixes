@@ -32,7 +32,7 @@ normative:
         date: 2022-11
 
 informative:
-     RFC3022: 
+
 
 --- abstract
 
