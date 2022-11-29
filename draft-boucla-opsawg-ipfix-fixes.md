@@ -175,8 +175,8 @@ Values are listed in the natType registry. See [https://www.iana.org/assignments
 
 NEW:
 | Description                     | Additional Information |
-| Values are listed in the natType registry.       | 
-See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type 
+| Values are listed in the natType registry.       |
+See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type]
 
 See [RFC3022] for the definition of NAT. See [RFC1631] for the definition of NAT44. See [RFC6144] for the definition of NAT64. See [RFC6146] for the definition of NAT46. See [RFC6296] for the definition of NAT66. See [RFC791] for the definition of IPv4. See [RFC8200] for the definition of IPv6. |
 {: title="XXXXX"}
@@ -262,7 +262,7 @@ NEW:
 | Description                     | Additional Information |
 | A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model [RFC5102]; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless.
 
-These types are registered in the [IANA IPFIX Information Element Units] subregistry.        
+These types are registered in the [IANA IPFIX Information Element Units] subregistry.
 
 | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units                    |
 {: title="XXXXX"}
@@ -376,7 +376,7 @@ NEW:
 | Description                     | Additional Information |
 | This Information Element specifies the type of the selected data link frame.
 
-Data link types are defined in the dataLinkFrameType registry. 
+Data link types are defined in the dataLinkFrameType registry.
 
 Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together.
 
@@ -435,7 +435,7 @@ OLD:
 NEW:
 
 | Description | Additional Information |
-| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event].        
+| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event].
 See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes.    |
 {: title="XXXXX"}
 
