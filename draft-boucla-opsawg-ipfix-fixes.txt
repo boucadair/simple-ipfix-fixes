@@ -226,8 +226,8 @@ Table of Contents
    |Indicates whether the session   |See                                    |
    |was created because traffic     |https://www.iana.org/assignments/ipfix/|
    |originated in the private or    |ipfix.xhtml#ipfix-nat-originating-     |
-   |public address realm.           |address-realm.                         |
-   |postNATSourceIPv4Address,       |                                       |
+   |public address realm.           |address-realm.  See [RFC3022] for the  |
+   |postNATSourceIPv4Address,       |definition of NAT.                     |
    |postNATDestinationIPv4Address,  |                                       |
    |postNAPTSourceTransportPort, and|                                       |
    |postNAPTDestinationTransportPort|                                       |
@@ -236,9 +236,6 @@ Table of Contents
    |are listed in the               |                                       |
    |natOriginatingAddressRealm      |                                       |
    |registry.                       |                                       |
-   +--------------------------------+---------------------------------------+
-   |See [RFC3022] for the definition|                                       |
-   |of NAT.                         |                                       |
    +--------------------------------+---------------------------------------+
 
                   Table 5: NEW natOriginatingAddressRealm
