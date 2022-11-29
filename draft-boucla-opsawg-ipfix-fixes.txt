@@ -102,7 +102,17 @@ Table of Contents
 1.  Introduction
 
    This document lists a set of fixes to the IPFIX IANA registry
-   [IANA-IPFIX].
+   [IANA-IPFIX].  These fixes are classified as follows:
+
+   *  Updates that require adding a pointer to an existing IANA registry
+      (Section 3).
+
+   *  Updates that are meant to ensure a consistent structure when
+      calling an existing IANA registry (Section 4).
+
+   *  Updates that update the description (Section 5).
+
+   The first two sets of modifications are considered as simple fixes.
 
 2.  Conventions and Definitions
 
@@ -169,7 +179,7 @@ Table of Contents
        | ipfix.xhtml#ipfix-flow-end-reason.          |             |
        +---------------------------------------------+-------------+
 
-                               Table 2: XXXXX
+                         Table 2: OLD flowEndReason
 
    NEW:
 
@@ -183,7 +193,7 @@ Table of Contents
    | registry.               |                                         |
    +-------------------------+-----------------------------------------+
 
-                               Table 3: XXXXX
+                         Table 3: NEW flowEndReason
 
 4.2.  natOriginatingAddressRealm
 
@@ -205,7 +215,7 @@ Table of Contents
    | ipfix.xhtml#ipfix-nat-originating-address-realm.   |             |
    +----------------------------------------------------+-------------+
 
-                              Table 4: XXXXX
+                 Table 4: OLD natOriginatingAddressRealm
 
    NEW:
 
@@ -230,7 +240,7 @@ Table of Contents
    |of NAT.                         |                                       |
    +--------------------------------+---------------------------------------+
 
-                               Table 5: XXXXX
+                  Table 5: NEW natOriginatingAddressRealm
 
 4.3.  natEvent
 
@@ -252,7 +262,7 @@ Table of Contents
     | ipfix.xhtml#ipfix-nat-event-type.           |                   |
     +---------------------------------------------+-------------------+
 
-                               Table 6: XXXXX
+                           Table 6: OLD natEvent
 
    NEW:
 
@@ -277,7 +287,7 @@ Table of Contents
    | Event Type" registry.   |                                         |
    +-------------------------+-----------------------------------------+
 
-                               Table 7: XXXXX
+                           Table 7: NEW natEvent
 
 4.4.  firewallEvent
 
@@ -293,7 +303,7 @@ Table of Contents
        | ipfix.xhtml#ipfix-firewall-event.           |             |
        +---------------------------------------------+-------------+
 
-                               Table 8: XXXXX
+                         Table 8: OLD firewallEvent
 
    NEW:
 
@@ -307,7 +317,7 @@ Table of Contents
    | registry.               |                                         |
    +-------------------------+-----------------------------------------+
 
-                               Table 9: XXXXX
+                         Table 9: NEW firewallEvent
 
 4.5.  biflowDirection
 
@@ -338,7 +348,7 @@ Table of Contents
     | ipfix.xhtml#ipfix-biflow-direction.               |             |
     +---------------------------------------------------+-------------+
 
-                              Table 10: XXXXX
+                       Table 10: OLD biflowDirection
 
    NEW:
 
@@ -387,7 +397,7 @@ Table of Contents
    | registry.              |                                         |
    +------------------------+-----------------------------------------+
 
-                             Table 11: XXXXX
+                      Table 11: NEW biflowDirection
 
 4.6.  observationPointType
 
@@ -403,7 +413,7 @@ Table of Contents
       | ipfix.xhtml#ipfix-observation-point-type.    |             |
       +----------------------------------------------+-------------+
 
-                             Table 12: XXXXX
+                    Table 12: OLD observationPointType
 
    NEW:
 
@@ -417,7 +427,7 @@ Table of Contents
    | registry.            |                                           |
    +----------------------+-------------------------------------------+
 
-                             Table 13: XXXXX
+                    Table 13: NEW observationPointType
 
 4.7.  anonymizationTechnique
 
@@ -438,7 +448,7 @@ Table of Contents
       | ipfix.xhtml#ipfix-anonymization-technique.    |             |
       +-----------------------------------------------+-------------+
 
-                              Table 14: XXXXX
+                    Table 14: OLD anonymizationTechnique
 
    NEW:
 
@@ -463,7 +473,7 @@ Table of Contents
    | registry.              |                                          |
    +------------------------+------------------------------------------+
 
-                              Table 15: XXXXX
+                    Table 15: NEW anonymizationTechnique
 
 4.8.  natType
 
@@ -483,13 +493,13 @@ Table of Contents
     |                                         | definition of NAT46.  |
     |                                         | See [RFC6296] for the |
     |                                         | definition of NAT66.  |
-    |                                         | See [RFC791] for the  |
+    |                                         | See [RFC0791] for the |
     |                                         | definition of IPv4.   |
     |                                         | See [RFC8200] for the |
     |                                         | definition of IPv6.   |
     +-----------------------------------------+-----------------------+
 
-                              Table 16: XXXXX
+                           Table 16: OLD natType
 
    NEW:
 
@@ -502,12 +512,12 @@ Table of Contents
        | registry.   | for the definition of NAT44.  See [RFC6144] |
        |             | for the definition of NAT64.  See [RFC6146] |
        |             | for the definition of NAT46.  See [RFC6296] |
-       |             | for the definition of NAT66.  See [RFC791]  |
+       |             | for the definition of NAT66.  See [RFC0791] |
        |             | for the definition of IPv4.  See [RFC8200]  |
        |             | for the definition of IPv6.                 |
        +-------------+---------------------------------------------+
 
-                              Table 17: XXXXX
+                           Table 17: NEW natType
 
 4.9.  selectorAlgorithm
 
@@ -539,7 +549,7 @@ Table of Contents
    | are no agreed parameters specified.                |             |
    +----------------------------------------------------+-------------+
 
-                             Table 18: XXXXX
+                     Table 18: OLD selectorAlgorithm
 
    NEW:
 
@@ -580,7 +590,7 @@ Table of Contents
    | agreed parameters specified. |                                   |
    +------------------------------+-----------------------------------+
 
-                             Table 19: XXXXX
+                     Table 19: NEW selectorAlgorithm
 
 4.10.  informationElementDataType
 
@@ -605,7 +615,7 @@ Table of Contents
    | Action [RFC8126] to modify.                         |             |
    +-----------------------------------------------------+-------------+
 
-                              Table 20: XXXXX
+                  Table 20: OLD informationElementDataType
 
    NEW:
 
@@ -637,7 +647,7 @@ Table of Contents
    |to modify.                  |                                       |
    +----------------------------+---------------------------------------+
 
-                              Table 21: XXXXX
+                  Table 21: NEW informationElementDataType
 
 4.11.  informationElementSemantics
 
@@ -667,7 +677,7 @@ Table of Contents
    | Standards Action [RFC8126] to modify.               |             |
    +-----------------------------------------------------+-------------+
 
-                              Table 22: XXXXX
+                 Table 22: OLD informationElementSemantics
 
    NEW:
 
@@ -748,7 +758,7 @@ Table of Contents
    | modify.         |                                                 |
    +-----------------+-------------------------------------------------+
 
-                              Table 23: XXXXX
+                 Table 23: NEW informationElementSemantics
 
 4.12.  informationElementUnits
 
@@ -772,7 +782,7 @@ Table of Contents
    | Information Element Units] subregistry.             |             |
    +-----------------------------------------------------+-------------+
 
-                              Table 24: XXXXX
+                   Table 24: OLD informationElementUnits
 
    NEW:
 
@@ -806,7 +816,7 @@ Table of Contents
    |subregistry.             |                                         |
    +-------------------------+-----------------------------------------+
 
-                              Table 25: XXXXX
+                   Table 25: NEW informationElementUnits
 
 4.13.  portRangeStart
 
@@ -825,7 +835,7 @@ Table of Contents
      | service-names-port-numbers.                     |             |
      +-------------------------------------------------+-------------+
 
-                              Table 26: XXXXX
+                        Table 26: OLD portRangeStart
 
    NEW:
 
@@ -841,7 +851,7 @@ Table of Contents
     | in some other way.          |                                   |
     +-----------------------------+-----------------------------------+
 
-                              Table 27: XXXXX
+                        Table 27: NEW portRangeStart
 
 4.14.  portRangeEnd
 
@@ -860,7 +870,7 @@ Table of Contents
      | service-names-port-numbers.                    |             |
      +------------------------------------------------+-------------+
 
-                             Table 28: XXXXX
+                        Table 28: OLD portRangeEnd
 
    NEW:
 
@@ -879,7 +889,7 @@ Table of Contents
        | names-port-numbers.                        |             |
        +--------------------------------------------+-------------+
 
-                             Table 29: XXXXX
+                        Table 29: NEW portRangeEnd
 
 4.15.  ingressInterfaceType
 
@@ -897,7 +907,7 @@ Table of Contents
    |ianaiftype-mib.                  |                                 |
    +---------------------------------+---------------------------------+
 
-                              Table 30: XXXXX
+                     Table 30: OLD ingressInterfaceType
 
    NEW:
 
@@ -911,7 +921,7 @@ Table of Contents
     | managed object 'ifType'.   |                                   |
     +----------------------------+-----------------------------------+
 
-                             Table 31: XXXXX
+                    Table 31: NEW ingressInterfaceType
 
 4.16.  egressInterfaceType
 
@@ -929,7 +939,7 @@ Table of Contents
    |ianaiftype-mib.                  |                                 |
    +---------------------------------+---------------------------------+
 
-                              Table 32: XXXXX
+                     Table 32: OLD egressInterfaceType
 
    NEW:
 
@@ -943,7 +953,7 @@ Table of Contents
     | managed object 'ifType'.   |                                   |
     +----------------------------+-----------------------------------+
 
-                             Table 33: XXXXX
+                    Table 33: NEW egressInterfaceType
 
 4.17.  valueDistributionMethod
 
@@ -971,7 +981,7 @@ Table of Contents
    | ipfix.xhtml#ipfix-value-distribution-method.       |             |
    +----------------------------------------------------+-------------+
 
-                             Table 34: XXXXX
+                  Table 34: OLD valueDistributionMethod
 
    NEW:
 
@@ -1011,7 +1021,7 @@ Table of Contents
    |distribution methods.    |                                         |
    +-------------------------+-----------------------------------------+
 
-                              Table 35: XXXXX
+                   Table 35: NEW valueDistributionMethod
 
 4.18.  flowSelectorAlgorithm
 
@@ -1043,7 +1053,7 @@ Table of Contents
    | ipfix.xhtml#ipfix-flowselectoralgorithm.            |             |
    +-----------------------------------------------------+-------------+
 
-                              Table 36: XXXXX
+                    Table 36: OLD flowSelectorAlgorithm
 
    NEW:
 
@@ -1080,18 +1090,10 @@ Table of Contents
    | define new             |                                          |
    | Information Elements   |                                          |
    | to specify their       |                                          |
-   | parameters.  Please    |                                          |
-   | note that the purpose  |                                          |
-   | of the flow selection  |                                          |
-   | techniques described   |                                          |
-   | in this document is    |                                          |
-   | the improvement of     |                                          |
-   | measurement functions  |                                          |
-   | as defined in the      |                                          |
-   | Scope (Section 1).     |                                          |
+   | parameters.            |                                          |
    +------------------------+------------------------------------------+
 
-                              Table 37: XXXXX
+                    Table 37: NEW flowSelectorAlgorithm
 
 4.19.  dataLinkFrameType
 
@@ -1113,7 +1115,7 @@ Table of Contents
    |defined in [ISO/IEC.7498-1:1994].      |                            |
    +---------------------------------------+----------------------------+
 
-                              Table 38: XXXXX
+                      Table 38: OLD dataLinkFrameType
 
    NEW:
 
@@ -1139,7 +1141,7 @@ Table of Contents
    | IEC.7498-1:1994].      |                                         |
    +------------------------+-----------------------------------------+
 
-                             Table 39: XXXXX
+                     Table 39: NEW dataLinkFrameType
 
 4.20.  mibCaptureTimeSemantics
 
@@ -1174,7 +1176,7 @@ Table of Contents
    | ipfix.xhtml#ipfix-mib-capture-time-semantics.      |             |
    +----------------------------------------------------+-------------+
 
-                             Table 40: XXXXX
+                  Table 40: OLD mibCaptureTimeSemantics
 
    NEW:
 
@@ -1230,7 +1232,7 @@ Table of Contents
    |registry.                |                                         |
    +-------------------------+-----------------------------------------+
 
-                              Table 41: XXXXX
+                   Table 41: NEW mibCaptureTimeSemantics
 
 4.21.  natQuotaExceededEvent
 
@@ -1240,7 +1242,7 @@ Table of Contents
    | Description                                 | Additional          |
    |                                             | Information         |
    +=============================================+=====================+
-   | This Information Element identifies the     | See [RFC791] for    |
+   | This Information Element identifies the     | See [RFC0791] for   |
    | type of a NAT Quota Exceeded event.  Values | the definition of   |
    | for this Information Element are listed in  | the IPv4 source     |
    | the "NAT Quota Exceeded Event Type"         | address field.      |
@@ -1252,7 +1254,7 @@ Table of Contents
    |                                             | middleboxes.        |
    +---------------------------------------------+---------------------+
 
-                              Table 42: XXXXX
+                    Table 42: OLD natQuotaExceededEvent
 
    NEW:
 
@@ -1261,17 +1263,17 @@ Table of Contents
    +====================+=============================================+
    | This Information   | See https://www.iana.org/assignments/ipfix/ |
    | Element identifies | ipfix.xhtml#ipfix-nat-quota-exceeded-event. |
-   | the type of a NAT  | See [RFC791] for the definition of the IPv4 |
-   | Quota Exceeded     | source address field.  See [RFC3022] for    |
-   | event.  Values for | the definition of NAT.  See [RFC3234] for   |
-   | this Information   | the definition of middleboxes.              |
+   | the type of a NAT  | See [RFC0791] for the definition of the     |
+   | Quota Exceeded     | IPv4 source address field.  See [RFC3022]   |
+   | event.  Values for | for the definition of NAT.  See [RFC3234]   |
+   | this Information   | for the definition of middleboxes.          |
    | Element are listed |                                             |
    | in the "NAT Quota  |                                             |
    | Exceeded Event     |                                             |
    | Type" registry.    |                                             |
    +--------------------+---------------------------------------------+
 
-                             Table 43: XXXXX
+                   Table 43: NEW natQuotaExceededEvent
 
 4.22.  natThresholdEvent
 
@@ -1281,7 +1283,7 @@ Table of Contents
     | Description                             | Additional            |
     |                                         | Information           |
     +=========================================+=======================+
-    | This Information Element identifies a   | See [RFC791] for the  |
+    | This Information Element identifies a   | See [RFC0791] for the |
     | type of a NAT Threshold event.  Values  | definition of the     |
     | for this Information Element are listed | IPv4 source address   |
     | in the "NAT Threshold Event Type"       | field.  See [RFC3022] |
@@ -1291,7 +1293,7 @@ Table of Contents
     |                                         | middleboxes.          |
     +-----------------------------------------+-----------------------+
 
-                              Table 44: XXXXX
+                      Table 44: OLD natThresholdEvent
 
    NEW:
 
@@ -1309,13 +1311,13 @@ Table of Contents
    | Type" registry          |                                         |
    +-------------------------+-----------------------------------------+
 
-                              Table 45: XXXXX
+                      Table 45: NEW natThresholdEvent
 
 5.  Update the Description
 
    These IEs cannot echo some values that can be included in a packet.
    This section can be moved to another document that will updated
-   RFC7012.
+   [RFC7012].
 
 5.1.  tcpOptions
 
@@ -1422,6 +1424,10 @@ Table of Contents
               DOI 10.17487/RFC0791, September 1981,
               <https://www.rfc-editor.org/rfc/rfc791>.
 
+   [RFC1631]  Egevang, K. and P. Francis, "The IP Network Address
+              Translator (NAT)", RFC 1631, DOI 10.17487/RFC1631, May
+              1994, <https://www.rfc-editor.org/rfc/rfc1631>.
+
    [RFC3022]  Srisuresh, P. and K. Egevang, "Traditional IP Network
               Address Translator (Traditional NAT)", RFC 3022,
               DOI 10.17487/RFC3022, January 2001,
@@ -1430,6 +1436,49 @@ Table of Contents
    [RFC3234]  Carpenter, B. and S. Brim, "Middleboxes: Taxonomy and
               Issues", RFC 3234, DOI 10.17487/RFC3234, February 2002,
               <https://www.rfc-editor.org/rfc/rfc3234>.
+
+   [RFC5102]  Quittek, J., Bryant, S., Claise, B., Aitken, P., and J.
+              Meyer, "Information Model for IP Flow Information Export",
+              RFC 5102, DOI 10.17487/RFC5102, January 2008,
+              <https://www.rfc-editor.org/rfc/rfc5102>.
+
+   [RFC5475]  Zseby, T., Molina, M., Duffield, N., Niccolini, S., and F.
+              Raspall, "Sampling and Filtering Techniques for IP Packet
+              Selection", RFC 5475, DOI 10.17487/RFC5475, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5475>.
+
+   [RFC6144]  Baker, F., Li, X., Bao, C., and K. Yin, "Framework for
+              IPv4/IPv6 Translation", RFC 6144, DOI 10.17487/RFC6144,
+              April 2011, <https://www.rfc-editor.org/rfc/rfc6144>.
+
+   [RFC6146]  Bagnulo, M., Matthews, P., and I. van Beijnum, "Stateful
+              NAT64: Network Address and Protocol Translation from IPv6
+              Clients to IPv4 Servers", RFC 6146, DOI 10.17487/RFC6146,
+              April 2011, <https://www.rfc-editor.org/rfc/rfc6146>.
+
+   [RFC6296]  Wasserman, M. and F. Baker, "IPv6-to-IPv6 Network Prefix
+              Translation", RFC 6296, DOI 10.17487/RFC6296, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6296>.
+
+   [RFC6313]  Claise, B., Dhandapani, G., Aitken, P., and S. Yates,
+              "Export of Structured Data in IP Flow Information Export
+              (IPFIX)", RFC 6313, DOI 10.17487/RFC6313, July 2011,
+              <https://www.rfc-editor.org/rfc/rfc6313>.
+
+   [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
+              Writing an IANA Considerations Section in RFCs", BCP 26,
+              RFC 8126, DOI 10.17487/RFC8126, June 2017,
+              <https://www.rfc-editor.org/rfc/rfc8126>.
+
+   [RFC8158]  Sivakumar, S. and R. Penno, "IP Flow Information Export
+              (IPFIX) Information Elements for Logging NAT Events",
+              RFC 8158, DOI 10.17487/RFC8158, December 2017,
+              <https://www.rfc-editor.org/rfc/rfc8158>.
+
+   [RFC8200]  Deering, S. and R. Hinden, "Internet Protocol, Version 6
+              (IPv6) Specification", STD 86, RFC 8200,
+              DOI 10.17487/RFC8200, July 2017,
+              <https://www.rfc-editor.org/rfc/rfc8200>.
 
 Acknowledgments
 
