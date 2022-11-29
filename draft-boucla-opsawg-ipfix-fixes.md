@@ -25,7 +25,6 @@ author:
     email: benoit.claise@huawei.com
 
 normative:
-     RFC7012: #ipfix
      IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
@@ -73,23 +72,17 @@ IANA is requested to update the following entries by adding the indicated pointe
 
 OLD:
 
-* Description: he reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
-* Additional Information:
-
-
 | Description                     | Additional Information |
 |---|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
 {: title="XXXXX"}
 
 NEW:
-* Description: he reason for Flow termination. Values are listed in the flowEndReason registry.
-* Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
 | Description                     | Additional Information |
 |---|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. |
-{: title="XXXXX" cols="50%l 50%l"}
+{: title="XXXXX"}
 
 
 ## natOriginatingAddressRealm
@@ -406,7 +399,7 @@ OLD:
 NEW:
 
 | Description | Additional Information |
-| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. |
+| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. |
 {: title="XXXXX"}
 
 
@@ -460,7 +453,7 @@ NEW:
 
 # Security Considerations
 
-IPFIX security considerations are discussed in {{Section 8 of RFC7012}}.
+IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
 
 
 # IANA Considerations
