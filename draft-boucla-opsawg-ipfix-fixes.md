@@ -433,7 +433,7 @@ OLD:
 NEW:
 
 | Description | Additional Information |
-| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. 
+| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event.
 
 See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. |
 {: title="XXXXX"}
@@ -486,7 +486,7 @@ IPFIX security considerations are discussed in {{Section 8 of RFC7012}}.
 
 # IANA Considerations
 
-Requested IANA actions are described in the main document.
+Requested IANA actions are described in the main document. These actions are not repeated here.
 
 
 --- back
