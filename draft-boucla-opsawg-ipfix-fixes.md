@@ -75,7 +75,7 @@ OLD:
 | Description                     | Additional Information |
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
 
-Values are listed in the natOriginatingAddressRealm registry. See XXX. | See [RFC3022] for the definition of NAT. |
+Values are listed in the natOriginatingAddressRealm registry. See XXX. | See RFC3022 for the definition of NAT. |
 {: title="XXXXX"}
 
 NEW:
@@ -85,7 +85,7 @@ NEW:
 
 Values are listed in the natOriginatingAddressRealm registry. | See XXXX.
 
-See [RFC3022] for the definition of NAT. |
+See RFC3022 for the definition of NAT. |
 {: title="XXXXX"}
 
 
