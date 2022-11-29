@@ -30,6 +30,7 @@ normative:
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
         date: 2022-11
 
+     RFC7012: #ipfix
 
 informative:
 
