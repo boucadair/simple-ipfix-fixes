@@ -75,7 +75,7 @@ OLD:
 
 | Description                     | Additional Information |
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
-{: title="XXXXX" cols="* 30"}
+{: title="XXXXX" cols="50% l"}
 
 NEW:
 
