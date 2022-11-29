@@ -42,15 +42,20 @@ This document describes simple fixes to the IANA IPFIX registry.
 
 # Introduction
 
-This document lists a set of fixes to the IPFIX IANA registry {{IANA-IPFIX}}.
+This document lists a set of fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
+- Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
+- Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}). 
+- Updates that update the description ({{desc}}). 
+
+The first two sets of modifications are considered as simple fixes. 
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
 
-# Point to An Existing IANA Registry
+# Point to An Existing IANA Registry {{#to-iana}}
 
 IANA is requested to update the following entries by adding the indicated pointer to an IANA registry under "Additional Information" of {{IANA-IPFIX}}:
 
@@ -65,7 +70,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 | privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
-# Consistent Citation of Registries
+# Consistent Citation of Registries {{#consistent}}
 
 
 ## flowEndReason
@@ -75,14 +80,14 @@ OLD:
 | Description                     | Additional Information |
 |---|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. | |
-{: title="XXXXX"}
+{: title="OLD flowEndReason"}
 
 NEW:
 
 | Description                     | Additional Information |
 |---|---|
 | The reason for Flow termination. Values are listed in the flowEndReason registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason. |
-{: title="XXXXX"}
+{: title="NEW flowEndReason"}
 
 
 ## natOriginatingAddressRealm
@@ -91,30 +96,30 @@ OLD:
 
 | Description                     | Additional Information |
 |---|---|
-|  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. | See [RFC3022] for the definition of NAT. |
-{: title="XXXXX" cols="50%l 50%l"}
+|  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. | See {{?RFC3022}} for the definition of NAT. |
+{: title="OLD natOriginatingAddressRealm" cols="50%l 50%l"}
 
 NEW:
 
 | Description                     | Additional Information |
 |---|---|
 |  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
-See [RFC3022] for the definition of NAT.     |
-{: title="XXXXX" cols="50%l 50%l"}
+See {{?RFC3022}} for the definition of NAT.     |
+{: title="NEW natOriginatingAddressRealm" cols="50%l 50%l"}
 
 ## natEvent
 
 OLD:
 
 | Description                     | Additional Information |
-| This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. |See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. See [RFC8158] for the definitions of values 4-16. |
-{: title="XXXXX"}
+| This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. |See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. See {{?RFC8158}} for the definitions of values 4-16. |
+{: title="OLD natEvent"}
 
 NEW:
 
 | Description                     | Additional Information |
-| This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. See [RFC8158] for the definitions of values 4-16. |
-{: title="XXXXX"}
+| This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. See {{?RFC8158}} for the definitions of values 4-16. |
+{: title="NEW natEvent"}
 
 ## firewallEvent
 
@@ -122,13 +127,13 @@ OLD:
 
 | Description                     | Additional Information |
 | Indicates a firewall event. Allowed values are listed in the firewallEvent registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event. | |
-{: title="XXXXX"}
+{: title="OLD firewallEvent"}
 
 NEW:
 
 | Description                     | Additional Information |
 | Indicates a firewall event. Allowed values are listed in the firewallEvent registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event. |
-{: title="XXXXX"}
+{: title="NEW firewallEvent"}
 
 ## biflowDirection
 
@@ -136,13 +141,13 @@ OLD:
 
 | Description                     | Additional Information |
 | A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element MAY be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option SHOULD be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element SHOULD appear in each Flow Record. Values are listed in the biflowDirection registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction.  | |
-{: title="XXXXX"}
+{: title="OLD biflowDirection"}
 
 NEW:
 
 | Description                     | Additional Information |
 | A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element MAY be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option SHOULD be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element SHOULD appear in each Flow Record. Values are listed in the biflowDirection registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction. |
-{: title="XXXXX"}
+{: title="NEW biflowDirection"}
 
 ## observationPointType
 
@@ -150,13 +155,13 @@ OLD:
 
 | Description                     | Additional Information |
 | Type of observation point. Values are listed in the observationPointType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type. | |
-{: title="XXXXX"}
+{: title="OLD observationPointType"}
 
 NEW:
 
 | Description                     | Additional Information |
 | Type of observation point. Values are listed in the observationPointType registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type. |
-{: title="XXXXX"}
+{: title="NEW observationPointType"}
 
 ## anonymizationTechnique
 
@@ -164,27 +169,27 @@ OLD:
 
 | Description                     | Additional Information |
 | A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique. | |
-{: title="XXXXX"}
+{: title="OLD anonymizationTechnique"}
 
 NEW:
 
 | Description                     | Additional Information |
 | A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique. |
-{: title="XXXXX"}
+{: title="NEW anonymizationTechnique"}
 
 ## natType
 
 OLD:
 
 | Description                     | Additional Information |
-| 	Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.        | See [RFC3022] for the definition of NAT. See [RFC1631] for the definition of NAT44. See [RFC6144] for the definition of NAT64. See [RFC6146] for the definition of NAT46. See [RFC6296] for the definition of NAT66. See [RFC791] for the definition of IPv4. See [RFC8200] for the definition of IPv6. |
-{: title="XXXXX"}
+| 	Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.        | See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See [RFC6146] for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
+{: title="OLD natType"}
 
 NEW:
 
 | Description                     | Additional Information |
-| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See [RFC3022] for the definition of NAT. See [RFC1631] for the definition of NAT44. See [RFC6144] for the definition of NAT64. See [RFC6146] for the definition of NAT46. See [RFC6296] for the definition of NAT66. See [RFC791] for the definition of IPv4. See [RFC8200] for the definition of IPv6. |
-{: title="XXXXX"}
+| Values are listed in the natType registry.       |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See {{?RFC3022}} for the definition of NAT. See {{?RFC1631}} for the definition of NAT44. See {{?RFC6144}} for the definition of NAT64. See [RFC6146] for the definition of NAT46. See {{?RFC6296}} for the definition of NAT66. See {{?RFC0791}} for the definition of IPv4. See {{?RFC8200}} for the definition of IPv6. |
+{: title="NEW natType"}
 
 
 ## selectorAlgorithm
@@ -192,14 +197,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-|  This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in [RFC5475]. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters. The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |  |
-{: title="XXXXX"}
+|  This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in {{?RFC5475}}. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters. The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |  |
+{: title="OLD selectorAlgorithm"}
 
 NEW:
 
 | Description                     | Additional Information |
-|  This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in [RFC5475]. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |See https://www.iana.org/assignments/psamp-parameters |
-{: title="XXXXX"}
+|  This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in {{?RFC5475}}. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified. |See https://www.iana.org/assignments/psamp-parameters |
+{: title="NEW selectorAlgorithm"}
 
 
 ## informationElementDataType
@@ -207,14 +212,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model [RFC5102]; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action [RFC8126] to modify. | |
-{: title="XXXXX"}
+| A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify. | |
+{: title="OLD informationElementDataType"}
 
 NEW:
 
 | Description                     | Additional Information |
-| A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model [RFC5102]; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action [RFC8126] to modify. |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types |
-{: title="XXXXX"}
+| A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify. |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types |
+{: title="NEW informationElementDataType"}
 
 
 ## informationElementSemantics
@@ -222,14 +227,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model [RFC5102]; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action [RFC8126] to modify. | |
-{: title="XXXXX"}
+| A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify. | |
+{: title="OLD informationElementSemantics"}
 
 NEW:
 
 | Description                     | Additional Information |
-| A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model [RFC5102]; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action [RFC8126] to modify. |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantics |
-{: title="XXXXX"}
+| A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify. |See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantics |
+{: title="NEW informationElementSemantics"}
 
 
 ## informationElementUnits
@@ -237,14 +242,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model [RFC5102]; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry. | |
-{: title="XXXXX"}
+| A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry. | |
+{: title="OLD informationElementUnits"}
 
 NEW:
 
 | Description                     | Additional Information |
-| A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model [RFC5102]; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units |
-{: title="XXXXX"}
+| A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units |
+{: title="NEW informationElementUnits"}
 
 
 ## portRangeStart
@@ -253,13 +258,13 @@ OLD:
 
 | Description                     | Additional Information |
 | The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
-{: title="XXXXX"}
+{: title="OLD portRangeStart"}
 
 NEW:
 
 | Description                     | Additional Information |
 | The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way. | Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. |
-{: title="XXXXX"}
+{: title="NEW portRangeStart"}
 
 
 ## portRangeEnd
@@ -268,14 +273,14 @@ OLD:
 
 | Description                     | Additional Information |
 | The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. | |
-{: title="XXXXX"}
+{: title="OLD portRangeEnd"}
 
 NEW:
 
 | Description                     | Additional Information |
 | The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
 | Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers. |
-{: title="XXXXX"}
+{: title="NEW portRangeEnd"}
 
 
 ## ingressInterfaceType
@@ -284,13 +289,13 @@ OLD:
 
 | Description                     | Additional Information |
 | The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib. | https://www.iana.org/assignments/ianaiftype-mib |
-{: title="XXXXX"}
+{: title="OLD ingressInterfaceType"}
 
 NEW:
 
 | Description                     | Additional Information |
 | The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType'. |See https://www.iana.org/assignments/ianaiftype-mib |
-{: title="XXXXX"}
+{: title="NEW ingressInterfaceType"}
 
 
 ## egressInterfaceType
@@ -299,13 +304,13 @@ OLD:
 
 | Description                     | Additional Information |
 | The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib. | https://www.iana.org/assignments/ianaiftype-mib |
-{: title="XXXXX"}
+{: title="OLD egressInterfaceType"}
 
 NEW:
 
 | Description                     | Additional Information |
 | The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType'. |See https://www.iana.org/assignments/ianaiftype-mib |
-{: title="XXXXX"}
+{: title="NEW egressInterfaceType"}
 
 
 
@@ -315,13 +320,13 @@ OLD:
 
 | Description                     | Additional Information |
 | A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method. | |
-{: title="XXXXX"}
+{: title="OLD valueDistributionMethod"}
 
 NEW:
 
 | Description                     | Additional Information |
 | A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method. |
-{: title="XXXXX"}
+{: title="NEW valueDistributionMethod"}
 
 
 ## flowSelectorAlgorithm
@@ -330,13 +335,13 @@ OLD:
 
 | Description                     | Additional Information |
 | This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters. Please note that the purpose of the flow selection techniques described in this document is the improvement of measurement functions as defined in the Scope (Section 1). The Intermediate Flow Selection Process Techniques identifiers are defined at https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm. | |
-{: title="XXXXX"}
+{: title="OLD flowSelectorAlgorithm"}
 
 NEW:
 
 | Description                     | Additional Information |
-| This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters. Please note that the purpose of the flow selection techniques described in this document is the improvement of measurement functions as defined in the Scope (Section 1). | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm. |
-{: title="XXXXX"}
+| This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm. |
+{: title="NEW flowSelectorAlgorithm"}
 
 
 
@@ -346,14 +351,14 @@ OLD:
 
 | Description                     | Additional Information |
 | This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994]. | [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994] |
-{: title="XXXXX"}
+{: title="OLD dataLinkFrameType"}
 
 
 NEW:
 
 | Description                     | Additional Information |
 | This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994]. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994] |
-{: title="XXXXX"}
+{: title="NEW dataLinkFrameType"}
 
 
 ## mibCaptureTimeSemantics
@@ -361,14 +366,14 @@ NEW:
 OLD:
 
 | Description                     | Additional Information |
-| Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data [RFC6313]. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics. | |
-{: title="XXXXX"}
+| Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data {{?RFC6313}}. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics. | |
+{: title="OLD mibCaptureTimeSemantics"}
 
 NEW:
 
 | Description                     | Additional Information |
-| Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data [RFC6313]. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics. |
-{: title="XXXXX"}
+| Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data {{?RFC6313}}. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics. |
+{: title="NEW mibCaptureTimeSemantics"}
 
 
 ## natQuotaExceededEvent
@@ -376,15 +381,15 @@ NEW:
 OLD:
 
 | Description | Additional Information |
-| This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. | See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes.|
-{: title="XXXXX"}
+| This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. | See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes.|
+{: title="OLD natQuotaExceededEvent"}
 
 
 NEW:
 
 | Description                     | Additional Information |
-| This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. |
-{: title="XXXXX"}
+| This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry. | See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. |
+{: title="NEW natQuotaExceededEvent"}
 
 
 
@@ -393,19 +398,19 @@ NEW:
 OLD:
 
 | Description | Additional Information |
-| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. | See [RFC791] for the definition of the IPv4 source address field. See [RFC3022] for the definition of NAT. See [RFC3234] for the definition of middleboxes. |
-{: title="XXXXX"}
+| This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. | See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. |
+{: title="OLD natThresholdEvent"}
 
 NEW:
 
 | Description | Additional Information |
 | This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry| See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes. |
-{: title="XXXXX"}
+{: title="NEW natThresholdEvent"}
 
 
-# Update the Description
+# Update the Description {{#desc}}
 
-These IEs cannot echo some values that can be included in a packet. This section can be moved to another document that will updated RFC7012.
+These IEs cannot echo some values that can be included in a packet. This section can be moved to another document that will updated {{!RFC7012}}.
 
 ## tcpOptions
 
