@@ -1366,44 +1366,6 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             </ul>
 </li>
         </ul>
-<p id="section-4.1-2">OLD:<a href="#section-4.1-2" class="pilcrow">¶</a></p>
-<span id="name-old-flowendreason"></span><table class="center" id="table-2">
-          <caption>
-<a href="#table-2" class="selfRef">Table 2</a>:
-<a href="#name-old-flowendreason" class="selfRef">OLD flowEndReason</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.1-4">NEW:<a href="#section-4.1-4" class="pilcrow">¶</a></p>
-<span id="name-new-flowendreason"></span><table class="center" id="table-3">
-          <caption>
-<a href="#table-3" class="selfRef">Table 3</a>:
-<a href="#name-new-flowendreason" class="selfRef">NEW flowEndReason</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The reason for Flow termination. Values are listed in the flowEndReason registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.</td>
-            </tr>
-          </tbody>
-        </table>
 </section>
 </div>
 <div id="natoriginatingaddressrealm">
@@ -1411,44 +1373,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natoriginatingaddressrealm">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-natoriginatingaddressrealm" class="section-name selfRef">natOriginatingAddressRealm</a>
         </h3>
-<p id="section-4.2-1">OLD:<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<span id="name-old-natoriginatingaddressre"></span><table class="center" id="table-4">
-          <caption>
-<a href="#table-4" class="selfRef">Table 4</a>:
-<a href="#name-old-natoriginatingaddressre" class="selfRef">OLD natOriginatingAddressRealm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.</td>
-              <td class="text-left" rowspan="1" colspan="1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.2-3">NEW:<a href="#section-4.2-3" class="pilcrow">¶</a></p>
-<span id="name-new-natoriginatingaddressre"></span><table class="center" id="table-5">
-          <caption>
-<a href="#table-5" class="selfRef">Table 5</a>:
-<a href="#name-new-natoriginatingaddressre" class="selfRef">NEW natOriginatingAddressRealm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.2-1.1">
+            <p id="section-4.2-1.1.1">OLD:<a href="#section-4.2-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.2-1.1.2.1">Description: Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.<a href="#section-4.2-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.2-1.1.2.2">Additional Information: See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-4.2-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.2-1.2">
+            <p id="section-4.2-1.2.1">NEW:<a href="#section-4.2-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.2-1.2.2.1">Description:  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry.<a href="#section-4.2-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.2-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-4.2-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="natevent">
@@ -1456,44 +1400,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natevent">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-natevent" class="section-name selfRef">natEvent</a>
         </h3>
-<p id="section-4.3-1">OLD:<a href="#section-4.3-1" class="pilcrow">¶</a></p>
-<span id="name-old-natevent"></span><table class="center" id="table-6">
-          <caption>
-<a href="#table-6" class="selfRef">Table 6</a>:
-<a href="#name-old-natevent" class="selfRef">OLD natEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type.</td>
-              <td class="text-left" rowspan="1" colspan="1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes. See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.3-3">NEW:<a href="#section-4.3-3" class="pilcrow">¶</a></p>
-<span id="name-new-natevent"></span><table class="center" id="table-7">
-          <caption>
-<a href="#table-7" class="selfRef">Table 7</a>:
-<a href="#name-new-natevent" class="selfRef">NEW natEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes. See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.3-1.1">
+            <p id="section-4.3-1.1.1">OLD:<a href="#section-4.3-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.3-1.1.2.1">Description: This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type.<a href="#section-4.3-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.3-1.1.2.2">Additional Information: See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes. See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.<a href="#section-4.3-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.3-1.2">
+            <p id="section-4.3-1.2.1">NEW:<a href="#section-4.3-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.3-1.2.2.1">Description: This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.<a href="#section-4.3-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.3-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes. See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.<a href="#section-4.3-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="firewallevent">
@@ -1501,44 +1427,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-firewallevent">
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-firewallevent" class="section-name selfRef">firewallEvent</a>
         </h3>
-<p id="section-4.4-1">OLD:<a href="#section-4.4-1" class="pilcrow">¶</a></p>
-<span id="name-old-firewallevent"></span><table class="center" id="table-8">
-          <caption>
-<a href="#table-8" class="selfRef">Table 8</a>:
-<a href="#name-old-firewallevent" class="selfRef">OLD firewallEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates a firewall event. Allowed values are listed in the firewallEvent registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.4-3">NEW:<a href="#section-4.4-3" class="pilcrow">¶</a></p>
-<span id="name-new-firewallevent"></span><table class="center" id="table-9">
-          <caption>
-<a href="#table-9" class="selfRef">Table 9</a>:
-<a href="#name-new-firewallevent" class="selfRef">NEW firewallEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates a firewall event. Allowed values are listed in the firewallEvent registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.4-1.1">
+            <p id="section-4.4-1.1.1">OLD:<a href="#section-4.4-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.4-1.1.2.1">Description: Indicates a firewall event. Allowed values are listed in the firewallEvent registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event.<a href="#section-4.4-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.4-1.1.2.2">Additional Information:<a href="#section-4.4-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.4-1.2">
+            <p id="section-4.4-1.2.1">NEW:<a href="#section-4.4-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.4-1.2.2.1">Description: Indicates a firewall event. Allowed values are listed in the firewallEvent registry.<a href="#section-4.4-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.4-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event.<a href="#section-4.4-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="biflowdirection">
@@ -1546,44 +1454,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-biflowdirection">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-biflowdirection" class="section-name selfRef">biflowDirection</a>
         </h3>
-<p id="section-4.5-1">OLD:<a href="#section-4.5-1" class="pilcrow">¶</a></p>
-<span id="name-old-biflowdirection"></span><table class="center" id="table-10">
-          <caption>
-<a href="#table-10" class="selfRef">Table 10</a>:
-<a href="#name-old-biflowdirection" class="selfRef">OLD biflowDirection</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element <span class="bcp14">MAY</span> be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option <span class="bcp14">SHOULD</span> be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element <span class="bcp14">SHOULD</span> appear in each Flow Record. Values are listed in the biflowDirection registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.5-3">NEW:<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<span id="name-new-biflowdirection"></span><table class="center" id="table-11">
-          <caption>
-<a href="#table-11" class="selfRef">Table 11</a>:
-<a href="#name-new-biflowdirection" class="selfRef">NEW biflowDirection</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element <span class="bcp14">MAY</span> be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option <span class="bcp14">SHOULD</span> be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element <span class="bcp14">SHOULD</span> appear in each Flow Record. Values are listed in the biflowDirection registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.5-1.1">
+            <p id="section-4.5-1.1.1">OLD:<a href="#section-4.5-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.5-1.1.2.1">Description:  A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element <span class="bcp14">MAY</span> be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option <span class="bcp14">SHOULD</span> be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element <span class="bcp14">SHOULD</span> appear in each Flow Record. Values are listed in the biflowDirection registry. See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction].<a href="#section-4.5-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.5-1.1.2.2">Additional Information:<a href="#section-4.5-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.5-1.2">
+            <p id="section-4.5-1.2.1">NEW:<a href="#section-4.5-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.5-1.2.2.1">Description: A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element <span class="bcp14">MAY</span> be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option <span class="bcp14">SHOULD</span> be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element <span class="bcp14">SHOULD</span> appear in each Flow Record. Values are listed in the biflowDirection registry.<a href="#section-4.5-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.5-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction.<a href="#section-4.5-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="observationpointtype">
@@ -1591,44 +1481,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-observationpointtype">
 <a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-observationpointtype" class="section-name selfRef">observationPointType</a>
         </h3>
-<p id="section-4.6-1">OLD:<a href="#section-4.6-1" class="pilcrow">¶</a></p>
-<span id="name-old-observationpointtype"></span><table class="center" id="table-12">
-          <caption>
-<a href="#table-12" class="selfRef">Table 12</a>:
-<a href="#name-old-observationpointtype" class="selfRef">OLD observationPointType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Type of observation point. Values are listed in the observationPointType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.6-3">NEW:<a href="#section-4.6-3" class="pilcrow">¶</a></p>
-<span id="name-new-observationpointtype"></span><table class="center" id="table-13">
-          <caption>
-<a href="#table-13" class="selfRef">Table 13</a>:
-<a href="#name-new-observationpointtype" class="selfRef">NEW observationPointType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Type of observation point. Values are listed in the observationPointType registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.6-1.1">
+            <p id="section-4.6-1.1.1">OLD:<a href="#section-4.6-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.6-1.1.2.1">Description: Type of observation point. Values are listed in the observationPointType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type.<a href="#section-4.6-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.6-1.1.2.2">Additional Information:<a href="#section-4.6-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.6-1.2">
+            <p id="section-4.6-1.2.1">NEW:<a href="#section-4.6-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.6-1.2.2.1">Description: Type of observation point. Values are listed in the observationPointType registry.<a href="#section-4.6-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.6-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type.<a href="#section-4.6-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="anonymizationtechnique">
@@ -1636,44 +1508,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-anonymizationtechnique">
 <a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-anonymizationtechnique" class="section-name selfRef">anonymizationTechnique</a>
         </h3>
-<p id="section-4.7-1">OLD:<a href="#section-4.7-1" class="pilcrow">¶</a></p>
-<span id="name-old-anonymizationtechnique"></span><table class="center" id="table-14">
-          <caption>
-<a href="#table-14" class="selfRef">Table 14</a>:
-<a href="#name-old-anonymizationtechnique" class="selfRef">OLD anonymizationTechnique</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.7-3">NEW:<a href="#section-4.7-3" class="pilcrow">¶</a></p>
-<span id="name-new-anonymizationtechnique"></span><table class="center" id="table-15">
-          <caption>
-<a href="#table-15" class="selfRef">Table 15</a>:
-<a href="#name-new-anonymizationtechnique" class="selfRef">NEW anonymizationTechnique</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.7-1.1">
+            <p id="section-4.7-1.1.1">OLD:<a href="#section-4.7-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.7-1.1.2.1">Description: A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique.<a href="#section-4.7-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.7-1.1.2.2">Additional Information:<a href="#section-4.7-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.7-1.2">
+            <p id="section-4.7-1.2.1">NEW:<a href="#section-4.7-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.7-1.2.2.1">Description: A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry.<a href="#section-4.7-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.7-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique.<a href="#section-4.7-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="nattype">
@@ -1681,44 +1535,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-nattype">
 <a href="#section-4.8" class="section-number selfRef">4.8. </a><a href="#name-nattype" class="section-name selfRef">natType</a>
         </h3>
-<p id="section-4.8-1">OLD:<a href="#section-4.8-1" class="pilcrow">¶</a></p>
-<span id="name-old-nattype"></span><table class="center" id="table-16">
-          <caption>
-<a href="#table-16" class="selfRef">Table 16</a>:
-<a href="#name-old-nattype" class="selfRef">OLD natType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.</td>
-              <td class="text-left" rowspan="1" colspan="1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC1631" class="cite xref">RFC1631</a>]</span> for the definition of NAT44. See <span>[<a href="#RFC6144" class="cite xref">RFC6144</a>]</span> for the definition of NAT64. See <span>[<a href="#RFC6146" class="cite xref">RFC6146</a>]</span> for the definition of NAT46. See <span>[<a href="#RFC6296" class="cite xref">RFC6296</a>]</span> for the definition of NAT66. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of IPv4. See <span>[<a href="#RFC8200" class="cite xref">RFC8200</a>]</span> for the definition of IPv6.</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.8-3">NEW:<a href="#section-4.8-3" class="pilcrow">¶</a></p>
-<span id="name-new-nattype"></span><table class="center" id="table-17">
-          <caption>
-<a href="#table-17" class="selfRef">Table 17</a>:
-<a href="#name-new-nattype" class="selfRef">NEW natType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Values are listed in the natType registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC1631" class="cite xref">RFC1631</a>]</span> for the definition of NAT44. See <span>[<a href="#RFC6144" class="cite xref">RFC6144</a>]</span> for the definition of NAT64. See <span>[<a href="#RFC6146" class="cite xref">RFC6146</a>]</span> for the definition of NAT46. See <span>[<a href="#RFC6296" class="cite xref">RFC6296</a>]</span> for the definition of NAT66. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of IPv4. See <span>[<a href="#RFC8200" class="cite xref">RFC8200</a>]</span> for the definition of IPv6.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.8-1.1">
+            <p id="section-4.8-1.1.1">OLD:<a href="#section-4.8-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.8-1.1.2.1">Description: Values are listed in the natType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.<a href="#section-4.8-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.8-1.1.2.2">Additional Information: See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC1631" class="cite xref">RFC1631</a>]</span> for the definition of NAT44. See <span>[<a href="#RFC6144" class="cite xref">RFC6144</a>]</span> for the definition of NAT64. See <span>[<a href="#RFC6146" class="cite xref">RFC6146</a>]</span> for the definition of NAT46. See <span>[<a href="#RFC6296" class="cite xref">RFC6296</a>]</span> for the definition of NAT66. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of IPv4. See <span>[<a href="#RFC8200" class="cite xref">RFC8200</a>]</span> for the definition of IPv6.<a href="#section-4.8-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.8-1.2">
+            <p id="section-4.8-1.2.1">NEW:<a href="#section-4.8-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.8-1.2.2.1">Description: Values are listed in the natType registry.<a href="#section-4.8-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.8-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC1631" class="cite xref">RFC1631</a>]</span> for the definition of NAT44. See <span>[<a href="#RFC6144" class="cite xref">RFC6144</a>]</span> for the definition of NAT64. See <span>[<a href="#RFC6146" class="cite xref">RFC6146</a>]</span> for the definition of NAT46. See <span>[<a href="#RFC6296" class="cite xref">RFC6296</a>]</span> for the definition of NAT66. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of IPv4. See <span>[<a href="#RFC8200" class="cite xref">RFC8200</a>]</span> for the definition of IPv6.<a href="#section-4.8-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="selectoralgorithm">
@@ -1726,44 +1562,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-selectoralgorithm">
 <a href="#section-4.9" class="section-number selfRef">4.9. </a><a href="#name-selectoralgorithm" class="section-name selfRef">selectorAlgorithm</a>
         </h3>
-<p id="section-4.9-1">OLD:<a href="#section-4.9-1" class="pilcrow">¶</a></p>
-<span id="name-old-selectoralgorithm"></span><table class="center" id="table-18">
-          <caption>
-<a href="#table-18" class="selfRef">Table 18</a>:
-<a href="#name-old-selectoralgorithm" class="selfRef">OLD selectorAlgorithm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in <span>[<a href="#RFC5475" class="cite xref">RFC5475</a>]</span>. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters. The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.9-3">NEW:<a href="#section-4.9-3" class="pilcrow">¶</a></p>
-<span id="name-new-selectoralgorithm"></span><table class="center" id="table-19">
-          <caption>
-<a href="#table-19" class="selfRef">Table 19</a>:
-<a href="#name-new-selectoralgorithm" class="selfRef">NEW selectorAlgorithm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in <span>[<a href="#RFC5475" class="cite xref">RFC5475</a>]</span>. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/psamp-parameters</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.9-1.1">
+            <p id="section-4.9-1.1.1">OLD:<a href="#section-4.9-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.9-1.1.2.1">Description: This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in <span>[<a href="#RFC5475" class="cite xref">RFC5475</a>]</span>. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters. The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.<a href="#section-4.9-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.9-1.1.2.2">Additional Information:<a href="#section-4.9-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.9-1.2">
+            <p id="section-4.9-1.2.1">NEW:<a href="#section-4.9-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.9-1.2.2.1">Description: This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in <span>[<a href="#RFC5475" class="cite xref">RFC5475</a>]</span>. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters. There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.<a href="#section-4.9-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.9-1.2.2.2">Additional Information: See https://www.iana.org/assignments/psamp-parameters<a href="#section-4.9-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="informationelementdatatype">
@@ -1771,44 +1589,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementdatatype">
 <a href="#section-4.10" class="section-number selfRef">4.10. </a><a href="#name-informationelementdatatype" class="section-name selfRef">informationElementDataType</a>
         </h3>
-<p id="section-4.10-1">OLD:<a href="#section-4.10-1" class="pilcrow">¶</a></p>
-<span id="name-old-informationelementdatat"></span><table class="center" id="table-20">
-          <caption>
-<a href="#table-20" class="selfRef">Table 20</a>:
-<a href="#name-old-informationelementdatat" class="selfRef">OLD informationElementDataType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.10-3">NEW:<a href="#section-4.10-3" class="pilcrow">¶</a></p>
-<span id="name-new-informationelementdatat"></span><table class="center" id="table-21">
-          <caption>
-<a href="#table-21" class="selfRef">Table 21</a>:
-<a href="#name-new-informationelementdatat" class="selfRef">NEW informationElementDataType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.10-1.1">
+            <p id="section-4.10-1.1.1">OLD:<a href="#section-4.10-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.10-1.1.2.1">Description: A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.<a href="#section-4.10-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.10-1.1.2.2">Additional Information:<a href="#section-4.10-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.10-1.2">
+            <p id="section-4.10-1.2.1">NEW:<a href="#section-4.10-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.10-1.2.2.1">Description: A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.<a href="#section-4.10-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.10-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types<a href="#section-4.10-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="informationelementsemantics">
@@ -1816,44 +1616,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementsemantics">
 <a href="#section-4.11" class="section-number selfRef">4.11. </a><a href="#name-informationelementsemantics" class="section-name selfRef">informationElementSemantics</a>
         </h3>
-<p id="section-4.11-1">OLD:<a href="#section-4.11-1" class="pilcrow">¶</a></p>
-<span id="name-old-informationelementseman"></span><table class="center" id="table-22">
-          <caption>
-<a href="#table-22" class="selfRef">Table 22</a>:
-<a href="#name-old-informationelementseman" class="selfRef">OLD informationElementSemantics</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.11-3">NEW:<a href="#section-4.11-3" class="pilcrow">¶</a></p>
-<span id="name-new-informationelementseman"></span><table class="center" id="table-23">
-          <caption>
-<a href="#table-23" class="selfRef">Table 23</a>:
-<a href="#name-new-informationelementseman" class="selfRef">NEW informationElementSemantics</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantics</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.11-1.1">
+            <p id="section-4.11-1.1.1">OLD:<a href="#section-4.11-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.11-1.1.2.1">Description: A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.<a href="#section-4.11-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.11-1.1.2.2">Additional Information:<a href="#section-4.11-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.11-1.2">
+            <p id="section-4.11-1.2.1">NEW:<a href="#section-4.11-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.11-1.2.2.1">Description: A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> to modify.<a href="#section-4.11-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.11-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantic<a href="#section-4.11-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="informationelementunits">
@@ -1861,44 +1643,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementunits">
 <a href="#section-4.12" class="section-number selfRef">4.12. </a><a href="#name-informationelementunits" class="section-name selfRef">informationElementUnits</a>
         </h3>
-<p id="section-4.12-1">OLD:<a href="#section-4.12-1" class="pilcrow">¶</a></p>
-<span id="name-old-informationelementunits"></span><table class="center" id="table-24">
-          <caption>
-<a href="#table-24" class="selfRef">Table 24</a>:
-<a href="#name-old-informationelementunits" class="selfRef">OLD informationElementUnits</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.12-3">NEW:<a href="#section-4.12-3" class="pilcrow">¶</a></p>
-<span id="name-new-informationelementunits"></span><table class="center" id="table-25">
-          <caption>
-<a href="#table-25" class="selfRef">Table 25</a>:
-<a href="#name-new-informationelementunits" class="selfRef">NEW informationElementUnits</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.12-1.1">
+            <p id="section-4.12-1.1.1">OLD:<a href="#section-4.12-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.12-1.1.2.1">Description: A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.<a href="#section-4.12-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.12-1.1.2.2">Additional Information:<a href="#section-4.12-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.12-1.2">
+            <p id="section-4.12-1.2.1">NEW:<a href="#section-4.12-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.12-1.2.2.1">Description: A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.<a href="#section-4.12-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.12-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units<a href="#section-4.12-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="portrangestart">
@@ -1906,44 +1670,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-portrangestart">
 <a href="#section-4.13" class="section-number selfRef">4.13. </a><a href="#name-portrangestart" class="section-name selfRef">portRangeStart</a>
         </h3>
-<p id="section-4.13-1">OLD:<a href="#section-4.13-1" class="pilcrow">¶</a></p>
-<span id="name-old-portrangestart"></span><table class="center" id="table-26">
-          <caption>
-<a href="#table-26" class="selfRef">Table 26</a>:
-<a href="#name-old-portrangestart" class="selfRef">OLD portRangeStart</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.13-3">NEW:<a href="#section-4.13-3" class="pilcrow">¶</a></p>
-<span id="name-new-portrangestart"></span><table class="center" id="table-27">
-          <caption>
-<a href="#table-27" class="selfRef">Table 27</a>:
-<a href="#name-new-portrangestart" class="selfRef">NEW portRangeStart</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.</td>
-              <td class="text-left" rowspan="1" colspan="1">Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.13-1.1">
+            <p id="section-4.13-1.1.1">OLD:<a href="#section-4.13-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.13-1.1.2.1">Description: The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.<a href="#section-4.13-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.13-1.1.2.2">Additional Information:<a href="#section-4.13-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.13-1.2">
+            <p id="section-4.13-1.2.1">NEW:<a href="#section-4.13-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.13-1.2.2.1">Description: The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.<a href="#section-4.13-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.13-1.2.2.2">Additional Information: Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.<a href="#section-4.13-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="portrangeend">
@@ -1951,48 +1697,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-portrangeend">
 <a href="#section-4.14" class="section-number selfRef">4.14. </a><a href="#name-portrangeend" class="section-name selfRef">portRangeEnd</a>
         </h3>
-<p id="section-4.14-1">OLD:<a href="#section-4.14-1" class="pilcrow">¶</a></p>
-<span id="name-old-portrangeend"></span><table class="center" id="table-28">
-          <caption>
-<a href="#table-28" class="selfRef">Table 28</a>:
-<a href="#name-old-portrangeend" class="selfRef">OLD portRangeEnd</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.14-3">NEW:<a href="#section-4.14-3" class="pilcrow">¶</a></p>
-<span id="name-new-portrangeend"></span><table class="center" id="table-29">
-          <caption>
-<a href="#table-29" class="selfRef">Table 29</a>:
-<a href="#name-new-portrangeend" class="selfRef">NEW portRangeEnd</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.14-1.1">
+            <p id="section-4.14-1.1.1">OLD:<a href="#section-4.14-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.14-1.1.2.1">Description: The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.<a href="#section-4.14-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.14-1.1.2.2">Additional Information:<a href="#section-4.14-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.14-1.2">
+            <p id="section-4.14-1.2.1">NEW:<a href="#section-4.14-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.14-1.2.2.1">Description: The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.<a href="#section-4.14-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.14-1.2.2.2">Additional Information: Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.<a href="#section-4.14-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="ingressinterfacetype">
@@ -2000,44 +1724,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-ingressinterfacetype">
 <a href="#section-4.15" class="section-number selfRef">4.15. </a><a href="#name-ingressinterfacetype" class="section-name selfRef">ingressInterfaceType</a>
         </h3>
-<p id="section-4.15-1">OLD:<a href="#section-4.15-1" class="pilcrow">¶</a></p>
-<span id="name-old-ingressinterfacetype"></span><table class="center" id="table-30">
-          <caption>
-<a href="#table-30" class="selfRef">Table 30</a>:
-<a href="#name-old-ingressinterfacetype" class="selfRef">OLD ingressInterfaceType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.</td>
-              <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/ianaiftype-mib</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.15-3">NEW:<a href="#section-4.15-3" class="pilcrow">¶</a></p>
-<span id="name-new-ingressinterfacetype"></span><table class="center" id="table-31">
-          <caption>
-<a href="#table-31" class="selfRef">Table 31</a>:
-<a href="#name-new-ingressinterfacetype" class="selfRef">NEW ingressInterfaceType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType'.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ianaiftype-mib</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.15-1.1">
+            <p id="section-4.15-1.1.1">OLD:<a href="#section-4.15-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.15-1.1.2.1">Description: The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.<a href="#section-4.15-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.15-1.1.2.2">Additional Information: https://www.iana.org/assignments/ianaiftype-mib<a href="#section-4.15-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.15-1.2">
+            <p id="section-4.15-1.2.1">NEW:<a href="#section-4.15-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.15-1.2.2.1">Description: The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType'.<a href="#section-4.15-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.15-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ianaiftype-mib<a href="#section-4.15-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="egressinterfacetype">
@@ -2045,44 +1751,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-egressinterfacetype">
 <a href="#section-4.16" class="section-number selfRef">4.16. </a><a href="#name-egressinterfacetype" class="section-name selfRef">egressInterfaceType</a>
         </h3>
-<p id="section-4.16-1">OLD:<a href="#section-4.16-1" class="pilcrow">¶</a></p>
-<span id="name-old-egressinterfacetype"></span><table class="center" id="table-32">
-          <caption>
-<a href="#table-32" class="selfRef">Table 32</a>:
-<a href="#name-old-egressinterfacetype" class="selfRef">OLD egressInterfaceType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.</td>
-              <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/ianaiftype-mib</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.16-3">NEW:<a href="#section-4.16-3" class="pilcrow">¶</a></p>
-<span id="name-new-egressinterfacetype"></span><table class="center" id="table-33">
-          <caption>
-<a href="#table-33" class="selfRef">Table 33</a>:
-<a href="#name-new-egressinterfacetype" class="selfRef">NEW egressInterfaceType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType'.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ianaiftype-mib</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.16-1.1">
+            <p id="section-4.16-1.1.1">OLD:<a href="#section-4.16-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.16-1.1.2.1">Description: The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.<a href="#section-4.16-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.16-1.1.2.2">Additional Information: https://www.iana.org/assignments/ianaiftype-mib<a href="#section-4.16-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.16-1.2">
+            <p id="section-4.16-1.2.1">NEW:<a href="#section-4.16-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.16-1.2.2.1">Description: The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType'.<a href="#section-4.16-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.16-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ianaiftype-mib<a href="#section-4.16-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="valuedistributionmethod">
@@ -2090,44 +1778,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-valuedistributionmethod">
 <a href="#section-4.17" class="section-number selfRef">4.17. </a><a href="#name-valuedistributionmethod" class="section-name selfRef">valueDistributionMethod</a>
         </h3>
-<p id="section-4.17-1">OLD:<a href="#section-4.17-1" class="pilcrow">¶</a></p>
-<span id="name-old-valuedistributionmethod"></span><table class="center" id="table-34">
-          <caption>
-<a href="#table-34" class="selfRef">Table 34</a>:
-<a href="#name-old-valuedistributionmethod" class="selfRef">OLD valueDistributionMethod</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.17-3">NEW:<a href="#section-4.17-3" class="pilcrow">¶</a></p>
-<span id="name-new-valuedistributionmethod"></span><table class="center" id="table-35">
-          <caption>
-<a href="#table-35" class="selfRef">Table 35</a>:
-<a href="#name-new-valuedistributionmethod" class="selfRef">NEW valueDistributionMethod</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.17-1.1">
+            <p id="section-4.17-1.1.1">OLD:<a href="#section-4.17-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.17-1.1.2.1">Description: A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method.<a href="#section-4.17-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.17-1.1.2.2">Additional Information:<a href="#section-4.17-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.17-1.2">
+            <p id="section-4.17-1.2.1">NEW:<a href="#section-4.17-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.17-1.2.2.1">Description: A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods.<a href="#section-4.17-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.17-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method.<a href="#section-4.17-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="flowselectoralgorithm">
@@ -2135,44 +1805,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-flowselectoralgorithm">
 <a href="#section-4.18" class="section-number selfRef">4.18. </a><a href="#name-flowselectoralgorithm" class="section-name selfRef">flowSelectorAlgorithm</a>
         </h3>
-<p id="section-4.18-1">OLD:<a href="#section-4.18-1" class="pilcrow">¶</a></p>
-<span id="name-old-flowselectoralgorithm"></span><table class="center" id="table-36">
-          <caption>
-<a href="#table-36" class="selfRef">Table 36</a>:
-<a href="#name-old-flowselectoralgorithm" class="selfRef">OLD flowSelectorAlgorithm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) <span class="bcp14">MUST</span> be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters. Please note that the purpose of the flow selection techniques described in this document is the improvement of measurement functions as defined in the Scope (Section 1). The Intermediate Flow Selection Process Techniques identifiers are defined at https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.18-3">NEW:<a href="#section-4.18-3" class="pilcrow">¶</a></p>
-<span id="name-new-flowselectoralgorithm"></span><table class="center" id="table-37">
-          <caption>
-<a href="#table-37" class="selfRef">Table 37</a>:
-<a href="#name-new-flowselectoralgorithm" class="selfRef">NEW flowSelectorAlgorithm</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) <span class="bcp14">MUST</span> be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.18-1.1">
+            <p id="section-4.18-1.1.1">OLD:<a href="#section-4.18-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.18-1.1.2.1">Description: This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) <span class="bcp14">MUST</span> be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters. Please note that the purpose of the flow selection techniques described in this document is the improvement of measurement functions as defined in the Scope (Section 1). The Intermediate Flow Selection Process Techniques identifiers are defined at https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm.<a href="#section-4.18-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.18-1.1.2.2">Additional Information:<a href="#section-4.18-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.18-1.2">
+            <p id="section-4.18-1.2.1">NEW:<a href="#section-4.18-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.18-1.2.2.1">Description: This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) <span class="bcp14">MUST</span> be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters.<a href="#section-4.18-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.18-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm.<a href="#section-4.18-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="datalinkframetype">
@@ -2180,44 +1832,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-datalinkframetype">
 <a href="#section-4.19" class="section-number selfRef">4.19. </a><a href="#name-datalinkframetype" class="section-name selfRef">dataLinkFrameType</a>
         </h3>
-<p id="section-4.19-1">OLD:<a href="#section-4.19-1" class="pilcrow">¶</a></p>
-<span id="name-old-datalinkframetype"></span><table class="center" id="table-38">
-          <caption>
-<a href="#table-38" class="selfRef">Table 38</a>:
-<a href="#name-old-datalinkframetype" class="selfRef">OLD dataLinkFrameType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].</td>
-              <td class="text-left" rowspan="1" colspan="1">[IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.19-3">NEW:<a href="#section-4.19-3" class="pilcrow">¶</a></p>
-<span id="name-new-datalinkframetype"></span><table class="center" id="table-39">
-          <caption>
-<a href="#table-39" class="selfRef">Table 39</a>:
-<a href="#name-new-datalinkframetype" class="selfRef">NEW dataLinkFrameType</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.19-1.1">
+            <p id="section-4.19-1.1.1">OLD:<a href="#section-4.19-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.19-1.1.2.1">Description: This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].<a href="#section-4.19-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.19-1.1.2.2">Additional Information: [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]<a href="#section-4.19-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.19-1.2">
+            <p id="section-4.19-1.2.1">NEW:<a href="#section-4.19-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.19-1.2.2.1">Description: This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].<a href="#section-4.19-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.19-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type. [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]<a href="#section-4.19-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="mibcapturetimesemantics">
@@ -2225,44 +1859,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-mibcapturetimesemantics">
 <a href="#section-4.20" class="section-number selfRef">4.20. </a><a href="#name-mibcapturetimesemantics" class="section-name selfRef">mibCaptureTimeSemantics</a>
         </h3>
-<p id="section-4.20-1">OLD:<a href="#section-4.20-1" class="pilcrow">¶</a></p>
-<span id="name-old-mibcapturetimesemantics"></span><table class="center" id="table-40">
-          <caption>
-<a href="#table-40" class="selfRef">Table 40</a>:
-<a href="#name-old-mibcapturetimesemantics" class="selfRef">OLD mibCaptureTimeSemantics</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field <span class="bcp14">SHOULD</span> be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data <span>[<a href="#RFC6313" class="cite xref">RFC6313</a>]</span>. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.20-3">NEW:<a href="#section-4.20-3" class="pilcrow">¶</a></p>
-<span id="name-new-mibcapturetimesemantics"></span><table class="center" id="table-41">
-          <caption>
-<a href="#table-41" class="selfRef">Table 41</a>:
-<a href="#name-new-mibcapturetimesemantics" class="selfRef">NEW mibCaptureTimeSemantics</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field <span class="bcp14">SHOULD</span> be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data <span>[<a href="#RFC6313" class="cite xref">RFC6313</a>]</span>. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.20-1.1">
+            <p id="section-4.20-1.1.1">OLD:<a href="#section-4.20-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.20-1.1.2.1">Description: Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field <span class="bcp14">SHOULD</span> be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data <span>[<a href="#RFC6313" class="cite xref">RFC6313</a>]</span>. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics.<a href="#section-4.20-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.20-1.1.2.2">Additional Information:<a href="#section-4.20-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.20-1.2">
+            <p id="section-4.20-1.2.1">NEW:<a href="#section-4.20-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.20-1.2.2.1">Description: Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record. This field <span class="bcp14">SHOULD</span> be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data <span>[<a href="#RFC6313" class="cite xref">RFC6313</a>]</span>. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data. Values are listed in the mibCaptureTimeSemantics registry.<a href="#section-4.20-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.20-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics<a href="#section-4.20-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="natquotaexceededevent">
@@ -2270,44 +1886,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natquotaexceededevent">
 <a href="#section-4.21" class="section-number selfRef">4.21. </a><a href="#name-natquotaexceededevent" class="section-name selfRef">natQuotaExceededEvent</a>
         </h3>
-<p id="section-4.21-1">OLD:<a href="#section-4.21-1" class="pilcrow">¶</a></p>
-<span id="name-old-natquotaexceededevent"></span><table class="center" id="table-42">
-          <caption>
-<a href="#table-42" class="selfRef">Table 42</a>:
-<a href="#name-old-natquotaexceededevent" class="selfRef">OLD natQuotaExceededEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event.</td>
-              <td class="text-left" rowspan="1" colspan="1">See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.21-3">NEW:<a href="#section-4.21-3" class="pilcrow">¶</a></p>
-<span id="name-new-natquotaexceededevent"></span><table class="center" id="table-43">
-          <caption>
-<a href="#table-43" class="selfRef">Table 43</a>:
-<a href="#name-new-natquotaexceededevent" class="selfRef">NEW natQuotaExceededEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry.</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.21-1.1">
+            <p id="section-4.21-1.1.1">OLD:<a href="#section-4.21-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.21-1.1.2.1">Description: This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event.<a href="#section-4.21-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.21-1.1.2.2">Additional Information: See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-4.21-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.21-1.2">
+            <p id="section-4.21-1.2.1">NEW:<a href="#section-4.21-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.21-1.2.2.1">Description: This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry.<a href="#section-4.21-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.21-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-4.21-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 <div id="natthresholdevent">
@@ -2315,44 +1913,26 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natthresholdevent">
 <a href="#section-4.22" class="section-number selfRef">4.22. </a><a href="#name-natthresholdevent" class="section-name selfRef">natThresholdEvent</a>
         </h3>
-<p id="section-4.22-1">OLD:<a href="#section-4.22-1" class="pilcrow">¶</a></p>
-<span id="name-old-natthresholdevent"></span><table class="center" id="table-44">
-          <caption>
-<a href="#table-44" class="selfRef">Table 44</a>:
-<a href="#name-old-natthresholdevent" class="selfRef">OLD natThresholdEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event.</td>
-              <td class="text-left" rowspan="1" colspan="1">See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.</td>
-            </tr>
-          </tbody>
-        </table>
-<p id="section-4.22-3">NEW:<a href="#section-4.22-3" class="pilcrow">¶</a></p>
-<span id="name-new-natthresholdevent"></span><table class="center" id="table-45">
-          <caption>
-<a href="#table-45" class="selfRef">Table 45</a>:
-<a href="#name-new-natthresholdevent" class="selfRef">NEW natThresholdEvent</a>
-          </caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Description</th>
-              <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry</td>
-              <td class="text-left" rowspan="1" colspan="1">See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.</td>
-            </tr>
-          </tbody>
-        </table>
+<ul class="normal">
+<li class="normal" id="section-4.22-1.1">
+            <p id="section-4.22-1.1.1">OLD:<a href="#section-4.22-1.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.22-1.1.2.1">Description: This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event.<a href="#section-4.22-1.1.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.22-1.1.2.2">Additional Information: See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-4.22-1.1.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.22-1.2">
+            <p id="section-4.22-1.2.1">NEW:<a href="#section-4.22-1.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.22-1.2.2.1">Description: This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.<a href="#section-4.22-1.2.2.1" class="pilcrow">¶</a>
+</li>
+              <li class="normal" id="section-4.22-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field. See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT. See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-4.22-1.2.2.2" class="pilcrow">¶</a>
+</li>
+            </ul>
+</li>
+        </ul>
 </section>
 </div>
 </section>
