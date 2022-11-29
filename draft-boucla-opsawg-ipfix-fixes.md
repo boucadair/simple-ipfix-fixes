@@ -46,7 +46,7 @@ This document lists a set of fixes to the IPFIX IANA registry {{IANA-IPFIX}}. Th
 
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
-- Updates that update the description ({{desc}}).
+- Updates that fix a shortcoming in the description of an IE ({{desc}}).
 
 The first two sets of modifications are considered as simple fixes.
 
