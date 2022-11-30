@@ -35,7 +35,7 @@ informative:
 
 --- abstract
 
-This document describes simple fixes to the IANA IP Flow Information Export (IPFIX) registry. These fixes are mainly updates to point to newer IANA registries and also updates to the description of some Information Elements (IEs). 
+This document describes simple fixes to the IANA IP Flow Information Export (IPFIX) registry. These fixes are mainly updates to point to newer IANA registries and also updates to the description of some Information Elements (IEs).
 
 
 --- middle
@@ -52,7 +52,7 @@ This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFI
 
 Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7125}}.
 
-Fixes that require defining new IEs may be moved to a separate document.  
+Fixes that require defining new IEs may be moved to a separate document.
 
 # Conventions and Definitions
 
@@ -76,7 +76,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 
 # Consistent Citation of Registries {#consistent}
 
-IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections. 
+IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
 ## flowEndReason
 
