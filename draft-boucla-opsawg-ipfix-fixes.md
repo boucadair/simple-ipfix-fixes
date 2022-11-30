@@ -74,6 +74,7 @@ Only options having a kind =< 56 can be included in a tcpOptions IE. An update i
 ## ipv6ExtensionHeaders
 
 The description should be updated to:
+
 - reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
 - specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
 - specify the procedure to follow when all bits are exhausted.
