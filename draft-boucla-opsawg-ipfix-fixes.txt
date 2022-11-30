@@ -66,33 +66,33 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Point to An Existing IANA Registry
-   4.  Consistent Citation of Registries
-     4.1.  flowEndReason
-     4.2.  natOriginatingAddressRealm
-     4.3.  natEvent
-     4.4.  firewallEvent
-     4.5.  biflowDirection
-     4.6.  observationPointType
-     4.7.  anonymizationTechnique
-     4.8.  natType
-     4.9.  selectorAlgorithm
-     4.10. informationElementDataType
-     4.11. informationElementSemantics
-     4.12. informationElementUnits
-     4.13. portRangeStart
-     4.14. portRangeEnd
-     4.15. ingressInterfaceType
-     4.16. egressInterfaceType
-     4.17. valueDistributionMethod
-     4.18. flowSelectorAlgorithm
-     4.19. dataLinkFrameType
-     4.20. mibCaptureTimeSemantics
-     4.21. natQuotaExceededEvent
-     4.22. natThresholdEvent
-   5.  Update the Description
-     5.1.  tcpOptions
-     5.2.  ipv6ExtensionHeaders
+   3.  Update the Description
+     3.1.  tcpOptions
+     3.2.  ipv6ExtensionHeaders
+   4.  Point to An Existing IANA Registry
+   5.  Consistent Citation of Registries
+     5.1.  flowEndReason
+     5.2.  natOriginatingAddressRealm
+     5.3.  natEvent
+     5.4.  firewallEvent
+     5.5.  biflowDirection
+     5.6.  observationPointType
+     5.7.  anonymizationTechnique
+     5.8.  natType
+     5.9.  selectorAlgorithm
+     5.10. informationElementDataType
+     5.11. informationElementSemantics
+     5.12. informationElementUnits
+     5.13. portRangeStart
+     5.14. portRangeEnd
+     5.15. ingressInterfaceType
+     5.16. egressInterfaceType
+     5.17. valueDistributionMethod
+     5.18. flowSelectorAlgorithm
+     5.19. dataLinkFrameType
+     5.20. mibCaptureTimeSemantics
+     5.21. natQuotaExceededEvent
+     5.22. natThresholdEvent
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -115,14 +115,14 @@ Table of Contents
    This document lists a set of simple fixes to the IPFIX IANA registry
    [IANA-IPFIX].  These fixes are classified as follows:
 
-   *  Updates that require adding a pointer to an existing IANA registry
+   *  Updates that fix a shortcoming in the description of an IE
       (Section 3).
 
-   *  Updates that are meant to ensure a consistent structure when
-      calling an existing IANA registry (Section 4).
+   *  Updates that require adding a pointer to an existing IANA registry
+      (Section 4).
 
-   *  Updates that fix a shortcoming in the description of an IE
-      (Section 5).
+   *  Updates that are meant to ensure a consistent structure when
+      calling an existing IANA registry (Section 5).
 
    Note that, as per Section 5 of [RFC7012], [IANA-IPFIX] is the
    normative reference for the IPFIX IEs that were defined in [RFC5102].
@@ -140,7 +140,22 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Point to An Existing IANA Registry
+3.  Update the Description
+
+   These IEs cannot echo some values that can be included in a packet.
+
+3.1.  tcpOptions
+
+   Only options having a kind =< 56 can be included in a tcpOptions IE.
+   An update is required to [RFC7012] to specify how all TCP options can
+   be exported.
+
+3.2.  ipv6ExtensionHeaders
+
+   The description should be updated to reflect recent IPv6 EH,
+   specifically 139, 140, 253, and 254.
+
+4.  Point to An Existing IANA Registry
 
    IANA is requested to update the following entries by adding the
    indicated pointer to an IANA registry under "Additional Information"
@@ -181,12 +196,18 @@ Table of Contents
 
         Table 1: Cite an IANA Registry under Additional Information
 
-4.  Consistent Citation of Registries
+5.  Consistent Citation of Registries
 
    IANA is requested to update [IANA-IPFIX] for each of the IE entries
    listed in the following subsections.
 
-4.1.  flowEndReason
+5.1.  flowEndReason
+
+   OLD  Description
+
+      The reason for Flow termination.  Values are listed in the
+      flowEndReason registry.  See
+      https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
 
    *  OLD:
 
@@ -206,7 +227,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
          end-reason.
 
-4.2.  natOriginatingAddressRealm
+5.2.  natOriginatingAddressRealm
 
    *  OLD:
 
@@ -238,7 +259,7 @@ Table of Contents
          originating-address-realm.  See [RFC3022] for the definition of
          NAT.
 
-4.3.  natEvent
+5.3.  natEvent
 
    *  OLD:
 
@@ -270,7 +291,7 @@ Table of Contents
          [RFC3234] for the definition of middleboxes.  See [RFC8158] for
          the definitions of values 4-16.
 
-4.4.  firewallEvent
+5.4.  firewallEvent
 
    *  OLD:
 
@@ -290,7 +311,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          firewall-event.
 
-4.5.  biflowDirection
+5.5.  biflowDirection
 
    *  OLD:
 
@@ -334,7 +355,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          biflow-direction.
 
-4.6.  observationPointType
+5.6.  observationPointType
 
    *  OLD:
 
@@ -354,7 +375,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          observation-point-type.
 
-4.7.  anonymizationTechnique
+5.7.  anonymizationTechnique
 
    *  OLD:
 
@@ -382,7 +403,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          anonymization-technique.
 
-4.8.  natType
+5.8.  natType
 
    *  OLD:
 
@@ -409,7 +430,7 @@ Table of Contents
          [RFC6296] for the definition of NAT66.  See [RFC0791] for the
          definition of IPv4.  See [RFC8200] for the definition of IPv6.
 
-4.9.  selectorAlgorithm
+5.9.  selectorAlgorithm
 
    *  OLD:
 
@@ -452,7 +473,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          psamp-parameters
 
-4.10.  informationElementDataType
+5.10.  informationElementDataType
 
    *  OLD:
 
@@ -486,7 +507,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-data-types
 
-4.11.  informationElementSemantics
+5.11.  informationElementSemantics
 
    *  OLD:
 
@@ -528,7 +549,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-semantic
 
-4.12.  informationElementUnits
+5.12.  informationElementUnits
 
    *  OLD:
 
@@ -560,7 +581,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-units
 
-4.13.  portRangeStart
+5.13.  portRangeStart
 
    *  OLD:
 
@@ -582,7 +603,7 @@ Table of Contents
          port numbers can be found at https://www.iana.org/assignments/
          service-names-port-numbers.
 
-4.14.  portRangeEnd
+5.14.  portRangeEnd
 
    *  OLD:
 
@@ -604,7 +625,7 @@ Table of Contents
          port numbers can be found at https://www.iana.org/assignments/
          service-names-port-numbers.
 
-4.15.  ingressInterfaceType
+5.15.  ingressInterfaceType
 
    *  OLD:
 
@@ -625,7 +646,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          ianaiftype-mib
 
-4.16.  egressInterfaceType
+5.16.  egressInterfaceType
 
    *  OLD:
 
@@ -646,7 +667,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          ianaiftype-mib
 
-4.17.  valueDistributionMethod
+5.17.  valueDistributionMethod
 
    *  OLD:
 
@@ -684,7 +705,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
          distribution-method.
 
-4.18.  flowSelectorAlgorithm
+5.18.  flowSelectorAlgorithm
 
    *  OLD:
 
@@ -724,7 +745,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          flowselectoralgorithm.
 
-4.19.  dataLinkFrameType
+5.19.  dataLinkFrameType
 
    *  OLD:
 
@@ -753,7 +774,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
          link-frame-type.  [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]
 
-4.20.  mibCaptureTimeSemantics
+5.20.  mibCaptureTimeSemantics
 
    *  OLD:
 
@@ -803,7 +824,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
          capture-time-semantics
 
-4.21.  natQuotaExceededEvent
+5.21.  natQuotaExceededEvent
 
    *  OLD:
 
@@ -829,7 +850,7 @@ Table of Contents
          IPv4 source address field.  See [RFC3022] for the definition of
          NAT.  See [RFC3234] for the definition of middleboxes.
 
-4.22.  natThresholdEvent
+5.22.  natThresholdEvent
 
    *  OLD:
 
@@ -854,23 +875,6 @@ Table of Contents
          threshold-event.  See [RFC0791] for the definition of the IPv4
          source address field.  See [RFC3022] for the definition of NAT.
          See [RFC3234] for the definition of middleboxes.
-
-5.  Update the Description
-
-   These IEs cannot echo some values that can be included in a packet.
-   This section may be moved to another document that will updates
-   [RFC7012].
-
-5.1.  tcpOptions
-
-   Only options having a kind =< 56 can be included in a tcpOptions IE.
-   An update is required to [RFC7012] to specify how all TCP options can
-   be exported.
-
-5.2.  ipv6ExtensionHeaders
-
-   The description should be updated to reflect recent IPv6 EH,
-   specifically 139, 140, 253, and 254.
 
 6.  Security Considerations
 
