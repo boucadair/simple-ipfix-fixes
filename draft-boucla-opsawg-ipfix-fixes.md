@@ -1,5 +1,5 @@
 ---
-title: "Simple Fixes to the IPFIX IANA Registry"
+title: "Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry"
 abbrev: "IPFIX IANA Fixes"
 category: info
 
@@ -29,6 +29,11 @@ normative:
         title: IP Flow Information Export (IPFIX) Entities
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
         date: 2022-11
+     IPv6-EH:
+        title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
+        target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
+        date: 2022-11
+        
 
 informative:
 
@@ -61,15 +66,19 @@ Fixes that require defining new IEs may be moved to a separate document.
 
 # Update the Description {#desc}
 
-These IEs cannot echo some values that can be included in a packet.
+The IEs listed in the following subsections cannot echo some values that can be seen in a packet.
 
 ## tcpOptions
 
-Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to {{!RFC7012}} to specify how all TCP options can be exported.
+Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to specify how any observed TCP option in a packet can be exported using IPFIX.
 
 ## ipv6ExtensionHeaders
 
-The description should be updated to reflect recent IPv6 EH, specifically 139, 140, 253, and 254.
+The description should be updated to:
+- reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
+- specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
+- specify the procedure to follow when all bits are exhausted.
+
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -91,10 +100,6 @@ IANA is requested to update the following entries by adding the indicated pointe
 IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
 ## flowEndReason
-
-OLD
-: Description
- : The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
 
 * OLD:
    - Description: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
