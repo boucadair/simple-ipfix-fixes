@@ -46,9 +46,9 @@ As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} 
 
 This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
+- Updates that fix a shortcoming in the description of an IE ({{desc}}).
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
-- Updates that fix a shortcoming in the description of an IE ({{desc}}).
 
 Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7125}}.
 
@@ -58,6 +58,18 @@ Fixes that require defining new IEs may be moved to a separate document.
 
 {::boilerplate bcp14-tagged}
 
+
+# Update the Description {#desc}
+
+These IEs cannot echo some values that can be included in a packet.
+
+## tcpOptions
+
+Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to {{!RFC7012}} to specify how all TCP options can be exported.
+
+## ipv6ExtensionHeaders
+
+The description should be updated to reflect recent IPv6 EH, specifically 139, 140, 253, and 254.
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -79,6 +91,10 @@ IANA is requested to update the following entries by adding the indicated pointe
 IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
 ## flowEndReason
+
+OLD
+: Description
+ : The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
 
 * OLD:
    - Description: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
@@ -281,18 +297,6 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
    - Description: This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.
    - Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes.
 
-
-# Update the Description {#desc}
-
-These IEs cannot echo some values that can be included in a packet. This section may be moved to another document that will updates {{!RFC7012}}.
-
-## tcpOptions
-
-Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to {{!RFC7012}} to specify how all TCP options can be exported.
-
-## ipv6ExtensionHeaders
-
-The description should be updated to reflect recent IPv6 EH, specifically 139, 140, 253, and 254.
 
 # Security Considerations
 
