@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Simple Fixes to the IPFIX IANA Registry</title>
+<title>Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry</title>
 <meta content="Mohamed Boucadair" name="author">
 <meta content="Benoit Claise" name="author">
 <meta content="
@@ -1072,7 +1072,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Simple Fixes to the IPFIX IANA Registry</h1>
+<h1 id="title">Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document describes simple fixes to the IANA IP Flow Information Export (IPFIX) registry. These fixes are mainly updates to point to newer IANA registries and also updates to the description of some Information Elements (IEs).<a href="#section-abstract-1" class="pilcrow">¶</a></p>
@@ -1289,13 +1289,13 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-update-the-description">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-update-the-description" class="section-name selfRef">Update the Description</a>
       </h2>
-<p id="section-3-1">These IEs cannot echo some values that can be included in a packet.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">The IEs listed in the following subsections cannot echo some values that can be seen in a packet.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <div id="tcpoptions">
 <section id="section-3.1">
         <h3 id="name-tcpoptions">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-tcpoptions" class="section-name selfRef">tcpOptions</a>
         </h3>
-<p id="section-3.1-1">Only options having a kind =&lt; 56 can be included in a tcpOptions IE. An update is required to <span>[<a href="#RFC7012" class="cite xref">RFC7012</a>]</span> to specify how all TCP options can be exported.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-1">Only options having a kind =&lt; 56 can be included in a tcpOptions IE. An update is required to specify how any observed TCP option in a packet can be exported using IPFIX.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="ipv6extensionheaders">
@@ -1303,7 +1303,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-ipv6extensionheaders">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-ipv6extensionheaders" class="section-name selfRef">ipv6ExtensionHeaders</a>
         </h3>
-<p id="section-3.2-1">The description should be updated to reflect recent IPv6 EH, specifically 139, 140, 253, and 254.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-1">The description should be updated to:
+- reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
+- specify how to automatically update the registry when a new value is assigned in <span>[<a href="#IPv6-EH" class="cite xref">IPv6-EH</a>]</span>.
+- specify the procedure to follow when all bits are exhausted.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1373,34 +1376,22 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-flowendreason">
 <a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-flowendreason" class="section-name selfRef">flowEndReason</a>
         </h3>
-<span class="break"></span><dl class="dlParallel" id="section-5.1-1">
-          <dt id="section-5.1-1.1">OLD</dt>
-          <dd style="margin-left: 1.5em" id="section-5.1-1.2">
-            <p id="section-5.1-1.2.1">Description<a href="#section-5.1-1.2.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.1-1.3"></dt>
-          <dd style="margin-left: 1.5em" id="section-5.1-1.4">
-            <p id="section-5.1-1.4.1">The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-<a href="#section-5.1-1.4.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-</dl>
 <ul class="normal">
-<li class="normal" id="section-5.1-2.1">
-            <p id="section-5.1-2.1.1">OLD:<a href="#section-5.1-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-5.1-1.1">
+            <p id="section-5.1-1.1.1">OLD:<a href="#section-5.1-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.1-2.1.2.1">Description: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.<a href="#section-5.1-2.1.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.1-1.1.2.1">Description: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.<a href="#section-5.1-1.1.2.1" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="section-5.1-2.1.2.2">Additional Information:<a href="#section-5.1-2.1.2.2" class="pilcrow">¶</a>
+              <li class="normal" id="section-5.1-1.1.2.2">Additional Information:<a href="#section-5.1-1.1.2.2" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
-          <li class="normal" id="section-5.1-2.2">
-            <p id="section-5.1-2.2.1">NEW:<a href="#section-5.1-2.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.1-1.2">
+            <p id="section-5.1-1.2.1">NEW:<a href="#section-5.1-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.1-2.2.2.1">Description: The reason for Flow termination. Values are listed in the flowEndReason registry.<a href="#section-5.1-2.2.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.1-1.2.2.1">Description: The reason for Flow termination. Values are listed in the flowEndReason registry.<a href="#section-5.1-1.2.2.1" class="pilcrow">¶</a>
 </li>
-              <li class="normal" id="section-5.1-2.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.<a href="#section-5.1-2.2.2.2" class="pilcrow">¶</a>
+              <li class="normal" id="section-5.1-1.2.2.2">Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.<a href="#section-5.1-1.2.2.2" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
@@ -2004,6 +1995,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <dt id="IANA-IPFIX">[IANA-IPFIX]</dt>
         <dd>
 <span class="refTitle">"IP Flow Information Export (IPFIX) Entities"</span>, <time datetime="2022-11" class="refDate">November 2022</time>, <span>&lt;<a href="https://www.iana.org/assignments/ipfix/ipfix.xhtml">https://www.iana.org/assignments/ipfix/ipfix.xhtml</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IPv6-EH">[IPv6-EH]</dt>
+        <dd>
+<span class="refTitle">"Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types"</span>, <time datetime="2022-11" class="refDate">November 2022</time>, <span>&lt;<a href="https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1">https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>

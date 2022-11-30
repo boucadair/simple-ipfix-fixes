@@ -9,7 +9,7 @@ Expires: 3 June 2023                                              Huawei
                                                         30 November 2022
 
 
-                Simple Fixes to the IPFIX IANA Registry
+  Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
                  draft-boucla-opsawg-ipfix-fixes-latest
 
 Abstract
@@ -142,18 +142,21 @@ Table of Contents
 
 3.  Update the Description
 
-   These IEs cannot echo some values that can be included in a packet.
+   The IEs listed in the following subsections cannot echo some values
+   that can be seen in a packet.
 
 3.1.  tcpOptions
 
    Only options having a kind =< 56 can be included in a tcpOptions IE.
-   An update is required to [RFC7012] to specify how all TCP options can
-   be exported.
+   An update is required to specify how any observed TCP option in a
+   packet can be exported using IPFIX.
 
 3.2.  ipv6ExtensionHeaders
 
-   The description should be updated to reflect recent IPv6 EH,
-   specifically 139, 140, 253, and 254.
+   The description should be updated to: - reflect missing IPv6 EHs,
+   specifically 139, 140, 253, and 254. - specify how to automatically
+   update the registry when a new value is assigned in [IPv6-EH]. -
+   specify the procedure to follow when all bits are exhausted.
 
 4.  Point to An Existing IANA Registry
 
@@ -202,12 +205,6 @@ Table of Contents
    listed in the following subsections.
 
 5.1.  flowEndReason
-
-   OLD  Description
-
-      The reason for Flow termination.  Values are listed in the
-      flowEndReason registry.  See
-      https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
 
    *  OLD:
 
@@ -894,6 +891,11 @@ Table of Contents
               "IP Flow Information Export (IPFIX) Entities", November
               2022,
               <https://www.iana.org/assignments/ipfix/ipfix.xhtml>.
+
+   [IPv6-EH]  "Internet Protocol Version 6 (IPv6) Parameters, IPv6
+              Extension Header Types", November 2022,
+              <https://www.iana.org/assignments/ipv6-parameters/
+              ipv6-parameters.xhtml#ipv6-parameters-1>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
