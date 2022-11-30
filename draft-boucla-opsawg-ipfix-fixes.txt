@@ -5,8 +5,8 @@
 Operations and Management Area Working Group                M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Informational                                 B. Claise
-Expires: 2 June 2023                                              Huawei
-                                                        29 November 2022
+Expires: 3 June 2023                                              Huawei
+                                                        30 November 2022
 
 
                 Simple Fixes to the IPFIX IANA Registry
@@ -14,7 +14,10 @@ Expires: 2 June 2023                                              Huawei
 
 Abstract
 
-   This document describes simple fixes to the IANA IPFIX registry.
+   This document describes simple fixes to the IANA IP Flow Information
+   Export (IPFIX) registry.  These fixes are mainly updates to point to
+   newer IANA registries and also updates to the description of some
+   Information Elements (IEs).
 
 Discussion Venues
 
@@ -43,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 June 2023.
+   This Internet-Draft will expire on 3 June 2023.
 
 Copyright Notice
 
@@ -100,6 +103,15 @@ Table of Contents
 
 1.  Introduction
 
+   As the OPSAWG is currently considering
+   [I-D.boucadair-opsawg-rfc7125-update] that updates [RFC7125], the WG
+   realized that some other parts of the IANA IPFIX registry
+   [IANA-IPFIX] were not up to date.  Indeed, since its initial creation
+   in 2007, some IPFIX Information Elements (IEs) are not adequately
+   specified any longer (while they were at some point in time in the
+   past).  This document intends to update the registry and bringing
+   some consistency.
+
    This document lists a set of simple fixes to the IPFIX IANA registry
    [IANA-IPFIX].  These fixes are classified as follows:
 
@@ -112,7 +124,12 @@ Table of Contents
    *  Updates that fix a shortcoming in the description of an IE
       (Section 5).
 
-   Fixes that require an update to [RFC7012] may be moved to a separate
+   Note that, as per Section 5 of [RFC7012], [IANA-IPFIX] is the
+   normative reference for the IPFIX IEs that were defined in [RFC5102].
+   Therefore, the updates in this document do not update any part of
+   [RFC7125].
+
+   Fixes that require defining new IEs may be moved to a separate
    document.
 
 2.  Conventions and Definitions
@@ -165,6 +182,9 @@ Table of Contents
         Table 1: Cite an IANA Registry under Additional Information
 
 4.  Consistent Citation of Registries
+
+   IANA is requested to update [IANA-IPFIX] for each of the IE entries
+   listed in the following subsections.
 
 4.1.  flowEndReason
 
@@ -881,11 +901,24 @@ Table of Contents
               DOI 10.17487/RFC7012, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7012>.
 
+   [RFC7125]  Trammell, B. and P. Aitken, "Revision of the
+              tcpControlBits IP Flow Information Export (IPFIX)
+              Information Element", RFC 7125, DOI 10.17487/RFC7125,
+              February 2014, <https://www.rfc-editor.org/rfc/rfc7125>.
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
 8.2.  Informative References
+
+   [I-D.boucadair-opsawg-rfc7125-update]
+              Boucadair, M., "An Update to the tcpControlBits IP Flow
+              Information Export (IPFIX) Information Element", Work in
+              Progress, Internet-Draft, draft-boucadair-opsawg-rfc7125-
+              update-01, 20 September 2022,
+              <https://datatracker.ietf.org/doc/html/draft-boucadair-
+              opsawg-rfc7125-update-01>.
 
    [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
