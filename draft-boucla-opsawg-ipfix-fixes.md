@@ -33,7 +33,6 @@ normative:
         title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
         target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
         date: 2022-11
-        
 
 informative:
 
