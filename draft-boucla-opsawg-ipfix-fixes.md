@@ -35,12 +35,14 @@ informative:
 
 --- abstract
 
-This document describes simple fixes to the IANA IPFIX registry.
+This document describes simple fixes to the IANA IP Flow Information Export (IPFIX) registry. These fixes are mainly updates to point to newer IANA registries and also updates to the description of some Information Elements (IEs). 
 
 
 --- middle
 
 # Introduction
+
+As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up to date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the registry and bringing some consistency.
 
 This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
@@ -48,7 +50,9 @@ This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFI
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 
-Fixes that require an update to {{!RFC7012}} may be moved to a separate document.
+Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7125}}.
+
+Fixes that require defining new IEs may be moved to a separate document.  
 
 # Conventions and Definitions
 
@@ -72,6 +76,7 @@ IANA is requested to update the following entries by adding the indicated pointe
 
 # Consistent Citation of Registries {#consistent}
 
+IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections. 
 
 ## flowEndReason
 
