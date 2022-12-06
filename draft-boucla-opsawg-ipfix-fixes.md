@@ -99,6 +99,78 @@ IANA is requested to update the following entries by adding the indicated pointe
 
 IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
+## mplsTopLabelType
+
+* OLD:
+   - Description: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
+   - Additional Information: See {{?RFC3031}} for the MPLS label structure. See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
+* NEW:
+   - Description: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+   - Additional Information: See {{?RFC3031}} for the MPLS label structure. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
+
+## forwardingStatus
+
+* OLD:
+   - Description:  This Information Element describes the forwarding status of the flow and any attached reasons.
+
+The layout of the encoding is as follows:
+
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
+      +---+---+---+---+---+---+---+---+
+      | Status|  Reason code or flags |
+      +---+---+---+---+---+---+---+---+
+
+See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+
+Examples:
+
+value : 0x40 = 64
+binary: 01000000
+decode: 01        -> Forward
+          000000  -> No further information
+
+value : 0x89 = 137
+binary: 10001001
+decode: 10        -> Drop
+          001001  -> Bad TTL
+
+   - Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].
+* NEW:
+   - Description: This Information Element describes the forwarding status of the flow and any attached reasons.
+
+The layout of the encoding is as follows:
+
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
+      +---+---+---+---+---+---+---+---+
+      | Status|  Reason code or flags |
+      +---+---+---+---+---+---+---+---+
+
+Examples:
+
+value : 0x40 = 64
+binary: 01000000
+decode: 01        -> Forward
+          000000  -> No further information
+
+value : 0x89 = 137
+binary: 10001001
+decode: 10        -> Drop
+          001001  -> Bad TTL
+   - Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+
+## classificationEngineId
+
+* OLD:
+   - Description:  A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+
+Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids. 
+   - Additional Information:
+* NEW:
+   - Description: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+
+Values for this field are listed in the Classification Engine IDs registry.
+   - Additional Information: See .https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+
 ## flowEndReason
 
 * OLD:
@@ -107,7 +179,6 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 * NEW:
    - Description: The reason for Flow termination. Values are listed in the flowEndReason registry.
    - Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
-
 
 ## natOriginatingAddressRealm
 
