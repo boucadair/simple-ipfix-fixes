@@ -244,19 +244,24 @@ Table of Contents
 
    The layout of the encoding is as follows:
 
-   MSB - 0 1 2 3 4 5 6 7 - LSB +---+---+---+---+---+---+---+---+ |
-   Status| Reason code or flags | +---+---+---+---+---+---+---+---+
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
+      +---+---+---+---+---+---+---+---+
+      | Status|  Reason code or flags |
+      +---+---+---+---+---+---+---+---+
 
-   See the Forwarding Status sub-registries at
-   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
-   Examples:
+Examples:
 
-   value : 0x40 = 64 binary: 01000000 decode: 01 -> Forward 000000 -> No
-   further information
+value : 0x40 = 64
+binary: 01000000
+decode: 01        -> Forward
+          000000  -> No further information
 
-   value : 0x89 = 137 binary: 10001001 decode: 10 -> Drop 001001 -> Bad
-   TTL
+value : 0x89 = 137
+binary: 10001001
+decode: 10        -> Drop
+          001001  -> Bad TTL
 
    *  Additional Information: See "NetFlow Version 9 Flow-Record Format"
       [CCO-NF9FMT].
@@ -268,18 +273,26 @@ Table of Contents
 
    The layout of the encoding is as follows:
 
-   MSB - 0 1 2 3 4 5 6 7 - LSB +---+---+---+---+---+---+---+---+ |
-   Status| Reason code or flags | +---+---+---+---+---+---+---+---+
+   MSB  -  0   1   2   3   4   5   6   7  -  LSB
+         +---+---+---+---+---+---+---+---+
+         | Status|  Reason code or flags |
+         +---+---+---+---+---+---+---+---+
 
    Examples:
 
-   value : 0x40 = 64 binary: 01000000 decode: 01 -> Forward 000000 -> No
-   further information
+   value : 0x40 = 64
+   binary: 01000000
+   decode: 01        -> Forward
+             000000  -> No further information
 
-   value : 0x89 = 137 binary: 10001001 decode: 10 -> Drop 001001 -> Bad
-   TTL - Additional Information: See the Forwarding Status sub-
-   registries at https://www.iana.org/assignments/ipfix/
-   ipfix.xhtml#forwarding-status.
+   value : 0x89 = 137
+   binary: 10001001
+   decode: 10        -> Drop
+             001001  -> Bad TTL
+
+   *  Additional Information: See the Forwarding Status sub-registries
+      at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-
+      status.
 
 5.3.  classificationEngineId
 

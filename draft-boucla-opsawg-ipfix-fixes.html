@@ -1427,46 +1427,64 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </li>
         </ul>
 <p id="section-5.2-2">The layout of the encoding is as follows:<a href="#section-5.2-2" class="pilcrow">¶</a></p>
-<p id="section-5.2-3">MSB  -  0   1   2   3   4   5   6   7  -  LSB
+<div class="alignLeft art-text artwork" id="section-5.2-3">
+<pre>
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
       +---+---+---+---+---+---+---+---+
       | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+<a href="#section-5.2-3" class="pilcrow">¶</a></p>
-<p id="section-5.2-4">See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
-<p id="section-5.2-5">Examples:<a href="#section-5.2-5" class="pilcrow">¶</a></p>
-<p id="section-5.2-6">value : 0x40 = 64
+      +---+---+---+---+---+---+---+---+
+
+See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+
+Examples:
+
+value : 0x40 = 64
 binary: 01000000
 decode: 01        -&gt; Forward
-          000000  -&gt; No further information<a href="#section-5.2-6" class="pilcrow">¶</a></p>
-<p id="section-5.2-7">value : 0x89 = 137
+          000000  -&gt; No further information
+
+value : 0x89 = 137
 binary: 10001001
 decode: 10        -&gt; Drop
-          001001  -&gt; Bad TTL<a href="#section-5.2-7" class="pilcrow">¶</a></p>
+          001001  -&gt; Bad TTL
+</pre><a href="#section-5.2-3" class="pilcrow">¶</a>
+</div>
 <ul class="normal">
-<li class="normal" id="section-5.2-8.1">Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].<a href="#section-5.2-8.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.2-4.1">Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].<a href="#section-5.2-4.1" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-5.2-8.2">
-            <p id="section-5.2-8.2.1">NEW:<a href="#section-5.2-8.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.2-4.2">
+            <p id="section-5.2-4.2.1">NEW:<a href="#section-5.2-4.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.2-8.2.2.1">Description: This Information Element describes the forwarding status of the flow and any attached reasons.<a href="#section-5.2-8.2.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.2-4.2.2.1">Description: This Information Element describes the forwarding status of the flow and any attached reasons.<a href="#section-5.2-4.2.2.1" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
         </ul>
-<p id="section-5.2-9">The layout of the encoding is as follows:<a href="#section-5.2-9" class="pilcrow">¶</a></p>
-<p id="section-5.2-10">MSB  -  0   1   2   3   4   5   6   7  -  LSB
+<p id="section-5.2-5">The layout of the encoding is as follows:<a href="#section-5.2-5" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-5.2-6">
+<pre>
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
       +---+---+---+---+---+---+---+---+
       | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+<a href="#section-5.2-10" class="pilcrow">¶</a></p>
-<p id="section-5.2-11">Examples:<a href="#section-5.2-11" class="pilcrow">¶</a></p>
-<p id="section-5.2-12">value : 0x40 = 64
+      +---+---+---+---+---+---+---+---+
+
+Examples:
+
+value : 0x40 = 64
 binary: 01000000
 decode: 01        -&gt; Forward
-          000000  -&gt; No further information<a href="#section-5.2-12" class="pilcrow">¶</a></p>
-<p id="section-5.2-13">value : 0x89 = 137
+          000000  -&gt; No further information
+
+value : 0x89 = 137
 binary: 10001001
 decode: 10        -&gt; Drop
           001001  -&gt; Bad TTL
-   - Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-13" class="pilcrow">¶</a></p>
+</pre><a href="#section-5.2-6" class="pilcrow">¶</a>
+</div>
+<ul class="normal">
+<li class="normal" id="section-5.2-7.1">Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-7.1" class="pilcrow">¶</a>
+</li>
+        </ul>
 </section>
 </div>
 <div id="classificationengineid">
