@@ -5,8 +5,8 @@
 Operations and Management Area Working Group                M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Informational                                 B. Claise
-Expires: 3 June 2023                                              Huawei
-                                                        30 November 2022
+Expires: 9 June 2023                                              Huawei
+                                                         6 December 2022
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 June 2023.
+   This Internet-Draft will expire on 9 June 2023.
 
 Copyright Notice
 
@@ -71,28 +71,31 @@ Table of Contents
      3.2.  ipv6ExtensionHeaders
    4.  Point to An Existing IANA Registry
    5.  Consistent Citation of Registries
-     5.1.  flowEndReason
-     5.2.  natOriginatingAddressRealm
-     5.3.  natEvent
-     5.4.  firewallEvent
-     5.5.  biflowDirection
-     5.6.  observationPointType
-     5.7.  anonymizationTechnique
-     5.8.  natType
-     5.9.  selectorAlgorithm
-     5.10. informationElementDataType
-     5.11. informationElementSemantics
-     5.12. informationElementUnits
-     5.13. portRangeStart
-     5.14. portRangeEnd
-     5.15. ingressInterfaceType
-     5.16. egressInterfaceType
-     5.17. valueDistributionMethod
-     5.18. flowSelectorAlgorithm
-     5.19. dataLinkFrameType
-     5.20. mibCaptureTimeSemantics
-     5.21. natQuotaExceededEvent
-     5.22. natThresholdEvent
+     5.1.  mplsTopLabelType
+     5.2.  forwardingStatus
+     5.3.  classificationEngineId
+     5.4.  flowEndReason
+     5.5.  natOriginatingAddressRealm
+     5.6.  natEvent
+     5.7.  firewallEvent
+     5.8.  biflowDirection
+     5.9.  observationPointType
+     5.10. anonymizationTechnique
+     5.11. natType
+     5.12. selectorAlgorithm
+     5.13. informationElementDataType
+     5.14. informationElementSemantics
+     5.15. informationElementUnits
+     5.16. portRangeStart
+     5.17. portRangeEnd
+     5.18. ingressInterfaceType
+     5.19. egressInterfaceType
+     5.20. valueDistributionMethod
+     5.21. flowSelectorAlgorithm
+     5.22. dataLinkFrameType
+     5.23. mibCaptureTimeSemantics
+     5.24. natQuotaExceededEvent
+     5.25. natThresholdEvent
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -208,7 +211,99 @@ Table of Contents
    IANA is requested to update [IANA-IPFIX] for each of the IE entries
    listed in the following subsections.
 
-5.1.  flowEndReason
+5.1.  mplsTopLabelType
+
+   *  OLD:
+
+      -  Description: This field identifies the control protocol that
+         allocated the top-of-stack label.  Values for this field are
+         listed in the MPLS label type registry.  See
+         https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-
+         label-type.
+
+      -  Additional Information: See [RFC3031] for the MPLS label
+         structure.  See the list of MPLS label types assigned by IANA
+         at [https://www.iana.org/assignments/mpls-label-values].
+
+   *  NEW:
+
+      -  Description: This field identifies the control protocol that
+         allocated the top-of-stack label.  Values for this field are
+         listed in the MPLS label type registry.
+
+      -  Additional Information: See [RFC3031] for the MPLS label
+         structure.  See https://www.iana.org/assignments/ipfix/
+         ipfix.xhtml#ipfix-mpls-label-type.
+
+5.2.  forwardingStatus
+
+   *  OLD:
+
+      -  Description: This Information Element describes the forwarding
+         status of the flow and any attached reasons.
+
+   The layout of the encoding is as follows:
+
+   MSB - 0 1 2 3 4 5 6 7 - LSB +---+---+---+---+---+---+---+---+ |
+   Status| Reason code or flags | +---+---+---+---+---+---+---+---+
+
+   See the Forwarding Status sub-registries at
+   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+
+   Examples:
+
+   value : 0x40 = 64 binary: 01000000 decode: 01 -> Forward 000000 -> No
+   further information
+
+   value : 0x89 = 137 binary: 10001001 decode: 10 -> Drop 001001 -> Bad
+   TTL
+
+   *  Additional Information: See "NetFlow Version 9 Flow-Record Format"
+      [CCO-NF9FMT].
+
+   *  NEW:
+
+      -  Description: This Information Element describes the forwarding
+         status of the flow and any attached reasons.
+
+   The layout of the encoding is as follows:
+
+   MSB - 0 1 2 3 4 5 6 7 - LSB +---+---+---+---+---+---+---+---+ |
+   Status| Reason code or flags | +---+---+---+---+---+---+---+---+
+
+   Examples:
+
+   value : 0x40 = 64 binary: 01000000 decode: 01 -> Forward 000000 -> No
+   further information
+
+   value : 0x89 = 137 binary: 10001001 decode: 10 -> Drop 001001 -> Bad
+   TTL - Additional Information: See the Forwarding Status sub-
+   registries at https://www.iana.org/assignments/ipfix/
+   ipfix.xhtml#forwarding-status.
+
+5.3.  classificationEngineId
+
+   *  OLD:
+
+      -  Description: A unique identifier for the engine that determined
+         the Selector ID.  Thus, the Classification Engine ID defines
+         the context for the Selector ID.  The Classification Engine can
+         be considered a specific registry for application assignments.
+
+   Values for this field are listed in the Classification Engine IDs
+   registry.  See https://www.iana.org/assignments/ipfix/
+   ipfix.xhtml#classification-engine-ids.  - Additional Information: *
+   NEW: - Description: A unique identifier for the engine that
+   determined the Selector ID.  Thus, the Classification Engine ID
+   defines the context for the Selector ID.  The Classification Engine
+   can be considered a specific registry for application assignments.
+
+   Values for this field are listed in the Classification Engine IDs
+   registry.  - Additional Information: See
+   .https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-
+   engine-ids.
+
+5.4.  flowEndReason
 
    *  OLD:
 
@@ -228,7 +323,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
          end-reason.
 
-5.2.  natOriginatingAddressRealm
+5.5.  natOriginatingAddressRealm
 
    *  OLD:
 
@@ -260,7 +355,7 @@ Table of Contents
          originating-address-realm.  See [RFC3022] for the definition of
          NAT.
 
-5.3.  natEvent
+5.6.  natEvent
 
    *  OLD:
 
@@ -292,7 +387,7 @@ Table of Contents
          [RFC3234] for the definition of middleboxes.  See [RFC8158] for
          the definitions of values 4-16.
 
-5.4.  firewallEvent
+5.7.  firewallEvent
 
    *  OLD:
 
@@ -312,7 +407,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          firewall-event.
 
-5.5.  biflowDirection
+5.8.  biflowDirection
 
    *  OLD:
 
@@ -356,7 +451,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          biflow-direction.
 
-5.6.  observationPointType
+5.9.  observationPointType
 
    *  OLD:
 
@@ -376,7 +471,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          observation-point-type.
 
-5.7.  anonymizationTechnique
+5.10.  anonymizationTechnique
 
    *  OLD:
 
@@ -404,7 +499,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          anonymization-technique.
 
-5.8.  natType
+5.11.  natType
 
    *  OLD:
 
@@ -431,7 +526,7 @@ Table of Contents
          [RFC6296] for the definition of NAT66.  See [RFC0791] for the
          definition of IPv4.  See [RFC8200] for the definition of IPv6.
 
-5.9.  selectorAlgorithm
+5.12.  selectorAlgorithm
 
    *  OLD:
 
@@ -474,7 +569,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          psamp-parameters
 
-5.10.  informationElementDataType
+5.13.  informationElementDataType
 
    *  OLD:
 
@@ -508,7 +603,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-data-types
 
-5.11.  informationElementSemantics
+5.14.  informationElementSemantics
 
    *  OLD:
 
@@ -550,7 +645,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-semantic
 
-5.12.  informationElementUnits
+5.15.  informationElementUnits
 
    *  OLD:
 
@@ -582,7 +677,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          information-element-units
 
-5.13.  portRangeStart
+5.16.  portRangeStart
 
    *  OLD:
 
@@ -604,7 +699,7 @@ Table of Contents
          port numbers can be found at https://www.iana.org/assignments/
          service-names-port-numbers.
 
-5.14.  portRangeEnd
+5.17.  portRangeEnd
 
    *  OLD:
 
@@ -626,7 +721,7 @@ Table of Contents
          port numbers can be found at https://www.iana.org/assignments/
          service-names-port-numbers.
 
-5.15.  ingressInterfaceType
+5.18.  ingressInterfaceType
 
    *  OLD:
 
@@ -647,7 +742,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          ianaiftype-mib
 
-5.16.  egressInterfaceType
+5.19.  egressInterfaceType
 
    *  OLD:
 
@@ -668,7 +763,7 @@ Table of Contents
       -  Additional Information: See https://www.iana.org/assignments/
          ianaiftype-mib
 
-5.17.  valueDistributionMethod
+5.20.  valueDistributionMethod
 
    *  OLD:
 
@@ -706,7 +801,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
          distribution-method.
 
-5.18.  flowSelectorAlgorithm
+5.21.  flowSelectorAlgorithm
 
    *  OLD:
 
@@ -746,7 +841,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
          flowselectoralgorithm.
 
-5.19.  dataLinkFrameType
+5.22.  dataLinkFrameType
 
    *  OLD:
 
@@ -775,7 +870,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
          link-frame-type.  [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]
 
-5.20.  mibCaptureTimeSemantics
+5.23.  mibCaptureTimeSemantics
 
    *  OLD:
 
@@ -825,7 +920,7 @@ Table of Contents
          https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
          capture-time-semantics
 
-5.21.  natQuotaExceededEvent
+5.24.  natQuotaExceededEvent
 
    *  OLD:
 
@@ -851,7 +946,7 @@ Table of Contents
          IPv4 source address field.  See [RFC3022] for the definition of
          NAT.  See [RFC3234] for the definition of middleboxes.
 
-5.22.  natThresholdEvent
+5.25.  natThresholdEvent
 
    *  OLD:
 
@@ -942,6 +1037,11 @@ Table of Contents
               Address Translator (Traditional NAT)", RFC 3022,
               DOI 10.17487/RFC3022, January 2001,
               <https://www.rfc-editor.org/rfc/rfc3022>.
+
+   [RFC3031]  Rosen, E., Viswanathan, A., and R. Callon, "Multiprotocol
+              Label Switching Architecture", RFC 3031,
+              DOI 10.17487/RFC3031, January 2001,
+              <https://www.rfc-editor.org/rfc/rfc3031>.
 
    [RFC3234]  Carpenter, B. and S. Brim, "Middleboxes: Taxonomy and
               Issues", RFC 3234, DOI 10.17487/RFC3234, February 2002,
