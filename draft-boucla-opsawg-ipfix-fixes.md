@@ -113,7 +113,6 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 * OLD:
    - Description:  This Information Element describes the forwarding status of the flow and any attached reasons.
 The layout of the encoding is as follows:
-
 ~~~
 MSB  -  0   1   2   3   4   5   6   7  -  LSB
       +---+---+---+---+---+---+---+---+
@@ -134,12 +133,11 @@ binary: 10001001
 decode: 10        -> Drop
           001001  -> Bad TTL
 ~~~
-
    - Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].
+
 * NEW:
    - Description: This Information Element describes the forwarding status of the flow and any attached reasons.
 The layout of the encoding is as follows:
-
 ~~~
 MSB  -  0   1   2   3   4   5   6   7  -  LSB
       +---+---+---+---+---+---+---+---+
@@ -158,7 +156,6 @@ binary: 10001001
 decode: 10        -> Drop
           001001  -> Bad TTL
 ~~~
-
    - Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
 ## classificationEngineId
