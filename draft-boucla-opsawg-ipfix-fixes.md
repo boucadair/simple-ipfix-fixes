@@ -154,7 +154,7 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
                          +---+---+---+---+---+---+---+---+
                          | Status|  Reason code or flags |
                          +---+---+---+---+---+---+---+---+
-                         
+
                    Examples:
 
                    value : 0x40 = 64
