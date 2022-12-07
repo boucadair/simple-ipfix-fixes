@@ -112,7 +112,6 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 
 * OLD:
    - Description:  This Information Element describes the forwarding status of the flow and any attached reasons.
-
 The layout of the encoding is as follows:
 
 ~~~
@@ -139,7 +138,6 @@ decode: 10        -> Drop
    - Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].
 * NEW:
    - Description: This Information Element describes the forwarding status of the flow and any attached reasons.
-
 The layout of the encoding is as follows:
 
 ~~~
