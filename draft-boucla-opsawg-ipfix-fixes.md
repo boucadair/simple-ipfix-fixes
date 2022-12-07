@@ -111,52 +111,65 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 ## forwardingStatus
 
 * OLD:
-   - Description:  This Information Element describes the forwarding status of the flow and any attached reasons.
-The layout of the encoding is as follows:
+
 ~~~
-MSB  -  0   1   2   3   4   5   6   7  -  LSB
-      +---+---+---+---+---+---+---+---+
-      | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+
+   - Description:  This Information Element describes the forwarding status
+                   of the flow and any attached reasons.
+                   
+                   The layout of the encoding is as follows:
 
-See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                         +---+---+---+---+---+---+---+---+
+                         | Status|  Reason code or flags |
+                         +---+---+---+---+---+---+---+---+
 
-Examples:
+                   See the Forwarding Status sub-registries at
+                   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
-value : 0x40 = 64
-binary: 01000000
-decode: 01        -> Forward
-          000000  -> No further information
+                   Examples:
 
-value : 0x89 = 137
-binary: 10001001
-decode: 10        -> Drop
-          001001  -> Bad TTL
+                   value : 0x40 = 64
+                   binary: 01000000
+                   decode: 01        -> Forward
+                             000000  -> No further information
+
+                   value : 0x89 = 137
+                   binary: 10001001
+                   decode: 10        -> Drop
+                             001001  -> Bad TTL
+
+   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+             [CCO-NF9FMT].
 ~~~
-   - Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].
 
 * NEW:
-   - Description: This Information Element describes the forwarding status of the flow and any attached reasons.
-The layout of the encoding is as follows:
+
 ~~~
-MSB  -  0   1   2   3   4   5   6   7  -  LSB
-      +---+---+---+---+---+---+---+---+
-      | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+
+   - Description:  This Information Element describes the forwarding status
+                   of the flow and any attached reasons.
+                   
+                   The layout of the encoding is as follows:
 
-Examples:
+                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                         +---+---+---+---+---+---+---+---+
+                         | Status|  Reason code or flags |
+                         +---+---+---+---+---+---+---+---+
+                         
+                   Examples:
 
-value : 0x40 = 64
-binary: 01000000
-decode: 01        -> Forward
-          000000  -> No further information
+                   value : 0x40 = 64
+                   binary: 01000000
+                   decode: 01        -> Forward
+                             000000  -> No further information
 
-value : 0x89 = 137
-binary: 10001001
-decode: 10        -> Drop
-          001001  -> Bad TTL
+                   value : 0x89 = 137
+                   binary: 10001001
+                   decode: 10        -> Drop
+                             001001  -> Bad TTL
+
+   - Additional Information: See the Forwarding Status sub-registries at
+         https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 ~~~
-   - Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
 ## classificationEngineId
 
