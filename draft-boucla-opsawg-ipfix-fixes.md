@@ -167,12 +167,10 @@ decode: 10        -> Drop
 
 * OLD:
    - Description:  A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-
 Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
    - Additional Information:
 * NEW:
    - Description: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-
 Values for this field are listed in the Classification Engine IDs registry.
    - Additional Information: See .https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
