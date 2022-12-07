@@ -115,7 +115,7 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 ~~~
    - Description:  This Information Element describes the forwarding status
                    of the flow and any attached reasons.
-                   
+
                    The layout of the encoding is as follows:
 
                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
@@ -147,7 +147,7 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 ~~~
    - Description:  This Information Element describes the forwarding status
                    of the flow and any attached reasons.
-                   
+
                    The layout of the encoding is as follows:
 
                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
