@@ -1422,69 +1422,54 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <p id="section-5.2-1.1.1">OLD:<a href="#section-5.2-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5.2-1.1.2.1">Description:  This Information Element describes the forwarding status of the flow and any attached reasons.
-The layout of the encoding is as follows:<a href="#section-5.2-1.1.2.1" class="pilcrow">¶</a>
+The layout of the encoding is as follows:
+~~~
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
+ +---+---+---+---+---+---+---+---+
+ | Status|  Reason code or flags |
+ +---+---+---+---+---+---+---+---+<a href="#section-5.2-1.1.2.1" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
         </ul>
-<div class="alignLeft art-text artwork" id="section-5.2-2">
-<pre>
-MSB  -  0   1   2   3   4   5   6   7  -  LSB
-      +---+---+---+---+---+---+---+---+
-      | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+
-
-See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
-
-Examples:
-
-value : 0x40 = 64
+<p id="section-5.2-2">See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<p id="section-5.2-3">Examples:<a href="#section-5.2-3" class="pilcrow">¶</a></p>
+<p id="section-5.2-4">value : 0x40 = 64
 binary: 01000000
 decode: 01        -&gt; Forward
-          000000  -&gt; No further information
-
-value : 0x89 = 137
+          000000  -&gt; No further information<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+<p id="section-5.2-5">value : 0x89 = 137
 binary: 10001001
 decode: 10        -&gt; Drop
           001001  -&gt; Bad TTL
-</pre><a href="#section-5.2-2" class="pilcrow">¶</a>
-</div>
+~~~
+   - Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].<a href="#section-5.2-5" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.2-3.1">Additional Information: See "NetFlow Version 9 Flow-Record Format" [CCO-NF9FMT].<a href="#section-5.2-3.1" class="pilcrow">¶</a>
-</li>
-          <li class="normal" id="section-5.2-3.2">
-            <p id="section-5.2-3.2.1">NEW:<a href="#section-5.2-3.2.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-5.2-6.1">
+            <p id="section-5.2-6.1.1">NEW:<a href="#section-5.2-6.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.2-3.2.2.1">Description: This Information Element describes the forwarding status of the flow and any attached reasons.
-The layout of the encoding is as follows:<a href="#section-5.2-3.2.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-5.2-6.1.2.1">Description: This Information Element describes the forwarding status of the flow and any attached reasons.
+The layout of the encoding is as follows:
+~~~
+MSB  -  0   1   2   3   4   5   6   7  -  LSB
+ +---+---+---+---+---+---+---+---+
+ | Status|  Reason code or flags |
+ +---+---+---+---+---+---+---+---+<a href="#section-5.2-6.1.2.1" class="pilcrow">¶</a>
 </li>
             </ul>
 </li>
         </ul>
-<div class="alignLeft art-text artwork" id="section-5.2-4">
-<pre>
-MSB  -  0   1   2   3   4   5   6   7  -  LSB
-      +---+---+---+---+---+---+---+---+
-      | Status|  Reason code or flags |
-      +---+---+---+---+---+---+---+---+
-
-Examples:
-
-value : 0x40 = 64
+<p id="section-5.2-7">Examples:<a href="#section-5.2-7" class="pilcrow">¶</a></p>
+<p id="section-5.2-8">value : 0x40 = 64
 binary: 01000000
 decode: 01        -&gt; Forward
-          000000  -&gt; No further information
-
-value : 0x89 = 137
+          000000  -&gt; No further information<a href="#section-5.2-8" class="pilcrow">¶</a></p>
+<p id="section-5.2-9">value : 0x89 = 137
 binary: 10001001
 decode: 10        -&gt; Drop
           001001  -&gt; Bad TTL
-</pre><a href="#section-5.2-4" class="pilcrow">¶</a>
-</div>
-<ul class="normal">
-<li class="normal" id="section-5.2-5.1">Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-5.1" class="pilcrow">¶</a>
-</li>
-        </ul>
+~~~
+   - Additional Information: See the Forwarding Status sub-registries at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.<a href="#section-5.2-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="classificationengineid">
