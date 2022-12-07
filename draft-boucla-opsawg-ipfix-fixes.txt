@@ -240,9 +240,8 @@ Table of Contents
    *  OLD:
 
       -  Description: This Information Element describes the forwarding
-         status of the flow and any attached reasons.
-
-   The layout of the encoding is as follows:
+         status of the flow and any attached reasons.  The layout of the
+         encoding is as follows:
 
 MSB  -  0   1   2   3   4   5   6   7  -  LSB
       +---+---+---+---+---+---+---+---+
@@ -269,9 +268,8 @@ decode: 10        -> Drop
    *  NEW:
 
       -  Description: This Information Element describes the forwarding
-         status of the flow and any attached reasons.
-
-   The layout of the encoding is as follows:
+         status of the flow and any attached reasons.  The layout of the
+         encoding is as follows:
 
    MSB  -  0   1   2   3   4   5   6   7  -  LSB
          +---+---+---+---+---+---+---+---+
