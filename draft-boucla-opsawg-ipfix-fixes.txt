@@ -5,8 +5,8 @@
 Operations and Management Area Working Group                M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Informational                                 B. Claise
-Expires: 10 June 2023                                             Huawei
-                                                         7 December 2022
+Expires: 9 July 2023                                              Huawei
+                                                          5 January 2023
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -46,11 +46,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 June 2023.
+   This Internet-Draft will expire on 9 July 2023.
 
 Copyright Notice
 
-   Copyright (c) 2022 IETF Trust and the persons identified as the
+   Copyright (c) 2023 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -115,8 +115,18 @@ Table of Contents
    past).  This document intends to update the registry and bringing
    some consistency.
 
-   This document lists a set of simple fixes to the IPFIX IANA registry
-   [IANA-IPFIX].  These fixes are classified as follows:
+   As discussed with IANA, the "Additional Information" entry in
+   [IANA-IPFIX] should contain a link to the existing registry, when
+   applicable, as opposed to having:
+
+   *  A link to an exiting registry in the "Description" entry.
+
+   *  The registry detailed values repeated in the "Description" entry.
+      This solution has the drawback that the description must be
+      updated each time the registry is updated.
+
+   Therefore, this document lists a set of simple fixes to the IPFIX
+   IANA registry [IANA-IPFIX].  These fixes are classified as follows:
 
    *  Updates that fix a shortcoming in the description of an IE
       (Section 3).
@@ -127,10 +137,16 @@ Table of Contents
    *  Updates that are meant to ensure a consistent structure when
       calling an existing IANA registry (Section 5).
 
+   These updates are also meant to facilitate the automatic extraction
+   of the values maintained in IANA registries (e.g., with a cron job),
+   required by Collectors to be able to support new IPFIX IEs and, more
+   importantly, adequately interpret new values in registries specified
+   by those IPFIX IEs.
+
    Note that, as per Section 5 of [RFC7012], [IANA-IPFIX] is the
    normative reference for the IPFIX IEs that were defined in [RFC5102].
    Therefore, the updates in this document do not update any part of
-   [RFC7125].
+   [RFC7011].
 
    Fixes that require defining new IEs may be moved to a separate
    document.
@@ -142,6 +158,12 @@ Table of Contents
    "OPTIONAL" in this document are to be interpreted as described in
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
+
+   This document uses the IPFIX-specific terminology (Information
+   Element, Template, Collector, Data Record, Flow Record, Exporting
+   Process, Collecting Process, etc.) defined in Section 2 of [RFC7011].
+   As in [RFC7011], these IPFIX-specific terms have the first letter of
+   a word capitalized.
 
 3.  Update the Description
 
@@ -1019,15 +1041,16 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
 
+   [RFC7011]  Claise, B., Ed., Trammell, B., Ed., and P. Aitken,
+              "Specification of the IP Flow Information Export (IPFIX)
+              Protocol for the Exchange of Flow Information", STD 77,
+              RFC 7011, DOI 10.17487/RFC7011, September 2013,
+              <https://www.rfc-editor.org/rfc/rfc7011>.
+
    [RFC7012]  Claise, B., Ed. and B. Trammell, Ed., "Information Model
               for IP Flow Information Export (IPFIX)", RFC 7012,
               DOI 10.17487/RFC7012, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7012>.
-
-   [RFC7125]  Trammell, B. and P. Aitken, "Revision of the
-              tcpControlBits IP Flow Information Export (IPFIX)
-              Information Element", RFC 7125, DOI 10.17487/RFC7125,
-              February 2014, <https://www.rfc-editor.org/rfc/rfc7125>.
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
@@ -1092,6 +1115,11 @@ Table of Contents
               "Export of Structured Data in IP Flow Information Export
               (IPFIX)", RFC 6313, DOI 10.17487/RFC6313, July 2011,
               <https://www.rfc-editor.org/rfc/rfc6313>.
+
+   [RFC7125]  Trammell, B. and P. Aitken, "Revision of the
+              tcpControlBits IP Flow Information Export (IPFIX)
+              Information Element", RFC 7125, DOI 10.17487/RFC7125,
+              February 2014, <https://www.rfc-editor.org/rfc/rfc7125>.
 
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
