@@ -148,9 +148,6 @@ Table of Contents
    Therefore, the updates in this document do not update any part of
    [RFC7011].
 
-   Fixes that require defining new IEs may be moved to a separate
-   document.
-
 2.  Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -169,6 +166,9 @@ Table of Contents
 
    The IEs listed in the following subsections cannot echo some values
    that can be seen in a packet.
+
+   Note that if the fixes to the following issues require defining new
+   IEs, these IEs will be moved to a separate document.
 
 3.1.  tcpOptions
 
