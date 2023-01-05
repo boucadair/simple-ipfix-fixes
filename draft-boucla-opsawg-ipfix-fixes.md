@@ -48,19 +48,32 @@ This document describes simple fixes to the IANA IP Flow Information Export (IPF
 
 As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up to date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the registry and bringing some consistency.
 
-This document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
+As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to the existing registry, when applicable, as opposed to having:
+
+- A link to an exiting registry in the "Description" entry.
+- The registry detailed values repeated in the "Description" entry. This solution has the drawback that the description must be updated each time the registry is updated.
+
+Therefore, this document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
 
-Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7125}}.
+These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
+
+Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7011}}.
 
 Fixes that require defining new IEs may be moved to a separate document.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
+
+This document uses the IPFIX-specific terminology (Information Element, Template,
+   Collector,  Data Record, Flow Record, Exporting Process,
+   Collecting Process, etc.) defined in
+   Section 2 of {{!RFC7011}}. As in {{!RFC7011}}, these IPFIX-specific terms
+   have the first letter of a word capitalized.
 
 
 # Update the Description {#desc}
