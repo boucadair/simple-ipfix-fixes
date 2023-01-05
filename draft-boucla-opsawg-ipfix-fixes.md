@@ -63,8 +63,6 @@ These updates are also meant to facilitate the automatic extraction of the value
 
 Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7011}}.
 
-Fixes that require defining new IEs may be moved to a separate document.
-
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
@@ -79,6 +77,8 @@ This document uses the IPFIX-specific terminology (Information Element, Template
 # Update the Description {#desc}
 
 The IEs listed in the following subsections cannot echo some values that can be seen in a packet.
+
+Note that if the fixes to the following issues require defining new IEs, these IEs will be moved to a separate document.
 
 ## tcpOptions
 
