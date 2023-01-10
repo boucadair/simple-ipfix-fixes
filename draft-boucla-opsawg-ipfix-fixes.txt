@@ -2,11 +2,11 @@
 
 
 
-Operations and Management Area Working Group                M. Boucadair
+OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Informational                                 B. Claise
-Expires: 9 July 2023                                              Huawei
-                                                          5 January 2023
+Expires: 14 July 2023                                             Huawei
+                                                         10 January 2023
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 July 2023.
+   This Internet-Draft will expire on 14 July 2023.
 
 Copyright Notice
 
@@ -109,11 +109,11 @@ Table of Contents
    As the OPSAWG is currently considering
    [I-D.boucadair-opsawg-rfc7125-update] that updates [RFC7125], the WG
    realized that some other parts of the IANA IPFIX registry
-   [IANA-IPFIX] were not up to date.  Indeed, since its initial creation
+   [IANA-IPFIX] were not up-to-date.  Indeed, since its initial creation
    in 2007, some IPFIX Information Elements (IEs) are not adequately
    specified any longer (while they were at some point in time in the
-   past).  This document intends to update the registry and bringing
-   some consistency.
+   past).  This document intends to update the IANA registry and
+   bringing some consistency.
 
    As discussed with IANA, the "Additional Information" entry in
    [IANA-IPFIX] should contain a link to the existing registry, when
@@ -261,8 +261,8 @@ Table of Contents
 
    *  OLD:
 
-   - Description:  This Information Element describes the forwarding status
-                   of the flow and any attached reasons.
+   - Description:  This Information Element describes the forwarding
+                   status of the flow and any attached reasons.
 
                    The layout of the encoding is as follows:
 
@@ -291,8 +291,8 @@ Table of Contents
 
    *  NEW:
 
-   - Description:  This Information Element describes the forwarding status
-                   of the flow and any attached reasons.
+   - Description:  This Information Element describes the forwarding
+                   status of the flow and any attached reasons.
 
                    The layout of the encoding is as follows:
 
@@ -313,8 +313,8 @@ Table of Contents
                    decode: 10        -> Drop
                              001001  -> Bad TTL
 
-   - Additional Information: See the Forwarding Status sub-registries at
-         https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+   - Additional Information: See the Forwarding Status sub-registries
+       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
 5.3.  classificationEngineId
 
@@ -340,7 +340,7 @@ Table of Contents
          IDs registry.
 
       -  Additional Information: See
-         .https://www.iana.org/assignments/ipfix/
+         https://www.iana.org/assignments/ipfix/
          ipfix.xhtml#classification-engine-ids.
 
 5.4.  flowEndReason
@@ -1062,9 +1062,9 @@ Table of Contents
               Boucadair, M., "An Update to the tcpControlBits IP Flow
               Information Export (IPFIX) Information Element", Work in
               Progress, Internet-Draft, draft-boucadair-opsawg-rfc7125-
-              update-01, 20 September 2022,
+              update-02, 5 January 2023,
               <https://datatracker.ietf.org/doc/html/draft-boucadair-
-              opsawg-rfc7125-update-01>.
+              opsawg-rfc7125-update-02>.
 
    [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
