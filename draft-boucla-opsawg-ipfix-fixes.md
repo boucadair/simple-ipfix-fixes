@@ -10,7 +10,7 @@ date:
 consensus: true
 v: 3
 area: "Operations and Management"
-workgroup: "Operations and Management Area Working Group"
+workgroup: "OPSAWG"
 keyword:
  - IPFIX
 author:
@@ -46,7 +46,7 @@ This document describes simple fixes to the IANA IP Flow Information Export (IPF
 
 # Introduction
 
-As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up to date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the registry and bringing some consistency.
+As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency.
 
 As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to the existing registry, when applicable, as opposed to having:
 
@@ -126,8 +126,8 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 * OLD:
 
 ~~~
-   - Description:  This Information Element describes the forwarding status
-                   of the flow and any attached reasons.
+   - Description:  This Information Element describes the forwarding
+                   status of the flow and any attached reasons.
 
                    The layout of the encoding is as follows:
 
@@ -158,8 +158,8 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
 * NEW:
 
 ~~~
-   - Description:  This Information Element describes the forwarding status
-                   of the flow and any attached reasons.
+   - Description:  This Information Element describes the forwarding
+                   status of the flow and any attached reasons.
 
                    The layout of the encoding is as follows:
 
@@ -180,8 +180,8 @@ IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in 
                    decode: 10        -> Drop
                              001001  -> Bad TTL
 
-   - Additional Information: See the Forwarding Status sub-registries at
-         https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+   - Additional Information: See the Forwarding Status sub-registries
+       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 ~~~
 
 ## classificationEngineId
@@ -193,7 +193,7 @@ Values for this field are listed in the Classification Engine IDs registry. See 
 * NEW:
    - Description: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
 Values for this field are listed in the Classification Engine IDs registry.
-   - Additional Information: See .https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+   - Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
 ## flowEndReason
 
