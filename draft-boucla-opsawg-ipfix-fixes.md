@@ -303,7 +303,7 @@ Values for this field are listed in the Classification Engine IDs registry.
    - Additional Information:
 * NEW:
    - Description: A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in Section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. The special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.
-   - Additional Information: See the assigned units of an IPFIX Information Element at[https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units].
+   - Additional Information: See the assigned units of an IPFIX Information Element at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-units].
 
 
 ## portRangeStart
@@ -397,6 +397,31 @@ Values for this field are listed in the Classification Engine IDs registry.
    - Description: This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.
    - Additional Information: See the assigned values for the NAT Threshold events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event]. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes.
 
+# Misc
+
+## collectionTimeMilliseconds
+
+* OLD:
+   - Description: The absolute timestamp at which the data within the scope containing this Information Element was received by a Collecting Process. This Information Element SHOULD be bound to its containing IPFIX Message via IPFIX Options and the messageScope Information Element, as defined below.
+
+* NEW:
+   - Description: The absolute timestamp at which the data within the scope containing this Information Element was received by a Collecting Process. This Information Element SHOULD be bound to its containing IPFIX Message via IPFIX Options and the messageScope Information Element.
+
+## messageMD5Checksum
+
+* OLD:
+   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, as defined below, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in [RFC1321], place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
+
+* NEW:
+   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in [RFC1321], place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
+
+## distinctCountOfDestinationIPAddress
+
+* OLD:
+   - Description: The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters below, unless it is important to separate the counts by version.
+
+* NEW:
+   - Description: The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters, unless it is important to separate the counts by version.
 
 # Security Considerations
 
