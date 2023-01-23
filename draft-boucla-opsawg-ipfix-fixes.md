@@ -46,7 +46,7 @@ This document describes simple fixes to the IANA IP Flow Information Export (IPF
 
 # Introduction
 
-As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency.
+As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency among the entries of the registry.
 
 As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to the existing registry, when applicable, as opposed to having:
 
@@ -82,7 +82,7 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 ## tcpOptions
 
-Only options having a kind =< 56 can be included in a tcpOptions IE. An update is required to specify how any observed TCP option in a packet can be exported using IPFIX.
+Only options having a kind =< 63 can be included in a tcpOptions IE. An update is required to specify how any observed TCP option in a packet can be exported using IPFIX.
 
 ## ipv6ExtensionHeaders
 
@@ -95,7 +95,7 @@ The description should be updated to:
 
 # Point to An Existing IANA Registry {#to-iana}
 
-IANA is requested to update the following entries by adding the indicated pointer to an IANA registry under "Additional Information" of {{IANA-IPFIX}}:
+I ANA is requested to update the following entries by adding the indicated "Additional Information" of {{IANA-IPFIX}}:
 
 | IE                     | Additional Information |
 | icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
@@ -413,5 +413,5 @@ Requested IANA actions are described in the main document. These actions are not
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Thanks to Paul Aitken for the review.
 
