@@ -33,7 +33,10 @@ normative:
         title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
         target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
         date: 2022-11
-
+     IANA-TCP:
+        title: Transmission Control Protocol (TCP) Parameters, TCP Option Kind Numbers
+        target: https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-parameters-1
+        date: 2022-11
 informative:
 
 
@@ -83,7 +86,49 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 ## tcpOptions
 
-Only options having a kind =< 63 can be included in a tcpOptions IE. An update is required to specify how any observed TCP option in a packet can be exported using IPFIX.
+The current descripption maay be interpreted as if only options having a kind =< 63 can be included in a tcpOptions IE. An update is required to clarify how any observed TCP option in a packet can be exported using IPFIX. Alos, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kinds 253 ad 254) {{!RFC6994}}. ExIDs can be either 2 or 4 bytes in length. Two new IEs are thus defined to accomodate these two lengths.
+
+## Update the Description
+
+TBC
+
+## New IE: tcpExID16
+
+   *  Name: tcpExID16
+
+   *  ElementID: TBD1
+
+   *  Description: Observed 2-byte Expermients IDs (ExIDs) in a shared
+      TCP option (Kind=253 or 254).  The information is encoded in a set of
+      16-bit fields.  Each 16-bit field carries the observed 2-byte ExID in a
+      shared option.
+
+   *  Abstract Data Type: octetArray
+
+   *  Data Type Semantics: identifier
+
+   *  Additional Information: See assigned ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+
+   *  Reference: [This-Document]
+
+## New IE: tcpExID32
+
+   *  Name: tcpExID32
+
+   *  ElementID: TBD2
+
+   *  Description: Observed 4-byte Expermients ID (ExIDs) in a shared
+      TCP option (Kind=253 or 254).  The information is encoded in a set of
+      16-bit fields.  Each 32-bit field carries the observed 4-byte ExID in a
+      shared option.
+
+   *  Abstract Data Type: octetArray
+
+   *  Data Type Semantics: identifier
+
+   *  Additional Information: See assigned ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+
+   *  Reference: [This-Document]
 
 ## ipv6ExtensionHeaders
 
