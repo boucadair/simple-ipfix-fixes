@@ -88,11 +88,11 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 The current descripption maay be interpreted as if only options having a kind =< 63 can be included in a tcpOptions IE. An update is required to clarify how any observed TCP option in a packet can be exported using IPFIX. Alos, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kinds 253 ad 254) {{!RFC6994}}. ExIDs can be either 2 or 4 bytes in length. Two new IEs are thus defined to accomodate these two lengths.
 
-## Update the Description
+### Update the Description
 
 TBC
 
-## New IE: tcpExID16
+### New IE: tcpExID16
 
    *  Name: tcpExID16
 
@@ -111,7 +111,7 @@ TBC
 
    *  Reference: [This-Document]
 
-## New IE: tcpExID32
+### New IE: tcpExID32
 
    *  Name: tcpExID32
 
