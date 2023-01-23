@@ -58,6 +58,7 @@ Therefore, this document lists a set of simple fixes to the IPFIX IANA registry 
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
+- Miscellaneous updates that fix broken pointers, orphan section references, etc. {{misc}}.
 
 These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
 
@@ -397,7 +398,7 @@ Values for this field are listed in the Classification Engine IDs registry.
    - Description: This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.
    - Additional Information: See the assigned values for the NAT Threshold events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event]. See {{?RFC0791}} for the definition of the IPv4 source address field. See {{?RFC3022}} for the definition of NAT. See {{?RFC3234}} for the definition of middleboxes.
 
-# Misc
+# Misc {#misc}
 
 ## collectionTimeMilliseconds
 
@@ -410,10 +411,104 @@ Values for this field are listed in the Classification Engine IDs registry.
 ## messageMD5Checksum
 
 * OLD:
-   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, as defined below, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in [RFC1321], place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
+   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, as defined below, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in {{?RFC1321}}, place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
 
 * NEW:
-   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in [RFC1321], place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
+   - Description: The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in {{?RFC1321}}, place the resulting value in this Information Element, and export the buffered message. This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
+
+## anonymizationFlags
+
+* OLD:
+~~~~
++--------+----------+-----------------------------------------------+
+| bit(s) | name     | description                                   |
+| (LSB = |          |                                               |
+| 0)     |          |                                               |
++--------+----------+-----------------------------------------------+
+| 0-1    | SC       | Stability Class: see the Stability Class      |
+|        |          | table below, and section Section 5.1.         | 
+| 2      | PmA      | Perimeter Anonymization: when set (1),        |
+|        |          | source- Information Elements as described in  |
+|        |          | [RFC5103] are interpreted as external         |
+|        |          | addresses, and destination- Information       |
+|        |          | Elements as described in [RFC5103] are        |
+|        |          | interpreted as internal addresses, for the    |
+|        |          | purposes of associating                       |
+|        |          | anonymizationTechnique to Information         |
+|        |          | Elements only; see Section 7.2.2 for details. |
+|        |          | This bit MUST NOT be set when associated with |
+|        |          | a non-endpoint (i.e., source- or              |
+|        |          | destination-) Information Element.  SHOULD be |
+|        |          | consistent within a record (i.e., if a        |
+|        |          | source- Information Element has this flag     |
+|        |          | set, the corresponding destination- element   |
+|        |          | SHOULD have this flag set, and vice-versa.)   |
+| 3      | LOR      | Low-Order Unchanged: when set (1), the        |
+|        |          | low-order bits of the anonymized Information  |
+|        |          | Element contain real data.  This modification |
+|        |          | is intended for the anonymization of          |
+|        |          | network-level addresses while leaving         |
+|        |          | host-level addresses intact in order to       |
+|        |          | preserve host level-structure, which could    |
+|        |          | otherwise be used to reverse anonymization.   |
+|        |          | MUST NOT be set when associated with a        |
+|        |          | truncation-based anonymizationTechnique.      |
+| 4-15   | Reserved | Reserved for future use: SHOULD be cleared    |
+|        |          | (0) by the Exporting Process and MUST be      |
+|        |          | ignored by the Collecting Process.            |
++--------+----------+-----------------------------------------------+
+~~~~
+
+* NEW:
+~~~~
++--------+----------+-----------------------------------------------+
+| bit(s) | name     | description                                   |
+| (LSB = |          |                                               |
+| 0)     |          |                                               |
++--------+----------+-----------------------------------------------+
+| 0-1    | SC       | Stability Class: see the Stability Class      |
+|        |          | table below, and Section 5.1 of [RFC6235].    | 
+| 2      | PmA      | Perimeter Anonymization: when set (1),        |
+|        |          | source- Information Elements as described in  |
+|        |          | [RFC5103] are interpreted as external         |
+|        |          | addresses, and destination- Information       |
+|        |          | Elements as described in [RFC5103] are        |
+|        |          | interpreted as internal addresses, for the    |
+|        |          | purposes of associating                       |
+|        |          | anonymizationTechnique to Information         |
+|        |          | Elements only; see Section 7.2.2 of [RFC6235] |
+|        |          | for details.                                  |
+|        |          | This bit MUST NOT be set when associated with |
+|        |          | a non-endpoint (i.e., source- or              |
+|        |          | destination-) Information Element.  SHOULD be |
+|        |          | consistent within a record (i.e., if a        |
+|        |          | source- Information Element has this flag     |
+|        |          | set, the corresponding destination- element   |
+|        |          | SHOULD have this flag set, and vice-versa.)   |
+| 3      | LOR      | Low-Order Unchanged: when set (1), the        |
+|        |          | low-order bits of the anonymized Information  |
+|        |          | Element contain real data.  This modification |
+|        |          | is intended for the anonymization of          |
+|        |          | network-level addresses while leaving         |
+|        |          | host-level addresses intact in order to       |
+|        |          | preserve host level-structure, which could    |
+|        |          | otherwise be used to reverse anonymization.   |
+|        |          | MUST NOT be set when associated with a        |
+|        |          | truncation-based anonymizationTechnique.      |
+| 4-15   | Reserved | Reserved for future use: SHOULD be cleared    |
+|        |          | (0) by the Exporting Process and MUST be      |
+|        |          | ignored by the Collecting Process.            |
++--------+----------+-----------------------------------------------+
+~~~~
+
+## informationElementDescription
+
+* OLD:
+   - Description: A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482]}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed. See the Security Considerations section for notes on string handling for Information Element type records.
+
+* NEW:
+   - Description: A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed. See the Security Considerations section of {{?RFC5610}} for notes on string handling for Information Element type records.
+
 
 ## distinctCountOfDestinationIPAddress
 
