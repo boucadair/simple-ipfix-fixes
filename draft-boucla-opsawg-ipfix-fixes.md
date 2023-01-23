@@ -419,7 +419,8 @@ Values for this field are listed in the Classification Engine IDs registry.
 ## anonymizationFlags
 
 * OLD:
-~~~~
+
+~~~
 +--------+----------+-----------------------------------------------+
 | bit(s) | name     | description                                   |
 | (LSB = |          |                                               |
@@ -457,10 +458,11 @@ Values for this field are listed in the Classification Engine IDs registry.
 |        |          | (0) by the Exporting Process and MUST be      |
 |        |          | ignored by the Collecting Process.            |
 +--------+----------+-----------------------------------------------+
-~~~~
+~~~
 
 * NEW:
-~~~~
+
+~~~
 +--------+----------+-----------------------------------------------+
 | bit(s) | name     | description                                   |
 | (LSB = |          |                                               |
@@ -499,7 +501,7 @@ Values for this field are listed in the Classification Engine IDs registry.
 |        |          | (0) by the Exporting Process and MUST be      |
 |        |          | ignored by the Collecting Process.            |
 +--------+----------+-----------------------------------------------+
-~~~~
+~~~
 
 ## informationElementDescription
 
