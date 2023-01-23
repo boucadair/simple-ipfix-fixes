@@ -95,7 +95,7 @@ The description should be updated to:
 
 # Point to An Existing IANA Registry {#to-iana}
 
-I ANA is requested to update the following entries by adding the indicated "Additional Information" of {{IANA-IPFIX}}:
+IANA is requested to update the following entries by adding the indicated "Additional Information" of {{IANA-IPFIX}}:
 
 | IE                     | Additional Information |
 | icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
@@ -422,6 +422,15 @@ Values for this field are listed in the Classification Engine IDs registry.
 
 * NEW:
    - Description: The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters, unless it is important to separate the counts by version.
+
+## externalAddressRealm
+
+* OLD:
+   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is in the internal address realm as specified above.
+
+* NEW:
+   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is similar to the one provided for the internalAddressRealm IE.
+
 
 # Security Considerations
 
