@@ -432,6 +432,7 @@ IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
 
 Requested IANA actions are described in the main document. These actions are not repeated here.
 
+This document also requests IANA to update the reference clause of the "IPFIX Information Elements" subregistry with teh reference to this document.
 
 --- back
 
