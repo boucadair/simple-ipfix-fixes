@@ -426,7 +426,7 @@ Values for this field are listed in the Classification Engine IDs registry.
 | 0)     |          |                                               |
 +--------+----------+-----------------------------------------------+
 | 0-1    | SC       | Stability Class: see the Stability Class      |
-|        |          | table below, and section Section 5.1.         | 
+|        |          | table below, and section Section 5.1.         |
 | 2      | PmA      | Perimeter Anonymization: when set (1),        |
 |        |          | source- Information Elements as described in  |
 |        |          | [RFC5103] are interpreted as external         |
@@ -467,7 +467,7 @@ Values for this field are listed in the Classification Engine IDs registry.
 | 0)     |          |                                               |
 +--------+----------+-----------------------------------------------+
 | 0-1    | SC       | Stability Class: see the Stability Class      |
-|        |          | table below, and Section 5.1 of [RFC6235].    | 
+|        |          | table below, and Section 5.1 of [RFC6235].    |
 | 2      | PmA      | Perimeter Anonymization: when set (1),        |
 |        |          | source- Information Elements as described in  |
 |        |          | [RFC5103] are interpreted as external         |
