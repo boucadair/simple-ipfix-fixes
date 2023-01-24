@@ -86,11 +86,11 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 ## tcpOptions
 
-### Issues 
+### Issues
 
 Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
 
-### Update the Description of tcpOptions IE
+### Update the Description of the tcpOptions IE
 
 This document requests IANA to update the descritpion of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
 
@@ -144,7 +144,7 @@ Description:
       of the corresponding bit is 0.
 
       TCP option numbers are maintained by IANA.
-      
+
       Up to four tcpOptions IEs can be included to cover the 0-255 range.
 
 ~~~~
