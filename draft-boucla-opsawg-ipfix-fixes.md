@@ -94,10 +94,9 @@ Only options having a kind =< 63 can be included in a tcpOptions IE. An update i
 
 This document requests IANA to update the descritpion of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
 
-#### OLD
+#### OLD Description
 
-Description:
-      : TCP options in packets of this Flow.  The information is encoded
+TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
@@ -131,10 +130,9 @@ Description:
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
-#### NEW
+#### NEW Description
 
-Description:
-      : TCP options in packets of this Flow.  The information is encoded
+TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
@@ -143,7 +141,7 @@ Description:
 
       TCP option numbers are maintained by IANA.
 
-      Up to four tcpOptions IEs can be included to cover the 0-255 range.
+      Up to four tcpOptions IEs can be included to cover the 0-255 range as follows:
 
 ~~~~
 +----------+----------+----------+----------+
@@ -158,8 +156,8 @@ Description:
 
       A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
 
-      (1) If only option kinds =<63 are observed, then only one udpOptions IE instance is included.
-      (2) If only option kinds =<127 are observed, then two udpOptions IEs instances are included.
+      (1) If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
+      (2) If only option kinds =<127 are observed, then the first two tcpOptions IEs instances are included.
 
 ~~~~
             0     1     2     3     4     5     6     7
