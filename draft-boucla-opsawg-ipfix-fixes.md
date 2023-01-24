@@ -330,13 +330,7 @@ The following section proposes fixes to these issues.
       See the assigned bits to each IPv6 extension header in
       [NEW_IPFIX_IPv6EH_SUBREGISTRY].
       See [RFC8200] for the general definition of IPv6 extension headers
-      and for the specification of the hop-by-hop options header, the
-      routing header, the fragment header, and the destination options
-      header. See [RFC4302] for the specification of the authentication
-      header. See [RFC4303] for the specification of the encapsulating
-      security payload. The diagram provided in [RFC5102] is incorrect.
-      The diagram in this registry is taken from Errata 1738.
-      See [RFC Errata 1738].
+      and [IPv6-EH] for assigned extension headers.
 ~~~
 
 # Point to An Existing IANA Registry {#to-iana}
@@ -822,7 +816,7 @@ Instance Bit    IPv6 Option   Description
     8    0 to 31              Unassigned
 ~~~
 
-Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH and the subregistry is udpated with the details that mirror the assigned EH. A new instance 'i+1' is used when only the bits of an instance 'i' are exhausted.
+Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH. A new instance 'i+1' is used if and only if all bits of the instance 'i' are exhausted, and so on.
 
 IANA is requested to add this note to {{IPv6-EH}}:
 
