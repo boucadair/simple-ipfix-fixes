@@ -645,7 +645,7 @@ Values for this field are listed in the Classification Engine IDs registry.
 
 # Misc {#misc}
 
-This document requests IANA to update the following entries by updating the description in the IANA IPFIX registry {{IANA-IPFIX}}.
+This document requests IANA to update the description of the following entries in {{IANA-IPFIX}}.
 
 ## collectionTimeMilliseconds
 
@@ -824,13 +824,12 @@ Ins    Bit    IPv6 Option   Description
 8      0 to 31              Unassigned
 ~~~
 
-139, 140, 253, and 254.
-
-Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH and the subregistry is udpated with the details that mirror the assigned EH.
+Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH and the subregistry is udpated with the details that mirror the assigned EH. A new instance 'i+1' is used when only the bits of an instance 'i' are exhausted.
 
 IANA is requested to add this note to {{IPv6-EH}}:
 
-Note: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header.[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
+Note: 
+: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header.[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
 
 --- back
 
