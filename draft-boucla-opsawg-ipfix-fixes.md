@@ -300,7 +300,7 @@ The following section proposes fixes to these issues.
       header. See [RFC4302] for the specification of the authentication
       header. See [RFC4303] for the specification of the encapsulating
       security payload. The diagram provided in [RFC5102] is incorrect.
-      The diagram in this registry is taken from Errata 1738. 
+      The diagram in this registry is taken from Errata 1738.
       See [RFC Errata 1738].
 ~~~
 
@@ -335,7 +335,7 @@ The following section proposes fixes to these issues.
       header. See [RFC4302] for the specification of the authentication
       header. See [RFC4303] for the specification of the encapsulating
       security payload. The diagram provided in [RFC5102] is incorrect.
-      The diagram in this registry is taken from Errata 1738. 
+      The diagram in this registry is taken from Errata 1738.
       See [RFC Errata 1738].
 ~~~
 
