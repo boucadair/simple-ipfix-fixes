@@ -139,16 +139,11 @@ TCP options in packets of this Flow.  The information is encoded
       packet of this Flow contained the respective TCP option, the value
       of the corresponding bit is 0.
 
-      TCP option numbers are maintained by IANA.
+TCP option numbers are maintained by IANA.
+Up to four tcpOptions IEs can be included to cover the 0-255 range. Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "[1+X/64]". A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
 
-      Up to four tcpOptions IEs can be included to cover the 0-255 range as follows:
-
-      Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "[1+X/64]".
-
-      A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
-
-      (1) If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
-      (2) If only option kinds =<127 are observed, then the first two tcpOptions IEs instances are included.
+* If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
+* If only option kinds =<127 are observed, then the first two tcpOptions IEs instances are included.
 
 ~~~
 * 0-255 range mapping to tcpOptions IE instances:
@@ -159,7 +154,7 @@ TCP options in packets of this Flow.  The information is encoded
             0-63      64-127    128-191    192-255
             Range      Range     Range       Range
 
-* TCP option position in a tcpOptions IE instance:
+* Position of TCP options in a tcpOptions IE instance:
 
             0     1     2     3     4     5     6     7
         +-----+-----+-----+-----+-----+-----+-----+-----+
@@ -231,12 +226,118 @@ This document requests IANA to add the following new IEs to the IANA IPFIX regis
 
 ## ipv6ExtensionHeaders
 
-The description should be updated to:
+### Issues
 
-- reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
-- specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
-- specify the procedure to follow when all bits are exhausted.
+The current specification of ipv6ExtensionHeaders IE should be updated to:
 
+- Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
+- Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
+- Specify the procedure to follow when all bits are exhausted.
+
+The following section proposes fixes to these issues.
+
+### Updates
+
+#### OLD
+
+~~~
+   Description:
+      IPv6 extension headers observed in packets of this Flow.  The
+      information is encoded in a set of bit fields.  For each IPv6
+      option header, there is a bit in this set.  The bit is set to 1 if
+      any observed packet of this Flow contains the corresponding IPv6
+      extension header.  Otherwise, if no observed packet of this Flow
+      contained the respective IPv6 extension header, the value of the
+      corresponding bit is 0.
+
+               0     1     2     3     4     5     6     7
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+           | DST | HOP | Res | UNK |FRA0 | RH  |FRA1 | Res |  ...
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+
+               8     9    10    11    12    13    14    15
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+       ... |           Reserved    | MOB | ESP | AH  | PAY | ...
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+
+              16    17    18    19    20    21    22    23
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+       ... |                  Reserved                     | ...
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+
+              24    25    26    27    28    29    30    31
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+       ... |                  Reserved                     |
+           +-----+-----+-----+-----+-----+-----+-----+-----+
+
+       Bit    IPv6 Option   Description
+
+       0, DST      60       Destination option header
+       1, HOP       0       Hop-by-hop option header
+       2, Res               Reserved
+       3, UNK               Unknown Layer 4 header
+                            (compressed, encrypted, not supported)
+       4, FRA0     44       Fragment header - first fragment
+       5, RH       43       Routing header
+       6, FRA1     44       Fragmentation header - not first fragment
+       7, Res               Reserved
+       8 to 11              Reserved
+       12, MOB     135      IPv6 mobility [RFC3775]
+       13, ESP      50      Encrypted security payload
+       14, AH       51      Authentication Header
+       15, PAY     108      Payload compression header
+       16 to 31             Reserved
+
+   Abstract Data Type: unsigned32
+   Data Type Semantics: flags
+   ElementId: 64
+   Status: current
+   Reference: [RFC5102]
+   Additional Information:
+      See [RFC8200] for the general definition of IPv6 extension headers
+      and for the specification of the hop-by-hop options header, the
+      routing header, the fragment header, and the destination options
+      header. See [RFC4302] for the specification of the authentication
+      header. See [RFC4303] for the specification of the encapsulating
+      security payload. The diagram provided in [RFC5102] is incorrect.
+      The diagram in this registry is taken from Errata 1738. 
+      See [RFC Errata 1738].
+~~~
+
+#### NEW
+
+~~~
+   Description:
+      IPv6 extension headers observed in packets of this Flow. The
+      information is encoded in a set of bit fields.  For each IPv6
+      option header, there is a bit in this set.  The bit is set to 1 if
+      any observed packet of this Flow contains the corresponding IPv6
+      extension header.  Otherwise, if no observed packet of this Flow
+      contained the respective IPv6 extension header, the value of the
+      corresponding bit is 0. The IPv6 EH associated with each bit
+      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+
+      Up to eight ipv6ExtensionHeaders IEs can be included to cover
+      the 0-255 range. EHs are mapped to bits according to their option
+      numbers. ipv6ExtensionHeaders IE instances MAY be ommited if there
+      is no ambiguity to determine the position of an observed EH.
+   Abstract Data Type: unsigned32
+   Data Type Semantics: flags
+   ElementId: 64
+   Status: current
+   Reference: [RFC5102]
+   Additional Information:
+      See the assigned bits to each IPv6 extension header in
+      [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+      See [RFC8200] for the general definition of IPv6 extension headers
+      and for the specification of the hop-by-hop options header, the
+      routing header, the fragment header, and the destination options
+      header. See [RFC4302] for the specification of the authentication
+      header. See [RFC4303] for the specification of the encapsulating
+      security payload. The diagram provided in [RFC5102] is incorrect.
+      The diagram in this registry is taken from Errata 1738. 
+      See [RFC Errata 1738].
+~~~
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -682,9 +783,54 @@ IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
 
 # IANA Considerations
 
-Requested IANA actions are described in the main document. These actions are not repeated here.
+A set of requested IANA actions are described in the main document. These actions are not repeated here.
 
 This document also requests IANA to update the reference clause of the "IPFIX Information Elements" subregistry with the reference to this document.
+
+## IPFIX Subregistry for IPv6 Extension Headers
+
+This document request IANA to create a new subregistry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry {{IANA-IPFIX}}.
+
+The initial values of this subregistry are as follows:
+
+~~~
+Ins    Bit    IPv6 Option   Description
+
+1      0, DST      60       Destination option header
+1      1, HOP       0       Hop-by-hop option header
+1      2, U                 Unassigned
+1      3, UNK               Unknown Layer 4 header
+                            (compressed, encrypted, not supported)
+1      4, FRA0     44       Fragment header - first fragment
+1      5, RH       43       Routing header
+1      6, FRA1     44       Fragmentation header - not first fragment
+1      7, U                 Unassigned
+1      8 to 11              Unassigned
+1      12, MOB     135      IPv6 mobility [RFC3775]
+1      13, ESP      50      Encrypted security payload
+1      14, AH       51      Authentication Header
+1      15, PAY     108      Payload compression header
+1      16          139      Host Identity Protocol
+1      17          140      Shim6 Protocol
+1      18          253      Use for experimentation and testing
+1      19          254      Use for experimentation and testing
+1      20 to 31             Unassigned
+2      0 to 31              Unassigned
+3      0 to 31              Unassigned
+4      0 to 31              Unassigned
+5      0 to 31              Unassigned
+6      0 to 31              Unassigned
+7      0 to 31              Unassigned
+8      0 to 31              Unassigned
+~~~
+
+139, 140, 253, and 254.
+
+Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH and the subregistry is udpated with the details that mirror the assigned EH.
+
+IANA is requested to add this note to {{IPv6-EH}}:
+
+Note: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header.[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
 
 --- back
 
