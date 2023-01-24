@@ -61,7 +61,7 @@ Therefore, this document lists a set of simple fixes to the IPFIX IANA registry 
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
-- Miscellaneous updates that fix broken pointers, orphan section references, etc. {{misc}}.
+- Miscellaneous updates that fix broken pointers, orphan section references, etc. ({{misc}}).
 
 These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
 
@@ -86,13 +86,115 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 ## tcpOptions
 
-The current descripption maay be interpreted as if only options having a kind =< 63 can be included in a tcpOptions IE. An update is required to clarify how any observed TCP option in a packet can be exported using IPFIX. Alos, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kinds 253 ad 254) {{!RFC6994}}. ExIDs can be either 2 or 4 bytes in length. Two new IEs are thus defined to accomodate these two lengths.
+### Issues 
 
-### Update the Description
+Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
 
-TBC
+### Update the Description of tcpOptions IE
 
-### New IE: tcpExID16
+This document requests IANA to update the descritpion of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
+
+#### OLD
+
+Description:
+
+      :TCP options in packets of this Flow.  The information is encoded
+      in a set of bit fields.  For each TCP option, there is a bit in
+      this set.  The bit is set to 1 if any observed packet of this Flow
+      contains the corresponding TCP option.  Otherwise, if no observed
+      packet of this Flow contained the respective TCP option, the value
+      of the corresponding bit is 0.
+      Options are mapped to bits according to their option numbers.
+      Option number X is mapped to bit X.  TCP option numbers are
+      maintained by IANA.
+
+~~~~
+            0     1     2     3     4     5     6     7
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            8     9    10    11    12    13    14    15
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+           16    17    18    19    20    21    22    23
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+                              . . .
+
+           56    57    58    59    60    61    62    63
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+~~~~
+
+#### NEW
+
+Description:
+
+      :TCP options in packets of this Flow.  The information is encoded
+      in a set of bit fields.  For each TCP option, there is a bit in
+      this set.  The bit is set to 1 if any observed packet of this Flow
+      contains the corresponding TCP option.  Otherwise, if no observed
+      packet of this Flow contained the respective TCP option, the value
+      of the corresponding bit is 0.
+
+      TCP option numbers are maintained by IANA.
+      
+      Up to four tcpOptions IEs can be included to cover the 0-255 range.
+
+~~~~
++----------+----------+----------+----------+
+|tcpOptions|tcpOptions|tcpOptions|tcpOptions|
+|Instance#1|Instance#2|Instance#3|Instance#4|
++----------+----------+----------+----------+
+    0-63      64-127    128-191    192-255
+    Range      Range     Range       Range
+~~~~
+
+      Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "[1+X/64]".
+
+      A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
+
+      (1) If only option kinds =<63 are observed, then only one udpOptions IE instance is included.
+      (2) If only option kinds =<127 are observed, then two udpOptions IEs instances are included.
+
+~~~~
+            0     1     2     3     4     5     6     7
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            8     9    10    11    12    13    14    15
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+           16    17    18    19    20    21    22    23
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+                              . . .
+
+           56    57    58    59    60    61    62    63
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+~~~~
+
+
+### Define New Information Elements for Shared TCP Options
+
+ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in miximing both types in the same IE.
+
+This document requests IANA to add the following new IEs to the IANA IPFIX registry {{IANA-IPFIX}}.
+
+#### New IE: tcpExID16
 
    *  Name: tcpExID16
 
@@ -107,11 +209,11 @@ TBC
 
    *  Data Type Semantics: identifier
 
-   *  Additional Information: See assigned ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+   *  Additional Information: See assigned 16-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
 
    *  Reference: [This-Document]
 
-### New IE: tcpExID32
+#### New IE: tcpExID32
 
    *  Name: tcpExID32
 
@@ -126,7 +228,7 @@ TBC
 
    *  Data Type Semantics: identifier
 
-   *  Additional Information: See assigned ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+   *  Additional Information: See assigned 32-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
 
    *  Reference: [This-Document]
 
@@ -141,7 +243,7 @@ The description should be updated to:
 
 # Point to An Existing IANA Registry {#to-iana}
 
-IANA is requested to update the following entries by adding the indicated "Additional Information" of {{IANA-IPFIX}}:
+This document requests IANA to update the following entries by adding the indicated "Additional Information" to the {{IANA-IPFIX}} registry:
 
 | IE                     | Additional Information |
 | icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
@@ -156,7 +258,7 @@ IANA is requested to update the following entries by adding the indicated "Addit
 
 # Consistent Citation of Registries {#consistent}
 
-IANA is requested to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
+This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
 ## mplsTopLabelType
 
@@ -445,6 +547,8 @@ Values for this field are listed in the Classification Engine IDs registry.
 
 # Misc {#misc}
 
+This document requests IANA to update the following entries by updating the description in the IANA IPFIX registry {{IANA-IPFIX}}.
+
 ## collectionTimeMilliseconds
 
 * OLD:
@@ -571,7 +675,7 @@ Values for this field are listed in the Classification Engine IDs registry.
    - Description: This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is in the internal address realm as specified above.
 
 * NEW:
-   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is similar to the one provided for the internalAddressRealm IE.
+   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. See the internalAddressRealm IE for the detailed definition.
 
 
 # Security Considerations
@@ -583,7 +687,7 @@ IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
 
 Requested IANA actions are described in the main document. These actions are not repeated here.
 
-This document also requests IANA to update the reference clause of the "IPFIX Information Elements" subregistry with teh reference to this document.
+This document also requests IANA to update the reference clause of the "IPFIX Information Elements" subregistry with the reference to this document.
 
 --- back
 
