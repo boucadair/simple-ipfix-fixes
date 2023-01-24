@@ -97,8 +97,7 @@ This document requests IANA to update the descritpion of the tcpOptions IE in th
 #### OLD
 
 Description:
-
-      :TCP options in packets of this Flow.  The information is encoded
+      : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
@@ -135,8 +134,7 @@ Description:
 #### NEW
 
 Description:
-
-      :TCP options in packets of this Flow.  The information is encoded
+      : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
@@ -190,7 +188,7 @@ Description:
 
 ### Define New Information Elements for Shared TCP Options
 
-ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in miximing both types in the same IE.
+ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in mixing both types in the same IE.
 
 This document requests IANA to add the following new IEs to the IANA IPFIX registry {{IANA-IPFIX}}.
 
