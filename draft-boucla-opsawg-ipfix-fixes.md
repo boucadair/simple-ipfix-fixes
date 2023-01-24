@@ -794,34 +794,32 @@ This document requests IANA to create a new subregistry entitled "ipv6ExtensionH
 The initial values of this subregistry are as follows:
 
 ~~~
-Ins    Bit    IPv6 Option   Description
-
-1      0, DST      60       Destination option header
-1      1, HOP       0       Hop-by-hop option header
-1      2, U                 Unassigned
-1      3, UNK               Unknown Layer 4 header
-                            (compressed, encrypted, not supported)
-1      4, FRA0     44       Fragment header - first fragment
-1      5, RH       43       Routing header
-1      6, FRA1     44       Fragmentation header - not first fragment
-1      7, U                 Unassigned
-1      8 to 11              Unassigned
-1      12, MOB     135      IPv6 mobility [RFC3775]
-1      13, ESP      50      Encrypted security payload
-1      14, AH       51      Authentication Header
-1      15, PAY     108      Payload compression header
-1      16          139      Host Identity Protocol
-1      17          140      Shim6 Protocol
-1      18          253      Use for experimentation and testing
-1      19          254      Use for experimentation and testing
-1      20 to 31             Unassigned
-2      0 to 31              Unassigned
-3      0 to 31              Unassigned
-4      0 to 31              Unassigned
-5      0 to 31              Unassigned
-6      0 to 31              Unassigned
-7      0 to 31              Unassigned
-8      0 to 31              Unassigned
+Instance Bit    IPv6 Option   Description
+    1    0, DST      60       Destination option header
+    1    1, HOP       0       Hop-by-hop option header
+    1    2, U                 Unassigned
+    1    3, UNK               Unknown Layer 4 header
+                              (compressed, encrypted, not supported)
+    1    4, FRA0     44       Fragment header - first fragment
+    1    5, RH       43       Routing header
+    1    6, FRA1     44       Fragmentation header - not first fragment
+    1    7 to 11              Unassigned
+    1    12, MOB     135      IPv6 mobility [RFC3775]
+    1    13, ESP      50      Encrypted security payload
+    1    14, AH       51      Authentication Header
+    1    15, PAY     108      Payload compression header
+    1    16, HIP     139      Host Identity Protocol
+    1    17, SHIM6   140      Shim6 Protocol
+    1    18          253      Use for experimentation and testing
+    1    19          254      Use for experimentation and testing
+    1    20 to 31             Unassigned
+    2    0 to 31              Unassigned
+    3    0 to 31              Unassigned
+    4    0 to 31              Unassigned
+    5    0 to 31              Unassigned
+    6    0 to 31              Unassigned
+    7    0 to 31              Unassigned
+    8    0 to 31              Unassigned
 ~~~
 
 Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH and the subregistry is udpated with the details that mirror the assigned EH. A new instance 'i+1' is used when only the bits of an instance 'i' are exhausted.
@@ -829,7 +827,7 @@ Values are not added directly into this subregistry. When a new code is assigned
 IANA is requested to add this note to {{IPv6-EH}}:
 
 Note:
-: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header.[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
+: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header [NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
 
 --- back
 
