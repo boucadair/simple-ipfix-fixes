@@ -828,7 +828,7 @@ Values are not added directly into this subregistry. When a new code is assigned
 
 IANA is requested to add this note to {{IPv6-EH}}:
 
-Note: 
+Note:
 : When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header.[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
 
 --- back
