@@ -143,15 +143,6 @@ TCP options in packets of this Flow.  The information is encoded
 
       Up to four tcpOptions IEs can be included to cover the 0-255 range as follows:
 
-~~~~
-+----------+----------+----------+----------+
-|tcpOptions|tcpOptions|tcpOptions|tcpOptions|
-|Instance#1|Instance#2|Instance#3|Instance#4|
-+----------+----------+----------+----------+
-    0-63      64-127    128-191    192-255
-    Range      Range     Range       Range
-~~~~
-
       Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "[1+X/64]".
 
       A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
@@ -159,7 +150,17 @@ TCP options in packets of this Flow.  The information is encoded
       (1) If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
       (2) If only option kinds =<127 are observed, then the first two tcpOptions IEs instances are included.
 
-~~~~
+~~~
+* 0-255 range mapping to tcpOptions IE instances:
+        +----------+----------+----------+----------+
+        |tcpOptions|tcpOptions|tcpOptions|tcpOptions|
+        |Instance#1|Instance#2|Instance#3|Instance#4|
+        +----------+----------+----------+----------+
+            0-63      64-127    128-191    192-255
+            Range      Range     Range       Range
+
+* TCP option position in a tcpOptions IE instance:
+
             0     1     2     3     4     5     6     7
         +-----+-----+-----+-----+-----+-----+-----+-----+
         |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
@@ -181,7 +182,7 @@ TCP options in packets of this Flow.  The information is encoded
         +-----+-----+-----+-----+-----+-----+-----+-----+
     ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
         +-----+-----+-----+-----+-----+-----+-----+-----+
-~~~~
+~~~
 
 
 ### Define New Information Elements for Shared TCP Options
