@@ -88,11 +88,11 @@ Note that if the fixes to the following issues require defining new IEs, these I
 
 ### Issues
 
-Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
+Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
 
 ### Update the Description of the tcpOptions IE
 
-This document requests IANA to update the descritpion of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
+This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
 
 #### OLD Description
 
@@ -140,10 +140,10 @@ TCP options in packets of this Flow.  The information is encoded
       of the corresponding bit is 0.
 
 TCP option numbers are maintained by IANA.
-Up to four tcpOptions IEs can be included to cover the 0-255 range. Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "[1+X/64]". A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
+Up to four tcpOptions IEs can be included to cover the 0-255 range. Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "1+1[X/64]". A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
 
 * If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
-* If only option kinds =<127 are observed, then the first two tcpOptions IEs instances are included.
+* If only option kinds =<127 are observed, then only the first two tcpOptions IEs instances are included.
 
 ~~~
 * 0-255 range mapping to tcpOptions IE instances:
