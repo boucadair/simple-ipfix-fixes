@@ -789,7 +789,7 @@ This document also requests IANA to update the reference clause of the "IPFIX In
 
 ## IPFIX Subregistry for IPv6 Extension Headers
 
-This document request IANA to create a new subregistry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry {{IANA-IPFIX}}.
+This document requests IANA to create a new subregistry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry {{IANA-IPFIX}}.
 
 The initial values of this subregistry are as follows:
 
