@@ -317,15 +317,13 @@ The following section proposes fixes to these issues.
       corresponding bit is 0. The IPv6 EH associated with each bit
       is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY].
 
-      Up to eight ipv6ExtensionHeaders IEs can be included to cover
-      the 0-255 range. EHs are mapped to bits according to their option
-      numbers. ipv6ExtensionHeaders IE instances MAY be ommited if there
-      is no ambiguity to determine the position of an observed EH.
-   Abstract Data Type: unsigned32
+      The value can be encoded in fewer octets as per the guidelines in
+      Section 6.2 of [RFC7011].
+   Abstract Data Type: unsigned
    Data Type Semantics: flags
    ElementId: 64
    Status: current
-   Reference: [RFC5102]
+   Reference: [RFC5102][This-Document]
    Additional Information:
       See the assigned bits to each IPv6 extension header in
       [NEW_IPFIX_IPv6EH_SUBREGISTRY].
@@ -788,35 +786,28 @@ This document requests IANA to create a new subregistry entitled "ipv6ExtensionH
 The initial values of this subregistry are as follows:
 
 ~~~
-Instance Bit    IPv6 Option   Description
-    1    0, DST      60       Destination option header
-    1    1, HOP       0       Hop-by-hop option header
-    1    2, U                 Unassigned
-    1    3, UNK               Unknown Layer 4 header
-                              (compressed, encrypted, not supported)
-    1    4, FRA0     44       Fragment header - first fragment
-    1    5, RH       43       Routing header
-    1    6, FRA1     44       Fragmentation header - not first fragment
-    1    7 to 11              Unassigned
-    1    12, MOB     135      IPv6 mobility [RFC3775]
-    1    13, ESP      50      Encrypted security payload
-    1    14, AH       51      Authentication Header
-    1    15, PAY     108      Payload compression header
-    1    16, HIP     139      Host Identity Protocol
-    1    17, SHIM6   140      Shim6 Protocol
-    1    18          253      Use for experimentation and testing
-    1    19          254      Use for experimentation and testing
-    1    20 to 31             Unassigned
-    2    0 to 31              Unassigned
-    3    0 to 31              Unassigned
-    4    0 to 31              Unassigned
-    5    0 to 31              Unassigned
-    6    0 to 31              Unassigned
-    7    0 to 31              Unassigned
-    8    0 to 31              Unassigned
+   Bit    IPv6 Option   Description
+    0, DST      60       Destination option header
+    1, HOP       0       Hop-by-hop option header
+    2, U                 Unassigned
+    3, UNK               Unknown Layer 4 header
+                         (compressed, encrypted, not supported)
+    4, FRA0     44       Fragment header - first fragment
+    5, RH       43       Routing header
+    6, FRA1     44       Fragmentation header - not first fragment
+    7 to 11              Unassigned
+    12, MOB     135      IPv6 mobility [RFC3775]
+    13, ESP      50      Encrypted security payload
+    14, AH       51      Authentication Header
+    15, PAY     108      Payload compression header
+    16, HIP     139      Host Identity Protocol
+    17, SHIM6   140      Shim6 Protocol
+    18          253      Use for experimentation and testing
+    19          254      Use for experimentation and testing
+    20 to 255            Unassigned
 ~~~
 
-Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH. A new instance 'i+1' is used if and only if all bits of the instance 'i' are exhausted, and so on.
+Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH.  
 
 IANA is requested to add this note to {{IPv6-EH}}:
 
