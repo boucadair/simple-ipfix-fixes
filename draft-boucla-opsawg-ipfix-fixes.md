@@ -807,7 +807,7 @@ The initial values of this subregistry are as follows:
     20 to 255            Unassigned
 ~~~
 
-Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH.  
+Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH.
 
 IANA is requested to add this note to {{IPv6-EH}}:
 
