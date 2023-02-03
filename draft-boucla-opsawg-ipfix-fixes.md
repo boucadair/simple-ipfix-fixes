@@ -77,6 +77,14 @@ This document uses the IPFIX-specific terminology (Information Element, Template
    Section 2 of {{!RFC7011}}. As in {{!RFC7011}}, these IPFIX-specific terms
    have the first letter of a word capitalized.
 
+# Why A Document is Needed for These Updates?
+
+Many of the edits in this document may be handled by the IPFIX Design Experts. However, and given that many of the imapced IE entries were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
+
+   This process should not in any way be construed as allowing the IE-
+   DOCTORS to overrule IETF consensus.  Specifically, Information
+   Elements in the IANA IE registry that were added with IETF consensus
+   require IETF consensus for revision or deprecation.
 
 # Update the Description {#desc}
 
