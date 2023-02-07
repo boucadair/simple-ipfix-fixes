@@ -315,7 +315,7 @@ This document requests IANA to add this new IE to the IPFIX regisry:
       of the corresponding bit is 0.
       Options are mapped to bits according to their option numbers.
       Option number X is mapped to bit X.  TCP option numbers are
-      maintained by IANA. 
+      maintained by IANA.
 
       The value can be encoded in fewer octets as per the guidelines in
       Section 6.2 of [RFC7011].
