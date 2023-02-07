@@ -1,7 +1,7 @@
 ---
 title: "Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry"
 abbrev: "IPFIX IANA Fixes"
-category: info
+category: std
 
 docname: draft-boucla-opsawg-ipfix-fixes-latest
 submissiontype: IETF
@@ -87,8 +87,6 @@ Many of the edits in this document may be handled by the IPFIX Design Experts. H
 
 The IEs listed in the following subsections cannot echo some values that can be seen in a packet.
 
-Note that if the fixes to the following issues require defining new IEs, these IEs will be moved to a separate document.
-
 ## ipv6ExtensionHeaders Information Element
 
 ### Issues
@@ -99,7 +97,7 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 - Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
 - Specify the procedure to follow when all bits are exhausted.
 
-The following section proposes fixes to these issues.
+The following section proposes a fixe for the first two issues. A companion document [I-D.boucadair-opsawg-ipfix-tcpo-v6eh] specifies a new option to fix the last issue.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -196,29 +194,6 @@ The following section proposes fixes to these issues.
       and [IPv6-EH] for assigned extension headers.
 ~~~
 
-#### New IPv6 EH IE: ipv6ExtensionHeadersFull
-
-This document requests IANA to add this new IE to the IPFIX regisry:
-
-   * Description:
-      IPv6 extension headers observed in packets of this Flow. The
-      information is encoded in a set of bit fields.  For each IPv6
-      option header, there is a bit in this set.  The bit is set to 1 if
-      any observed packet of this Flow contains the corresponding IPv6
-      extension header.  Otherwise, if no observed packet of this Flow
-      contained the respective IPv6 extension header, the value of the
-      corresponding bit is 0. The IPv6 EH associated with each bit
-      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-
-      The value can be encoded in fewer octets as per the guidelines in
-      Section 6.2 of [RFC7011].
-   * Abstract Data Type: unsigned
-   * Data Type Semantics: flags
-   * ElementId: TBA1
-   * Status: current
-   * Reference: [This-Document]
-   * Additional Information: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY]. See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
-
 ## tcpOptions
 
 ### Issues
@@ -301,76 +276,6 @@ TCP options in packets of this Flow.  The information is encoded
     ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~
-
-### New Information Elements for the Full TCP Options Range
-
-This document requests IANA to add this new IE to the IPFIX regisry:
-
-   * Description:
-      TCP options in packets of this Flow.  The information is encoded
-      in a set of bit fields.  For each TCP option, there is a bit in
-      this set.  The bit is set to 1 if any observed packet of this Flow
-      contains the corresponding TCP option.  Otherwise, if no observed
-      packet of this Flow contained the respective TCP option, the value
-      of the corresponding bit is 0.
-      Options are mapped to bits according to their option numbers.
-      Option number X is mapped to bit X.  TCP option numbers are
-      maintained by IANA.
-
-      The value can be encoded in fewer octets as per the guidelines in
-      Section 6.2 of [RFC7011].
-   * Abstract Data Type: unsigned
-   * Data Type Semantics: flags
-   * ElementId: TBA2
-   * Status: current
-   * Reference: [This-Document]
-   * Additional Information: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY]. See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
-
-### New Information Elements for Shared TCP Options
-
-ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in mixing both types in the same IE.
-
-This document requests IANA to add the following new IEs to the IANA IPFIX registry {{IANA-IPFIX}}.
-
-#### New IE: tcpExID16
-
-   *  Name: tcpExID16
-
-   *  ElementID: TBD3
-
-   *  Description: Observed 2-byte Expermients IDs (ExIDs) in a shared
-      TCP option (Kind=253 or 254).  The information is encoded in a set of
-      16-bit fields.  Each 16-bit field carries the observed 2-byte ExID in a
-      shared option.
-
-   *  Abstract Data Type: octetArray
-
-   *  Data Type Semantics: identifier
-
-   *  Additional Information: See assigned 16-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
-
-   *  Reference: [This-Document]
-
-#### New IE: tcpExID32
-
-   *  Name: tcpExID32
-
-   *  ElementID: TBD4
-
-   *  Description: Observed 4-byte Expermients ID (ExIDs) in a shared
-      TCP option (Kind=253 or 254).  The information is encoded in a set of
-      16-bit fields.  Each 32-bit field carries the observed 4-byte ExID in a
-      shared option.
-
-   *  Abstract Data Type: octetArray
-
-   *  Data Type Semantics: identifier
-
-   *  Additional Information: See assigned 32-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
-
-   *  Reference: [This-Document]
-
-
 
 # Point to An Existing IANA Registry {#to-iana}
 
