@@ -79,12 +79,9 @@ This document uses the IPFIX-specific terminology (Information Element, Template
 
 # Why A Document is Needed for These Updates?
 
-Many of the edits in this document may be handled by the IPFIX Design Experts. However, and given that many of the imapced IE entries were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
+Many of the edits in this document may be handled by the IPFIX Design Experts. However, and given that many of the impacted IEs were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
 
-   This process should not in any way be construed as allowing the IE-
-   DOCTORS to overrule IETF consensus.  Specifically, Information
-   Elements in the IANA IE registry that were added with IETF consensus
-   require IETF consensus for revision or deprecation.
+   > This process should not in any way be construed as allowing the IE-DOCTORS to overrule IETF consensus.  Specifically, Information Elements in the IANA IE registry that were added with IETF consensus require IETF consensus for revision or deprecation.
 
 # Update the Description {#desc}
 
@@ -92,151 +89,11 @@ The IEs listed in the following subsections cannot echo some values that can be 
 
 Note that if the fixes to the following issues require defining new IEs, these IEs will be moved to a separate document.
 
-## tcpOptions
+## ipv6ExtensionHeaders Information Element
 
 ### Issues
 
-Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
-
-### Update the Description of the tcpOptions IE
-
-This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
-
-#### OLD Description
-
-TCP options in packets of this Flow.  The information is encoded
-      in a set of bit fields.  For each TCP option, there is a bit in
-      this set.  The bit is set to 1 if any observed packet of this Flow
-      contains the corresponding TCP option.  Otherwise, if no observed
-      packet of this Flow contained the respective TCP option, the value
-      of the corresponding bit is 0.
-      Options are mapped to bits according to their option numbers.
-      Option number X is mapped to bit X.  TCP option numbers are
-      maintained by IANA.
-
-~~~~
-            0     1     2     3     4     5     6     7
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            8     9    10    11    12    13    14    15
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-           16    17    18    19    20    21    22    23
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-                              . . .
-
-           56    57    58    59    60    61    62    63
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-~~~~
-
-#### NEW Description
-
-TCP options in packets of this Flow.  The information is encoded
-      in a set of bit fields.  For each TCP option, there is a bit in
-      this set.  The bit is set to 1 if any observed packet of this Flow
-      contains the corresponding TCP option.  Otherwise, if no observed
-      packet of this Flow contained the respective TCP option, the value
-      of the corresponding bit is 0.
-
-TCP option numbers are maintained by IANA.
-Up to four tcpOptions IEs can be included to cover the 0-255 range. Options are mapped to bits according to their option numbers. Option number X is mapped to bit X[64] of the IE instance determined by the order "1+1[X/64]". A tcpOptions IE instance MAY be ommited if there is no ambiguity to determine the position of an observed TCP option. For example:
-
-* If only option kinds =<63 are observed, then only the first tcpOptions IE instance is included.
-* If only option kinds =<127 are observed, then only the first two tcpOptions IEs instances are included.
-
-~~~
-* 0-255 range mapping to tcpOptions IE instances:
-        +----------+----------+----------+----------+
-        |tcpOptions|tcpOptions|tcpOptions|tcpOptions|
-        |Instance#1|Instance#2|Instance#3|Instance#4|
-        +----------+----------+----------+----------+
-            0-63      64-127    128-191    192-255
-            Range      Range     Range       Range
-
-* Position of TCP options in a tcpOptions IE instance:
-
-            0     1     2     3     4     5     6     7
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            8     9    10    11    12    13    14    15
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-           16    17    18    19    20    21    22    23
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-                              . . .
-
-           56    57    58    59    60    61    62    63
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-~~~
-
-
-### Define New Information Elements for Shared TCP Options
-
-ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in mixing both types in the same IE.
-
-This document requests IANA to add the following new IEs to the IANA IPFIX registry {{IANA-IPFIX}}.
-
-#### New IE: tcpExID16
-
-   *  Name: tcpExID16
-
-   *  ElementID: TBD1
-
-   *  Description: Observed 2-byte Expermients IDs (ExIDs) in a shared
-      TCP option (Kind=253 or 254).  The information is encoded in a set of
-      16-bit fields.  Each 16-bit field carries the observed 2-byte ExID in a
-      shared option.
-
-   *  Abstract Data Type: octetArray
-
-   *  Data Type Semantics: identifier
-
-   *  Additional Information: See assigned 16-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
-
-   *  Reference: [This-Document]
-
-#### New IE: tcpExID32
-
-   *  Name: tcpExID32
-
-   *  ElementID: TBD2
-
-   *  Description: Observed 4-byte Expermients ID (ExIDs) in a shared
-      TCP option (Kind=253 or 254).  The information is encoded in a set of
-      16-bit fields.  Each 32-bit field carries the observed 4-byte ExID in a
-      shared option.
-
-   *  Abstract Data Type: octetArray
-
-   *  Data Type Semantics: identifier
-
-   *  Additional Information: See assigned 32-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
-
-   *  Reference: [This-Document]
-
-## ipv6ExtensionHeaders
-
-### Issues
-
-The current specification of ipv6ExtensionHeaders IE should be updated to:
+The current specification of ipv6ExtensionHeaders Information Element should be updated to:
 
 - Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
 - Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
@@ -244,7 +101,7 @@ The current specification of ipv6ExtensionHeaders IE should be updated to:
 
 The following section proposes fixes to these issues.
 
-### Updates
+### Updates to the ipv6ExtensionHeaders Description
 
 #### OLD
 
@@ -323,11 +180,11 @@ The following section proposes fixes to these issues.
       extension header.  Otherwise, if no observed packet of this Flow
       contained the respective IPv6 extension header, the value of the
       corresponding bit is 0. The IPv6 EH associated with each bit
-      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-
-      The value can be encoded in fewer octets as per the guidelines in
-      Section 6.2 of [RFC7011].
-   Abstract Data Type: unsigned
+      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
+      only when when the observed extension headers are in the 0-31
+      range. If the observed EHs exceeds that range,
+      ipv6ExtensionHeadersFull Information Element MUST be used.
+   Abstract Data Type: unsigned32
    Data Type Semantics: flags
    ElementId: 64
    Status: current
@@ -338,6 +195,182 @@ The following section proposes fixes to these issues.
       See [RFC8200] for the general definition of IPv6 extension headers
       and [IPv6-EH] for assigned extension headers.
 ~~~
+
+#### New IPv6 EH IE: ipv6ExtensionHeadersFull
+
+This document requests IANA to add this new IE to the IPFIX regisry:
+
+   * Description:
+      IPv6 extension headers observed in packets of this Flow. The
+      information is encoded in a set of bit fields.  For each IPv6
+      option header, there is a bit in this set.  The bit is set to 1 if
+      any observed packet of this Flow contains the corresponding IPv6
+      extension header.  Otherwise, if no observed packet of this Flow
+      contained the respective IPv6 extension header, the value of the
+      corresponding bit is 0. The IPv6 EH associated with each bit
+      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+
+      The value can be encoded in fewer octets as per the guidelines in
+      Section 6.2 of [RFC7011].
+   * Abstract Data Type: unsigned
+   * Data Type Semantics: flags
+   * ElementId: TBA1
+   * Status: current
+   * Reference: [This-Document]
+   * Additional Information: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY]. See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
+
+## tcpOptions
+
+### Issues
+
+Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
+
+### Update the Description of the tcpOptions IE
+
+This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
+
+#### OLD Description
+
+TCP options in packets of this Flow.  The information is encoded
+      in a set of bit fields.  For each TCP option, there is a bit in
+      this set.  The bit is set to 1 if any observed packet of this Flow
+      contains the corresponding TCP option.  Otherwise, if no observed
+      packet of this Flow contained the respective TCP option, the value
+      of the corresponding bit is 0.
+      Options are mapped to bits according to their option numbers.
+      Option number X is mapped to bit X.  TCP option numbers are
+      maintained by IANA.
+
+~~~~
+            0     1     2     3     4     5     6     7
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            8     9    10    11    12    13    14    15
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+           16    17    18    19    20    21    22    23
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+                              . . .
+
+           56    57    58    59    60    61    62    63
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+~~~~
+
+#### NEW Description
+
+TCP options in packets of this Flow.  The information is encoded
+      in a set of bit fields.  For each TCP option, there is a bit in
+      this set.  The bit is set to 1 if any observed packet of this Flow
+      contains the corresponding TCP option.  Otherwise, if no observed
+      packet of this Flow contained the respective TCP option, the value
+      of the corresponding bit is 0.
+      Options are mapped to bits according to their option numbers.
+      Option number X is mapped to bit X.  TCP option numbers are
+      maintained by IANA. This information element is used only
+      when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE MUST be used.
+
+~~~
+            0     1     2     3     4     5     6     7
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            8     9    10    11    12    13    14    15
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+           16    17    18    19    20    21    22    23
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+
+                              . . .
+
+           56    57    58    59    60    61    62    63
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+~~~
+
+### New Information Elements for the Full TCP Options Range
+
+This document requests IANA to add this new IE to the IPFIX regisry:
+
+   * Description:
+      TCP options in packets of this Flow.  The information is encoded
+      in a set of bit fields.  For each TCP option, there is a bit in
+      this set.  The bit is set to 1 if any observed packet of this Flow
+      contains the corresponding TCP option.  Otherwise, if no observed
+      packet of this Flow contained the respective TCP option, the value
+      of the corresponding bit is 0.
+      Options are mapped to bits according to their option numbers.
+      Option number X is mapped to bit X.  TCP option numbers are
+      maintained by IANA. 
+
+      The value can be encoded in fewer octets as per the guidelines in
+      Section 6.2 of [RFC7011].
+   * Abstract Data Type: unsigned
+   * Data Type Semantics: flags
+   * ElementId: TBA2
+   * Status: current
+   * Reference: [This-Document]
+   * Additional Information: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY]. See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
+
+### New Information Elements for Shared TCP Options
+
+ExIDs can be either 2 or 4 bytes in length {{!RFC6994}}. Two new IEs are defined to accomodate these two lengths without introducing extra complexity in mixing both types in the same IE.
+
+This document requests IANA to add the following new IEs to the IANA IPFIX registry {{IANA-IPFIX}}.
+
+#### New IE: tcpExID16
+
+   *  Name: tcpExID16
+
+   *  ElementID: TBD3
+
+   *  Description: Observed 2-byte Expermients IDs (ExIDs) in a shared
+      TCP option (Kind=253 or 254).  The information is encoded in a set of
+      16-bit fields.  Each 16-bit field carries the observed 2-byte ExID in a
+      shared option.
+
+   *  Abstract Data Type: octetArray
+
+   *  Data Type Semantics: identifier
+
+   *  Additional Information: See assigned 16-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+
+   *  Reference: [This-Document]
+
+#### New IE: tcpExID32
+
+   *  Name: tcpExID32
+
+   *  ElementID: TBD4
+
+   *  Description: Observed 4-byte Expermients ID (ExIDs) in a shared
+      TCP option (Kind=253 or 254).  The information is encoded in a set of
+      16-bit fields.  Each 32-bit field carries the observed 4-byte ExID in a
+      shared option.
+
+   *  Abstract Data Type: octetArray
+
+   *  Data Type Semantics: identifier
+
+   *  Additional Information: See assigned 32-bit ExIDs at [https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-exids].
+
+   *  Reference: [This-Document]
+
+
 
 # Point to An Existing IANA Registry {#to-iana}
 
