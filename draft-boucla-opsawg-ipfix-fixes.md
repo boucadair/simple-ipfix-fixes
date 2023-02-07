@@ -97,7 +97,7 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 - Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
 - Specify the procedure to follow when all bits are exhausted.
 
-The following section proposes a fixe for the first two issues. A companion document [I-D.boucadair-opsawg-ipfix-tcpo-v6eh] specifies a new option to fix the last issue.
+The following section proposes a fix for the first two issues. A companion document [I-D.boucadair-opsawg-ipfix-tcpo-v6eh] specifies a new option to fix the last issue.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
