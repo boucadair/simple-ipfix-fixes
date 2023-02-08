@@ -79,7 +79,7 @@ This document uses the IPFIX-specific terminology (Information Element, Template
 
 # Why A Document is Needed for These Updates?
 
-Many of the edits in this document may be handled by the IPFIX Design Experts. However, and given that many of the impacted IEs were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
+Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
 
    > This process should not in any way be construed as allowing the IE-DOCTORS to overrule IETF consensus.  Specifically, Information Elements in the IANA IE registry that were added with IETF consensus require IETF consensus for revision or deprecation.
 
