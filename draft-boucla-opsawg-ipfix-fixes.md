@@ -369,12 +369,12 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
    - Description:  This Information Element describes the forwarding
                    status of the flow and any attached reasons.
                    IPFIX reduced-size encoding is used as required.
-                   
+
                    A structure is currently associated with the first
                    byte. Future versions may be defined to associate
-                   meanings with bits in the remaining bits. 
-                   
-                   The current version of the Information Element 
+                   meanings with bits in the remaining bits.
+
+                   The current version of the Information Element
                    should be exported as unsigned8.
 
                    The layout of the encoding is as follows:
