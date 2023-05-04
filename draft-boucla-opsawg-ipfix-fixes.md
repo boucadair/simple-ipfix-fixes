@@ -359,6 +359,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
              [CCO-NF9FMT].
+
+   - Abstract Data Type: unsigned8
 ~~~
 
 * NEW:
@@ -366,6 +368,14 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 ~~~
    - Description:  This Information Element describes the forwarding
                    status of the flow and any attached reasons.
+                   IPFIX reduced-size encoding is used as required.
+                   
+                   A structure is currently associated with the first
+                   byte. Future versions may be defined to associate
+                   meanings with bits in the remaining bits. 
+                   
+                   The current version of the Information Element 
+                   should be exported as unsigned8.
 
                    The layout of the encoding is as follows:
 
@@ -388,6 +398,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
    - Additional Information: See the Forwarding Status sub-registries
        at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+
+   - Abstract Data Type: unsigned32
 ~~~
 
 ## classificationEngineId
@@ -999,3 +1011,4 @@ Note:
 
 Thanks to Paul Aitken for the review.
 
+Thomas Graf tagged an issue with the forwardingStatus Information Element.
