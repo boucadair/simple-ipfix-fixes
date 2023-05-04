@@ -79,7 +79,7 @@ This document uses the IPFIX-specific terminology (Information Element, Template
 
 # Why A Document is Needed for These Updates?
 
-Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from Section 5.1 of {{!RFC7013}} should be followed:
+Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from {{Section 5.1 of !RFC7013}} should be followed:
 
    > This process should not in any way be construed as allowing the IE-DOCTORS to overrule IETF consensus.  Specifically, Information Elements in the IANA IE registry that were added with IETF consensus require IETF consensus for revision or deprecation.
 
@@ -97,7 +97,7 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 - Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
 - Specify the procedure to follow when all bits are exhausted.
 
-The following section proposes a fix for the first two issues. A companion document [I-D.boucadair-opsawg-ipfix-tcpo-v6eh] specifies a new option to fix the last issue.
+The following section proposes a fix for the first two issues. A companion document {{!I-D.boucadair-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -152,10 +152,15 @@ The following section proposes a fix for the first two issues. A companion docum
        16 to 31             Reserved
 
    Abstract Data Type: unsigned32
+
    Data Type Semantics: flags
+
    ElementId: 64
+
    Status: current
+
    Reference: [RFC5102]
+
    Additional Information:
       See [RFC8200] for the general definition of IPv6 extension headers
       and for the specification of the hop-by-hop options header, the
@@ -181,12 +186,19 @@ The following section proposes a fix for the first two issues. A companion docum
       is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
       only when when the observed extension headers are in the 0-31
       range. If the observed EHs exceeds that range,
-      ipv6ExtensionHeadersFull Information Element MUST be used.
+      ipv6ExtensionHeadersFull Information Element MUST be used
+      [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
+
    Abstract Data Type: unsigned32
+
    Data Type Semantics: flags
+
    ElementId: 64
+
    Status: current
+
    Reference: [RFC5102][This-Document]
+
    Additional Information:
       See the assigned bits to each IPv6 extension header in
       [NEW_IPFIX_IPv6EH_SUBREGISTRY].
@@ -251,7 +263,7 @@ TCP options in packets of this Flow.  The information is encoded
       Options are mapped to bits according to their option numbers.
       Option number X is mapped to bit X.  TCP option numbers are
       maintained by IANA. This information element is used only
-      when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE MUST be used.
+      when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE {{!I-D.boucadair-opsawg-ipfix-tcpo-v6eh}} MUST be used .
 
 ~~~
             0     1     2     3     4     5     6     7
@@ -299,11 +311,18 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 ## mplsTopLabelType
 
 * OLD:
-   - Description: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
-   - Additional Information: See {{?RFC3031}} for the MPLS label structure. See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
+    - Description:
+    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
+
+    - Additional Information:
+    : See {{?RFC3031}} for the MPLS label structure. See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
+    
 * NEW:
-   - Description: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
-   - Additional Information: See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type]. See {{?RFC3031}} for the MPLS label structure.
+    - Description:
+    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+
+    - Additional Information:
+    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type]. See {{?RFC3031}} for the MPLS label structure.
 
 ## forwardingStatus
 
@@ -371,28 +390,48 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 ## classificationEngineId
 
 * OLD:
-   - Description:  A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+    - Description:
+    : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+
+    : Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+
    - Additional Information:
+
 * NEW:
-   - Description: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-Values for this field are listed in the Classification Engine IDs registry.
-   - Additional Information: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+    - Description:
+    : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+
+    : Values for this field are listed in the Classification Engine IDs registry.
+
+    - Additional Information:
+    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
 ## flowEndReason
 
 * OLD:
-   - Description: The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
+    - Description:
+    : The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
+
    - Additional Information:
+
 * NEW:
-   - Description: The reason for Flow termination. Values are listed in the flowEndReason registry.
-   - Additional Information: See the Classification Engine IDs registry available at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason].
+    - Description:
+    : The reason for Flow termination. Values are listed in the flowEndReason registry.
+
+    - Additional Information:
+    : See the Classification Engine IDs registry available at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason].
 
 ## natOriginatingAddressRealm
 
 * OLD:
-   - Description: Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
-   - Additional Information: See {{?RFC3022}} for the definition of NAT.
+    - Description:
+    : Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
+
+    : Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
+
+   - Additional Information:
+   : See {{?RFC3022}} for the definition of NAT.
+
 * NEW:
    - Description:  Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective. Values are listed in the natOriginatingAddressRealm registry.
    - Additional Information: See the assigned NAT originating address realm at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm]. See {{?RFC3022}} for the definition of NAT.
@@ -691,10 +730,14 @@ This document requests IANA to update the description of the following entries i
 ## informationElementDescription
 
 * OLD:
-   - Description: A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed. See the Security Considerations section for notes on string handling for Information Element type records.
+    - Description:
+    : A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed.
+    :See the Security Considerations section for notes on string handling for Information Element type records.
 
 * NEW:
-   - Description: A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed. See the Security Considerations section of {{?RFC5610}} for notes on string handling for Information Element type records.
+    - Description:
+    : A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed.
+    : See the Security Considerations Section of {{?RFC5610}} for notes on string handling for Information Element type records.
 
 
 ## distinctCountOfDestinationIPAddress
@@ -703,15 +746,19 @@ This document requests IANA to update the description of the following entries i
    - Description: The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters below, unless it is important to separate the counts by version.
 
 * NEW:
-   - Description: The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters, unless it is important to separate the counts by version.
+   - Description:
+   : The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters, unless it is important to separate the counts by version.
 
 ## externalAddressRealm
 
 * OLD:
-   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is in the internal address realm as specified above.
+    - Description:
+    : This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is in the internal address realm as specified above.
 
 * NEW:
-   - Description: This Information Element represents the external address realm where the packet is originated from or destined to. See the internalAddressRealm IE for the detailed definition.
+   - Description:
+   : This Information Element represents the external address realm where the packet is originated from or destined to.
+   : See the internalAddressRealm IE for the detailed definition.
 
 
 # Security Considerations
