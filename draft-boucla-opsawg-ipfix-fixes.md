@@ -85,8 +85,6 @@ Many of the edits in this document may be handled by the IPFIX Experts (informal
 
 # Update the Description {#desc}
 
-The IEs listed in the following subsections cannot echo some values that can be seen in a packet.
-
 ## ipv6ExtensionHeaders Information Element
 
 ### Issues
@@ -292,45 +290,9 @@ TCP options in packets of this Flow.  The information is encoded
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~
 
-# Point to An Existing IANA Registry {#to-iana}
-
-This document requests IANA to update the following entries by adding the indicated "Additional Information" to the {{IANA-IPFIX}} registry:
-
-| IE                     | Additional Information |
-| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
-| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
-| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
-| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
-| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
-| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
-| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
-| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
-{: title="Cite an IANA Registry under Additional Information"}
-
-# Consistent Citation of Registries {#consistent}
-
-This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
-
-## mplsTopLabelType
-
-* OLD:
-    - Description:
-    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
-    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
-
-    - Additional Information:
-    : See {{?RFC3031}} for the MPLS label structure.
-    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
-
-* NEW:
-    - Description:
-    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
-
-    - Additional Information:
-    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type].
-    : See {{?RFC3031}} for the MPLS label structure.
-
 ## forwardingStatus
+
+The current entry in {{IANA-IPFIX}} deviates from what is provided in {{!rfc7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
 
 * OLD:
 
@@ -404,6 +366,45 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
    - Abstract Data Type: unsigned32
 ~~~
+
+
+# Point to An Existing IANA Registry {#to-iana}
+
+This document requests IANA to update the following entries by adding the indicated "Additional Information" to the {{IANA-IPFIX}} registry:
+
+| IE                     | Additional Information |
+| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
+| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
+| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
+| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
+| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
+| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
+| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
+| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
+{: title="Cite an IANA Registry under Additional Information"}
+
+# Consistent Citation of Registries {#consistent}
+
+This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
+
+## mplsTopLabelType
+
+* OLD:
+    - Description:
+    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
+
+    - Additional Information:
+    : See {{?RFC3031}} for the MPLS label structure.
+    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
+
+* NEW:
+    - Description:
+    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+
+    - Additional Information:
+    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type].
+    : See {{?RFC3031}} for the MPLS label structure.
 
 ## classificationEngineId
 
