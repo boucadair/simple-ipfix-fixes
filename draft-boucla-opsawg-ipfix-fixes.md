@@ -104,107 +104,110 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
 #### OLD
 
 ~~~
-   Description:
-      IPv6 extension headers observed in packets of this Flow.  The
-      information is encoded in a set of bit fields.  For each IPv6
-      option header, there is a bit in this set.  The bit is set to 1 if
-      any observed packet of this Flow contains the corresponding IPv6
-      extension header.  Otherwise, if no observed packet of this Flow
-      contained the respective IPv6 extension header, the value of the
-      corresponding bit is 0.
+ Description:
+    IPv6 extension headers observed in packets of this Flow.  The
+    information is encoded in a set of bit fields.  For each IPv6
+    option header, there is a bit in this set.  The bit is set to 1 if
+    any observed packet of this Flow contains the corresponding IPv6
+    extension header.  Otherwise, if no observed packet of this Flow
+    contained the respective IPv6 extension header, the value of the
+    corresponding bit is 0.
 
-               0     1     2     3     4     5     6     7
-           +-----+-----+-----+-----+-----+-----+-----+-----+
-           | DST | HOP | Res | UNK |FRA0 | RH  |FRA1 | Res |  ...
-           +-----+-----+-----+-----+-----+-----+-----+-----+
+             0     1     2     3     4     5     6     7
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+         | DST | HOP | Res | UNK |FRA0 | RH  |FRA1 | Res |  ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-               8     9    10    11    12    13    14    15
-           +-----+-----+-----+-----+-----+-----+-----+-----+
-       ... |           Reserved    | MOB | ESP | AH  | PAY | ...
-           +-----+-----+-----+-----+-----+-----+-----+-----+
+             8     9    10    11    12    13    14    15
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |           Reserved    | MOB | ESP | AH  | PAY | ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-              16    17    18    19    20    21    22    23
-           +-----+-----+-----+-----+-----+-----+-----+-----+
-       ... |                  Reserved                     | ...
-           +-----+-----+-----+-----+-----+-----+-----+-----+
+            16    17    18    19    20    21    22    23
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |                  Reserved                     | ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-              24    25    26    27    28    29    30    31
-           +-----+-----+-----+-----+-----+-----+-----+-----+
-       ... |                  Reserved                     |
-           +-----+-----+-----+-----+-----+-----+-----+-----+
+            24    25    26    27    28    29    30    31
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |                  Reserved                     |
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-       Bit    IPv6 Option   Description
+     Bit    IPv6 Option   Description
 
-       0, DST      60       Destination option header
-       1, HOP       0       Hop-by-hop option header
-       2, Res               Reserved
-       3, UNK               Unknown Layer 4 header
-                            (compressed, encrypted, not supported)
-       4, FRA0     44       Fragment header - first fragment
-       5, RH       43       Routing header
-       6, FRA1     44       Fragmentation header - not first fragment
-       7, Res               Reserved
-       8 to 11              Reserved
-       12, MOB     135      IPv6 mobility [RFC3775]
-       13, ESP      50      Encrypted security payload
-       14, AH       51      Authentication Header
-       15, PAY     108      Payload compression header
-       16 to 31             Reserved
+     0, DST      60       Destination option header
+     1, HOP       0       Hop-by-hop option header
+     2, Res               Reserved
+     3, UNK               Unknown Layer 4 header
+                          (compressed, encrypted, not supported)
+     4, FRA0     44       Fragment header - first fragment
+     5, RH       43       Routing header
+     6, FRA1     44       Fragmentation header - not first fragment
+     7, Res               Reserved
+     8 to 11              Reserved
+     12, MOB     135      IPv6 mobility [RFC3775]
+     13, ESP      50      Encrypted security payload
+     14, AH       51      Authentication Header
+     15, PAY     108      Payload compression header
+     16 to 31             Reserved
 
-   Abstract Data Type: unsigned32
+ Abstract Data Type: unsigned32
 
-   Data Type Semantics: flags
+ Data Type Semantics: flags
 
-   ElementId: 64
+ ElementId: 64
 
-   Status: current
+ Status: current
 
-   Reference: [RFC5102]
+ Reference: [RFC5102]
 
-   Additional Information:
-      See [RFC8200] for the general definition of IPv6 extension headers
-      and for the specification of the hop-by-hop options header, the
-      routing header, the fragment header, and the destination options
-      header. See [RFC4302] for the specification of the authentication
-      header. See [RFC4303] for the specification of the encapsulating
-      security payload. The diagram provided in [RFC5102] is incorrect.
-      The diagram in this registry is taken from Errata 1738.
-      See [RFC Errata 1738].
+ Additional Information:
+    See [RFC8200] for the general definition of IPv6 extension headers
+    and for the specification of the hop-by-hop options header, the
+    routing header, the fragment header, and the destination options
+    header. See [RFC4302] for the specification of the authentication
+    header. See [RFC4303] for the specification of the encapsulating
+    security payload. The diagram provided in [RFC5102] is incorrect.
+    The diagram in this registry is taken from Errata 1738.
+    See [RFC Errata 1738].
 ~~~
 
 #### NEW
 
-~~~
-   Description:
-      IPv6 extension headers observed in packets of this Flow. The
-      information is encoded in a set of bit fields.  For each IPv6
-      option header, there is a bit in this set.  The bit is set to 1 if
-      any observed packet of this Flow contains the corresponding IPv6
-      extension header.  Otherwise, if no observed packet of this Flow
-      contained the respective IPv6 extension header, the value of the
-      corresponding bit is 0. The IPv6 EH associated with each bit
-      is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
-      only when when the observed extension headers are in the 0-31
-      range. If the observed EHs exceeds that range,
-      ipv6ExtensionHeadersFull Information Element MUST be used
-      [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
 
-   Abstract Data Type: unsigned32
+Description:
+: IPv6 extension headers observed in packets of this Flow. The
+    information is encoded in a set of bit fields.  For each IPv6
+    option header, there is a bit in this set.  The bit is set to 1 if
+    any observed packet of this Flow contains the corresponding IPv6
+    extension header.  Otherwise, if no observed packet of this Flow
+    contained the respective IPv6 extension header, the value of the
+    corresponding bit is 0. The IPv6 EH associated with each bit
+    is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
+    only when when the observed extension headers are in the 0-31
+    range.
+: If the observed EHs exceeds that range,
+    ipv6ExtensionHeadersFull Information Element MUST be used
+    [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
 
-   Data Type Semantics: flags
+Abstract Data Type:
+: unsigned32
 
-   ElementId: 64
+Data Type Semantics:
+: flags
 
-   Status: current
+ElementId:
+: 64
 
-   Reference: [RFC5102][This-Document]
+Status:
+: current
 
-   Additional Information:
-      See the assigned bits to each IPv6 extension header in
-      [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-      See [RFC8200] for the general definition of IPv6 extension headers
-      and [IPv6-EH] for assigned extension headers.
-~~~
+Reference:
+: [RFC5102]This-Document
+
+Additional Information:
+: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+: See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
 
 ## tcpOptions
 
@@ -372,7 +375,7 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
                    A structure is currently associated with the first
                    byte. Future versions may be defined to associate
-                   meanings with bits in the remaining bits.
+                   meanings with the remaining bits.
 
                    The current version of the Information Element
                    should be exported as unsigned8.
@@ -445,7 +448,7 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
    : See {{?RFC3022}} for the definition of NAT.
 
 * NEW:
-    - Description::
+    - Description:
     : Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
     : Values are listed in the natOriginatingAddressRealm registry.
 
@@ -928,7 +931,7 @@ This document requests IANA to update the description of the following entries i
 * OLD:
     - Description:
     : A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed.
-    :See the Security Considerations section for notes on string handling for Information Element type records.
+    : See the Security Considerations section for notes on string handling for Information Element type records.
 
 * NEW:
     - Description:
