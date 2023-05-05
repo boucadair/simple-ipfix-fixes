@@ -867,19 +867,6 @@ This document requests IANA to update the description of the following entries i
 |        |          | source- Information Element has this flag     |
 |        |          | set, the corresponding destination- element   |
 |        |          | SHOULD have this flag set, and vice-versa.)   |
-| 3      | LOR      | Low-Order Unchanged: when set (1), the        |
-|        |          | low-order bits of the anonymized Information  |
-|        |          | Element contain real data.  This modification |
-|        |          | is intended for the anonymization of          |
-|        |          | network-level addresses while leaving         |
-|        |          | host-level addresses intact in order to       |
-|        |          | preserve host level-structure, which could    |
-|        |          | otherwise be used to reverse anonymization.   |
-|        |          | MUST NOT be set when associated with a        |
-|        |          | truncation-based anonymizationTechnique.      |
-| 4-15   | Reserved | Reserved for future use: SHOULD be cleared    |
-|        |          | (0) by the Exporting Process and MUST be      |
-|        |          | ignored by the Collecting Process.            |
 +--------+----------+-----------------------------------------------+
 ~~~
 
@@ -910,19 +897,6 @@ This document requests IANA to update the description of the following entries i
 |        |          | source- Information Element has this flag     |
 |        |          | set, the corresponding destination- element   |
 |        |          | SHOULD have this flag set, and vice-versa.)   |
-| 3      | LOR      | Low-Order Unchanged: when set (1), the        |
-|        |          | low-order bits of the anonymized Information  |
-|        |          | Element contain real data.  This modification |
-|        |          | is intended for the anonymization of          |
-|        |          | network-level addresses while leaving         |
-|        |          | host-level addresses intact in order to       |
-|        |          | preserve host level-structure, which could    |
-|        |          | otherwise be used to reverse anonymization.   |
-|        |          | MUST NOT be set when associated with a        |
-|        |          | truncation-based anonymizationTechnique.      |
-| 4-15   | Reserved | Reserved for future use: SHOULD be cleared    |
-|        |          | (0) by the Exporting Process and MUST be      |
-|        |          | ignored by the Collecting Process.            |
 +--------+----------+-----------------------------------------------+
 ~~~
 
