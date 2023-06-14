@@ -99,11 +99,11 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
 
 ### Updates to the ipv6ExtensionHeaders Description
 
-#### OLD
+* OLD:
 
-~~~
- Description:
-    IPv6 extension headers observed in packets of this Flow.  The
+  {: indent='8'}
+  Description:
+    : IPv6 extension headers observed in packets of this Flow.  The
     information is encoded in a set of bit fields.  For each IPv6
     option header, there is a bit in this set.  The bit is set to 1 if
     any observed packet of this Flow contains the corresponding IPv6
@@ -111,6 +111,7 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
     contained the respective IPv6 extension header, the value of the
     corresponding bit is 0.
 
+~~~~
              0     1     2     3     4     5     6     7
          +-----+-----+-----+-----+-----+-----+-----+-----+
          | DST | HOP | Res | UNK |FRA0 | RH  |FRA1 | Res |  ...
@@ -148,33 +149,42 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
      14, AH       51      Authentication Header
      15, PAY     108      Payload compression header
      16 to 31             Reserved
+~~~~
 
- Abstract Data Type: unsigned32
+  {: indent='8'}
+  Abstract Data Type: unsigned32
 
- Data Type Semantics: flags
+  {: indent='8'}
+  Data Type Semantics: flags
 
- ElementId: 64
+  {: indent='8'}
+  ElementId: 64
 
- Status: current
+  {: indent='8'}
+  Status:
+  : current
 
- Reference: [RFC5102]
+  {: indent='8'}
+  Reference:
+  : [RFC5102]
 
- Additional Information:
-    See [RFC8200] for the general definition of IPv6 extension headers
+  {: indent='8'}
+  Additional Information:
+    : See [RFC8200] for the general definition of IPv6 extension headers
     and for the specification of the hop-by-hop options header, the
     routing header, the fragment header, and the destination options
     header. See [RFC4302] for the specification of the authentication
     header. See [RFC4303] for the specification of the encapsulating
     security payload. The diagram provided in [RFC5102] is incorrect.
     The diagram in this registry is taken from Errata 1738.
-    See [RFC Errata 1738].
-~~~
-
-#### NEW
+    : See [RFC Errata 1738].
 
 
-Description:
-: IPv6 extension headers observed in packets of this Flow. The
+* NEW:
+
+  {: indent='8'}
+  Description:
+  : IPv6 extension headers observed in packets of this Flow. The
     information is encoded in a set of bit fields.  For each IPv6
     option header, there is a bit in this set.  The bit is set to 1 if
     any observed packet of this Flow contains the corresponding IPv6
@@ -184,28 +194,34 @@ Description:
     is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
     only when when the observed extension headers are in the 0-31
     range.
-: If the observed EHs exceeds that range,
+  : If the observed EHs exceeds that range,
     ipv6ExtensionHeadersFull Information Element MUST be used
     [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
 
-Abstract Data Type:
-: unsigned32
+  {: indent='8'}
+  Abstract Data Type:
+  : unsigned32
 
-Data Type Semantics:
-: flags
+  {: indent='8'}
+  Data Type Semantics:
+  : flags
 
-ElementId:
-: 64
+  {: indent='8'}
+  ElementId:
+  : 64
 
-Status:
-: current
+  {: indent='8'}
+  Status:
+  : current
 
-Reference:
-: [RFC5102]This-Document
+  {: indent='8'}
+  Reference:
+  : [RFC5102]This-Document
 
-Additional Information:
-: See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-: See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
+  {: indent='8'}
+  Additional Information:
+  : See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+  : See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
 
 ## tcpOptions
 
@@ -217,15 +233,14 @@ Only options having a kind =< 63 can be included in a tcpOptions IE. An update i
 
 This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
 
-#### OLD Description
-
-TCP options in packets of this Flow.  The information is encoded
+* OLD Description:
+: TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
       packet of this Flow contained the respective TCP option, the value
       of the corresponding bit is 0.
-      Options are mapped to bits according to their option numbers.
+: Options are mapped to bits according to their option numbers.
       Option number X is mapped to bit X.  TCP option numbers are
       maintained by IANA.
 
@@ -253,16 +268,16 @@ TCP options in packets of this Flow.  The information is encoded
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
-#### NEW Description
+* NEW Description:
 
-TCP options in packets of this Flow.  The information is encoded
+: TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
       packet of this Flow contained the respective TCP option, the value
       of the corresponding bit is 0.
-      Options are mapped to bits according to their option numbers.
-      Option number X is mapped to bit X.  TCP option numbers are
+: Options are mapped to bits according to their option numbers.
+: Option number X is mapped to bit X.  TCP option numbers are
       maintained by IANA. This information element is used only
       when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE {{!I-D.boucadair-opsawg-ipfix-tcpo-v6eh}} MUST be used.
 
