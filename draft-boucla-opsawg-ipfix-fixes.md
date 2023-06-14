@@ -101,7 +101,6 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
 
 * OLD:
 
-  {: indent='8'}
   Description:
     : IPv6 extension headers observed in packets of this Flow.  The
     information is encoded in a set of bit fields.  For each IPv6
@@ -151,24 +150,21 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
      16 to 31             Reserved
 ~~~~
 
-  {: indent='8'}
-  Abstract Data Type: unsigned32
+  Abstract Data Type:
+  : unsigned32
 
-  {: indent='8'}
-  Data Type Semantics: flags
+  Data Type Semantics:
+  : flags
 
-  {: indent='8'}
-  ElementId: 64
+  ElementId:
+  : 64
 
-  {: indent='8'}
   Status:
   : current
 
-  {: indent='8'}
   Reference:
   : [RFC5102]
 
-  {: indent='8'}
   Additional Information:
     : See [RFC8200] for the general definition of IPv6 extension headers
     and for the specification of the hop-by-hop options header, the
@@ -182,7 +178,6 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
 
 * NEW:
 
-  {: indent='8'}
   Description:
   : IPv6 extension headers observed in packets of this Flow. The
     information is encoded in a set of bit fields.  For each IPv6
@@ -198,27 +193,21 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
     ipv6ExtensionHeadersFull Information Element MUST be used
     [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
 
-  {: indent='8'}
   Abstract Data Type:
   : unsigned32
 
-  {: indent='8'}
   Data Type Semantics:
   : flags
 
-  {: indent='8'}
   ElementId:
   : 64
 
-  {: indent='8'}
   Status:
   : current
 
-  {: indent='8'}
   Reference:
   : [RFC5102]This-Document
 
-  {: indent='8'}
   Additional Information:
   : See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
   : See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
