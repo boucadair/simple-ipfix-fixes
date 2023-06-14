@@ -222,7 +222,7 @@ Only options having a kind =< 63 can be included in a tcpOptions IE. An update i
 
 This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
 
-* OLD Description:
+OLD Description:
 : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
@@ -257,7 +257,7 @@ This document requests IANA to update the description of the tcpOptions IE in th
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
-* NEW Description:
+NEW Description:
 
 : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
