@@ -3,7 +3,7 @@ title: "Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry"
 abbrev: "IPFIX IANA Fixes"
 category: std
 
-docname: draft-iest-opsawg-ipfix-fixes-latest
+docname: draft-iesf-opsawg-ipfix-fixes-latest
 submissiontype: IETF
 number:
 date:
