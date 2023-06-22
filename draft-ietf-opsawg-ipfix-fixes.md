@@ -95,7 +95,7 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 2. Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
 3. Specify the procedure to follow when all bits are exhausted.
 
-The following section proposes a fix for the first two issues. {{!I-D.boucadair-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
+The following section proposes a fix for the first two issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -185,7 +185,7 @@ Description:
     range.
 : If the observed EHs exceeds that range,
     ipv6ExtensionHeadersFull Information Element MUST be used
-    [I-D.boucadair-opsawg-ipfix-tcpo-v6eh].
+    {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
 
 Abstract Data Type:
 : unsigned32
@@ -261,7 +261,7 @@ This document requests IANA to update the description of the tcpOptions IE in th
       Options are mapped to bits according to their option numbers.
       Option number X is mapped to bit X.  TCP option numbers are
       maintained by IANA. This information element is used only
-      when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE {{!I-D.boucadair-opsawg-ipfix-tcpo-v6eh}} MUST be used.
+      when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} MUST be used.
 
 ~~~
             0     1     2     3     4     5     6     7
@@ -289,7 +289,7 @@ This document requests IANA to update the description of the tcpOptions IE in th
 
 ## forwardingStatus
 
-The current entry in {{IANA-IPFIX}} deviates from what is provided in {{!rfc7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
+The current entry in {{IANA-IPFIX}} deviates from what is provided in {{!RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
 
 * OLD:
 
