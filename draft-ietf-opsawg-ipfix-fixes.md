@@ -99,7 +99,7 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
 
 ### Updates to the ipv6ExtensionHeaders Description
 
-#### OLD
+* OLD:
 
 ~~~
  Description:
@@ -170,8 +170,7 @@ The following section proposes a fix for the first two issues. {{!I-D.boucadair-
     See [RFC Errata 1738].
 ~~~
 
-#### NEW
-
+* NEW:
 
 Description:
 : IPv6 extension headers observed in packets of this Flow. The
@@ -217,9 +216,8 @@ Only options having a kind =< 63 can be included in a tcpOptions IE. An update i
 
 This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
 
-#### OLD Description
-
-TCP options in packets of this Flow.  The information is encoded
+* OLD Description:
+: TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
@@ -253,9 +251,8 @@ TCP options in packets of this Flow.  The information is encoded
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
-#### NEW Description
-
-TCP options in packets of this Flow.  The information is encoded
+* NEW Description:
+: TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
       contains the corresponding TCP option.  Otherwise, if no observed
