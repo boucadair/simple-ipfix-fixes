@@ -1,6 +1,6 @@
 # Simple Fixes to the IPFIX IANA Registry
 
-This is the working area for the individual Internet-Draft, "Simple Fixes to the IPFIX IANA Registry".
+This is the working area for the OPSAWG draft, "Simple Fixes to the IPFIX IANA Registry".
 
 * [Editor's Copy](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-boucla-opsawg-ipfix-fixes.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-boucla-opsawg-ipfix-fixes)
