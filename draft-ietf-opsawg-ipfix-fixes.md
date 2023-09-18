@@ -977,7 +977,6 @@ The initial values of this registry are as follows:
 ~~~
 
 
-
 Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "IPv6 Option" mirrors the "Protocol Number" in {{IANA-EH}}.
 
 IANA is requested to add the following note to the new registry:
