@@ -28,15 +28,15 @@ normative:
      IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
-        date: 2022-11
      IPv6-EH:
         title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
         target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
-        date: 2022-11
      IANA-TCP:
         title: Transmission Control Protocol (TCP) Parameters, TCP Option Kind Numbers
         target: https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-parameters-1
-        date: 2022-11
+     IANA-Protocols:
+        title: Protocol Numbers
+        target: https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 informative:
 
 
@@ -93,9 +93,10 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 
 1. Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
 2. Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
-3. Specify the procedure to follow when all bits are exhausted.
+3. As per {{IANA-Protocols}}, 108 does not correspond to an EH.
+4. Specify the procedure to follow when all bits are exhausted.
 
-The following section proposes a fix for the first two issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
+The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -967,7 +968,7 @@ The initial values of this registry are as follows:
     12 MOB     135      Mobility Header
     13 ESP      50      Encapsulating Security Payload
     14 AH       51      Authentication Header
-    15 PAY     108      Payload compression header
+    15                  Unassigned
     16 HIP     139      Host Identity Protocol
     17 SHIM6   140      Shim6 Protocol
     18         253      Use for experimentation and testing
@@ -975,7 +976,11 @@ The initial values of this registry are as follows:
     20 to 255           Unassigned
 ~~~
 
-Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. IANA is requested to add the following note to the new registry:
+
+
+Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "IPv6 Option" mirrors the "Protocol Number" in {{IANA-EH}}.
+
+IANA is requested to add the following note to the new registry:
 
 Note:
 : Values are not added directly into this registry. New codes are assigned to an IPv6 EH in {{IPv6-EH}}.
