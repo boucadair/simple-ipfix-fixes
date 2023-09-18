@@ -42,19 +42,19 @@ informative:
 
 --- abstract
 
-This document describes simple fixes to the IANA IP Flow Information Export (IPFIX) registry. These fixes are mainly updates to point to newer IANA registries and also updates to the description of some Information Elements (IEs).
+This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphan section references, etc. The updates are also meant to bringing some consistency among the entries of the registry.
 
 
 --- middle
 
 # Introduction
 
-As the OPSAWG is currently considering {{?I-D.boucadair-opsawg-rfc7125-update}} that updates {{?RFC7125}}, the WG realized that some other parts of the IANA IPFIX registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency among the entries of the registry.
+As the OPSAWG is currently considering {{?I-D.ietf-opsawg-rfc7125-update}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency among the entries of the registry.
 
-As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to the existing registry, when applicable, as opposed to having:
+As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
 - A link to an exiting registry in the "Description" entry.
-- The registry detailed values repeated in the "Description" entry. This solution has the drawback that the description must be updated each time the registry is updated.
+- The registry detailed values repeated in the "Description" entry. This practice has the drawback that the description must be updated each time the registry is updated.
 
 Therefore, this document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
 
@@ -65,7 +65,7 @@ Therefore, this document lists a set of simple fixes to the IPFIX IANA registry 
 
 These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
 
-Note that, as per {{Section 5 of RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7011}}.
+Note that, as per {{Section 5 of !RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7011}}.
 
 # Conventions and Definitions
 
@@ -77,7 +77,7 @@ This document uses the IPFIX-specific terminology (Information Element, Template
    Section 2 of {{!RFC7011}}. As in {{!RFC7011}}, these IPFIX-specific terms
    have the first letter of a word capitalized.
 
-# Why A Document is Needed for These Updates?
+# Why An RFC is Needed for These Updates?
 
 Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from {{Section 5.1 of !RFC7013}} should be followed:
 
@@ -181,7 +181,7 @@ Description:
     contained the respective IPv6 extension header, the value of the
     corresponding bit is 0. The IPv6 EH associated with each bit
     is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
-    only when when the observed extension headers are in the 0-31
+    only when the observed extension headers are in the 0-31
     range.
 : If the observed EHs exceeds that range,
     ipv6ExtensionHeadersFull Information Element MUST be used
@@ -212,9 +212,11 @@ Additional Information:
 
 Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
 
+The following section updates the description of the tcpOptions IE to explicitly indicate the applicable kind range and to point to the new IEs defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
+
 ### Update the Description of the tcpOptions IE
 
-This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows.
+This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
 
 * OLD Description:
 : TCP options in packets of this Flow.  The information is encoded
@@ -289,7 +291,7 @@ This document requests IANA to update the description of the tcpOptions IE in th
 
 ## forwardingStatus
 
-The current entry in {{IANA-IPFIX}} deviates from what is provided in {{!RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
+The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provided in {{!RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
 
 * OLD:
 
@@ -380,7 +382,7 @@ This document requests IANA to update the following entries by adding the indica
 | privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
-# Consistent Citation of Registries {#consistent}
+# Consistent Citation of IANA Registries {#consistent}
 
 This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries listed in the following subsections.
 
@@ -940,44 +942,50 @@ IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
 
 # IANA Considerations
 
-A set of requested IANA actions are described in the main document. These actions are not repeated here.
+Sections 4 to 7 include actions for IANA. These actions are not repeated here.
 
-This document also requests IANA to update the reference clause of the "IPFIX Information Elements" subregistry with the reference to this document.
+This document also requests IANA to update the reference clause of the "IPFIX Information Elements" registry {{IANA-IPFIX}} with the reference to this document.
 
 ## IPFIX Subregistry for IPv6 Extension Headers
 
-This document requests IANA to create a new subregistry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry {{IANA-IPFIX}}.
+This document requests IANA to create a new registry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry group {{IANA-IPFIX}}.
 
-The initial values of this subregistry are as follows:
+The initial values of this registry are as follows:
 
 ~~~
-   Bit    IPv6 Option   Description
-    0, DST      60       Destination option header
-    1, HOP       0       Hop-by-hop option header
-    2, U                 Unassigned
-    3, UNK               Unknown Layer 4 header
-                         (compressed, encrypted, not supported)
-    4, FRA0     44       Fragment header - first fragment
-    5, RH       43       Routing header
-    6, FRA1     44       Fragmentation header - not first fragment
-    7 to 11              Unassigned
-    12, MOB     135      IPv6 mobility [RFC3775]
-    13, ESP      50      Encrypted security payload
-    14, AH       51      Authentication Header
-    15, PAY     108      Payload compression header
-    16, HIP     139      Host Identity Protocol
-    17, SHIM6   140      Shim6 Protocol
-    18          253      Use for experimentation and testing
-    19          254      Use for experimentation and testing
-    20 to 255            Unassigned
+   Bit Label   IPv6     Description
+               Option
+    0  DST      60      Destination Options for IPv6
+    1  HOP       0      IPv6 Hop-by-Hop Option
+    2                   Unassigned
+    3  UNK              Unknown Layer 4 header
+                        (compressed, encrypted, not supported)
+    4  FRA0     44      Fragment header - first fragment
+    5  RH       43      Routing header
+    6  FRA1     44      Fragmentation header - not first fragment
+    7 to 11             Unassigned
+    12 MOB     135      Mobility Header
+    13 ESP      50      Encapsulating Security Payload
+    14 AH       51      Authentication Header
+    15 PAY     108      Payload compression header
+    16 HIP     139      Host Identity Protocol
+    17 SHIM6   140      Shim6 Protocol
+    18         253      Use for experimentation and testing
+    19         254      Use for experimentation and testing
+    20 to 255           Unassigned
 ~~~
 
-Values are not added directly into this subregistry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" subregistry and the subregistry is udpated with the details that mirror the assigned EH.
-
-IANA is requested to add this note to {{IPv6-EH}}:
+Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. IANA is requested to add the following note to the new registry:
 
 Note:
-: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header [NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly.
+: Values are not added directly into this registry. New codes are assigned to an IPv6 EH in {{IPv6-EH}}.
+
+Also, IANA is requested to add the following note to {{IPv6-EH}}:
+
+Note:
+: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. [NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Deprecated values or modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+
+> Note to the RFC Editor: Please replace [NEW_IPFIX_IPv6EH_SUBREGISTRY] with the link used by IANA for this new registry.
 
 --- back
 
