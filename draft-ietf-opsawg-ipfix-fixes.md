@@ -28,7 +28,7 @@ normative:
      IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
-     IPv6-EH:
+     IANA-EH:
         title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
         target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
      IANA-TCP:
@@ -92,7 +92,7 @@ Many of the edits in this document may be handled by the IPFIX Experts (informal
 The current specification of ipv6ExtensionHeaders Information Element should be updated to:
 
 1. Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
-2. Specify how to automatically update the registry when a new value is assigned in {{IPv6-EH}}.
+2. Specify how to automatically update the registry when a new value is assigned in {{IANA-EH}}.
 3. As per {{IANA-Protocols}}, 108 does not correspond to an EH.
 4. Specify the procedure to follow when all bits are exhausted.
 
@@ -205,7 +205,7 @@ Reference:
 
 Additional Information:
 : See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-: See [RFC8200] for the general definition of IPv6 extension headers and [IPv6-EH] for assigned extension headers.
+: See [RFC8200] for the general definition of IPv6 extension headers and [IANA-EH] for assigned extension headers.
 
 ## tcpOptions
 
@@ -978,14 +978,14 @@ The initial values of this registry are as follows:
 
 
 
-Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IPv6-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "IPv6 Option" mirrors the "Protocol Number" in {{IANA-EH}}.
+Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "IPv6 Option" mirrors the "Protocol Number" in {{IANA-EH}}.
 
 IANA is requested to add the following note to the new registry:
 
 Note:
-: Values are not added directly into this registry. New codes are assigned to an IPv6 EH in {{IPv6-EH}}.
+: Values are not added directly into this registry. New codes are assigned to an IPv6 EH in {{IANA-EH}}.
 
-Also, IANA is requested to add the following note to {{IPv6-EH}}:
+Also, IANA is requested to add the following note to {{IANA-EH}}:
 
 Note:
 : When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. [NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Deprecated values or modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
