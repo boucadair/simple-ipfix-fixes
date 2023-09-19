@@ -2,10 +2,10 @@
 
 This is the working area for the OPSAWG draft, "Simple Fixes to the IPFIX IANA Registry".
 
-* [Editor's Copy](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-boucla-opsawg-ipfix-fixes.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-boucla-opsawg-ipfix-fixes)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-boucla-opsawg-ipfix-fixes)
-* [Compare Editor's Copy to Individual Draft](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-boucla-opsawg-ipfix-fixes.diff)
+* [Editor's Copy](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-ietf-opsawg-ipfix-fixes.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-fixes)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-fixes)
+* [Compare Editor's Copy to Individual Draft](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-ietf-opsawg-ipfix-fixes.diff)
 
 
 ## Contributing
