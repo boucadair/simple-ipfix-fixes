@@ -180,7 +180,7 @@ Description:
     any observed packet of this Flow contains the corresponding IPv6
     extension header.  Otherwise, if no observed packet of this Flow
     contained the respective IPv6 extension header, the value of the
-    corresponding bit is 0. The IPv6 EH associated with each bit
+    corresponding bit is 0. The IPv6 extension header associated with each bit
     is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
     only when the observed extension headers are in the 0-31
     range.
@@ -261,8 +261,7 @@ This document requests IANA to update the description of the tcpOptions IE in th
       contains the corresponding TCP option.  Otherwise, if no observed
       packet of this Flow contained the respective TCP option, the value
       of the corresponding bit is 0.
-      Options are mapped to bits according to their option numbers.
-      Option number X is mapped to bit X.  TCP option numbers are
+      Options are mapped to bits according to the drawing below.  TCP option numbers are
       maintained by IANA. This information element is used only
       when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} MUST be used.
 
