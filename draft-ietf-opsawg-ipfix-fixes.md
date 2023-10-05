@@ -996,6 +996,6 @@ Note:
 # Acknowledgments
 {:numbered="false"}
 
-Thanks to Paul Aitken for the review.
+Thanks to Paul Aitken for the review. Special thanks to Andrew Feren sharing data about thousands of scan he collected.
 
 Thomas Graf tagged an issue with the forwardingStatus Information Element.
