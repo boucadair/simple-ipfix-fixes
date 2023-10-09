@@ -955,10 +955,10 @@ This document requests IANA to create a new registry entitled "ipv6ExtensionHead
 The initial values of this registry are as follows:
 
 ~~~
-   Bit Label   IPv6     Description
-               Option
+   Bit Label   Protocol Description
+               Number
     0  DST      60      Destination Options for IPv6
-    1  HOP       0      IPv6 Hop-by-Hop Option
+    1  HOP       0      IPv6 Hop-by-Hop Options
     2                   Unassigned
     3  UNK              Unknown Layer 4 header
                         (compressed, encrypted, not supported)
@@ -1001,3 +1001,6 @@ Note:
 Thanks to Paul Aitken for the review. Special thanks to Andrew Feren sharing data about thousands of scan he collected.
 
 Thomas Graf tagged an issue with the forwardingStatus Information Element.
+
+Thanks to Eric Vyncke for the review and comments.
+
