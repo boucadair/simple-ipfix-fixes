@@ -93,11 +93,11 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 
 1. Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
 2. Specify how to automatically update the registry when a new value is assigned in {{IANA-EH}}.
-3. As per {{IANA-Protocols}}, 108 does not correspond to an EH.
+3. Update the 108 entry given that 108 does not correspond to an extension header as per {{IANA-Protocols}}.
 4. Specify the procedure to follow when all bits are exhausted.
 
 The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
-
+ 
 ### Updates to the ipv6ExtensionHeaders Description
 
 * OLD:
