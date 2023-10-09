@@ -98,7 +98,7 @@ The current specification of the ipv6ExtensionHeaders Information Element should
 
 The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
-> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension header or only update to a limit.
+> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only update to a limit.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
