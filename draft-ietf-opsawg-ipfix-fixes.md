@@ -89,7 +89,7 @@ Many of the edits in this document may be handled by the IPFIX Experts (informal
 
 ### Issues
 
-The current specification of ipv6ExtensionHeaders Information Element should be updated to:
+The current specification of the ipv6ExtensionHeaders Information Element should be updated to:
 
 1. Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.
 2. Specify how to automatically update the registry when a new value is assigned in {{IANA-EH}}.
@@ -97,7 +97,9 @@ The current specification of ipv6ExtensionHeaders Information Element should be 
 4. Specify the procedure to follow when all bits are exhausted.
 
 The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
- 
+
+> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension header or only update to a limit.
+
 ### Updates to the ipv6ExtensionHeaders Description
 
 * OLD:
@@ -953,10 +955,10 @@ This document requests IANA to create a new registry entitled "ipv6ExtensionHead
 The initial values of this registry are as follows:
 
 ~~~
-   Bit Label   IPv6     Description
-               Option
+   Bit Label   Protocol Description
+               Number
     0  DST      60      Destination Options for IPv6
-    1  HOP       0      IPv6 Hop-by-Hop Option
+    1  HOP       0      IPv6 Hop-by-Hop Options
     2                   Unassigned
     3  UNK              Unknown Layer 4 header
                         (compressed, encrypted, not supported)
@@ -999,3 +1001,6 @@ Note:
 Thanks to Paul Aitken for the review. Special thanks to Andrew Feren sharing data about thousands of scan he collected.
 
 Thomas Graf tagged an issue with the forwardingStatus Information Element.
+
+Thanks to Eric Vyncke for the review and comments.
+
