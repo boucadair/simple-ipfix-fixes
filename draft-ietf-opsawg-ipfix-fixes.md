@@ -98,7 +98,7 @@ The current specification of the ipv6ExtensionHeaders Information Element should
 
 The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
-> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only update to a limit.
+> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -977,9 +977,7 @@ The initial values of this registry are as follows:
     20 to 255           Unassigned
 ~~~
 
-
-
-Values are not added directly into this registry. When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "IPv6 Option" mirrors the "Protocol Number" in {{IANA-EH}}.
+When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "Protocol Number" mirrors the "Protocol Number" in {{IANA-EH}}.
 
 IANA is requested to add the following note to the new registry:
 
