@@ -98,7 +98,7 @@ The current specification of the ipv6ExtensionHeaders Information Element should
 
 The following section proposes a fix for the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new option to fix the last issue.
 
-> Some implementations may not be able to export all enclosed extension headers because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit.
+Note also that some implementations may not be able to export all observed extension headers in a Flow because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit. A solution to this shortcoming is defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
 
 ### Updates to the ipv6ExtensionHeaders Description
 
@@ -996,7 +996,7 @@ Note:
 # Acknowledgments
 {:numbered="false"}
 
-Thanks to Paul Aitken for the review. Special thanks to Andrew Feren sharing data about thousands of scan he collected.
+Thanks to Paul Aitken for the review. Special thanks to Andrew Feren for sharing data about scans of IPFIX data he collected.
 
 Thomas Graf tagged an issue with the forwardingStatus Information Element.
 
