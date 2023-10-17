@@ -183,12 +183,37 @@ Description:
     extension header.  Otherwise, if no observed packet of this Flow
     contained the respective IPv6 extension header, the value of the
     corresponding bit is 0. The IPv6 extension header associated with each bit
-    is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. This IE is used
-    only when the observed extension headers are in the 0-31
+    is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. The following drawing indicates
+    the position of each bit in the encoding of the Information Element.
+
+: This IE is used only when the observed extension headers are in the 0-31
     range.
+
 : If the observed EHs exceeds that range,
     ipv6ExtensionHeadersFull Information Element MUST be used
     {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
+
+~~~~
+             0     1     2     3     4     5     6     7
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+         |        IPv6 extension header bits            |  ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+
+             8     9    10    11    12    13    14    15
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+         |         IPv6 extension header bits            |  ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            16    17    18    19    20    21    22    23
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+         |         IPv6 extension header bits            |  ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+
+            24    25    26    27    28    29    30    31
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |        IPv6 extension header bits             |
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+~~~~
 
 Abstract Data Type:
 : unsigned32
@@ -952,6 +977,15 @@ This document also requests IANA to update the reference clause of the "IPFIX In
 
 This document requests IANA to create a new registry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry group {{IANA-IPFIX}}.
 
+When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "Protocol Number" mirrors the "Protocol Number" in {{IANA-EH}}. IANA is requested to add the following note to {{IANA-EH}}:
+
+> Note:
+: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. >>[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+
+> Note to the RFC Editor: Please replace [NEW_IPFIX_IPv6EH_SUBREGISTRY] with the link used by IANA for this new registry.
+
+Otherwise, the registration policy for the registry is Expert Review ({{Section 4.5 of !RFC8126}}). See more details in {{sec-de}}.
+
 The initial values of this registry are as follows:
 
 ~~~
@@ -959,7 +993,7 @@ The initial values of this registry are as follows:
                Number
     0  DST      60      Destination Options for IPv6
     1  HOP       0      IPv6 Hop-by-Hop Options
-    2                   Unassigned
+    2  NoNxt     59     No Next Header for IPv6
     3  UNK              Unknown Layer 4 header
                         (compressed, encrypted, not supported)
     4  FRA0     44      Fragment header - first fragment
@@ -977,19 +1011,13 @@ The initial values of this registry are as follows:
     20 to 255           Unassigned
 ~~~
 
-When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "Protocol Number" mirrors the "Protocol Number" in {{IANA-EH}}.
+## Guidelines for the Designated Experts {#sec-de}
 
-IANA is requested to add the following note to the new registry:
+It is suggested that multiple designated experts be appointed for registry change requests.
 
-Note:
-: Values are not added directly into this registry. New codes are assigned to an IPv6 EH in {{IANA-EH}}.
+Criteria that should be applied by the designated experts include determining whether the proposed registration duplicates existing entries and whether the registration description is clear and fits the purpose of this registry.
 
-Also, IANA is requested to add the following note to {{IANA-EH}}:
-
-Note:
-: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. [NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-
-> Note to the RFC Editor: Please replace [NEW_IPFIX_IPv6EH_SUBREGISTRY] with the link used by IANA for this new registry.
+Within the review period, the designated experts will either approve or deny the registration request, communicating this decision to the IANA. Denials should include an explanation and, if applicable, suggestions as to how to make the request successful.
 
 --- back
 
