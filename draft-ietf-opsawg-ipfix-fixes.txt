@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 1 June 2024                                              Huawei
-                                                        29 November 2023
+Expires: 12 July 2024                                             Huawei
+                                                          9 January 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,11 +49,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 June 2024.
+   This Internet-Draft will expire on 12 July 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -213,15 +213,15 @@ Table of Contents
 
    4.  Specify the procedure to follow when all bits are exhausted.
 
-   Section 4.1.2 specifies fixes to the first three issues.
-   [I-D.ietf-opsawg-ipfix-tcpo-v6eh] specifies a new Information Element
-   to fix the last issue.  Other Information Elements are defined in
-   [I-D.ietf-opsawg-ipfix-tcpo-v6eh] to address some other limitations
-   such as lack of reporting of extension header chains or aggregate
-   extension headers length.
+   Section 4.1.2 specifies fixes to the first three issues.  Section 3
+   of [I-D.ietf-opsawg-ipfix-tcpo-v6eh] specifies a new Information
+   Element to fix the last issue.  Other Information Elements are
+   defined in [I-D.ietf-opsawg-ipfix-tcpo-v6eh] to address some other
+   limitations such as lack of reporting of extension header chains or
+   aggregate extension headers length.
 
    Note that some implementations may not be able to export all observed
-   extension headers in a Flow because of a hardware of software limit
+   extension headers in a Flow because of a hardware or software limit
    (see, e.g., [I-D.ietf-6man-eh-limits].  The specification of the
    ipv6ExtensionHeaders Information Element does not discuss whether it
    covers all enclosed extension headers or only up to a limit.  A
@@ -373,7 +373,7 @@ Table of Contents
 4.2.2.  Update the Description of the tcpOptions IE
 
    This document requests IANA to update the description of the
-   tcpOptions IE in the IANA IPFIX registry [IANA-IPFIX] as follows:
+   tcpOptions IE in [IANA-IPFIX] as follows:
 
    *  OLD Description:  TCP options in packets of this Flow.  The
          information is encoded in a set of bit fields.  For each TCP
@@ -1724,9 +1724,9 @@ Table of Contents
    [I-D.ietf-6man-eh-limits]
               Herbert, T., "Limits on Sending and Processing IPv6
               Extension Headers", Work in Progress, Internet-Draft,
-              draft-ietf-6man-eh-limits-10, 28 November 2023,
+              draft-ietf-6man-eh-limits-12, 18 December 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-6man-eh-
-              limits-10>.
+              limits-12>.
 
    [I-D.ietf-opsawg-rfc7125-update]
               Boucadair, M., "An Update to the tcpControlBits IP Flow
@@ -1836,6 +1836,8 @@ Acknowledgments
    Element.
 
    Thanks to Eric Vyncke for the review and comments.
+
+   Thanks to Qin Wu for the opsdir review.
 
 Authors' Addresses
 
