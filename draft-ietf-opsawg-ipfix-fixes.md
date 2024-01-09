@@ -96,9 +96,9 @@ The current specification of the ipv6ExtensionHeaders Information Element should
 3. Update the 108 entry given that 108 does not correspond to an extension header as per {{IANA-Protocols}}.
 4. Specify the procedure to follow when all bits are exhausted.
 
-{{sec-up-eh}} specifies fixes to the first three issues. {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new Information Element to fix the last issue. Other Information Elements are defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} to address some other limitations such as lack of reporting of extension header chains or aggregate extension headers length.
+{{sec-up-eh}} specifies fixes to the first three issues. {{Section 3 of !I-D.ietf-opsawg-ipfix-tcpo-v6eh}} specifies a new Information Element to fix the last issue. Other Information Elements are defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}} to address some other limitations such as lack of reporting of extension header chains or aggregate extension headers length.
 
-Note that some implementations may not be able to export all observed extension headers in a Flow because of a hardware of software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit. A solution to this shortcoming is also defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
+Note that some implementations may not be able to export all observed extension headers in a Flow because of a hardware or software limit (see, e.g., {{?I-D.ietf-6man-eh-limits}}. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit. A solution to this shortcoming is also defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
 
 ### Updates to the ipv6ExtensionHeaders Description {#sec-up-eh}
 
@@ -244,7 +244,7 @@ The following section updates the description of the tcpOptions IE to explicitly
 
 ### Update the Description of the tcpOptions IE
 
-This document requests IANA to update the description of the tcpOptions IE in the IANA IPFIX registry {{IANA-IPFIX}} as follows:
+This document requests IANA to update the description of the tcpOptions IE in {{IANA-IPFIX}} as follows:
 
 * OLD Description:
 : TCP options in packets of this Flow.  The information is encoded
@@ -1030,3 +1030,4 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element.
 
 Thanks to Eric Vyncke for the review and comments.
 
+Thanks to Qin Wu for the opsdir review.
