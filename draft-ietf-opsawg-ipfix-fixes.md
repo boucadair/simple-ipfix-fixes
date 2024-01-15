@@ -31,9 +31,6 @@ normative:
      IANA-EH:
         title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
         target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
-     IANA-TCP:
-        title: Transmission Control Protocol (TCP) Parameters, TCP Option Kind Numbers
-        target: https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-parameters-1
      IANA-Protocols:
         title: Protocol Numbers
         target: https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
@@ -70,6 +67,8 @@ Therefore, this document lists a set of simple fixes to the IPFIX IANA registry 
 These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
 
 Note that, as per {{Section 5 of !RFC7012}}, {{IANA-IPFIX}} is the normative reference for the IPFIX IEs that were defined in {{?RFC5102}}. Therefore, the updates in this document do not update any part of {{!RFC7011}}.
+
+Likewise, this document is not marked as formally updating {{?RFC5477}}, {{?RFC5610}}, {{?RFC5655}}, {{?RFC6235}}, {{?RFC6759}}, {{?RFC7014}}, {{?RFC7015}}, {{?RFC7133}}, {{?RFC7270}}, {{?RFC8038}}, and {{?RFC8158}}.
 
 # Conventions and Definitions
 
@@ -200,7 +199,7 @@ Description:
 ~~~~
              0     1     2     3     4     5     6     7
          +-----+-----+-----+-----+-----+-----+-----+-----+
-         |        IPv6 extension header bits            |  ...
+         |        IPv6 extension header bits             |  ...
          +-----+-----+-----+-----+-----+-----+-----+-----+
 
              8     9    10    11    12    13    14    15
@@ -236,7 +235,7 @@ Reference:
 
 Additional Information:
 : See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
-: See [RFC8200] for the general definition of IPv6 extension headers and [IANA-EH] for assigned extension headers.
+: See [RFC8200] for the general definition of IPv6 extension headers and {{IANA-EH}} for assigned extension headers.
 
 ## tcpOptions
 
@@ -338,7 +337,7 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
                          +---+---+---+---+---+---+---+---+
 
                    See the Forwarding Status sub-registries at
-                   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
                    Examples:
 
