@@ -168,6 +168,10 @@ Table of Contents
    Therefore, the updates in this document do not update any part of
    [RFC7011].
 
+   Likewise, this document is not marked as formally updating [RFC5477],
+   [RFC5610], [RFC5655], [RFC6235], [RFC6759], [RFC7014], [RFC7015],
+   [RFC7133], [RFC7270], [RFC8038], and [RFC8158].
+
 2.  Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -322,7 +326,7 @@ Table of Contents
 
                 0     1     2     3     4     5     6     7
             +-----+-----+-----+-----+-----+-----+-----+-----+
-            |        IPv6 extension header bits            |  ...
+            |        IPv6 extension header bits             |  ...
             +-----+-----+-----+-----+-----+-----+-----+-----+
 
                 8     9    10    11    12    13    14    15
@@ -462,7 +466,7 @@ Table of Contents
                          +---+---+---+---+---+---+---+---+
 
                    See the Forwarding Status sub-registries at
-                   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
                    Examples:
 
@@ -1673,11 +1677,6 @@ Table of Contents
               <https://www.iana.org/assignments/protocol-numbers/
               protocol-numbers.xhtml>.
 
-   [IANA-TCP] "Transmission Control Protocol (TCP) Parameters, TCP
-              Option Kind Numbers", n.d.,
-              <https://www.iana.org/assignments/tcp-parameters/tcp-
-              parameters.xhtml#tcp-parameters-1>.
-
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
@@ -1799,11 +1798,21 @@ Table of Contents
               Selection", RFC 5475, DOI 10.17487/RFC5475, March 2009,
               <https://www.rfc-editor.org/rfc/rfc5475>.
 
+   [RFC5477]  Dietz, T., Claise, B., Aitken, P., Dressler, F., and G.
+              Carle, "Information Model for Packet Sampling Exports",
+              RFC 5477, DOI 10.17487/RFC5477, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5477>.
+
    [RFC5610]  Boschi, E., Trammell, B., Mark, L., and T. Zseby,
               "Exporting Type Information for IP Flow Information Export
               (IPFIX) Information Elements", RFC 5610,
               DOI 10.17487/RFC5610, July 2009,
               <https://www.rfc-editor.org/rfc/rfc5610>.
+
+   [RFC5655]  Trammell, B., Boschi, E., Mark, L., Zseby, T., and A.
+              Wagner, "Specification of the IP Flow Information Export
+              (IPFIX) File Format", RFC 5655, DOI 10.17487/RFC5655,
+              October 2009, <https://www.rfc-editor.org/rfc/rfc5655>.
 
    [RFC6144]  Baker, F., Li, X., Bao, C., and K. Yin, "Framework for
               IPv4/IPv6 Translation", RFC 6144, DOI 10.17487/RFC6144,
@@ -1827,16 +1836,41 @@ Table of Contents
               (IPFIX)", RFC 6313, DOI 10.17487/RFC6313, July 2011,
               <https://www.rfc-editor.org/rfc/rfc6313>.
 
+   [RFC6759]  Claise, B., Aitken, P., and N. Ben-Dvora, "Cisco Systems
+              Export of Application Information in IP Flow Information
+              Export (IPFIX)", RFC 6759, DOI 10.17487/RFC6759, November
+              2012, <https://www.rfc-editor.org/rfc/rfc6759>.
+
+   [RFC7014]  D'Antonio, S., Zseby, T., Henke, C., and L. Peluso, "Flow
+              Selection Techniques", RFC 7014, DOI 10.17487/RFC7014,
+              September 2013, <https://www.rfc-editor.org/rfc/rfc7014>.
+
+   [RFC7015]  Trammell, B., Wagner, A., and B. Claise, "Flow Aggregation
+              for the IP Flow Information Export (IPFIX) Protocol",
+              RFC 7015, DOI 10.17487/RFC7015, September 2013,
+              <https://www.rfc-editor.org/rfc/rfc7015>.
+
    [RFC7125]  Trammell, B. and P. Aitken, "Revision of the
               tcpControlBits IP Flow Information Export (IPFIX)
               Information Element", RFC 7125, DOI 10.17487/RFC7125,
               February 2014, <https://www.rfc-editor.org/rfc/rfc7125>.
+
+   [RFC7133]  Kashima, S., Kobayashi, A., Ed., and P. Aitken,
+              "Information Elements for Data Link Layer Traffic
+              Measurement", RFC 7133, DOI 10.17487/RFC7133, May 2014,
+              <https://www.rfc-editor.org/rfc/rfc7133>.
 
    [RFC7270]  Yourtchenko, A., Aitken, P., and B. Claise, "Cisco-
               Specific Information Elements Reused in IP Flow
               Information Export (IPFIX)", RFC 7270,
               DOI 10.17487/RFC7270, June 2014,
               <https://www.rfc-editor.org/rfc/rfc7270>.
+
+   [RFC8038]  Aitken, P., Ed., Claise, B., S, S. B., McDowall, C., and
+              J. Schoenwaelder, "Exporting MIB Variables Using the IP
+              Flow Information Export (IPFIX) Protocol", RFC 8038,
+              DOI 10.17487/RFC8038, May 2017,
+              <https://www.rfc-editor.org/rfc/rfc8038>.
 
    [RFC8158]  Sivakumar, S. and R. Penno, "IP Flow Information Export
               (IPFIX) Information Elements for Logging NAT Events",

@@ -1335,6 +1335,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </ul>
 <p id="section-1-6">These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.<a href="#section-1-6" class="pilcrow">¶</a></p>
 <p id="section-1-7">Note that, as per <span><a href="https://rfc-editor.org/rfc/rfc7012#section-5" class="relref">Section 5</a> of [<a href="#RFC7012" class="cite xref">RFC7012</a>]</span>, <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> is the normative reference for the IPFIX IEs that were defined in <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>. Therefore, the updates in this document do not update any part of <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">Likewise, this document is not marked as formally updating <span>[<a href="#RFC5477" class="cite xref">RFC5477</a>]</span>, <span>[<a href="#RFC5610" class="cite xref">RFC5610</a>]</span>, <span>[<a href="#RFC5655" class="cite xref">RFC5655</a>]</span>, <span>[<a href="#RFC6235" class="cite xref">RFC6235</a>]</span>, <span>[<a href="#RFC6759" class="cite xref">RFC6759</a>]</span>, <span>[<a href="#RFC7014" class="cite xref">RFC7014</a>]</span>, <span>[<a href="#RFC7015" class="cite xref">RFC7015</a>]</span>, <span>[<a href="#RFC7133" class="cite xref">RFC7133</a>]</span>, <span>[<a href="#RFC7270" class="cite xref">RFC7270</a>]</span>, <span>[<a href="#RFC8038" class="cite xref">RFC8038</a>]</span>, and <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span>.<a href="#section-1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1517,7 +1518,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <pre>
              0     1     2     3     4     5     6     7
          +-----+-----+-----+-----+-----+-----+-----+-----+
-         |        IPv6 extension header bits            |  ...
+         |        IPv6 extension header bits             |  ...
          +-----+-----+-----+-----+-----+-----+-----+-----+
 
              8     9    10    11    12    13    14    15
@@ -1713,7 +1714,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
                          +---+---+---+---+---+---+---+---+
 
                    See the Forwarding Status sub-registries at
-                   https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
                    Examples:
 
@@ -3732,10 +3733,6 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <dd>
 <span class="refTitle">"Protocol Numbers"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="IANA-TCP">[IANA-TCP]</dt>
-        <dd>
-<span class="refTitle">"Transmission Control Protocol (TCP) Parameters, TCP Option Kind Numbers"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-parameters-1">https://www.iana.org/assignments/tcp-parameters/tcp-parameters.xhtml#tcp-parameters-1</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
@@ -3845,9 +3842,17 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <dd>
 <span class="refAuthor">Zseby, T.</span>, <span class="refAuthor">Molina, M.</span>, <span class="refAuthor">Duffield, N.</span>, <span class="refAuthor">Niccolini, S.</span>, and <span class="refAuthor">F. Raspall</span>, <span class="refTitle">"Sampling and Filtering Techniques for IP Packet Selection"</span>, <span class="seriesInfo">RFC 5475</span>, <span class="seriesInfo">DOI 10.17487/RFC5475</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5475">https://www.rfc-editor.org/rfc/rfc5475</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC5477">[RFC5477]</dt>
+        <dd>
+<span class="refAuthor">Dietz, T.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Aitken, P.</span>, <span class="refAuthor">Dressler, F.</span>, and <span class="refAuthor">G. Carle</span>, <span class="refTitle">"Information Model for Packet Sampling Exports"</span>, <span class="seriesInfo">RFC 5477</span>, <span class="seriesInfo">DOI 10.17487/RFC5477</span>, <time datetime="2009-03" class="refDate">March 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5477">https://www.rfc-editor.org/rfc/rfc5477</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC5610">[RFC5610]</dt>
         <dd>
 <span class="refAuthor">Boschi, E.</span>, <span class="refAuthor">Trammell, B.</span>, <span class="refAuthor">Mark, L.</span>, and <span class="refAuthor">T. Zseby</span>, <span class="refTitle">"Exporting Type Information for IP Flow Information Export (IPFIX) Information Elements"</span>, <span class="seriesInfo">RFC 5610</span>, <span class="seriesInfo">DOI 10.17487/RFC5610</span>, <time datetime="2009-07" class="refDate">July 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5610">https://www.rfc-editor.org/rfc/rfc5610</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5655">[RFC5655]</dt>
+        <dd>
+<span class="refAuthor">Trammell, B.</span>, <span class="refAuthor">Boschi, E.</span>, <span class="refAuthor">Mark, L.</span>, <span class="refAuthor">Zseby, T.</span>, and <span class="refAuthor">A. Wagner</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) File Format"</span>, <span class="seriesInfo">RFC 5655</span>, <span class="seriesInfo">DOI 10.17487/RFC5655</span>, <time datetime="2009-10" class="refDate">October 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5655">https://www.rfc-editor.org/rfc/rfc5655</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6144">[RFC6144]</dt>
         <dd>
@@ -3869,13 +3874,33 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <dd>
 <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Dhandapani, G.</span>, <span class="refAuthor">Aitken, P.</span>, and <span class="refAuthor">S. Yates</span>, <span class="refTitle">"Export of Structured Data in IP Flow Information Export (IPFIX)"</span>, <span class="seriesInfo">RFC 6313</span>, <span class="seriesInfo">DOI 10.17487/RFC6313</span>, <time datetime="2011-07" class="refDate">July 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6313">https://www.rfc-editor.org/rfc/rfc6313</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC6759">[RFC6759]</dt>
+        <dd>
+<span class="refAuthor">Claise, B.</span>, <span class="refAuthor">Aitken, P.</span>, and <span class="refAuthor">N. Ben-Dvora</span>, <span class="refTitle">"Cisco Systems Export of Application Information in IP Flow Information Export (IPFIX)"</span>, <span class="seriesInfo">RFC 6759</span>, <span class="seriesInfo">DOI 10.17487/RFC6759</span>, <time datetime="2012-11" class="refDate">November 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6759">https://www.rfc-editor.org/rfc/rfc6759</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7014">[RFC7014]</dt>
+        <dd>
+<span class="refAuthor">D'Antonio, S.</span>, <span class="refAuthor">Zseby, T.</span>, <span class="refAuthor">Henke, C.</span>, and <span class="refAuthor">L. Peluso</span>, <span class="refTitle">"Flow Selection Techniques"</span>, <span class="seriesInfo">RFC 7014</span>, <span class="seriesInfo">DOI 10.17487/RFC7014</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7014">https://www.rfc-editor.org/rfc/rfc7014</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7015">[RFC7015]</dt>
+        <dd>
+<span class="refAuthor">Trammell, B.</span>, <span class="refAuthor">Wagner, A.</span>, and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Flow Aggregation for the IP Flow Information Export (IPFIX) Protocol"</span>, <span class="seriesInfo">RFC 7015</span>, <span class="seriesInfo">DOI 10.17487/RFC7015</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7015">https://www.rfc-editor.org/rfc/rfc7015</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7125">[RFC7125]</dt>
         <dd>
 <span class="refAuthor">Trammell, B.</span> and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Revision of the tcpControlBits IP Flow Information Export (IPFIX) Information Element"</span>, <span class="seriesInfo">RFC 7125</span>, <span class="seriesInfo">DOI 10.17487/RFC7125</span>, <time datetime="2014-02" class="refDate">February 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7125">https://www.rfc-editor.org/rfc/rfc7125</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC7133">[RFC7133]</dt>
+        <dd>
+<span class="refAuthor">Kashima, S.</span>, <span class="refAuthor">Kobayashi, A., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Information Elements for Data Link Layer Traffic Measurement"</span>, <span class="seriesInfo">RFC 7133</span>, <span class="seriesInfo">DOI 10.17487/RFC7133</span>, <time datetime="2014-05" class="refDate">May 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7133">https://www.rfc-editor.org/rfc/rfc7133</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7270">[RFC7270]</dt>
         <dd>
 <span class="refAuthor">Yourtchenko, A.</span>, <span class="refAuthor">Aitken, P.</span>, and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Cisco-Specific Information Elements Reused in IP Flow Information Export (IPFIX)"</span>, <span class="seriesInfo">RFC 7270</span>, <span class="seriesInfo">DOI 10.17487/RFC7270</span>, <time datetime="2014-06" class="refDate">June 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7270">https://www.rfc-editor.org/rfc/rfc7270</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8038">[RFC8038]</dt>
+        <dd>
+<span class="refAuthor">Aitken, P., Ed.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">S, S. B.</span>, <span class="refAuthor">McDowall, C.</span>, and <span class="refAuthor">J. Schoenwaelder</span>, <span class="refTitle">"Exporting MIB Variables Using the IP Flow Information Export (IPFIX) Protocol"</span>, <span class="seriesInfo">RFC 8038</span>, <span class="seriesInfo">DOI 10.17487/RFC8038</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8038">https://www.rfc-editor.org/rfc/rfc8038</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8158">[RFC8158]</dt>
         <dd>
