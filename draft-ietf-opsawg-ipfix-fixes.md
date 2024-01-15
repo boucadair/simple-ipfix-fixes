@@ -38,7 +38,11 @@ normative:
         title: Protocol Numbers
         target: https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 informative:
-
+     RFC5103:
+     RFC6235:
+     RFC3775:
+     RFC4302:
+     RFC4303:
 
 --- abstract
 
@@ -170,7 +174,7 @@ Note that some implementations may not be able to export all observed extension 
     header. See [RFC4303] for the specification of the encapsulating
     security payload. The diagram provided in [RFC5102] is incorrect.
     The diagram in this registry is taken from Errata 1738.
-    See [RFC Errata 1738].
+    See RFC Errata 1738.
 ~~~
 
 * NEW:
@@ -318,7 +322,7 @@ This document requests IANA to update the description of the tcpOptions IE in {{
 
 ## forwardingStatus
 
-The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provided in {{!RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
+The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provided in {{?RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
 
 * OLD:
 
@@ -349,7 +353,7 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
                              001001  -> Bad TTL
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT].
+             (CCO-NF9FMT).
 
    - Abstract Data Type: unsigned8
 ~~~
@@ -768,7 +772,7 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
     : Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].
 
     - Additional Information:
-    : [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994]
+    : (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994)
 
 * NEW:
     - Description:
@@ -777,7 +781,7 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
     - Additional Information:
     : See the assigned data link frame types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type].
-    : More information about the data link layer can be found in [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994].
+    : More information about the data link layer can be found in (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994).
 
 ## mibCaptureTimeSemantics
 
@@ -1030,4 +1034,4 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element.
 
 Thanks to Eric Vyncke for the review and comments.
 
-Thanks to Qin Wu for the opsdir review.
+Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the genart review.
