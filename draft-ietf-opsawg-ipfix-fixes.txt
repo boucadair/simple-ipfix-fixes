@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 12 July 2024                                             Huawei
-                                                          9 January 2024
+Expires: 18 July 2024                                             Huawei
+                                                         15 January 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 July 2024.
+   This Internet-Draft will expire on 18 July 2024.
 
 Copyright Notice
 
@@ -297,7 +297,7 @@ Table of Contents
       header. See [RFC4303] for the specification of the encapsulating
       security payload. The diagram provided in [RFC5102] is incorrect.
       The diagram in this registry is taken from Errata 1738.
-      See [RFC Errata 1738].
+      See RFC Errata 1738.
 
    *  NEW:
 
@@ -477,7 +477,7 @@ Table of Contents
                              001001  -> Bad TTL
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT].
+             (CCO-NF9FMT).
 
    - Abstract Data Type: unsigned8
 
@@ -1230,8 +1230,8 @@ Table of Contents
             be OR'd together.  The data link layer is defined in [ISO/
             IEC.7498-1:1994].
 
-      -  Additional Information:  [IEEE802.3][IEEE802.11][ISO/
-            IEC.7498-1:1994]
+      -  Additional Information:  (IEEE802.3)(IEEE802.11)(ISO/
+            IEC.7498-1:1994)
 
    *  NEW:
 
@@ -1248,7 +1248,7 @@ Table of Contents
             ipfix.xhtml#ipfix-data-link-frame-type].
 
             More information about the data link layer can be found in
-            [IEEE802.3][IEEE802.11][ISO/IEC.7498-1:1994].
+            (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994).
 
 6.22.  mibCaptureTimeSemantics
 
@@ -1655,9 +1655,9 @@ Table of Contents
               Boucadair, M. and B. Claise, "Extended TCP Options and
               IPv6 Extension Headers IPFIX Information Elements", Work
               in Progress, Internet-Draft, draft-ietf-opsawg-ipfix-tcpo-
-              v6eh-05, 23 October 2023,
+              v6eh-06, 15 January 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              ipfix-tcpo-v6eh-05>.
+              ipfix-tcpo-v6eh-06>.
 
    [IANA-EH]  "Internet Protocol Version 6 (IPv6) Parameters, IPv6
               Extension Header Types", n.d.,
@@ -1703,12 +1703,6 @@ Table of Contents
               Information Elements", BCP 184, RFC 7013,
               DOI 10.17487/RFC7013, September 2013,
               <https://www.rfc-editor.org/rfc/rfc7013>.
-
-   [RFC7270]  Yourtchenko, A., Aitken, P., and B. Claise, "Cisco-
-              Specific Information Elements Reused in IP Flow
-              Information Export (IPFIX)", RFC 7270,
-              DOI 10.17487/RFC7270, June 2014,
-              <https://www.rfc-editor.org/rfc/rfc7270>.
 
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
@@ -1774,6 +1768,18 @@ Table of Contents
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/rfc/rfc3629>.
 
+   [RFC3775]  Johnson, D., Perkins, C., and J. Arkko, "Mobility Support
+              in IPv6", RFC 3775, DOI 10.17487/RFC3775, June 2004,
+              <https://www.rfc-editor.org/rfc/rfc3775>.
+
+   [RFC4302]  Kent, S., "IP Authentication Header", RFC 4302,
+              DOI 10.17487/RFC4302, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4302>.
+
+   [RFC4303]  Kent, S., "IP Encapsulating Security Payload (ESP)",
+              RFC 4303, DOI 10.17487/RFC4303, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4303>.
+
    [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
               Languages", RFC 4646, DOI 10.17487/RFC4646, September
               2006, <https://www.rfc-editor.org/rfc/rfc4646>.
@@ -1782,6 +1788,11 @@ Table of Contents
               Meyer, "Information Model for IP Flow Information Export",
               RFC 5102, DOI 10.17487/RFC5102, January 2008,
               <https://www.rfc-editor.org/rfc/rfc5102>.
+
+   [RFC5103]  Trammell, B. and E. Boschi, "Bidirectional Flow Export
+              Using IP Flow Information Export (IPFIX)", RFC 5103,
+              DOI 10.17487/RFC5103, January 2008,
+              <https://www.rfc-editor.org/rfc/rfc5103>.
 
    [RFC5475]  Zseby, T., Molina, M., Duffield, N., Niccolini, S., and F.
               Raspall, "Sampling and Filtering Techniques for IP Packet
@@ -1803,6 +1814,10 @@ Table of Contents
               Clients to IPv4 Servers", RFC 6146, DOI 10.17487/RFC6146,
               April 2011, <https://www.rfc-editor.org/rfc/rfc6146>.
 
+   [RFC6235]  Boschi, E. and B. Trammell, "IP Flow Anonymization
+              Support", RFC 6235, DOI 10.17487/RFC6235, May 2011,
+              <https://www.rfc-editor.org/rfc/rfc6235>.
+
    [RFC6296]  Wasserman, M. and F. Baker, "IPv6-to-IPv6 Network Prefix
               Translation", RFC 6296, DOI 10.17487/RFC6296, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6296>.
@@ -1816,6 +1831,12 @@ Table of Contents
               tcpControlBits IP Flow Information Export (IPFIX)
               Information Element", RFC 7125, DOI 10.17487/RFC7125,
               February 2014, <https://www.rfc-editor.org/rfc/rfc7125>.
+
+   [RFC7270]  Yourtchenko, A., Aitken, P., and B. Claise, "Cisco-
+              Specific Information Elements Reused in IP Flow
+              Information Export (IPFIX)", RFC 7270,
+              DOI 10.17487/RFC7270, June 2014,
+              <https://www.rfc-editor.org/rfc/rfc7270>.
 
    [RFC8158]  Sivakumar, S. and R. Penno, "IP Flow Information Export
               (IPFIX) Information Elements for Logging NAT Events",
@@ -1837,7 +1858,8 @@ Acknowledgments
 
    Thanks to Eric Vyncke for the review and comments.
 
-   Thanks to Qin Wu for the opsdir review.
+   Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the
+   genart review.
 
 Authors' Addresses
 
