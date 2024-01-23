@@ -363,7 +363,7 @@ Table of Contents
       header. See [RFC4303] for the specification of the encapsulating
       security payload. The diagram provided in [RFC5102] is incorrect.
       The diagram in this registry is taken from Errata 1738.
-      See RFC Errata 1738.
+      See [RFC_Errata_1738].
 
 4.1.2.2.  NEW
 
@@ -544,7 +544,7 @@ Table of Contents
                              001001  -> Bad TTL
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             (CCO-NF9FMT).
+             [CCO-NF9FMT].
 
    - Abstract Data Type: unsigned8
 
@@ -580,7 +580,8 @@ Table of Contents
                    decode: 10        -> Drop
                              001001  -> Bad TTL
 
-   - Additional Information: See the Forwarding Status sub-registries
+   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+             [CCO-NF9FMT]. See the Forwarding Status sub-registries
        at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
    - Abstract Data Type: unsigned32
@@ -896,7 +897,10 @@ Table of Contents
 
 6.10.2.  NEW
 
-   Description:  Values are listed in the natType registry.
+   Description:  This Information Element identifies the NAT type
+      applied to packets of the Flow.
+
+      Values are listed in the natType registry.
 
    Additional Information:  See the assigned NAT types at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
