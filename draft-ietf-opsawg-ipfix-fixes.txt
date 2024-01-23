@@ -1707,6 +1707,11 @@ Table of Contents
 
 10.2.  Informative References
 
+   [CCO-NF9FMT]
+              "NetFlow Version 9 Flow-Record Format", n.d.,
+              <https://www.cisco.com/en/US/technologies/tk648/tk362/
+              technologies_white_paper09186a00800a3db9.html>.
+
    [I-D.ietf-6man-eh-limits]
               Herbert, T., "Limits on Sending and Processing IPv6
               Extension Headers", Work in Progress, Internet-Draft,
@@ -1879,6 +1884,10 @@ Table of Contents
               Routing over IPv6 Information in IP Flow Information
               Export (IPFIX)", RFC 9487, DOI 10.17487/RFC9487, November
               2023, <https://www.rfc-editor.org/rfc/rfc9487>.
+
+   [RFC_Errata_1738]
+              "RFC Errata 1738", n.d.,
+              <http://www.rfc-editor.org/errata_search.php?eid=1738>.
 
 Acknowledgments
 
