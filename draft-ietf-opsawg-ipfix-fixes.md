@@ -311,7 +311,7 @@ Reference:
 : [RFC5102]
 
 Additional Information:
-: See {{RFC9293}} for the definition of TCP options.
+: See {{?RFC9293}} for the definition of TCP options.
 : See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].
 : The diagram provided in {{?RFC5102}} is incorrect. The diagram in this registry is taken from Errata 1739. See {{RFC_Errata_1739}}.
 
@@ -368,7 +368,7 @@ Reference:
 : {{?RFC5102}}This-Document
 
 Additional Information:
-: See {{RFC9293}} for the definition of TCP options.
+: See {{?RFC9293}} for the definition of TCP options.
 : See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].
 : The diagram in this registry is taken from Errata 1739. See {{RFC_Errata_1739}}.
 
