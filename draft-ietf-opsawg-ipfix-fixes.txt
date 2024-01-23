@@ -1943,7 +1943,7 @@ Acknowledgments
    sharing data about scans of IPFIX data he collected.
 
    Thomas Graf tagged an issue with the forwardingStatus Information
-   Element.
+   Element and for the Shepherd review.
 
    Thanks to Eric Vyncke for the review and comments.
 
