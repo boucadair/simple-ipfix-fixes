@@ -34,13 +34,8 @@ normative:
      IANA-Protocols:
         title: Protocol Numbers
         target: https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
+
 informative:
-     CCO-NF9FMT:
-       title: NetFlow Version 9 Flow-Record Format
-       target: https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html
-      RFC_Errata_1738:
-        title:  RFC Errata 1738
-        target: http://www.rfc-editor.org/errata_search.php?eid=1738
      RFC5103:
      RFC6235:
      RFC3775:
