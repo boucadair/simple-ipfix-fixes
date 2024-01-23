@@ -43,18 +43,18 @@ informative:
 
 --- abstract
 
-This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphan section references, etc. The updates are also meant to bringing some consistency among the entries of the registry.
+This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphan section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
 
 
 --- middle
 
 # Introduction
 
-As the OPSAWG is currently considering {{?I-D.ietf-opsawg-rfc7125-update}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are not adequately specified any longer (while they were at some point in time in the past). This document intends to update the IANA registry and bringing some consistency among the entries of the registry.
+When OPSAWG was considering {{?I-D.ietf-opsawg-rfc7125-update}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are no longer adequately specified  (while they were at some point in time in the past). This document intends to update the IANA registry and bring some consistency among the entries of the registry.
 
-As discussed with IANA, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
+As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
-- A link to an exiting registry in the "Description" entry.
+- A link to an existing registry in the "Description" entry.
 - The registry detailed values repeated in the "Description" entry. This practice has the drawback that the description must be updated each time the registry is updated.
 
 Therefore, this document lists a set of simple fixes to the IPFIX IANA registry {{IANA-IPFIX}}. These fixes are classified as follows:
@@ -62,7 +62,7 @@ Therefore, this document lists a set of simple fixes to the IPFIX IANA registry 
 - Updates that fix a shortcoming in the description of an IE ({{desc}}).
 - Updates that require adding a pointer to an existing IANA registry ({{to-iana}}).
 - Updates that are meant to ensure a consistent structure when calling an existing IANA registry ({{consistent}}).
-- Miscellaneous updates that fix broken pointers, orphan section references, etc. ({{misc}}).
+- Miscellaneous updates that fix broken pointers, orphaned section references, etc. ({{misc}}).
 
 These updates are also meant to facilitate the automatic extraction of the values maintained in IANA registries (e.g., with a cron job), required by Collectors to be able to support new IPFIX IEs and, more importantly, adequately interpret new values in registries specified by those IPFIX IEs.
 
@@ -105,7 +105,7 @@ Note that some implementations may not be able to export all observed extension 
 
 ### Updates to the ipv6ExtensionHeaders Description {#sec-up-eh}
 
-* OLD:
+#### OLD
 
 ~~~
  Description:
@@ -176,7 +176,7 @@ Note that some implementations may not be able to export all observed extension 
     See RFC Errata 1738.
 ~~~
 
-* NEW:
+#### NEW
 
 Description:
 : IPv6 extension headers observed in packets of this Flow. The
@@ -187,7 +187,7 @@ Description:
     contained the respective IPv6 extension header, the value of the
     corresponding bit is 0. The IPv6 extension header associated with each bit
     is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. The following drawing indicates
-    the position of each bit in the encoding of the Information Element.
+    the bit position in the encoding of the Information Element.
 
 : This IE is used only when the observed extension headers are in the 0-31
     range.
@@ -241,7 +241,7 @@ Additional Information:
 
 ### Issues
 
-Only options having a kind =< 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
+Only options having a kind <= 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) {{!RFC6994}}.
 
 The following section updates the description of the tcpOptions IE to explicitly indicate the applicable kind range and to point to the new IEs defined in {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
 
@@ -249,7 +249,9 @@ The following section updates the description of the tcpOptions IE to explicitly
 
 This document requests IANA to update the description of the tcpOptions IE in {{IANA-IPFIX}} as follows:
 
-* OLD Description:
+#### OLD
+
+* Description:
 : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
@@ -284,7 +286,9 @@ This document requests IANA to update the description of the tcpOptions IE in {{
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
-* NEW Description:
+#### NEW
+
+* Description:
 : TCP options in packets of this Flow.  The information is encoded
       in a set of bit fields.  For each TCP option, there is a bit in
       this set.  The bit is set to 1 if any observed packet of this Flow
@@ -323,7 +327,7 @@ This document requests IANA to update the description of the tcpOptions IE in {{
 
 The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provided in {{?RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
 
-* OLD:
+### OLD
 
 ~~~
    - Description:  This Information Element describes the forwarding
@@ -357,7 +361,7 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
    - Abstract Data Type: unsigned8
 ~~~
 
-* NEW:
+### NEW
 
 ~~~
    - Description:  This Information Element describes the forwarding
@@ -418,7 +422,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## mplsTopLabelType
 
-* OLD:
+### OLD
+
     - Description:
     : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
     : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
@@ -427,7 +432,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
     : See {{?RFC3031}} for the MPLS label structure.
     : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
 
-* NEW:
+### NEW
+
     - Description:
     : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
 
@@ -437,14 +443,14 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## classificationEngineId
 
-* OLD:
+### OLD
+
     - Description:
     : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
     : Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
-   - Additional Information:
+### NEW
 
-* NEW:
     - Description:
     : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
     : Values for this field are listed in the Classification Engine IDs registry.
@@ -454,13 +460,14 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## flowEndReason
 
-* OLD:
+### OLD
+
     - Description:
     : The reason for Flow termination. Values are listed in the flowEndReason registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason.
 
-   - Additional Information:
 
-* NEW:
+### NEW
+
     - Description:
     : The reason for Flow termination. Values are listed in the flowEndReason registry.
 
@@ -469,7 +476,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## natOriginatingAddressRealm
 
-* OLD:
+### OLD
+
     - Description:
     : Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
     : Values are listed in the natOriginatingAddressRealm registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm.
@@ -477,7 +485,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
    - Additional Information:
    : See {{?RFC3022}} for the definition of NAT.
 
-* NEW:
+### NEW
+
     - Description:
     : Indicates whether the session was created because traffic originated in the private or public address realm. postNATSourceIPv4Address, postNATDestinationIPv4Address, postNAPTSourceTransportPort, and postNAPTDestinationTransportPort are qualified with the address realm in perspective.
     : Values are listed in the natOriginatingAddressRealm registry.
@@ -487,7 +496,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## natEvent
 
-* OLD:
+### OLD
+
    - Description:
    : This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type.
 
@@ -496,7 +506,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
    : See {{?RFC3234}} for the definition of middleboxes.
    : See {{?RFC8158}} for the definitions of values 4-16.
 
-* NEW:
+### NEW
+
    - Description:
    : This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.
 
@@ -508,14 +519,14 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## firewallEvent
 
-* OLD:
+### OLD
+
    - Description:
    : Indicates a firewall event. Allowed values are listed in the firewallEvent registry.
    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : Indicates a firewall event. Allowed values are listed in the firewallEvent registry.
 
@@ -524,13 +535,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## biflowDirection
 
-* OLD:
+### OLD
+
    - Description:
    :  A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element MAY be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option SHOULD be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element SHOULD appear in each Flow Record. Values are listed in the biflowDirection registry. See [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction].
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element MAY be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option SHOULD be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element SHOULD appear in each Flow Record. Values are listed in the biflowDirection registry.
 
@@ -540,13 +551,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## observationPointType
 
-* OLD:
+### OLD
+
    - Description:
    : Type of observation point. Values are listed in the observationPointType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : Type of observation point. Values are listed in the observationPointType registry.
 
@@ -555,13 +566,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## anonymizationTechnique
 
-* OLD:
+### OLD
+
    - Description:
    : A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry.
 
@@ -570,7 +581,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## natType
 
-* OLD:
+### OLD
+
    - Description:
    : Values are listed in the natType registry.
    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type.
@@ -584,7 +596,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
    : See {{?RFC0791}} for the definition of IPv4.
    : See {{?RFC8200}} for the definition of IPv6.
 
-* NEW:
+### NEW
+
    - Description:
    : Values are listed in the natType registry.
 
@@ -603,15 +616,15 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## selectorAlgorithm
 
-* OLD:
+### OLD
+
    - Description:
    : This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. The methods listed below are defined in {{?RFC5475}}. For their parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list below. It might be necessary to define new Information Elements to specify their parameters.
    : The following packet selection methods identifiers are defined here: https://www.iana.org/assignments/psamp-parameters.
    : There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. For the methods parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters.
    : There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.
@@ -621,13 +634,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## informationElementDataType
 
-* OLD:
+### OLD
+
    - Description:
-   : A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
+   : A description of the abstract data type of an IPFIX information element. These are taken from the abstract data types defined in section 3.1 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry. This subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : A description of the abstract data type of an IPFIX information element.These are taken from the abstract data types defined in Section 3.1 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the [informationElementDataType] subregistry. These types are registered in the IANA IPFIX Information Element Data Type subregistry.
    : The [informationElementDataType] subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
@@ -637,13 +650,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## informationElementSemantics
 
-* OLD:
+### OLD
+
    - Description:
    : A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the semantics registry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori. These semantics are registered in the IANA IPFIX Information Element Semantics subregistry. This subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in Section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the [IPFIX Information Element Semantics] subregistry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori.
    : The [IPFIX Information Element Semantics] subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
@@ -653,13 +666,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## informationElementUnits
 
-* OLD:
+### OLD
+
    - Description:
    : A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. This field may take the values in Table 3 below; the special value 0x00 (none) is used to note that the field is unitless. These types are registered in the [IANA IPFIX Information Element Units] subregistry.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in Section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. These types can take the values in the [IANA IPFIX Information Element Units] subregistry. The special value 0x00 (none) is used to note that the field is unitless.
 
@@ -668,14 +681,14 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## portRangeStart
 
-* OLD:
+### OLD
+
    - Description:
    : The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, ie the range is defined in some other way.
    : Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.
 
@@ -684,13 +697,13 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## portRangeEnd
 
-* OLD:
+### OLD
+
    - Description:
    : The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, ie the range is defined in some other way. Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
 
@@ -699,14 +712,16 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## ingressInterfaceType
 
-* OLD:
+### OLD
+
    - Description:
    : The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.
 
    - Additional Information:
    : https://www.iana.org/assignments/ianaiftype-mib
 
-* NEW:
+### NEW
+
    - Description:
    : The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType'.
 
@@ -715,14 +730,16 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## egressInterfaceType
 
-* OLD:
+### OLD
+
    - Description:
    : The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType' as defined in https://www.iana.org/assignments/ianaiftype-mib.
 
    - Additional Information:
    : https://www.iana.org/assignments/ianaiftype-mib
 
-* NEW:
+### NEW
+
    - Description:
    : The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType'.
 
@@ -732,31 +749,31 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## valueDistributionMethod
 
-* OLD:
+### OLD
+
     - Description:
     : A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods.
     : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method.
 
-   - Additional Information:
+### NEW
 
-* NEW:
     - Description:
     : A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods.
 
     - Additional Information:
-    : See the assigned distributed methods at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method].
+    : See the assigned value distribution methods at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method].
 
 ## flowSelectorAlgorithm
 
-* OLD:
+### OLD
+
     - Description:
     : This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters.
     : Please note that the purpose of the flow selection techniques described in this document is the improvement of measurement functions as defined in the Scope (Section 1).
     : The Intermediate Flow Selection Process Techniques identifiers are defined at https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm.
 
-   - Additional Information:
+### NEW
 
-* NEW:
    - Description:
    : This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters.
 
@@ -765,7 +782,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## dataLinkFrameType
 
-* OLD:
+### OLD
+
     - Description:
     : This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type.
     : Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together. The data link layer is defined in [ISO/IEC.7498-1:1994].
@@ -773,7 +791,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
     - Additional Information:
     : (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994)
 
-* NEW:
+### NEW
+
     - Description:
     : This Information Element specifies the type of the selected data link frame. Data link types are defined in the dataLinkFrameType registry.
     : Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together.
@@ -784,15 +803,15 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## mibCaptureTimeSemantics
 
-* OLD:
+### OLD
+
     - Description:
     : Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record.
     : This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data {{?RFC6313}}. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data.
     : Values are listed in the mibCaptureTimeSemantics registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics.
 
-    - Additional Information:
+### NEW
 
-* NEW:
     - Description:
     : Indicates when in the lifetime of the Flow the MIB value was retrieved from the MIB for a mibObjectIdentifier. This is used to indicate if the value exported was collected from the MIB closer to Flow creation or Flow export time and refers to the Timestamp fields included in the same Data Record.
     : This field SHOULD be used when exporting a mibObjectValue that specifies counters or statistics. If the MIB value was sampled by SNMP prior to the IPFIX Metering Process or Exporting Process retrieving the value (i.e., the data is already stale) and it is important to know the exact sampling time, then an additional observationTime* element should be paired with the OID using IPFIX Structured Data {{?RFC6313}}. Similarly, if different MIB capture times apply to different mibObjectValue elements within the Data Record, then individual mibCaptureTimeSemantics Information Elements should be paired with each OID using IPFIX Structured Data.
@@ -803,7 +822,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## natQuotaExceededEvent
 
-* OLD:
+### OLD
+
     - Description:
     : This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event.
 
@@ -812,7 +832,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
     : See {{?RFC3022}} for the definition of NAT.
     : See {{?RFC3234}} for the definition of middleboxes.
 
-* NEW:
+### NEW
+
     - Description:
     : This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry.
 
@@ -824,7 +845,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 
 ## natThresholdEvent
 
-* OLD:
+### OLD
+
     - Description:
     : This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry, see https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event.
 
@@ -833,7 +855,8 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
     : See {{?RFC3022}} for the definition of NAT.
     : See {{?RFC3234}} for the definition of middleboxes.
 
-* NEW:
+### NEW
+
     - Description:
     : This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.
 
@@ -849,29 +872,33 @@ This document requests IANA to update the description of the following entries i
 
 ## collectionTimeMilliseconds
 
-* OLD:
+### OLD
+
    - Description:
    : The absolute timestamp at which the data within the scope containing this Information Element was received by a Collecting Process. This Information Element SHOULD be bound to its containing IPFIX Message via IPFIX Options and the messageScope Information Element, as defined below.
 
-* NEW:
+### NEW
+
    - Description:
    : The absolute timestamp at which the data within the scope containing this Information Element was received by a Collecting Process. This Information Element SHOULD be bound to its containing IPFIX Message via IPFIX Options and the messageScope Information Element.
 
 ## messageMD5Checksum
 
-* OLD:
+### OLD
+
     - Description:
     :  The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, as defined below, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in {{?RFC1321}}, place the resulting value in this Information Element, and export the buffered message.
     : This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
 
-* NEW:
+### NEW
+
     - Description:
     : The MD5 checksum of the IPFIX Message containing this record. This Information Element SHOULD be bound to its containing IPFIX Message via an options record and the messageScope Information Element, and SHOULD appear only once in a given IPFIX Message. To calculate the value of this Information Element, first buffer the containing IPFIX Message, setting the value of this Information Element to all zeroes. Then calculate the MD5 checksum of the resulting buffer as defined in {{?RFC1321}}, place the resulting value in this Information Element, and export the buffered message.
     : This Information Element is intended as a simple checksum only; therefore collision resistance and algorithm agility are not required, and MD5 is an appropriate message digest. This Information Element has a fixed length of 16 octets.
 
 ## anonymizationFlags
 
-* OLD:
+### OLD
 
 ~~~
 +--------+----------+-----------------------------------------------+
@@ -900,7 +927,7 @@ This document requests IANA to update the description of the following entries i
 +--------+----------+-----------------------------------------------+
 ~~~
 
-* NEW:
+### NEW
 
 ~~~
 +--------+----------+-----------------------------------------------+
@@ -932,12 +959,14 @@ This document requests IANA to update the description of the following entries i
 
 ## informationElementDescription
 
-* OLD:
+### OLD
+
     - Description:
     : A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed.
     : See the Security Considerations section for notes on string handling for Information Element type records.
 
-* NEW:
+### NEW
+
     - Description:
     : A UTF-8 {{?RFC3629}} encoded Unicode string containing a human-readable description of an Information Element. The content of the informationElementDescription MAY be annotated with one or more language tags {{?RFC4646}}, encoded in-line {{?RFC2482}} within the UTF-8 string, in order to specify the language in which the description is written. Description text in multiple languages MAY tag each section with its own language tag; in this case, the description information in each language SHOULD have equivalent meaning. In the absence of any language tag, the "i-default" {{?RFC2277}} language SHOULD be assumed.
     : See the Security Considerations Section of {{?RFC5610}} for notes on string handling for Information Element type records.
@@ -945,21 +974,25 @@ This document requests IANA to update the description of the following entries i
 
 ## distinctCountOfDestinationIPAddress
 
-* OLD:
+### OLD
+
     - Description:
     : The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters below, unless it is important to separate the counts by version.
 
-* NEW:
+### NEW
+
    - Description:
    : The count of distinct destination IP address values for Original Flows contributing to this Aggregated Flow, without regard to IP version. This Information Element is preferred to the version-specific counters, unless it is important to separate the counts by version.
 
 ## externalAddressRealm
 
-* OLD:
+### OLD
+
     - Description:
     : This Information Element represents the external address realm where the packet is originated from or destined to. The detailed definition is in the internal address realm as specified above.
 
-* NEW:
+### NEW
+
    - Description:
    : This Information Element represents the external address realm where the packet is originated from or destined to.
    : See the internalAddressRealm IE for the detailed definition.
@@ -967,7 +1000,8 @@ This document requests IANA to update the description of the following entries i
 
 # Security Considerations
 
-IPFIX security considerations are discussed in {{Section 8 of !RFC7012}}.
+This document does not add new security considerations to those
+already discussed for IPFIX in {{Section 8 of !RFC7012}}.
 
 
 # IANA Considerations
@@ -980,10 +1014,10 @@ This document also requests IANA to update the reference clause of the "IPFIX In
 
 This document requests IANA to create a new registry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry group {{IANA-IPFIX}}.
 
-When a new code is assigned to an IPv6 EH in {{IANA-EH}}, a free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "Protocol Number" mirrors the "Protocol Number" in {{IANA-EH}}. IANA is requested to add the following note to {{IANA-EH}}:
+When a new code is assigned to an IPv6 EH in {{IANA-EH}}, the next available free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in {{IANA-Protocols}}, while the "Protocol Number" mirrors the "Protocol Number" in {{IANA-EH}}. IANA is requested to add the following note to {{IANA-EH}}:
 
 > Note:
-: When a new code is assigned to an IPv6 Extension Header, a free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. >>[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
+: When a new code is assigned to an IPv6 Extension Header, the next available free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. >>[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].
 
 > Note to the RFC Editor: Please replace [NEW_IPFIX_IPv6EH_SUBREGISTRY] with the link used by IANA for this new registry.
 
@@ -996,7 +1030,7 @@ The initial values of this registry are as follows:
                Number
     0  DST      60      Destination Options for IPv6
     1  HOP       0      IPv6 Hop-by-Hop Options
-    2  NoNxt     59     No Next Header for IPv6
+    2  NoNxt    59      No Next Header for IPv6
     3  UNK              Unknown Layer 4 header
                         (compressed, encrypted, not supported)
     4  FRA0     44      Fragment header - first fragment
@@ -1027,7 +1061,7 @@ Within the review period, the designated experts will either approve or deny the
 # Acknowledgments
 {:numbered="false"}
 
-Thanks to Paul Aitken for the review. Special thanks to Andrew Feren for sharing data about scans of IPFIX data he collected.
+Many thanks to Paul Aitken for the review and many suggestions that enhanced this specification. Special thanks to Andrew Feren for sharing data about scans of IPFIX data he collected.
 
 Thomas Graf tagged an issue with the forwardingStatus Information Element.
 
