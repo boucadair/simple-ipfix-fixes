@@ -47,6 +47,9 @@ informative:
      RFC_Errata_1738:
         title: RFC Errata 1738
         target: http://www.rfc-editor.org/errata_search.php?eid=1738
+     RFC_Errata_1739:
+        title: RFC Errata 1739
+        target: http://www.rfc-editor.org/errata_search.php?eid=1739
 
 --- abstract
 
@@ -211,15 +214,18 @@ Description:
 
             8     9    10    11    12    13    14    15
         +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |   8 |   9 |  10 |  11 |  12 |  13 |  14 |  15 |...
+    ... |   8 |   9 |  10 |  11 |  12 |  13 |  14 |  15 | ...
         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-                              . . .
+            16    17    18    19    20    21    22    23
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |  16 |  17 |  18 |  19 |  20 |  21 |  22 |  23 | ...
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 
-           56    57    58    59    60    61    62    63
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  56 |  57 |  58 |  59 |  60 |  61 |  62 |  63 |
-        +-----+-----+-----+-----+-----+-----+-----+-----+
+            24    25    26    27    28    29    30    31
+         +-----+-----+-----+-----+-----+-----+-----+-----+
+     ... |  24 |  25 |  26 |  27 |  28 |  29 |  30 |  31 |
+         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
 Abstract Data Type:
@@ -290,6 +296,26 @@ Description:
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
+Abstract Data Type:
+: unsigned64
+
+Data Type Semantics:
+: flags
+
+ElementId:
+: 209
+
+Status: current
+
+Reference:
+: [RFC5102]
+
+Additional Information:
+: See {{RFC9293}} for the definition of TCP options.
+: See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].
+: The diagram provided in {{?RFC5102}} is incorrect. The diagram in this registry is taken from Errata 1739. See {{RFC_Errata_1739}}.
+
+
 #### NEW
 
 Description:
@@ -326,6 +352,26 @@ Description:
     ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
         +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~
+
+Abstract Data Type:
+: unsigned64
+
+Data Type Semantics:
+: flags
+
+ElementId:
+: 209
+
+Status: current
+
+Reference:
+: {{?RFC5102}}This-Document
+
+Additional Information:
+: See {{RFC9293}} for the definition of TCP options.
+: See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].
+: The diagram in this registry is taken from Errata 1739. See {{RFC_Errata_1739}}.
+
 
 ## forwardingStatus
 
