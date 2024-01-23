@@ -194,7 +194,7 @@ Description:
     contained the respective IPv6 extension header, the value of the
     corresponding bit is 0. The IPv6 extension header associated with each bit
     is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. The following drawing indicates
-    the bit position in the encoding of the Information Element.
+    the position of each bit in the encoding of the Information Element.
 
 : This IE is used only when the observed extension headers are in the 0-31
     range.
@@ -204,25 +204,22 @@ Description:
     {{!I-D.ietf-opsawg-ipfix-tcpo-v6eh}}.
 
 ~~~~
-             0     1     2     3     4     5     6     7
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-         |        IPv6 extension header bits             |  ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
+            0     1     2     3     4     5     6     7
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+        |   0 |   1 |   2 |   3 |   4 |   5 |   6 |   7 |  ...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
 
-             8     9    10    11    12    13    14    15
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-         |         IPv6 extension header bits            |  ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
+            8     9    10    11    12    13    14    15
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |   8 |   9 |  10 |  11 |  12 |  13 |  14 |  15 |...
+        +-----+-----+-----+-----+-----+-----+-----+-----+
 
-            16    17    18    19    20    21    22    23
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-         |         IPv6 extension header bits            |  ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
+                              . . .
 
-            24    25    26    27    28    29    30    31
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |        IPv6 extension header bits             |
-         +-----+-----+-----+-----+-----+-----+-----+-----+
+           56    57    58    59    60    61    62    63
+        +-----+-----+-----+-----+-----+-----+-----+-----+
+    ... |  56 |  57 |  58 |  59 |  60 |  61 |  62 |  63 |
+        +-----+-----+-----+-----+-----+-----+-----+-----+
 ~~~~
 
 Abstract Data Type:
