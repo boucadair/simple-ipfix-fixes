@@ -43,7 +43,7 @@ informative:
 
 --- abstract
 
-This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphan section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
+This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
 
 
 --- middle
