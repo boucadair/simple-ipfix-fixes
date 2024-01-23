@@ -1115,7 +1115,7 @@ Within the review period, the designated experts will either approve or deny the
 
 Many thanks to Paul Aitken for the review and many suggestions that enhanced this specification. Special thanks to Andrew Feren for sharing data about scans of IPFIX data he collected.
 
-Thomas Graf tagged an issue with the forwardingStatus Information Element.
+Thomas Graf tagged an issue with the forwardingStatus Information Element and for the Shepherd review.
 
 Thanks to Eric Vyncke for the review and comments.
 
