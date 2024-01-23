@@ -425,38 +425,38 @@ This document requests IANA to update {{IANA-IPFIX}} for each of the IE entries 
 ### OLD
 
 Description:
-    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
-    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
+: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type.
 
 Additional Information:
-    : See {{?RFC3031}} for the MPLS label structure.
-    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
+: See {{?RFC3031}} for the MPLS label structure.
+: See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/mpls-label-values].
 
 ### NEW
 
 Description:
-    : This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
+: This field identifies the control protocol that allocated the top-of-stack label. Values for this field are listed in the MPLS label type registry.
 
 Additional Information:
-    : See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type].
-    : See {{?RFC3031}} for the MPLS label structure.
+: See the list of MPLS label types assigned by IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mpls-label-type].
+: See {{?RFC3031}} for the MPLS label structure.
 
 ## classificationEngineId
 
 ### OLD
 
 Description:
-    : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-    : Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+: Values for this field are listed in the Classification Engine IDs registry. See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
 ### NEW
 
 Description:
-    : A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
-    : Values for this field are listed in the Classification Engine IDs registry.
+: A unique identifier for the engine that determined the Selector ID. Thus, the Classification Engine ID defines the context for the Selector ID. The Classification Engine can be considered a specific registry for application assignments.
+: Values for this field are listed in the Classification Engine IDs registry.
 
 Additional Information:
-    : See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
+: See https://www.iana.org/assignments/ipfix/ipfix.xhtml#classification-engine-ids.
 
 ## flowEndReason
 
