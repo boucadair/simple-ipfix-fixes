@@ -27,14 +27,22 @@ author:
 normative:
      IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
+        author:
+        -
+          organization: "IANA"
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
+        date: false
 
 informative:
      RFC5103:
      RFC6235:
      CCO-NF9FMT:
        title: NetFlow Version 9 Flow-Record Format
+       author:
+        -
+          organization: "Cisco"
        target: https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html
+       date: May 2011
      RFC_Errata_1738:
         title: RFC Errata 1738
         target: http://www.rfc-editor.org/errata_search.php?eid=1738
@@ -43,7 +51,11 @@ informative:
         target: http://www.rfc-editor.org/errata_search.php?eid=1739
      Forwarding-Status:
         title: Forwarding Status (Value 89)
+        author:
+        -
+          organization: "IANA"
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status
+        date: false
 
 
 --- abstract
