@@ -10,18 +10,18 @@
 <meta content="
        This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry. 
     " name="description">
-<meta content="xml2rfc 3.19.1" name="generator">
+<meta content="xml2rfc 3.19.2" name="generator">
 <meta content="IPFIX" name="keyword">
 <meta content="draft-ietf-opsawg-ipfix-fixes-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.1
+  xml2rfc 3.19.2
     Python 3.11.6
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 4.1.0
+    platformdirs 4.2.0
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.31.0
@@ -1026,11 +1026,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">IPFIX IANA Fixes</td>
-<td class="right">January 2024</td>
+<td class="right">February 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Claise</td>
-<td class="center">Expires 26 July 2024</td>
+<td class="center">Expires 9 August 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1043,12 +1043,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-opsawg-ipfix-fixes-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-01-23" class="published">23 January 2024</time>
+<time datetime="2024-02-06" class="published">6 February 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-07-26">26 July 2024</time></dd>
+<dd class="expires"><time datetime="2024-08-09">9 August 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1097,7 +1097,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 26 July 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 9 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1139,35 +1139,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-update-the-description" class="internal xref">Update the Description</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
-                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-ipv6extensionheaders-inform" class="internal xref">ipv6ExtensionHeaders Information Element</a></p>
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-forwardingstatus" class="internal xref">forwardingStatus</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1.2.1">
-                    <p id="section-toc.1-1.4.2.1.2.1.1"><a href="#section-4.1.1" class="auto internal xref">4.1.1</a>.  <a href="#name-issues" class="internal xref">Issues</a></p>
+                    <p id="section-toc.1-1.4.2.1.2.1.1"><a href="#section-4.1.1" class="auto internal xref">4.1.1</a>.  <a href="#name-old" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1.2.2">
-                    <p id="section-toc.1-1.4.2.1.2.2.1"><a href="#section-4.1.2" class="auto internal xref">4.1.2</a>.  <a href="#name-updates-to-the-ipv6extensio" class="internal xref">Updates to the ipv6ExtensionHeaders Description</a></p>
-</li>
-                </ul>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
-                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-tcpoptions" class="internal xref">tcpOptions</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.1">
-                    <p id="section-toc.1-1.4.2.2.2.1.1"><a href="#section-4.2.1" class="auto internal xref">4.2.1</a>.  <a href="#name-issues-2" class="internal xref">Issues</a></p>
-</li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2.2.2">
-                    <p id="section-toc.1-1.4.2.2.2.2.1"><a href="#section-4.2.2" class="auto internal xref">4.2.2</a>.  <a href="#name-update-the-description-of-t" class="internal xref">Update the Description of the tcpOptions IE</a></p>
-</li>
-                </ul>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
-                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-forwardingstatus" class="internal xref">forwardingStatus</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3.2.1">
-                    <p id="section-toc.1-1.4.2.3.2.1.1"><a href="#section-4.3.1" class="auto internal xref">4.3.1</a>.  <a href="#name-old-3" class="internal xref">OLD</a></p>
-</li>
-                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3.2.2">
-                    <p id="section-toc.1-1.4.2.3.2.2.1"><a href="#section-4.3.2" class="auto internal xref">4.3.2</a>.  <a href="#name-new-3" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.4.2.1.2.2.1"><a href="#section-4.1.2" class="auto internal xref">4.1.2</a>.  <a href="#name-new" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1183,10 +1161,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-mplstoplabeltype" class="internal xref">mplsTopLabelType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.1">
-                    <p id="section-toc.1-1.6.2.1.2.1.1"><a href="#section-6.1.1" class="auto internal xref">6.1.1</a>.  <a href="#name-old-4" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.1.2.1.1"><a href="#section-6.1.1" class="auto internal xref">6.1.1</a>.  <a href="#name-old-2" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1.2.2">
-                    <p id="section-toc.1-1.6.2.1.2.2.1"><a href="#section-6.1.2" class="auto internal xref">6.1.2</a>.  <a href="#name-new-4" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.1.2.2.1"><a href="#section-6.1.2" class="auto internal xref">6.1.2</a>.  <a href="#name-new-2" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1194,10 +1172,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-classificationengineid" class="internal xref">classificationEngineId</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.1">
-                    <p id="section-toc.1-1.6.2.2.2.1.1"><a href="#section-6.2.1" class="auto internal xref">6.2.1</a>.  <a href="#name-old-5" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.1.1"><a href="#section-6.2.1" class="auto internal xref">6.2.1</a>.  <a href="#name-old-3" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.2">
-                    <p id="section-toc.1-1.6.2.2.2.2.1"><a href="#section-6.2.2" class="auto internal xref">6.2.2</a>.  <a href="#name-new-5" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.2.1"><a href="#section-6.2.2" class="auto internal xref">6.2.2</a>.  <a href="#name-new-3" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1205,10 +1183,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-flowendreason" class="internal xref">flowEndReason</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3.2.1">
-                    <p id="section-toc.1-1.6.2.3.2.1.1"><a href="#section-6.3.1" class="auto internal xref">6.3.1</a>.  <a href="#name-old-6" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.3.2.1.1"><a href="#section-6.3.1" class="auto internal xref">6.3.1</a>.  <a href="#name-old-4" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3.2.2">
-                    <p id="section-toc.1-1.6.2.3.2.2.1"><a href="#section-6.3.2" class="auto internal xref">6.3.2</a>.  <a href="#name-new-6" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.3.2.2.1"><a href="#section-6.3.2" class="auto internal xref">6.3.2</a>.  <a href="#name-new-4" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1216,10 +1194,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-natoriginatingaddressrealm" class="internal xref">natOriginatingAddressRealm</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4.2.1">
-                    <p id="section-toc.1-1.6.2.4.2.1.1"><a href="#section-6.4.1" class="auto internal xref">6.4.1</a>.  <a href="#name-old-7" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.4.2.1.1"><a href="#section-6.4.1" class="auto internal xref">6.4.1</a>.  <a href="#name-old-5" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4.2.2">
-                    <p id="section-toc.1-1.6.2.4.2.2.1"><a href="#section-6.4.2" class="auto internal xref">6.4.2</a>.  <a href="#name-new-7" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.4.2.2.1"><a href="#section-6.4.2" class="auto internal xref">6.4.2</a>.  <a href="#name-new-5" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1227,10 +1205,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.5.1"><a href="#section-6.5" class="auto internal xref">6.5</a>.  <a href="#name-natevent" class="internal xref">natEvent</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.5.2.1">
-                    <p id="section-toc.1-1.6.2.5.2.1.1"><a href="#section-6.5.1" class="auto internal xref">6.5.1</a>.  <a href="#name-old-8" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.5.2.1.1"><a href="#section-6.5.1" class="auto internal xref">6.5.1</a>.  <a href="#name-old-6" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.5.2.2">
-                    <p id="section-toc.1-1.6.2.5.2.2.1"><a href="#section-6.5.2" class="auto internal xref">6.5.2</a>.  <a href="#name-new-8" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.5.2.2.1"><a href="#section-6.5.2" class="auto internal xref">6.5.2</a>.  <a href="#name-new-6" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1238,10 +1216,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.6.1"><a href="#section-6.6" class="auto internal xref">6.6</a>.  <a href="#name-firewallevent" class="internal xref">firewallEvent</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.6.2.1">
-                    <p id="section-toc.1-1.6.2.6.2.1.1"><a href="#section-6.6.1" class="auto internal xref">6.6.1</a>.  <a href="#name-old-9" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.6.2.1.1"><a href="#section-6.6.1" class="auto internal xref">6.6.1</a>.  <a href="#name-old-7" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.6.2.2">
-                    <p id="section-toc.1-1.6.2.6.2.2.1"><a href="#section-6.6.2" class="auto internal xref">6.6.2</a>.  <a href="#name-new-9" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.6.2.2.1"><a href="#section-6.6.2" class="auto internal xref">6.6.2</a>.  <a href="#name-new-7" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1249,10 +1227,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.7.1"><a href="#section-6.7" class="auto internal xref">6.7</a>.  <a href="#name-biflowdirection" class="internal xref">biflowDirection</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.7.2.1">
-                    <p id="section-toc.1-1.6.2.7.2.1.1"><a href="#section-6.7.1" class="auto internal xref">6.7.1</a>.  <a href="#name-old-10" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.7.2.1.1"><a href="#section-6.7.1" class="auto internal xref">6.7.1</a>.  <a href="#name-old-8" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.7.2.2">
-                    <p id="section-toc.1-1.6.2.7.2.2.1"><a href="#section-6.7.2" class="auto internal xref">6.7.2</a>.  <a href="#name-new-10" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.7.2.2.1"><a href="#section-6.7.2" class="auto internal xref">6.7.2</a>.  <a href="#name-new-8" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1260,10 +1238,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.8.1"><a href="#section-6.8" class="auto internal xref">6.8</a>.  <a href="#name-observationpointtype" class="internal xref">observationPointType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.8.2.1">
-                    <p id="section-toc.1-1.6.2.8.2.1.1"><a href="#section-6.8.1" class="auto internal xref">6.8.1</a>.  <a href="#name-old-11" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.8.2.1.1"><a href="#section-6.8.1" class="auto internal xref">6.8.1</a>.  <a href="#name-old-9" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.8.2.2">
-                    <p id="section-toc.1-1.6.2.8.2.2.1"><a href="#section-6.8.2" class="auto internal xref">6.8.2</a>.  <a href="#name-new-11" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.8.2.2.1"><a href="#section-6.8.2" class="auto internal xref">6.8.2</a>.  <a href="#name-new-9" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1271,10 +1249,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.9.1"><a href="#section-6.9" class="auto internal xref">6.9</a>.  <a href="#name-anonymizationtechnique" class="internal xref">anonymizationTechnique</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.9.2.1">
-                    <p id="section-toc.1-1.6.2.9.2.1.1"><a href="#section-6.9.1" class="auto internal xref">6.9.1</a>.  <a href="#name-old-12" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.9.2.1.1"><a href="#section-6.9.1" class="auto internal xref">6.9.1</a>.  <a href="#name-old-10" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.9.2.2">
-                    <p id="section-toc.1-1.6.2.9.2.2.1"><a href="#section-6.9.2" class="auto internal xref">6.9.2</a>.  <a href="#name-new-12" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.9.2.2.1"><a href="#section-6.9.2" class="auto internal xref">6.9.2</a>.  <a href="#name-new-10" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1282,10 +1260,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.10.1"><a href="#section-6.10" class="auto internal xref">6.10</a>. <a href="#name-nattype" class="internal xref">natType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.10.2.1">
-                    <p id="section-toc.1-1.6.2.10.2.1.1"><a href="#section-6.10.1" class="auto internal xref">6.10.1</a>.  <a href="#name-old-13" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.10.2.1.1"><a href="#section-6.10.1" class="auto internal xref">6.10.1</a>.  <a href="#name-old-11" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.10.2.2">
-                    <p id="section-toc.1-1.6.2.10.2.2.1"><a href="#section-6.10.2" class="auto internal xref">6.10.2</a>.  <a href="#name-new-13" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.10.2.2.1"><a href="#section-6.10.2" class="auto internal xref">6.10.2</a>.  <a href="#name-new-11" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1293,10 +1271,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.11.1"><a href="#section-6.11" class="auto internal xref">6.11</a>. <a href="#name-selectoralgorithm" class="internal xref">selectorAlgorithm</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.11.2.1">
-                    <p id="section-toc.1-1.6.2.11.2.1.1"><a href="#section-6.11.1" class="auto internal xref">6.11.1</a>.  <a href="#name-old-14" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.11.2.1.1"><a href="#section-6.11.1" class="auto internal xref">6.11.1</a>.  <a href="#name-old-12" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.11.2.2">
-                    <p id="section-toc.1-1.6.2.11.2.2.1"><a href="#section-6.11.2" class="auto internal xref">6.11.2</a>.  <a href="#name-new-14" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.11.2.2.1"><a href="#section-6.11.2" class="auto internal xref">6.11.2</a>.  <a href="#name-new-12" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1304,10 +1282,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.12.1"><a href="#section-6.12" class="auto internal xref">6.12</a>. <a href="#name-informationelementdatatype" class="internal xref">informationElementDataType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.12.2.1">
-                    <p id="section-toc.1-1.6.2.12.2.1.1"><a href="#section-6.12.1" class="auto internal xref">6.12.1</a>.  <a href="#name-old-15" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.12.2.1.1"><a href="#section-6.12.1" class="auto internal xref">6.12.1</a>.  <a href="#name-old-13" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.12.2.2">
-                    <p id="section-toc.1-1.6.2.12.2.2.1"><a href="#section-6.12.2" class="auto internal xref">6.12.2</a>.  <a href="#name-new-15" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.12.2.2.1"><a href="#section-6.12.2" class="auto internal xref">6.12.2</a>.  <a href="#name-new-13" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1315,10 +1293,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.13.1"><a href="#section-6.13" class="auto internal xref">6.13</a>. <a href="#name-informationelementsemantics" class="internal xref">informationElementSemantics</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.13.2.1">
-                    <p id="section-toc.1-1.6.2.13.2.1.1"><a href="#section-6.13.1" class="auto internal xref">6.13.1</a>.  <a href="#name-old-16" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.13.2.1.1"><a href="#section-6.13.1" class="auto internal xref">6.13.1</a>.  <a href="#name-old-14" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.13.2.2">
-                    <p id="section-toc.1-1.6.2.13.2.2.1"><a href="#section-6.13.2" class="auto internal xref">6.13.2</a>.  <a href="#name-new-16" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.13.2.2.1"><a href="#section-6.13.2" class="auto internal xref">6.13.2</a>.  <a href="#name-new-14" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1326,10 +1304,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.14.1"><a href="#section-6.14" class="auto internal xref">6.14</a>. <a href="#name-informationelementunits" class="internal xref">informationElementUnits</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.14.2.1">
-                    <p id="section-toc.1-1.6.2.14.2.1.1"><a href="#section-6.14.1" class="auto internal xref">6.14.1</a>.  <a href="#name-old-17" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.14.2.1.1"><a href="#section-6.14.1" class="auto internal xref">6.14.1</a>.  <a href="#name-old-15" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.14.2.2">
-                    <p id="section-toc.1-1.6.2.14.2.2.1"><a href="#section-6.14.2" class="auto internal xref">6.14.2</a>.  <a href="#name-new-17" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.14.2.2.1"><a href="#section-6.14.2" class="auto internal xref">6.14.2</a>.  <a href="#name-new-15" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1337,10 +1315,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.15.1"><a href="#section-6.15" class="auto internal xref">6.15</a>. <a href="#name-portrangestart" class="internal xref">portRangeStart</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.15.2.1">
-                    <p id="section-toc.1-1.6.2.15.2.1.1"><a href="#section-6.15.1" class="auto internal xref">6.15.1</a>.  <a href="#name-old-18" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.15.2.1.1"><a href="#section-6.15.1" class="auto internal xref">6.15.1</a>.  <a href="#name-old-16" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.15.2.2">
-                    <p id="section-toc.1-1.6.2.15.2.2.1"><a href="#section-6.15.2" class="auto internal xref">6.15.2</a>.  <a href="#name-new-18" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.15.2.2.1"><a href="#section-6.15.2" class="auto internal xref">6.15.2</a>.  <a href="#name-new-16" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1348,10 +1326,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.16.1"><a href="#section-6.16" class="auto internal xref">6.16</a>. <a href="#name-portrangeend" class="internal xref">portRangeEnd</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.16.2.1">
-                    <p id="section-toc.1-1.6.2.16.2.1.1"><a href="#section-6.16.1" class="auto internal xref">6.16.1</a>.  <a href="#name-old-19" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.16.2.1.1"><a href="#section-6.16.1" class="auto internal xref">6.16.1</a>.  <a href="#name-old-17" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.16.2.2">
-                    <p id="section-toc.1-1.6.2.16.2.2.1"><a href="#section-6.16.2" class="auto internal xref">6.16.2</a>.  <a href="#name-new-19" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.16.2.2.1"><a href="#section-6.16.2" class="auto internal xref">6.16.2</a>.  <a href="#name-new-17" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1359,10 +1337,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.17.1"><a href="#section-6.17" class="auto internal xref">6.17</a>. <a href="#name-ingressinterfacetype" class="internal xref">ingressInterfaceType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.17.2.1">
-                    <p id="section-toc.1-1.6.2.17.2.1.1"><a href="#section-6.17.1" class="auto internal xref">6.17.1</a>.  <a href="#name-old-20" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.17.2.1.1"><a href="#section-6.17.1" class="auto internal xref">6.17.1</a>.  <a href="#name-old-18" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.17.2.2">
-                    <p id="section-toc.1-1.6.2.17.2.2.1"><a href="#section-6.17.2" class="auto internal xref">6.17.2</a>.  <a href="#name-new-20" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.17.2.2.1"><a href="#section-6.17.2" class="auto internal xref">6.17.2</a>.  <a href="#name-new-18" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1370,10 +1348,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.18.1"><a href="#section-6.18" class="auto internal xref">6.18</a>. <a href="#name-egressinterfacetype" class="internal xref">egressInterfaceType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.18.2.1">
-                    <p id="section-toc.1-1.6.2.18.2.1.1"><a href="#section-6.18.1" class="auto internal xref">6.18.1</a>.  <a href="#name-old-21" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.18.2.1.1"><a href="#section-6.18.1" class="auto internal xref">6.18.1</a>.  <a href="#name-old-19" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.18.2.2">
-                    <p id="section-toc.1-1.6.2.18.2.2.1"><a href="#section-6.18.2" class="auto internal xref">6.18.2</a>.  <a href="#name-new-21" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.18.2.2.1"><a href="#section-6.18.2" class="auto internal xref">6.18.2</a>.  <a href="#name-new-19" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1381,10 +1359,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.19.1"><a href="#section-6.19" class="auto internal xref">6.19</a>. <a href="#name-valuedistributionmethod" class="internal xref">valueDistributionMethod</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.19.2.1">
-                    <p id="section-toc.1-1.6.2.19.2.1.1"><a href="#section-6.19.1" class="auto internal xref">6.19.1</a>.  <a href="#name-old-22" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.19.2.1.1"><a href="#section-6.19.1" class="auto internal xref">6.19.1</a>.  <a href="#name-old-20" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.19.2.2">
-                    <p id="section-toc.1-1.6.2.19.2.2.1"><a href="#section-6.19.2" class="auto internal xref">6.19.2</a>.  <a href="#name-new-22" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.19.2.2.1"><a href="#section-6.19.2" class="auto internal xref">6.19.2</a>.  <a href="#name-new-20" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1392,10 +1370,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.20.1"><a href="#section-6.20" class="auto internal xref">6.20</a>. <a href="#name-flowselectoralgorithm" class="internal xref">flowSelectorAlgorithm</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.20.2.1">
-                    <p id="section-toc.1-1.6.2.20.2.1.1"><a href="#section-6.20.1" class="auto internal xref">6.20.1</a>.  <a href="#name-old-23" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.20.2.1.1"><a href="#section-6.20.1" class="auto internal xref">6.20.1</a>.  <a href="#name-old-21" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.20.2.2">
-                    <p id="section-toc.1-1.6.2.20.2.2.1"><a href="#section-6.20.2" class="auto internal xref">6.20.2</a>.  <a href="#name-new-23" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.20.2.2.1"><a href="#section-6.20.2" class="auto internal xref">6.20.2</a>.  <a href="#name-new-21" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1403,10 +1381,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.21.1"><a href="#section-6.21" class="auto internal xref">6.21</a>. <a href="#name-datalinkframetype" class="internal xref">dataLinkFrameType</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.21.2.1">
-                    <p id="section-toc.1-1.6.2.21.2.1.1"><a href="#section-6.21.1" class="auto internal xref">6.21.1</a>.  <a href="#name-old-24" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.21.2.1.1"><a href="#section-6.21.1" class="auto internal xref">6.21.1</a>.  <a href="#name-old-22" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.21.2.2">
-                    <p id="section-toc.1-1.6.2.21.2.2.1"><a href="#section-6.21.2" class="auto internal xref">6.21.2</a>.  <a href="#name-new-24" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.21.2.2.1"><a href="#section-6.21.2" class="auto internal xref">6.21.2</a>.  <a href="#name-new-22" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1414,10 +1392,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.22.1"><a href="#section-6.22" class="auto internal xref">6.22</a>. <a href="#name-mibcapturetimesemantics" class="internal xref">mibCaptureTimeSemantics</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.22.2.1">
-                    <p id="section-toc.1-1.6.2.22.2.1.1"><a href="#section-6.22.1" class="auto internal xref">6.22.1</a>.  <a href="#name-old-25" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.22.2.1.1"><a href="#section-6.22.1" class="auto internal xref">6.22.1</a>.  <a href="#name-old-23" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.22.2.2">
-                    <p id="section-toc.1-1.6.2.22.2.2.1"><a href="#section-6.22.2" class="auto internal xref">6.22.2</a>.  <a href="#name-new-25" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.22.2.2.1"><a href="#section-6.22.2" class="auto internal xref">6.22.2</a>.  <a href="#name-new-23" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1425,10 +1403,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.23.1"><a href="#section-6.23" class="auto internal xref">6.23</a>. <a href="#name-natquotaexceededevent" class="internal xref">natQuotaExceededEvent</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.23.2.1">
-                    <p id="section-toc.1-1.6.2.23.2.1.1"><a href="#section-6.23.1" class="auto internal xref">6.23.1</a>.  <a href="#name-old-26" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.23.2.1.1"><a href="#section-6.23.1" class="auto internal xref">6.23.1</a>.  <a href="#name-old-24" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.23.2.2">
-                    <p id="section-toc.1-1.6.2.23.2.2.1"><a href="#section-6.23.2" class="auto internal xref">6.23.2</a>.  <a href="#name-new-26" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.23.2.2.1"><a href="#section-6.23.2" class="auto internal xref">6.23.2</a>.  <a href="#name-new-24" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1436,10 +1414,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.6.2.24.1"><a href="#section-6.24" class="auto internal xref">6.24</a>. <a href="#name-natthresholdevent" class="internal xref">natThresholdEvent</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.24.2.1">
-                    <p id="section-toc.1-1.6.2.24.2.1.1"><a href="#section-6.24.1" class="auto internal xref">6.24.1</a>.  <a href="#name-old-27" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.6.2.24.2.1.1"><a href="#section-6.24.1" class="auto internal xref">6.24.1</a>.  <a href="#name-old-25" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.24.2.2">
-                    <p id="section-toc.1-1.6.2.24.2.2.1"><a href="#section-6.24.2" class="auto internal xref">6.24.2</a>.  <a href="#name-new-27" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.6.2.24.2.2.1"><a href="#section-6.24.2" class="auto internal xref">6.24.2</a>.  <a href="#name-new-25" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1452,10 +1430,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-collectiontimemilliseconds" class="internal xref">collectionTimeMilliseconds</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.1">
-                    <p id="section-toc.1-1.7.2.1.2.1.1"><a href="#section-7.1.1" class="auto internal xref">7.1.1</a>.  <a href="#name-old-28" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.1.2.1.1"><a href="#section-7.1.1" class="auto internal xref">7.1.1</a>.  <a href="#name-old-26" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1.2.2">
-                    <p id="section-toc.1-1.7.2.1.2.2.1"><a href="#section-7.1.2" class="auto internal xref">7.1.2</a>.  <a href="#name-new-28" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.1.2.2.1"><a href="#section-7.1.2" class="auto internal xref">7.1.2</a>.  <a href="#name-new-26" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1463,10 +1441,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="auto internal xref">7.2</a>.  <a href="#name-messagemd5checksum" class="internal xref">messageMD5Checksum</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2.2.1">
-                    <p id="section-toc.1-1.7.2.2.2.1.1"><a href="#section-7.2.1" class="auto internal xref">7.2.1</a>.  <a href="#name-old-29" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.2.2.1.1"><a href="#section-7.2.1" class="auto internal xref">7.2.1</a>.  <a href="#name-old-27" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2.2.2">
-                    <p id="section-toc.1-1.7.2.2.2.2.1"><a href="#section-7.2.2" class="auto internal xref">7.2.2</a>.  <a href="#name-new-29" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.2.2.2.1"><a href="#section-7.2.2" class="auto internal xref">7.2.2</a>.  <a href="#name-new-27" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1474,10 +1452,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.3.1"><a href="#section-7.3" class="auto internal xref">7.3</a>.  <a href="#name-anonymizationflags" class="internal xref">anonymizationFlags</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.3.2.1">
-                    <p id="section-toc.1-1.7.2.3.2.1.1"><a href="#section-7.3.1" class="auto internal xref">7.3.1</a>.  <a href="#name-old-30" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.3.2.1.1"><a href="#section-7.3.1" class="auto internal xref">7.3.1</a>.  <a href="#name-old-28" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.3.2.2">
-                    <p id="section-toc.1-1.7.2.3.2.2.1"><a href="#section-7.3.2" class="auto internal xref">7.3.2</a>.  <a href="#name-new-30" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.3.2.2.1"><a href="#section-7.3.2" class="auto internal xref">7.3.2</a>.  <a href="#name-new-28" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1485,10 +1463,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.4.1"><a href="#section-7.4" class="auto internal xref">7.4</a>.  <a href="#name-informationelementdescripti" class="internal xref">informationElementDescription</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.4.2.1">
-                    <p id="section-toc.1-1.7.2.4.2.1.1"><a href="#section-7.4.1" class="auto internal xref">7.4.1</a>.  <a href="#name-old-31" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.4.2.1.1"><a href="#section-7.4.1" class="auto internal xref">7.4.1</a>.  <a href="#name-old-29" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.4.2.2">
-                    <p id="section-toc.1-1.7.2.4.2.2.1"><a href="#section-7.4.2" class="auto internal xref">7.4.2</a>.  <a href="#name-new-31" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.4.2.2.1"><a href="#section-7.4.2" class="auto internal xref">7.4.2</a>.  <a href="#name-new-29" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1496,10 +1474,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.5.1"><a href="#section-7.5" class="auto internal xref">7.5</a>.  <a href="#name-distinctcountofdestinationi" class="internal xref">distinctCountOfDestinationIPAddress</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.5.2.1">
-                    <p id="section-toc.1-1.7.2.5.2.1.1"><a href="#section-7.5.1" class="auto internal xref">7.5.1</a>.  <a href="#name-old-32" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.5.2.1.1"><a href="#section-7.5.1" class="auto internal xref">7.5.1</a>.  <a href="#name-old-30" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.5.2.2">
-                    <p id="section-toc.1-1.7.2.5.2.2.1"><a href="#section-7.5.2" class="auto internal xref">7.5.2</a>.  <a href="#name-new-32" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.5.2.2.1"><a href="#section-7.5.2" class="auto internal xref">7.5.2</a>.  <a href="#name-new-30" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1507,10 +1485,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.7.2.6.1"><a href="#section-7.6" class="auto internal xref">7.6</a>.  <a href="#name-externaladdressrealm" class="internal xref">externalAddressRealm</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.6.2.1">
-                    <p id="section-toc.1-1.7.2.6.2.1.1"><a href="#section-7.6.1" class="auto internal xref">7.6.1</a>.  <a href="#name-old-33" class="internal xref">OLD</a></p>
+                    <p id="section-toc.1-1.7.2.6.2.1.1"><a href="#section-7.6.1" class="auto internal xref">7.6.1</a>.  <a href="#name-old-31" class="internal xref">OLD</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.6.2.2">
-                    <p id="section-toc.1-1.7.2.6.2.2.1"><a href="#section-7.6.2" class="auto internal xref">7.6.2</a>.  <a href="#name-new-33" class="internal xref">NEW</a></p>
+                    <p id="section-toc.1-1.7.2.6.2.2.1"><a href="#section-7.6.2" class="auto internal xref">7.6.2</a>.  <a href="#name-new-31" class="internal xref">NEW</a></p>
 </li>
                 </ul>
 </li>
@@ -1521,14 +1499,6 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
             <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.1">
-                <p id="section-toc.1-1.9.2.1.1"><a href="#section-9.1" class="auto internal xref">9.1</a>.  <a href="#name-ipfix-subregistry-for-ipv6-" class="internal xref">IPFIX Subregistry for IPv6 Extension Headers</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.2">
-                <p id="section-toc.1-1.9.2.2.1"><a href="#section-9.2" class="auto internal xref">9.2</a>.  <a href="#name-guidelines-for-the-designat" class="internal xref">Guidelines for the Designated Experts</a></p>
-</li>
-            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
             <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-references" class="internal xref">References</a></p>
@@ -1620,426 +1590,18 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-update-the-description">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-update-the-description" class="section-name selfRef">Update the Description</a>
       </h2>
-<div id="ipv6extensionheaders-information-element">
-<section id="section-4.1">
-        <h3 id="name-ipv6extensionheaders-inform">
-<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-ipv6extensionheaders-inform" class="section-name selfRef">ipv6ExtensionHeaders Information Element</a>
-        </h3>
-<div id="issues">
-<section id="section-4.1.1">
-          <h4 id="name-issues">
-<a href="#section-4.1.1" class="section-number selfRef">4.1.1. </a><a href="#name-issues" class="section-name selfRef">Issues</a>
-          </h4>
-<p id="section-4.1.1-1">The current specification of the ipv6ExtensionHeaders Information Element should be updated to:<a href="#section-4.1.1-1" class="pilcrow">¶</a></p>
-<ol start="1" type="1" class="normal type-1" id="section-4.1.1-2">
-<li id="section-4.1.1-2.1">
-              <p id="section-4.1.1-2.1.1">Reflect missing IPv6 EHs, specifically 139, 140, 253, and 254.<a href="#section-4.1.1-2.1.1" class="pilcrow">¶</a></p>
-</li>
-            <li id="section-4.1.1-2.2">
-              <p id="section-4.1.1-2.2.1">Specify how to automatically update the registry when a new value is assigned in <span>[<a href="#IANA-EH" class="cite xref">IANA-EH</a>]</span>.<a href="#section-4.1.1-2.2.1" class="pilcrow">¶</a></p>
-</li>
-            <li id="section-4.1.1-2.3">
-              <p id="section-4.1.1-2.3.1">Update the 108 entry given that 108 does not correspond to an extension header as per <span>[<a href="#IANA-Protocols" class="cite xref">IANA-Protocols</a>]</span>.<a href="#section-4.1.1-2.3.1" class="pilcrow">¶</a></p>
-</li>
-            <li id="section-4.1.1-2.4">
-              <p id="section-4.1.1-2.4.1">Specify the procedure to follow when all bits are exhausted.<a href="#section-4.1.1-2.4.1" class="pilcrow">¶</a></p>
-</li>
-          </ol>
-<p id="section-4.1.1-3"><a href="#sec-up-eh" class="auto internal xref">Section 4.1.2</a> specifies fixes to the first three issues. <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-tcpo-v6eh-08#section-3" class="relref">Section 3</a> of [<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span> specifies a new Information Element to fix the last issue. Other Information Elements are defined in <span>[<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span> to address some other limitations such as lack of reporting of extension header chains or aggregate extension headers length.<a href="#section-4.1.1-3" class="pilcrow">¶</a></p>
-<p id="section-4.1.1-4">Note that some implementations may not be able to export all observed extension headers in a Flow because of a hardware or software limit (see, e.g., <span>[<a href="#I-D.ietf-6man-eh-limits" class="cite xref">I-D.ietf-6man-eh-limits</a>]</span>. The specification of the ipv6ExtensionHeaders Information Element does not discuss whether it covers all enclosed extension headers or only up to a limit. A solution to this shortcoming is also defined in <span>[<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span>.<a href="#section-4.1.1-4" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="sec-up-eh">
-<section id="section-4.1.2">
-          <h4 id="name-updates-to-the-ipv6extensio">
-<a href="#section-4.1.2" class="section-number selfRef">4.1.2. </a><a href="#name-updates-to-the-ipv6extensio" class="section-name selfRef">Updates to the ipv6ExtensionHeaders Description</a>
-          </h4>
-<div id="old">
-<section id="section-4.1.2.1">
-            <h5 id="name-old">
-<a href="#section-4.1.2.1" class="section-number selfRef">4.1.2.1. </a><a href="#name-old" class="section-name selfRef">OLD</a>
-            </h5>
-<div class="alignLeft art-text artwork" id="section-4.1.2.1-1">
-<pre>
- Description:
-    IPv6 extension headers observed in packets of this Flow.  The
-    information is encoded in a set of bit fields.  For each IPv6
-    option header, there is a bit in this set.  The bit is set to 1 if
-    any observed packet of this Flow contains the corresponding IPv6
-    extension header.  Otherwise, if no observed packet of this Flow
-    contained the respective IPv6 extension header, the value of the
-    corresponding bit is 0.
-
-             0     1     2     3     4     5     6     7
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-         | DST | HOP | Res | UNK |FRA0 | RH  |FRA1 | Res |  ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-
-             8     9    10    11    12    13    14    15
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |           Reserved    | MOB | ESP | AH  | PAY | ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            16    17    18    19    20    21    22    23
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |                  Reserved                     | ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            24    25    26    27    28    29    30    31
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |                  Reserved                     |
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-
-     Bit    IPv6 Option   Description
-
-     0, DST      60       Destination option header
-     1, HOP       0       Hop-by-hop option header
-     2, Res               Reserved
-     3, UNK               Unknown Layer 4 header
-                          (compressed, encrypted, not supported)
-     4, FRA0     44       Fragment header - first fragment
-     5, RH       43       Routing header
-     6, FRA1     44       Fragmentation header - not first fragment
-     7, Res               Reserved
-     8 to 11              Reserved
-     12, MOB     135      IPv6 mobility [RFC3775]
-     13, ESP      50      Encrypted security payload
-     14, AH       51      Authentication Header
-     15, PAY     108      Payload compression header
-     16 to 31             Reserved
-
- Abstract Data Type: unsigned32
-
- Data Type Semantics: flags
-
- ElementId: 64
-
- Status: current
-
- Reference: [RFC5102]
-
- Additional Information:
-    See [RFC8200] for the general definition of IPv6 extension headers
-    and for the specification of the hop-by-hop options header, the
-    routing header, the fragment header, and the destination options
-    header. See [RFC4302] for the specification of the authentication
-    header. See [RFC4303] for the specification of the encapsulating
-    security payload. The diagram provided in [RFC5102] is incorrect.
-    The diagram in this registry is taken from Errata 1738.
-    See [RFC_Errata_1738].
-</pre><a href="#section-4.1.2.1-1" class="pilcrow">¶</a>
-</div>
-</section>
-</div>
-<div id="new">
-<section id="section-4.1.2.2">
-            <h5 id="name-new">
-<a href="#section-4.1.2.2" class="section-number selfRef">4.1.2.2. </a><a href="#name-new" class="section-name selfRef">NEW</a>
-            </h5>
-<span class="break"></span><dl class="dlParallel" id="section-4.1.2.2-1">
-              <dt id="section-4.1.2.2-1.1">Description:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-1.2">
-                <p id="section-4.1.2.2-1.2.1">IPv6 extension headers observed in packets of this Flow. The
-  information is encoded in a set of bit fields.  For each IPv6
-  option header, there is a bit in this set.  The bit is set to 1 if
-  any observed packet of this Flow contains the corresponding IPv6
-  extension header.  Otherwise, if no observed packet of this Flow
-  contained the respective IPv6 extension header, the value of the
-  corresponding bit is 0. The IPv6 extension header associated with each bit
-  is provided in  [NEW_IPFIX_IPv6EH_SUBREGISTRY]. The following drawing indicates
-  the position of each bit in the encoding of the Information Element.<a href="#section-4.1.2.2-1.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-1.3"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-1.4">
-                <p id="section-4.1.2.2-1.4.1">This IE is used only when the observed extension headers are in the 0-31
-  range.<a href="#section-4.1.2.2-1.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-1.5"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-1.6">
-                <p id="section-4.1.2.2-1.6.1">If the observed EHs exceeds that range,
-  ipv6ExtensionHeadersFull Information Element <span class="bcp14">MUST</span> be used
-  <span>[<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span>.<a href="#section-4.1.2.2-1.6.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-<div class="alignLeft art-text artwork" id="section-4.1.2.2-2">
-<pre>
-            0     1     2     3     4     5     6     7
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-        |   0 |   1 |   2 |   3 |   4 |   5 |   6 |   7 |  ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            8     9    10    11    12    13    14    15
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |   8 |   9 |  10 |  11 |  12 |  13 |  14 |  15 | ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            16    17    18    19    20    21    22    23
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |  16 |  17 |  18 |  19 |  20 |  21 |  22 |  23 | ...
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            24    25    26    27    28    29    30    31
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-     ... |  24 |  25 |  26 |  27 |  28 |  29 |  30 |  31 |
-         +-----+-----+-----+-----+-----+-----+-----+-----+
-</pre><a href="#section-4.1.2.2-2" class="pilcrow">¶</a>
-</div>
-<span class="break"></span><dl class="dlParallel" id="section-4.1.2.2-3">
-              <dt id="section-4.1.2.2-3.1">Abstract Data Type:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.2">
-                <p id="section-4.1.2.2-3.2.1">unsigned32<a href="#section-4.1.2.2-3.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.3">Data Type Semantics:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.4">
-                <p id="section-4.1.2.2-3.4.1">flags<a href="#section-4.1.2.2-3.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.5">ElementId:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.6">
-                <p id="section-4.1.2.2-3.6.1">64<a href="#section-4.1.2.2-3.6.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.7">Status:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.8">
-                <p id="section-4.1.2.2-3.8.1">current<a href="#section-4.1.2.2-3.8.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.9">Reference:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.10">
-                <p id="section-4.1.2.2-3.10.1"><span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>This-Document<a href="#section-4.1.2.2-3.10.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.11">Additional Information:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.12">
-                <p id="section-4.1.2.2-3.12.1">See the assigned bits to each IPv6 extension header in [NEW_IPFIX_IPv6EH_SUBREGISTRY].<a href="#section-4.1.2.2-3.12.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.1.2.2-3.13"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.1.2.2-3.14">
-                <p id="section-4.1.2.2-3.14.1">See <span>[<a href="#RFC8200" class="cite xref">RFC8200</a>]</span> for the general definition of IPv6 extension headers and <span>[<a href="#IANA-EH" class="cite xref">IANA-EH</a>]</span> for assigned extension headers.<a href="#section-4.1.2.2-3.14.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-</section>
-</div>
-</section>
-</div>
-</section>
-</div>
-<div id="tcpoptions">
-<section id="section-4.2">
-        <h3 id="name-tcpoptions">
-<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-tcpoptions" class="section-name selfRef">tcpOptions</a>
-        </h3>
-<div id="issues-1">
-<section id="section-4.2.1">
-          <h4 id="name-issues-2">
-<a href="#section-4.2.1" class="section-number selfRef">4.2.1. </a><a href="#name-issues-2" class="section-name selfRef">Issues</a>
-          </h4>
-<p id="section-4.2.1-1">Only options having a kind &lt;= 63 can be included in a tcpOptions IE. An update is thus required to specify how any observed TCP option in a packet can be exported using IPFIX. Also, there is no way to report the observed Experimental Identifiers (ExIDs) that are carried in shared TCP options (kind=253 or 254) <span>[<a href="#RFC6994" class="cite xref">RFC6994</a>]</span>.<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.2.1-2">The following section updates the description of the tcpOptions IE to explicitly indicate the applicable kind range and to point to the new IEs defined in <span>[<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span>.<a href="#section-4.2.1-2" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="update-the-description-of-the-tcpoptions-ie">
-<section id="section-4.2.2">
-          <h4 id="name-update-the-description-of-t">
-<a href="#section-4.2.2" class="section-number selfRef">4.2.2. </a><a href="#name-update-the-description-of-t" class="section-name selfRef">Update the Description of the tcpOptions IE</a>
-          </h4>
-<p id="section-4.2.2-1">This document requests IANA to update the description of the tcpOptions IE in <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> as follows:<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
-<div id="old-1">
-<section id="section-4.2.2.1">
-            <h5 id="name-old-2">
-<a href="#section-4.2.2.1" class="section-number selfRef">4.2.2.1. </a><a href="#name-old-2" class="section-name selfRef">OLD</a>
-            </h5>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.1-1">
-              <dt id="section-4.2.2.1-1.1">Description:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-1.2">
-                <p id="section-4.2.2.1-1.2.1">TCP options in packets of this Flow.  The information is encoded
-    in a set of bit fields.  For each TCP option, there is a bit in
-    this set.  The bit is set to 1 if any observed packet of this Flow
-    contains the corresponding TCP option.  Otherwise, if no observed
-    packet of this Flow contained the respective TCP option, the value
-    of the corresponding bit is 0.
-    Options are mapped to bits according to their option numbers.
-    Option number X is mapped to bit X.  TCP option numbers are
-    maintained by IANA.<a href="#section-4.2.2.1-1.2.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-<div class="alignLeft art-text artwork" id="section-4.2.2.1-2">
-<pre>
-            0     1     2     3     4     5     6     7
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            8     9    10    11    12    13    14    15
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-           16    17    18    19    20    21    22    23
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-                              . . .
-
-           56    57    58    59    60    61    62    63
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-</pre><a href="#section-4.2.2.1-2" class="pilcrow">¶</a>
-</div>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.1-3">
-              <dt id="section-4.2.2.1-3.1">Abstract Data Type:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-3.2">
-                <p id="section-4.2.2.1-3.2.1">unsigned64<a href="#section-4.2.2.1-3.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.1-3.3">Data Type Semantics:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-3.4">
-                <p id="section-4.2.2.1-3.4.1">flags<a href="#section-4.2.2.1-3.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.1-3.5">ElementId:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-3.6">
-                <p id="section-4.2.2.1-3.6.1">209<a href="#section-4.2.2.1-3.6.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-<p id="section-4.2.2.1-4">Status: current<a href="#section-4.2.2.1-4" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.1-5">
-              <dt id="section-4.2.2.1-5.1">Reference:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-5.2">
-                <p id="section-4.2.2.1-5.2.1"><span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span><a href="#section-4.2.2.1-5.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.1-5.3">Additional Information:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-5.4">
-                <p id="section-4.2.2.1-5.4.1">See <span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> for the definition of TCP options.<a href="#section-4.2.2.1-5.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.1-5.5"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-5.6">
-                <p id="section-4.2.2.1-5.6.1">See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].<a href="#section-4.2.2.1-5.6.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.1-5.7"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.1-5.8">
-                <p id="section-4.2.2.1-5.8.1">The diagram provided in <span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span> is incorrect. The diagram in this registry is taken from Errata 1739. See <span>[<a href="#RFC_Errata_1739" class="cite xref">RFC_Errata_1739</a>]</span>.<a href="#section-4.2.2.1-5.8.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-</section>
-</div>
-<div id="new-1">
-<section id="section-4.2.2.2">
-            <h5 id="name-new-2">
-<a href="#section-4.2.2.2" class="section-number selfRef">4.2.2.2. </a><a href="#name-new-2" class="section-name selfRef">NEW</a>
-            </h5>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.2-1">
-              <dt id="section-4.2.2.2-1.1">Description:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-1.2">
-                <p id="section-4.2.2.2-1.2.1">TCP options in packets of this Flow.  The information is encoded
-    in a set of bit fields.  For each TCP option, there is a bit in
-    this set.  The bit is set to 1 if any observed packet of this Flow
-    contains the corresponding TCP option.  Otherwise, if no observed
-    packet of this Flow contained the respective TCP option, the value
-    of the corresponding bit is 0.
-    Options are mapped to bits according to the drawing below.  TCP option numbers are
-    maintained by IANA. This information element is used only
-    when the observed kinds are within the 0-63 range. If not, the tcpOptionsFull IE <span>[<a href="#I-D.ietf-opsawg-ipfix-tcpo-v6eh" class="cite xref">I-D.ietf-opsawg-ipfix-tcpo-v6eh</a>]</span> <span class="bcp14">MUST</span> be used.<a href="#section-4.2.2.2-1.2.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-<div class="alignLeft art-text artwork" id="section-4.2.2.2-2">
-<pre>
-            0     1     2     3     4     5     6     7
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-        |   7 |   6 |   5 |   4 |   3 |   2 |   1 |   0 |  ...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-            8     9    10    11    12    13    14    15
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  15 |  14 |  13 |  12 |  11 |  10 |   9 |   8 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-           16    17    18    19    20    21    22    23
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  23 |  22 |  21 |  20 |  19 |  18 |  17 |  16 |...
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-
-                              . . .
-
-           56    57    58    59    60    61    62    63
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-    ... |  63 |  62 |  61 |  60 |  59 |  58 |  57 |  56 |
-        +-----+-----+-----+-----+-----+-----+-----+-----+
-</pre><a href="#section-4.2.2.2-2" class="pilcrow">¶</a>
-</div>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.2-3">
-              <dt id="section-4.2.2.2-3.1">Abstract Data Type:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-3.2">
-                <p id="section-4.2.2.2-3.2.1">unsigned64<a href="#section-4.2.2.2-3.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.2-3.3">Data Type Semantics:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-3.4">
-                <p id="section-4.2.2.2-3.4.1">flags<a href="#section-4.2.2.2-3.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.2-3.5">ElementId:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-3.6">
-                <p id="section-4.2.2.2-3.6.1">209<a href="#section-4.2.2.2-3.6.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-<p id="section-4.2.2.2-4">Status: current<a href="#section-4.2.2.2-4" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-4.2.2.2-5">
-              <dt id="section-4.2.2.2-5.1">Reference:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-5.2">
-                <p id="section-4.2.2.2-5.2.1"><span>[<a href="#RFC5102" class="cite xref">RFC5102</a>]</span>This-Document<a href="#section-4.2.2.2-5.2.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.2-5.3">Additional Information:</dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-5.4">
-                <p id="section-4.2.2.2-5.4.1">See <span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> for the definition of TCP options.<a href="#section-4.2.2.2-5.4.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.2-5.5"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-5.6">
-                <p id="section-4.2.2.2-5.6.1">See the list of TCP option numbers assigned by IANA at [https://www.iana.org/assignments/tcp-parameters].<a href="#section-4.2.2.2-5.6.1" class="pilcrow">¶</a></p>
-</dd>
-              <dd class="break"></dd>
-<dt id="section-4.2.2.2-5.7"></dt>
-              <dd style="margin-left: 1.5em" id="section-4.2.2.2-5.8">
-                <p id="section-4.2.2.2-5.8.1">The diagram in this registry is taken from Errata 1739. See <span>[<a href="#RFC_Errata_1739" class="cite xref">RFC_Errata_1739</a>]</span>.<a href="#section-4.2.2.2-5.8.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-</section>
-</div>
-</section>
-</div>
-</section>
-</div>
 <div id="forwardingstatus">
-<section id="section-4.3">
+<section id="section-4.1">
         <h3 id="name-forwardingstatus">
-<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-forwardingstatus" class="section-name selfRef">forwardingStatus</a>
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-forwardingstatus" class="section-name selfRef">forwardingStatus</a>
         </h3>
-<p id="section-4.3-1">The current forwardingStatus entry in <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> deviates from what is provided in <span>[<a href="#RFC7270" class="cite xref">RFC7270</a>]</span>. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per <span><a href="https://rfc-editor.org/rfc/rfc7011#section-6.2" class="relref">Section 6.2</a> of [<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
-<div id="old-2">
-<section id="section-4.3.1">
-          <h4 id="name-old-3">
-<a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-old-3" class="section-name selfRef">OLD</a>
+<p id="section-4.1-1">The current forwardingStatus entry in <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> deviates from what is provided in <span>[<a href="#RFC7270" class="cite xref">RFC7270</a>]</span>. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per <span><a href="https://rfc-editor.org/rfc/rfc7011#section-6.2" class="relref">Section 6.2</a> of [<a href="#RFC7011" class="cite xref">RFC7011</a>]</span>.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<div id="old">
+<section id="section-4.1.1">
+          <h4 id="name-old">
+<a href="#section-4.1.1" class="section-number selfRef">4.1.1. </a><a href="#name-old" class="section-name selfRef">OLD</a>
           </h4>
-<div class="alignLeft art-text artwork" id="section-4.3.1-1">
+<div class="alignLeft art-text artwork" id="section-4.1.1-1">
 <pre>
    - Description:  This Information Element describes the forwarding
                    status of the flow and any attached reasons.
@@ -2070,16 +1632,16 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
              [CCO-NF9FMT].
 
    - Abstract Data Type: unsigned8
-</pre><a href="#section-4.3.1-1" class="pilcrow">¶</a>
+</pre><a href="#section-4.1.1-1" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
-<div id="new-2">
-<section id="section-4.3.2">
-          <h4 id="name-new-3">
-<a href="#section-4.3.2" class="section-number selfRef">4.3.2. </a><a href="#name-new-3" class="section-name selfRef">NEW</a>
+<div id="new">
+<section id="section-4.1.2">
+          <h4 id="name-new">
+<a href="#section-4.1.2" class="section-number selfRef">4.1.2. </a><a href="#name-new" class="section-name selfRef">NEW</a>
           </h4>
-<div class="alignLeft art-text artwork" id="section-4.3.2-1">
+<div class="alignLeft art-text artwork" id="section-4.1.2-1">
 <pre>
    - Description:  This Information Element describes the forwarding
                    status of the flow and any attached reasons.
@@ -2116,7 +1678,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
        at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
 
    - Abstract Data Type: unsigned32
-</pre><a href="#section-4.3.2-1" class="pilcrow">¶</a>
+</pre><a href="#section-4.1.2-1" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -2189,10 +1751,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-mplstoplabeltype">
 <a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-mplstoplabeltype" class="section-name selfRef">mplsTopLabelType</a>
         </h3>
-<div id="old-3">
+<div id="old-1">
 <section id="section-6.1.1">
-          <h4 id="name-old-4">
-<a href="#section-6.1.1" class="section-number selfRef">6.1.1. </a><a href="#name-old-4" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-2">
+<a href="#section-6.1.1" class="section-number selfRef">6.1.1. </a><a href="#name-old-2" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.1.1-1">
             <dt id="section-6.1.1-1.1">Description:</dt>
@@ -2218,10 +1780,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-3">
+<div id="new-1">
 <section id="section-6.1.2">
-          <h4 id="name-new-4">
-<a href="#section-6.1.2" class="section-number selfRef">6.1.2. </a><a href="#name-new-4" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-2">
+<a href="#section-6.1.2" class="section-number selfRef">6.1.2. </a><a href="#name-new-2" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.1.2-1">
             <dt id="section-6.1.2-1.1">Description:</dt>
@@ -2249,10 +1811,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-classificationengineid">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-classificationengineid" class="section-name selfRef">classificationEngineId</a>
         </h3>
-<div id="old-4">
+<div id="old-2">
 <section id="section-6.2.1">
-          <h4 id="name-old-5">
-<a href="#section-6.2.1" class="section-number selfRef">6.2.1. </a><a href="#name-old-5" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-3">
+<a href="#section-6.2.1" class="section-number selfRef">6.2.1. </a><a href="#name-old-3" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.2.1-1">
             <dt id="section-6.2.1-1.1">Description:</dt>
@@ -2268,10 +1830,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-4">
+<div id="new-2">
 <section id="section-6.2.2">
-          <h4 id="name-new-5">
-<a href="#section-6.2.2" class="section-number selfRef">6.2.2. </a><a href="#name-new-5" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-3">
+<a href="#section-6.2.2" class="section-number selfRef">6.2.2. </a><a href="#name-new-3" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.2.2-1">
             <dt id="section-6.2.2-1.1">Description:</dt>
@@ -2299,10 +1861,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-flowendreason">
 <a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-flowendreason" class="section-name selfRef">flowEndReason</a>
         </h3>
-<div id="old-5">
+<div id="old-3">
 <section id="section-6.3.1">
-          <h4 id="name-old-6">
-<a href="#section-6.3.1" class="section-number selfRef">6.3.1. </a><a href="#name-old-6" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-4">
+<a href="#section-6.3.1" class="section-number selfRef">6.3.1. </a><a href="#name-old-4" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.3.1-1">
             <dt id="section-6.3.1-1.1">Description:</dt>
@@ -2313,10 +1875,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-5">
+<div id="new-3">
 <section id="section-6.3.2">
-          <h4 id="name-new-6">
-<a href="#section-6.3.2" class="section-number selfRef">6.3.2. </a><a href="#name-new-6" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-4">
+<a href="#section-6.3.2" class="section-number selfRef">6.3.2. </a><a href="#name-new-4" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.3.2-1">
             <dt id="section-6.3.2-1.1">Description:</dt>
@@ -2339,10 +1901,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natoriginatingaddressrealm">
 <a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-natoriginatingaddressrealm" class="section-name selfRef">natOriginatingAddressRealm</a>
         </h3>
-<div id="old-6">
+<div id="old-4">
 <section id="section-6.4.1">
-          <h4 id="name-old-7">
-<a href="#section-6.4.1" class="section-number selfRef">6.4.1. </a><a href="#name-old-7" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-5">
+<a href="#section-6.4.1" class="section-number selfRef">6.4.1. </a><a href="#name-old-5" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.4.1-1">
             <dt id="section-6.4.1-1.1">Description:</dt>
@@ -2363,10 +1925,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-6">
+<div id="new-4">
 <section id="section-6.4.2">
-          <h4 id="name-new-7">
-<a href="#section-6.4.2" class="section-number selfRef">6.4.2. </a><a href="#name-new-7" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-5">
+<a href="#section-6.4.2" class="section-number selfRef">6.4.2. </a><a href="#name-new-5" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.4.2-1">
             <dt id="section-6.4.2-1.1">Description:</dt>
@@ -2394,10 +1956,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natevent">
 <a href="#section-6.5" class="section-number selfRef">6.5. </a><a href="#name-natevent" class="section-name selfRef">natEvent</a>
         </h3>
-<div id="old-7">
+<div id="old-5">
 <section id="section-6.5.1">
-          <h4 id="name-old-8">
-<a href="#section-6.5.1" class="section-number selfRef">6.5.1. </a><a href="#name-old-8" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-6">
+<a href="#section-6.5.1" class="section-number selfRef">6.5.1. </a><a href="#name-old-6" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.5.1-1">
             <dt id="section-6.5.1-1.1">Description:</dt>
@@ -2423,10 +1985,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-7">
+<div id="new-5">
 <section id="section-6.5.2">
-          <h4 id="name-new-8">
-<a href="#section-6.5.2" class="section-number selfRef">6.5.2. </a><a href="#name-new-8" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-6">
+<a href="#section-6.5.2" class="section-number selfRef">6.5.2. </a><a href="#name-new-6" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.5.2-1">
             <dt id="section-6.5.2-1.1">Description:</dt>
@@ -2464,10 +2026,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-firewallevent">
 <a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-firewallevent" class="section-name selfRef">firewallEvent</a>
         </h3>
-<div id="old-8">
+<div id="old-6">
 <section id="section-6.6.1">
-          <h4 id="name-old-9">
-<a href="#section-6.6.1" class="section-number selfRef">6.6.1. </a><a href="#name-old-9" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-7">
+<a href="#section-6.6.1" class="section-number selfRef">6.6.1. </a><a href="#name-old-7" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.6.1-1">
             <dt id="section-6.6.1-1.1">Description:</dt>
@@ -2483,10 +2045,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-8">
+<div id="new-6">
 <section id="section-6.6.2">
-          <h4 id="name-new-9">
-<a href="#section-6.6.2" class="section-number selfRef">6.6.2. </a><a href="#name-new-9" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-7">
+<a href="#section-6.6.2" class="section-number selfRef">6.6.2. </a><a href="#name-new-7" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.6.2-1">
             <dt id="section-6.6.2-1.1">Description:</dt>
@@ -2509,10 +2071,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-biflowdirection">
 <a href="#section-6.7" class="section-number selfRef">6.7. </a><a href="#name-biflowdirection" class="section-name selfRef">biflowDirection</a>
         </h3>
-<div id="old-9">
+<div id="old-7">
 <section id="section-6.7.1">
-          <h4 id="name-old-10">
-<a href="#section-6.7.1" class="section-number selfRef">6.7.1. </a><a href="#name-old-10" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-8">
+<a href="#section-6.7.1" class="section-number selfRef">6.7.1. </a><a href="#name-old-8" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.7.1-1">
             <dt id="section-6.7.1-1.1">Description:</dt>
@@ -2523,10 +2085,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-9">
+<div id="new-7">
 <section id="section-6.7.2">
-          <h4 id="name-new-10">
-<a href="#section-6.7.2" class="section-number selfRef">6.7.2. </a><a href="#name-new-10" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-8">
+<a href="#section-6.7.2" class="section-number selfRef">6.7.2. </a><a href="#name-new-8" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.7.2-1">
             <dt id="section-6.7.2-1.1">Description:</dt>
@@ -2549,10 +2111,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-observationpointtype">
 <a href="#section-6.8" class="section-number selfRef">6.8. </a><a href="#name-observationpointtype" class="section-name selfRef">observationPointType</a>
         </h3>
-<div id="old-10">
+<div id="old-8">
 <section id="section-6.8.1">
-          <h4 id="name-old-11">
-<a href="#section-6.8.1" class="section-number selfRef">6.8.1. </a><a href="#name-old-11" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-9">
+<a href="#section-6.8.1" class="section-number selfRef">6.8.1. </a><a href="#name-old-9" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.8.1-1">
             <dt id="section-6.8.1-1.1">Description:</dt>
@@ -2563,10 +2125,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-10">
+<div id="new-8">
 <section id="section-6.8.2">
-          <h4 id="name-new-11">
-<a href="#section-6.8.2" class="section-number selfRef">6.8.2. </a><a href="#name-new-11" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-9">
+<a href="#section-6.8.2" class="section-number selfRef">6.8.2. </a><a href="#name-new-9" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.8.2-1">
             <dt id="section-6.8.2-1.1">Description:</dt>
@@ -2589,10 +2151,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-anonymizationtechnique">
 <a href="#section-6.9" class="section-number selfRef">6.9. </a><a href="#name-anonymizationtechnique" class="section-name selfRef">anonymizationTechnique</a>
         </h3>
-<div id="old-11">
+<div id="old-9">
 <section id="section-6.9.1">
-          <h4 id="name-old-12">
-<a href="#section-6.9.1" class="section-number selfRef">6.9.1. </a><a href="#name-old-12" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-10">
+<a href="#section-6.9.1" class="section-number selfRef">6.9.1. </a><a href="#name-old-10" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.9.1-1">
             <dt id="section-6.9.1-1.1">Description:</dt>
@@ -2603,10 +2165,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-11">
+<div id="new-9">
 <section id="section-6.9.2">
-          <h4 id="name-new-12">
-<a href="#section-6.9.2" class="section-number selfRef">6.9.2. </a><a href="#name-new-12" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-10">
+<a href="#section-6.9.2" class="section-number selfRef">6.9.2. </a><a href="#name-new-10" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.9.2-1">
             <dt id="section-6.9.2-1.1">Description:</dt>
@@ -2629,10 +2191,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-nattype">
 <a href="#section-6.10" class="section-number selfRef">6.10. </a><a href="#name-nattype" class="section-name selfRef">natType</a>
         </h3>
-<div id="old-12">
+<div id="old-10">
 <section id="section-6.10.1">
-          <h4 id="name-old-13">
-<a href="#section-6.10.1" class="section-number selfRef">6.10.1. </a><a href="#name-old-13" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-11">
+<a href="#section-6.10.1" class="section-number selfRef">6.10.1. </a><a href="#name-old-11" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.10.1-1">
             <dt id="section-6.10.1-1.1">Description:</dt>
@@ -2683,10 +2245,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-12">
+<div id="new-10">
 <section id="section-6.10.2">
-          <h4 id="name-new-13">
-<a href="#section-6.10.2" class="section-number selfRef">6.10.2. </a><a href="#name-new-13" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-11">
+<a href="#section-6.10.2" class="section-number selfRef">6.10.2. </a><a href="#name-new-11" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.10.2-1">
             <dt id="section-6.10.2-1.1">Description:</dt>
@@ -2754,10 +2316,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-selectoralgorithm">
 <a href="#section-6.11" class="section-number selfRef">6.11. </a><a href="#name-selectoralgorithm" class="section-name selfRef">selectorAlgorithm</a>
         </h3>
-<div id="old-13">
+<div id="old-11">
 <section id="section-6.11.1">
-          <h4 id="name-old-14">
-<a href="#section-6.11.1" class="section-number selfRef">6.11.1. </a><a href="#name-old-14" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-12">
+<a href="#section-6.11.1" class="section-number selfRef">6.11.1. </a><a href="#name-old-12" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.11.1-1">
             <dt id="section-6.11.1-1.1">Description:</dt>
@@ -2778,10 +2340,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-13">
+<div id="new-11">
 <section id="section-6.11.2">
-          <h4 id="name-new-14">
-<a href="#section-6.11.2" class="section-number selfRef">6.11.2. </a><a href="#name-new-14" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-12">
+<a href="#section-6.11.2" class="section-number selfRef">6.11.2. </a><a href="#name-new-12" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.11.2-1">
             <dt id="section-6.11.2-1.1">Description:</dt>
@@ -2809,10 +2371,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementdatatype">
 <a href="#section-6.12" class="section-number selfRef">6.12. </a><a href="#name-informationelementdatatype" class="section-name selfRef">informationElementDataType</a>
         </h3>
-<div id="old-14">
+<div id="old-12">
 <section id="section-6.12.1">
-          <h4 id="name-old-15">
-<a href="#section-6.12.1" class="section-number selfRef">6.12.1. </a><a href="#name-old-15" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-13">
+<a href="#section-6.12.1" class="section-number selfRef">6.12.1. </a><a href="#name-old-13" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.12.1-1">
             <dt id="section-6.12.1-1.1">Description:</dt>
@@ -2823,10 +2385,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-14">
+<div id="new-12">
 <section id="section-6.12.2">
-          <h4 id="name-new-15">
-<a href="#section-6.12.2" class="section-number selfRef">6.12.2. </a><a href="#name-new-15" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-13">
+<a href="#section-6.12.2" class="section-number selfRef">6.12.2. </a><a href="#name-new-13" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.12.2-1">
             <dt id="section-6.12.2-1.1">Description:</dt>
@@ -2854,10 +2416,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementsemantics">
 <a href="#section-6.13" class="section-number selfRef">6.13. </a><a href="#name-informationelementsemantics" class="section-name selfRef">informationElementSemantics</a>
         </h3>
-<div id="old-15">
+<div id="old-13">
 <section id="section-6.13.1">
-          <h4 id="name-old-16">
-<a href="#section-6.13.1" class="section-number selfRef">6.13.1. </a><a href="#name-old-16" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-14">
+<a href="#section-6.13.1" class="section-number selfRef">6.13.1. </a><a href="#name-old-14" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.13.1-1">
             <dt id="section-6.13.1-1.1">Description:</dt>
@@ -2868,10 +2430,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-15">
+<div id="new-13">
 <section id="section-6.13.2">
-          <h4 id="name-new-16">
-<a href="#section-6.13.2" class="section-number selfRef">6.13.2. </a><a href="#name-new-16" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-14">
+<a href="#section-6.13.2" class="section-number selfRef">6.13.2. </a><a href="#name-new-14" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.13.2-1">
             <dt id="section-6.13.2-1.1">Description:</dt>
@@ -2899,10 +2461,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementunits">
 <a href="#section-6.14" class="section-number selfRef">6.14. </a><a href="#name-informationelementunits" class="section-name selfRef">informationElementUnits</a>
         </h3>
-<div id="old-16">
+<div id="old-14">
 <section id="section-6.14.1">
-          <h4 id="name-old-17">
-<a href="#section-6.14.1" class="section-number selfRef">6.14.1. </a><a href="#name-old-17" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-15">
+<a href="#section-6.14.1" class="section-number selfRef">6.14.1. </a><a href="#name-old-15" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.14.1-1">
             <dt id="section-6.14.1-1.1">Description:</dt>
@@ -2913,10 +2475,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-16">
+<div id="new-14">
 <section id="section-6.14.2">
-          <h4 id="name-new-17">
-<a href="#section-6.14.2" class="section-number selfRef">6.14.2. </a><a href="#name-new-17" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-15">
+<a href="#section-6.14.2" class="section-number selfRef">6.14.2. </a><a href="#name-new-15" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.14.2-1">
             <dt id="section-6.14.2-1.1">Description:</dt>
@@ -2939,10 +2501,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-portrangestart">
 <a href="#section-6.15" class="section-number selfRef">6.15. </a><a href="#name-portrangestart" class="section-name selfRef">portRangeStart</a>
         </h3>
-<div id="old-17">
+<div id="old-15">
 <section id="section-6.15.1">
-          <h4 id="name-old-18">
-<a href="#section-6.15.1" class="section-number selfRef">6.15.1. </a><a href="#name-old-18" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-16">
+<a href="#section-6.15.1" class="section-number selfRef">6.15.1. </a><a href="#name-old-16" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.15.1-1">
             <dt id="section-6.15.1-1.1">Description:</dt>
@@ -2958,10 +2520,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-17">
+<div id="new-15">
 <section id="section-6.15.2">
-          <h4 id="name-new-18">
-<a href="#section-6.15.2" class="section-number selfRef">6.15.2. </a><a href="#name-new-18" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-16">
+<a href="#section-6.15.2" class="section-number selfRef">6.15.2. </a><a href="#name-new-16" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.15.2-1">
             <dt id="section-6.15.2-1.1">Description:</dt>
@@ -2984,10 +2546,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-portrangeend">
 <a href="#section-6.16" class="section-number selfRef">6.16. </a><a href="#name-portrangeend" class="section-name selfRef">portRangeEnd</a>
         </h3>
-<div id="old-18">
+<div id="old-16">
 <section id="section-6.16.1">
-          <h4 id="name-old-19">
-<a href="#section-6.16.1" class="section-number selfRef">6.16.1. </a><a href="#name-old-19" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-17">
+<a href="#section-6.16.1" class="section-number selfRef">6.16.1. </a><a href="#name-old-17" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.16.1-1">
             <dt id="section-6.16.1-1.1">Description:</dt>
@@ -2998,10 +2560,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-18">
+<div id="new-16">
 <section id="section-6.16.2">
-          <h4 id="name-new-19">
-<a href="#section-6.16.2" class="section-number selfRef">6.16.2. </a><a href="#name-new-19" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-17">
+<a href="#section-6.16.2" class="section-number selfRef">6.16.2. </a><a href="#name-new-17" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.16.2-1">
             <dt id="section-6.16.2-1.1">Description:</dt>
@@ -3024,10 +2586,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-ingressinterfacetype">
 <a href="#section-6.17" class="section-number selfRef">6.17. </a><a href="#name-ingressinterfacetype" class="section-name selfRef">ingressInterfaceType</a>
         </h3>
-<div id="old-19">
+<div id="old-17">
 <section id="section-6.17.1">
-          <h4 id="name-old-20">
-<a href="#section-6.17.1" class="section-number selfRef">6.17.1. </a><a href="#name-old-20" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-18">
+<a href="#section-6.17.1" class="section-number selfRef">6.17.1. </a><a href="#name-old-18" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.17.1-1">
             <dt id="section-6.17.1-1.1">Description:</dt>
@@ -3043,10 +2605,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-19">
+<div id="new-17">
 <section id="section-6.17.2">
-          <h4 id="name-new-20">
-<a href="#section-6.17.2" class="section-number selfRef">6.17.2. </a><a href="#name-new-20" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-18">
+<a href="#section-6.17.2" class="section-number selfRef">6.17.2. </a><a href="#name-new-18" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.17.2-1">
             <dt id="section-6.17.2-1.1">Description:</dt>
@@ -3069,10 +2631,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-egressinterfacetype">
 <a href="#section-6.18" class="section-number selfRef">6.18. </a><a href="#name-egressinterfacetype" class="section-name selfRef">egressInterfaceType</a>
         </h3>
-<div id="old-20">
+<div id="old-18">
 <section id="section-6.18.1">
-          <h4 id="name-old-21">
-<a href="#section-6.18.1" class="section-number selfRef">6.18.1. </a><a href="#name-old-21" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-19">
+<a href="#section-6.18.1" class="section-number selfRef">6.18.1. </a><a href="#name-old-19" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.18.1-1">
             <dt id="section-6.18.1-1.1">Description:</dt>
@@ -3088,10 +2650,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-20">
+<div id="new-18">
 <section id="section-6.18.2">
-          <h4 id="name-new-21">
-<a href="#section-6.18.2" class="section-number selfRef">6.18.2. </a><a href="#name-new-21" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-19">
+<a href="#section-6.18.2" class="section-number selfRef">6.18.2. </a><a href="#name-new-19" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.18.2-1">
             <dt id="section-6.18.2-1.1">Description:</dt>
@@ -3114,10 +2676,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-valuedistributionmethod">
 <a href="#section-6.19" class="section-number selfRef">6.19. </a><a href="#name-valuedistributionmethod" class="section-name selfRef">valueDistributionMethod</a>
         </h3>
-<div id="old-21">
+<div id="old-19">
 <section id="section-6.19.1">
-          <h4 id="name-old-22">
-<a href="#section-6.19.1" class="section-number selfRef">6.19.1. </a><a href="#name-old-22" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-20">
+<a href="#section-6.19.1" class="section-number selfRef">6.19.1. </a><a href="#name-old-20" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.19.1-1">
             <dt id="section-6.19.1-1.1">Description:</dt>
@@ -3133,10 +2695,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-21">
+<div id="new-19">
 <section id="section-6.19.2">
-          <h4 id="name-new-22">
-<a href="#section-6.19.2" class="section-number selfRef">6.19.2. </a><a href="#name-new-22" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-20">
+<a href="#section-6.19.2" class="section-number selfRef">6.19.2. </a><a href="#name-new-20" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.19.2-1">
             <dt id="section-6.19.2-1.1">Description:</dt>
@@ -3159,10 +2721,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-flowselectoralgorithm">
 <a href="#section-6.20" class="section-number selfRef">6.20. </a><a href="#name-flowselectoralgorithm" class="section-name selfRef">flowSelectorAlgorithm</a>
         </h3>
-<div id="old-22">
+<div id="old-20">
 <section id="section-6.20.1">
-          <h4 id="name-old-23">
-<a href="#section-6.20.1" class="section-number selfRef">6.20.1. </a><a href="#name-old-23" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-21">
+<a href="#section-6.20.1" class="section-number selfRef">6.20.1. </a><a href="#name-old-21" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.20.1-1">
             <dt id="section-6.20.1-1.1">Description:</dt>
@@ -3183,10 +2745,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-22">
+<div id="new-20">
 <section id="section-6.20.2">
-          <h4 id="name-new-23">
-<a href="#section-6.20.2" class="section-number selfRef">6.20.2. </a><a href="#name-new-23" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-21">
+<a href="#section-6.20.2" class="section-number selfRef">6.20.2. </a><a href="#name-new-21" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.20.2-1">
             <dt id="section-6.20.2-1.1">Description:</dt>
@@ -3209,10 +2771,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-datalinkframetype">
 <a href="#section-6.21" class="section-number selfRef">6.21. </a><a href="#name-datalinkframetype" class="section-name selfRef">dataLinkFrameType</a>
         </h3>
-<div id="old-23">
+<div id="old-21">
 <section id="section-6.21.1">
-          <h4 id="name-old-24">
-<a href="#section-6.21.1" class="section-number selfRef">6.21.1. </a><a href="#name-old-24" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-22">
+<a href="#section-6.21.1" class="section-number selfRef">6.21.1. </a><a href="#name-old-22" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.21.1-1">
             <dt id="section-6.21.1-1.1">Description:</dt>
@@ -3233,10 +2795,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-23">
+<div id="new-21">
 <section id="section-6.21.2">
-          <h4 id="name-new-24">
-<a href="#section-6.21.2" class="section-number selfRef">6.21.2. </a><a href="#name-new-24" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-22">
+<a href="#section-6.21.2" class="section-number selfRef">6.21.2. </a><a href="#name-new-22" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.21.2-1">
             <dt id="section-6.21.2-1.1">Description:</dt>
@@ -3269,10 +2831,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-mibcapturetimesemantics">
 <a href="#section-6.22" class="section-number selfRef">6.22. </a><a href="#name-mibcapturetimesemantics" class="section-name selfRef">mibCaptureTimeSemantics</a>
         </h3>
-<div id="old-24">
+<div id="old-22">
 <section id="section-6.22.1">
-          <h4 id="name-old-25">
-<a href="#section-6.22.1" class="section-number selfRef">6.22.1. </a><a href="#name-old-25" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-23">
+<a href="#section-6.22.1" class="section-number selfRef">6.22.1. </a><a href="#name-old-23" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.22.1-1">
             <dt id="section-6.22.1-1.1">Description:</dt>
@@ -3293,10 +2855,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-24">
+<div id="new-22">
 <section id="section-6.22.2">
-          <h4 id="name-new-25">
-<a href="#section-6.22.2" class="section-number selfRef">6.22.2. </a><a href="#name-new-25" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-23">
+<a href="#section-6.22.2" class="section-number selfRef">6.22.2. </a><a href="#name-new-23" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.22.2-1">
             <dt id="section-6.22.2-1.1">Description:</dt>
@@ -3329,10 +2891,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natquotaexceededevent">
 <a href="#section-6.23" class="section-number selfRef">6.23. </a><a href="#name-natquotaexceededevent" class="section-name selfRef">natQuotaExceededEvent</a>
         </h3>
-<div id="old-25">
+<div id="old-23">
 <section id="section-6.23.1">
-          <h4 id="name-old-26">
-<a href="#section-6.23.1" class="section-number selfRef">6.23.1. </a><a href="#name-old-26" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-24">
+<a href="#section-6.23.1" class="section-number selfRef">6.23.1. </a><a href="#name-old-24" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.23.1-1">
             <dt id="section-6.23.1-1.1">Description:</dt>
@@ -3358,10 +2920,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-25">
+<div id="new-23">
 <section id="section-6.23.2">
-          <h4 id="name-new-26">
-<a href="#section-6.23.2" class="section-number selfRef">6.23.2. </a><a href="#name-new-26" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-24">
+<a href="#section-6.23.2" class="section-number selfRef">6.23.2. </a><a href="#name-new-24" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.23.2-1">
             <dt id="section-6.23.2-1.1">Description:</dt>
@@ -3399,10 +2961,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-natthresholdevent">
 <a href="#section-6.24" class="section-number selfRef">6.24. </a><a href="#name-natthresholdevent" class="section-name selfRef">natThresholdEvent</a>
         </h3>
-<div id="old-26">
+<div id="old-24">
 <section id="section-6.24.1">
-          <h4 id="name-old-27">
-<a href="#section-6.24.1" class="section-number selfRef">6.24.1. </a><a href="#name-old-27" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-25">
+<a href="#section-6.24.1" class="section-number selfRef">6.24.1. </a><a href="#name-old-25" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.24.1-1">
             <dt id="section-6.24.1-1.1">Description:</dt>
@@ -3428,10 +2990,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-26">
+<div id="new-24">
 <section id="section-6.24.2">
-          <h4 id="name-new-27">
-<a href="#section-6.24.2" class="section-number selfRef">6.24.2. </a><a href="#name-new-27" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-25">
+<a href="#section-6.24.2" class="section-number selfRef">6.24.2. </a><a href="#name-new-25" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-6.24.2-1">
             <dt id="section-6.24.2-1.1">Description:</dt>
@@ -3477,10 +3039,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-collectiontimemilliseconds">
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-collectiontimemilliseconds" class="section-name selfRef">collectionTimeMilliseconds</a>
         </h3>
-<div id="old-27">
+<div id="old-25">
 <section id="section-7.1.1">
-          <h4 id="name-old-28">
-<a href="#section-7.1.1" class="section-number selfRef">7.1.1. </a><a href="#name-old-28" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-26">
+<a href="#section-7.1.1" class="section-number selfRef">7.1.1. </a><a href="#name-old-26" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.1.1-1">
             <dt id="section-7.1.1-1.1">Description:</dt>
@@ -3491,10 +3053,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-27">
+<div id="new-25">
 <section id="section-7.1.2">
-          <h4 id="name-new-28">
-<a href="#section-7.1.2" class="section-number selfRef">7.1.2. </a><a href="#name-new-28" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-26">
+<a href="#section-7.1.2" class="section-number selfRef">7.1.2. </a><a href="#name-new-26" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.1.2-1">
             <dt id="section-7.1.2-1.1">Description:</dt>
@@ -3512,10 +3074,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-messagemd5checksum">
 <a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-messagemd5checksum" class="section-name selfRef">messageMD5Checksum</a>
         </h3>
-<div id="old-28">
+<div id="old-26">
 <section id="section-7.2.1">
-          <h4 id="name-old-29">
-<a href="#section-7.2.1" class="section-number selfRef">7.2.1. </a><a href="#name-old-29" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-27">
+<a href="#section-7.2.1" class="section-number selfRef">7.2.1. </a><a href="#name-old-27" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.2.1-1">
             <dt id="section-7.2.1-1.1">Description:</dt>
@@ -3531,10 +3093,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-28">
+<div id="new-26">
 <section id="section-7.2.2">
-          <h4 id="name-new-29">
-<a href="#section-7.2.2" class="section-number selfRef">7.2.2. </a><a href="#name-new-29" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-27">
+<a href="#section-7.2.2" class="section-number selfRef">7.2.2. </a><a href="#name-new-27" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.2.2-1">
             <dt id="section-7.2.2-1.1">Description:</dt>
@@ -3557,10 +3119,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-anonymizationflags">
 <a href="#section-7.3" class="section-number selfRef">7.3. </a><a href="#name-anonymizationflags" class="section-name selfRef">anonymizationFlags</a>
         </h3>
-<div id="old-29">
+<div id="old-27">
 <section id="section-7.3.1">
-          <h4 id="name-old-30">
-<a href="#section-7.3.1" class="section-number selfRef">7.3.1. </a><a href="#name-old-30" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-28">
+<a href="#section-7.3.1" class="section-number selfRef">7.3.1. </a><a href="#name-old-28" class="section-name selfRef">OLD</a>
           </h4>
 <div class="alignLeft art-text artwork" id="section-7.3.1-1">
 <pre>
@@ -3592,10 +3154,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </div>
 </section>
 </div>
-<div id="new-29">
+<div id="new-27">
 <section id="section-7.3.2">
-          <h4 id="name-new-30">
-<a href="#section-7.3.2" class="section-number selfRef">7.3.2. </a><a href="#name-new-30" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-28">
+<a href="#section-7.3.2" class="section-number selfRef">7.3.2. </a><a href="#name-new-28" class="section-name selfRef">NEW</a>
           </h4>
 <div class="alignLeft art-text artwork" id="section-7.3.2-1">
 <pre>
@@ -3635,10 +3197,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-informationelementdescripti">
 <a href="#section-7.4" class="section-number selfRef">7.4. </a><a href="#name-informationelementdescripti" class="section-name selfRef">informationElementDescription</a>
         </h3>
-<div id="old-30">
+<div id="old-28">
 <section id="section-7.4.1">
-          <h4 id="name-old-31">
-<a href="#section-7.4.1" class="section-number selfRef">7.4.1. </a><a href="#name-old-31" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-29">
+<a href="#section-7.4.1" class="section-number selfRef">7.4.1. </a><a href="#name-old-29" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.4.1-1">
             <dt id="section-7.4.1-1.1">Description:</dt>
@@ -3654,10 +3216,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-30">
+<div id="new-28">
 <section id="section-7.4.2">
-          <h4 id="name-new-31">
-<a href="#section-7.4.2" class="section-number selfRef">7.4.2. </a><a href="#name-new-31" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-29">
+<a href="#section-7.4.2" class="section-number selfRef">7.4.2. </a><a href="#name-new-29" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.4.2-1">
             <dt id="section-7.4.2-1.1">Description:</dt>
@@ -3680,10 +3242,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-distinctcountofdestinationi">
 <a href="#section-7.5" class="section-number selfRef">7.5. </a><a href="#name-distinctcountofdestinationi" class="section-name selfRef">distinctCountOfDestinationIPAddress</a>
         </h3>
-<div id="old-31">
+<div id="old-29">
 <section id="section-7.5.1">
-          <h4 id="name-old-32">
-<a href="#section-7.5.1" class="section-number selfRef">7.5.1. </a><a href="#name-old-32" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-30">
+<a href="#section-7.5.1" class="section-number selfRef">7.5.1. </a><a href="#name-old-30" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.5.1-1">
             <dt id="section-7.5.1-1.1">Description:</dt>
@@ -3694,10 +3256,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-31">
+<div id="new-29">
 <section id="section-7.5.2">
-          <h4 id="name-new-32">
-<a href="#section-7.5.2" class="section-number selfRef">7.5.2. </a><a href="#name-new-32" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-30">
+<a href="#section-7.5.2" class="section-number selfRef">7.5.2. </a><a href="#name-new-30" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.5.2-1">
             <dt id="section-7.5.2-1.1">Description:</dt>
@@ -3715,10 +3277,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-externaladdressrealm">
 <a href="#section-7.6" class="section-number selfRef">7.6. </a><a href="#name-externaladdressrealm" class="section-name selfRef">externalAddressRealm</a>
         </h3>
-<div id="old-32">
+<div id="old-30">
 <section id="section-7.6.1">
-          <h4 id="name-old-33">
-<a href="#section-7.6.1" class="section-number selfRef">7.6.1. </a><a href="#name-old-33" class="section-name selfRef">OLD</a>
+          <h4 id="name-old-31">
+<a href="#section-7.6.1" class="section-number selfRef">7.6.1. </a><a href="#name-old-31" class="section-name selfRef">OLD</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.6.1-1">
             <dt id="section-7.6.1-1.1">Description:</dt>
@@ -3729,10 +3291,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </dl>
 </section>
 </div>
-<div id="new-32">
+<div id="new-30">
 <section id="section-7.6.2">
-          <h4 id="name-new-33">
-<a href="#section-7.6.2" class="section-number selfRef">7.6.2. </a><a href="#name-new-33" class="section-name selfRef">NEW</a>
+          <h4 id="name-new-31">
+<a href="#section-7.6.2" class="section-number selfRef">7.6.2. </a><a href="#name-new-31" class="section-name selfRef">NEW</a>
           </h4>
 <span class="break"></span><dl class="dlParallel" id="section-7.6.2-1">
             <dt id="section-7.6.2-1.1">Description:</dt>
@@ -3768,67 +3330,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
       </h2>
 <p id="section-9-1">Sections 4 to 7 include actions for IANA. These actions are not repeated here.<a href="#section-9-1" class="pilcrow">¶</a></p>
 <p id="section-9-2">This document also requests IANA to update the reference clause of the "IPFIX Information Elements" registry <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> with the reference to this document.<a href="#section-9-2" class="pilcrow">¶</a></p>
-<div id="ipfix-subregistry-for-ipv6-extension-headers">
-<section id="section-9.1">
-        <h3 id="name-ipfix-subregistry-for-ipv6-">
-<a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-ipfix-subregistry-for-ipv6-" class="section-name selfRef">IPFIX Subregistry for IPv6 Extension Headers</a>
-        </h3>
-<p id="section-9.1-1">This document requests IANA to create a new registry entitled "ipv6ExtensionHeaders Bits" under the IANA IPFIX registry group <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span>.<a href="#section-9.1-1" class="pilcrow">¶</a></p>
-<p id="section-9.1-2">When a new code is assigned to an IPv6 EH in <span>[<a href="#IANA-EH" class="cite xref">IANA-EH</a>]</span>, the next available free bit is selected by IANA for this EH from "ipv6ExtensionHeaders Bits" registry and the registry is updated with the details that mirror the assigned EH. The "Label" mirrors the "keyword" of an EH as indicated in <span>[<a href="#IANA-Protocols" class="cite xref">IANA-Protocols</a>]</span>, while the "Protocol Number" mirrors the "Protocol Number" in <span>[<a href="#IANA-EH" class="cite xref">IANA-EH</a>]</span>. IANA is requested to add the following note to <span>[<a href="#IANA-EH" class="cite xref">IANA-EH</a>]</span>:<a href="#section-9.1-2" class="pilcrow">¶</a></p>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-9.1-3.1">
-            <span class="break"></span><dl class="dlParallel" id="section-9.1-3.1.1">
-              <dt id="section-9.1-3.1.1.1">Note:</dt>
-              <dd style="margin-left: 1.5em" id="section-9.1-3.1.1.2">
-                <p id="section-9.1-3.1.1.2.1">When a new code is assigned to an IPv6 Extension Header, the next available free bit in [NEW_IPFIX_IPv6EH_SUBREGISTRY] is selected for this new Extension Header. &gt;&gt;[NEW_IPFIX_IPv6EH_SUBREGISTRY] is updated accordingly. Modifications to existing registrations must be mirrored in [NEW_IPFIX_IPv6EH_SUBREGISTRY].<a href="#section-9.1-3.1.1.2.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-</dl>
-</li>
-        </ul>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-9.1-4.1">
-            <p id="section-9.1-4.1.1">Note to the RFC Editor: Please replace [NEW_IPFIX_IPv6EH_SUBREGISTRY] with the link used by IANA for this new registry.<a href="#section-9.1-4.1.1" class="pilcrow">¶</a></p>
-</li>
-        </ul>
-<p id="section-9.1-5">Otherwise, the registration policy for the registry is Expert Review (<span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span>). See more details in <a href="#sec-de" class="auto internal xref">Section 9.2</a>.<a href="#section-9.1-5" class="pilcrow">¶</a></p>
-<p id="section-9.1-6">The initial values of this registry are as follows:<a href="#section-9.1-6" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-9.1-7">
-<pre>
-   Bit Label   Protocol Description
-               Number
-    0  DST      60      Destination Options for IPv6
-    1  HOP       0      IPv6 Hop-by-Hop Options
-    2  NoNxt    59      No Next Header for IPv6
-    3  UNK              Unknown Layer 4 header
-                        (compressed, encrypted, not supported)
-    4  FRA0     44      Fragment header - first fragment
-    5  RH       43      Routing header
-    6  FRA1     44      Fragmentation header - not first fragment
-    7 to 11             Unassigned
-    12 MOB     135      Mobility Header
-    13 ESP      50      Encapsulating Security Payload
-    14 AH       51      Authentication Header
-    15                  Unassigned
-    16 HIP     139      Host Identity Protocol
-    17 SHIM6   140      Shim6 Protocol
-    18         253      Use for experimentation and testing
-    19         254      Use for experimentation and testing
-    20 to 255           Unassigned
-</pre><a href="#section-9.1-7" class="pilcrow">¶</a>
-</div>
-</section>
-</div>
-<div id="sec-de">
-<section id="section-9.2">
-        <h3 id="name-guidelines-for-the-designat">
-<a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-guidelines-for-the-designat" class="section-name selfRef">Guidelines for the Designated Experts</a>
-        </h3>
-<p id="section-9.2-1">It is suggested that multiple designated experts be appointed for registry change requests.<a href="#section-9.2-1" class="pilcrow">¶</a></p>
-<p id="section-9.2-2">Criteria that should be applied by the designated experts include determining whether the proposed registration duplicates existing entries and whether the registration description is clear and fits the purpose of this registry.<a href="#section-9.2-2" class="pilcrow">¶</a></p>
-<p id="section-9.2-3">Within the review period, the designated experts will either approve or deny the registration request, communicating this decision to the IANA. Denials should include an explanation and, if applicable, suggestions as to how to make the request successful.<a href="#section-9.2-3" class="pilcrow">¶</a></p>
-</section>
-</div>
 </section>
 </div>
 <section id="section-10">
@@ -3841,10 +3342,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
-<dt id="I-D.ietf-opsawg-ipfix-tcpo-v6eh">[I-D.ietf-opsawg-ipfix-tcpo-v6eh]</dt>
-        <dd>
-<span class="refAuthor">Boucadair, M.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Extended TCP Options and IPv6 Extension Headers IPFIX Information Elements"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-ipfix-tcpo-v6eh-08</span>, <time datetime="2024-01-17" class="refDate">17 January 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-tcpo-v6eh-08">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-tcpo-v6eh-08</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="IANA-EH">[IANA-EH]</dt>
         <dd>
 <span class="refTitle">"Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1">https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1</a>&gt;</span>. </dd>
@@ -3861,10 +3358,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC6994">[RFC6994]</dt>
-        <dd>
-<span class="refAuthor">Touch, J.</span>, <span class="refTitle">"Shared Use of Experimental TCP Options"</span>, <span class="seriesInfo">RFC 6994</span>, <span class="seriesInfo">DOI 10.17487/RFC6994</span>, <time datetime="2013-08" class="refDate">August 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6994">https://www.rfc-editor.org/rfc/rfc6994</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC7011">[RFC7011]</dt>
         <dd>
 <span class="refAuthor">Claise, B., Ed.</span>, <span class="refAuthor">Trammell, B., Ed.</span>, and <span class="refAuthor">P. Aitken</span>, <span class="refTitle">"Specification of the IP Flow Information Export (IPFIX) Protocol for the Exchange of Flow Information"</span>, <span class="seriesInfo">STD 77</span>, <span class="seriesInfo">RFC 7011</span>, <span class="seriesInfo">DOI 10.17487/RFC7011</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7011">https://www.rfc-editor.org/rfc/rfc7011</a>&gt;</span>. </dd>
@@ -3876,10 +3369,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <dt id="RFC7013">[RFC7013]</dt>
         <dd>
 <span class="refAuthor">Trammell, B.</span> and <span class="refAuthor">B. Claise</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of IP Flow Information Export (IPFIX) Information Elements"</span>, <span class="seriesInfo">BCP 184</span>, <span class="seriesInfo">RFC 7013</span>, <span class="seriesInfo">DOI 10.17487/RFC7013</span>, <time datetime="2013-09" class="refDate">September 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7013">https://www.rfc-editor.org/rfc/rfc7013</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC8126">[RFC8126]</dt>
-        <dd>
-<span class="refAuthor">Cotton, M.</span>, <span class="refAuthor">Leiba, B.</span>, and <span class="refAuthor">T. Narten</span>, <span class="refTitle">"Guidelines for Writing an IANA Considerations Section in RFCs"</span>, <span class="seriesInfo">BCP 26</span>, <span class="seriesInfo">RFC 8126</span>, <span class="seriesInfo">DOI 10.17487/RFC8126</span>, <time datetime="2017-06" class="refDate">June 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8126">https://www.rfc-editor.org/rfc/rfc8126</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
       <dd>
@@ -3897,10 +3386,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <dt id="CCO-NF9FMT">[CCO-NF9FMT]</dt>
         <dd>
 <span class="refTitle">"NetFlow Version 9 Flow-Record Format"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html">https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="I-D.ietf-6man-eh-limits">[I-D.ietf-6man-eh-limits]</dt>
-        <dd>
-<span class="refAuthor">Herbert, T.</span>, <span class="refTitle">"Limits on Sending and Processing IPv6 Extension Headers"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-6man-eh-limits-12</span>, <time datetime="2023-12-18" class="refDate">18 December 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-6man-eh-limits-12">https://datatracker.ietf.org/doc/html/draft-ietf-6man-eh-limits-12</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-opsawg-rfc7125-update">[I-D.ietf-opsawg-rfc7125-update]</dt>
         <dd>
@@ -4030,6 +3515,10 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
         <dd>
 <span class="refAuthor">Aitken, P., Ed.</span>, <span class="refAuthor">Claise, B.</span>, <span class="refAuthor">S, S. B.</span>, <span class="refAuthor">McDowall, C.</span>, and <span class="refAuthor">J. Schoenwaelder</span>, <span class="refTitle">"Exporting MIB Variables Using the IP Flow Information Export (IPFIX) Protocol"</span>, <span class="seriesInfo">RFC 8038</span>, <span class="seriesInfo">DOI 10.17487/RFC8038</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8038">https://www.rfc-editor.org/rfc/rfc8038</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8126">[RFC8126]</dt>
+        <dd>
+<span class="refAuthor">Cotton, M.</span>, <span class="refAuthor">Leiba, B.</span>, and <span class="refAuthor">T. Narten</span>, <span class="refTitle">"Guidelines for Writing an IANA Considerations Section in RFCs"</span>, <span class="seriesInfo">BCP 26</span>, <span class="seriesInfo">RFC 8126</span>, <span class="seriesInfo">DOI 10.17487/RFC8126</span>, <time datetime="2017-06" class="refDate">June 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8126">https://www.rfc-editor.org/rfc/rfc8126</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8158">[RFC8158]</dt>
         <dd>
 <span class="refAuthor">Sivakumar, S.</span> and <span class="refAuthor">R. Penno</span>, <span class="refTitle">"IP Flow Information Export (IPFIX) Information Elements for Logging NAT Events"</span>, <span class="seriesInfo">RFC 8158</span>, <span class="seriesInfo">DOI 10.17487/RFC8158</span>, <time datetime="2017-12" class="refDate">December 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8158">https://www.rfc-editor.org/rfc/rfc8158</a>&gt;</span>. </dd>
@@ -4037,10 +3526,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <dt id="RFC8200">[RFC8200]</dt>
         <dd>
 <span class="refAuthor">Deering, S.</span> and <span class="refAuthor">R. Hinden</span>, <span class="refTitle">"Internet Protocol, Version 6 (IPv6) Specification"</span>, <span class="seriesInfo">STD 86</span>, <span class="seriesInfo">RFC 8200</span>, <span class="seriesInfo">DOI 10.17487/RFC8200</span>, <time datetime="2017-07" class="refDate">July 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8200">https://www.rfc-editor.org/rfc/rfc8200</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC9293">[RFC9293]</dt>
-        <dd>
-<span class="refAuthor">Eddy, W., Ed.</span>, <span class="refTitle">"Transmission Control Protocol (TCP)"</span>, <span class="seriesInfo">STD 7</span>, <span class="seriesInfo">RFC 9293</span>, <span class="seriesInfo">DOI 10.17487/RFC9293</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9293">https://www.rfc-editor.org/rfc/rfc9293</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9487">[RFC9487]</dt>
         <dd>
