@@ -264,73 +264,73 @@ Table of Contents
 
 4.1.1.  OLD
 
-   - Description:  This Information Element describes the forwarding
-                   status of the flow and any attached reasons.
+    - Description:  This Information Element describes the forwarding
+                    status of the flow and any attached reasons.
 
-                   The layout of the encoding is as follows:
+                    The layout of the encoding is as follows:
 
-                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
-                         +---+---+---+---+---+---+---+---+
-                         | Status|  Reason code or flags |
-                         +---+---+---+---+---+---+---+---+
+                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                          +---+---+---+---+---+---+---+---+
+                          | Status|  Reason code or flags |
+                          +---+---+---+---+---+---+---+---+
 
-                   See the Forwarding Status sub-registries at
-     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+                    See the Forwarding Status sub-registries at
+                    [Forwarding-Status].
 
-                   Examples:
+                    Examples:
 
-                   value : 0x40 = 64
-                   binary: 01000000
-                   decode: 01        -> Forward
-                             000000  -> No further information
+                    value : 0x40 = 64
+                    binary: 01000000
+                    decode: 01        -> Forward
+                              000000  -> No further information
 
-                   value : 0x89 = 137
-                   binary: 10001001
-                   decode: 10        -> Drop
-                             001001  -> Bad TTL
+                    value : 0x89 = 137
+                    binary: 10001001
+                    decode: 10        -> Drop
+                              001001  -> Bad TTL
 
-   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT].
+    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+              [CCO-NF9FMT].
 
-   - Abstract Data Type: unsigned8
+    - Abstract Data Type: unsigned8
 
 4.1.2.  NEW
 
-   - Description:  This Information Element describes the forwarding
-                   status of the flow and any attached reasons.
-                   IPFIX reduced-size encoding is used as required.
+    - Description:  This Information Element describes the forwarding
+                    status of the flow and any attached reasons.
+                    IPFIX reduced-size encoding is used as required.
 
-                   A structure is currently associated with the first
-                   byte. Future versions may be defined to associate
-                   meanings with the remaining bits.
+                    A structure is currently associated with the first
+                    byte. Future versions may be defined to associate
+                    meanings with the remaining bits.
 
-                   The current version of the Information Element
-                   should be exported as unsigned8.
+                    The current version of the Information Element
+                    should be exported as unsigned8.
 
-                   The layout of the encoding is as follows:
+                    The layout of the encoding is as follows:
 
-                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
-                         +---+---+---+---+---+---+---+---+
-                         | Status|  Reason code or flags |
-                         +---+---+---+---+---+---+---+---+
+                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                          +---+---+---+---+---+---+---+---+
+                          | Status|  Reason code or flags |
+                          +---+---+---+---+---+---+---+---+
 
-                   Examples:
+                    Examples:
 
-                   value : 0x40 = 64
-                   binary: 01000000
-                   decode: 01        -> Forward
-                             000000  -> No further information
+                    value : 0x40 = 64
+                    binary: 01000000
+                    decode: 01        -> Forward
+                              000000  -> No further information
 
-                   value : 0x89 = 137
-                   binary: 10001001
-                   decode: 10        -> Drop
-                             001001  -> Bad TTL
+                    value : 0x89 = 137
+                    binary: 10001001
+                    decode: 10        -> Drop
+                              001001  -> Bad TTL
 
-   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT]. See the Forwarding Status sub-registries
-       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+              [CCO-NF9FMT]. See the Forwarding Status sub-registries
+              at [Forwarding-Status].
 
-   - Abstract Data Type: unsigned32
+    - Abstract Data Type: unsigned32
 
 5.  Point to An Existing IANA Registry
 
@@ -1364,6 +1364,11 @@ Table of Contents
               "NetFlow Version 9 Flow-Record Format", n.d.,
               <https://www.cisco.com/en/US/technologies/tk648/tk362/
               technologies_white_paper09186a00800a3db9.html>.
+
+   [Forwarding-Status]
+              "Forwarding Status (Value 89)", n.d.,
+              <https://www.iana.org/assignments/ipfix/
+              ipfix.xhtml#forwarding-status>.
 
    [I-D.ietf-opsawg-rfc7125-update]
               Boucadair, M., "An Update to the tcpControlBits IP Flow
