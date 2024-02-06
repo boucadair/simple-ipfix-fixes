@@ -41,6 +41,10 @@ informative:
      RFC_Errata_1739:
         title: RFC Errata 1739
         target: http://www.rfc-editor.org/errata_search.php?eid=1739
+     Forwarding-Status:
+        title: Forwarding Status (Value 89)
+        target: https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status
+
 
 --- abstract
 
@@ -107,7 +111,7 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
                          +---+---+---+---+---+---+---+---+
 
                    See the Forwarding Status sub-registries at
-     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+                   [Forwarding-Status].
 
                    Examples:
 
@@ -162,7 +166,7 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
              [CCO-NF9FMT]. See the Forwarding Status sub-registries
-       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+             at [Forwarding-Status].
 
    - Abstract Data Type: unsigned32
 ~~~
