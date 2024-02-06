@@ -6,6 +6,7 @@ This is the working area for the OPSAWG draft, "Simple Fixes to the IPFIX IANA R
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-opsawg-ipfix-fixes)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-ipfix-fixes)
 * [Compare Editor's Copy to Individual Draft](https://boucadair.github.io/simple-ipfix-fixes/#go.draft-ietf-opsawg-ipfix-fixes.diff)
+* [idnits](https://author-tools.ietf.org/api/idnits?url=https://boucadair.github.io/simple-ipfix-fixes/draft-ietf-opsawg-ipfix-fixes.txt&submissioncheck=True)
 
 
 ## Contributing
