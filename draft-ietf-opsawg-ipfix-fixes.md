@@ -28,19 +28,10 @@ normative:
      IANA-IPFIX:
         title: IP Flow Information Export (IPFIX) Entities
         target: https://www.iana.org/assignments/ipfix/ipfix.xhtml
-     IANA-EH:
-        title: Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types
-        target: https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1
-     IANA-Protocols:
-        title: Protocol Numbers
-        target: https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 
 informative:
      RFC5103:
      RFC6235:
-     RFC3775:
-     RFC4302:
-     RFC4303:
      CCO-NF9FMT:
        title: NetFlow Version 9 Flow-Record Format
        target: https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html
