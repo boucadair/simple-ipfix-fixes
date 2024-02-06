@@ -1328,19 +1328,9 @@ Table of Contents
 
 10.1.  Normative References
 
-   [IANA-EH]  "Internet Protocol Version 6 (IPv6) Parameters, IPv6
-              Extension Header Types", n.d.,
-              <https://www.iana.org/assignments/ipv6-parameters/
-              ipv6-parameters.xhtml#ipv6-parameters-1>.
-
    [IANA-IPFIX]
               "IP Flow Information Export (IPFIX) Entities", n.d.,
               <https://www.iana.org/assignments/ipfix/ipfix.xhtml>.
-
-   [IANA-Protocols]
-              "Protocol Numbers", n.d.,
-              <https://www.iana.org/assignments/protocol-numbers/
-              protocol-numbers.xhtml>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -1420,18 +1410,6 @@ Table of Contents
    [RFC3629]  Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/rfc/rfc3629>.
-
-   [RFC3775]  Johnson, D., Perkins, C., and J. Arkko, "Mobility Support
-              in IPv6", RFC 3775, DOI 10.17487/RFC3775, June 2004,
-              <https://www.rfc-editor.org/rfc/rfc3775>.
-
-   [RFC4302]  Kent, S., "IP Authentication Header", RFC 4302,
-              DOI 10.17487/RFC4302, December 2005,
-              <https://www.rfc-editor.org/rfc/rfc4302>.
-
-   [RFC4303]  Kent, S., "IP Encapsulating Security Payload (ESP)",
-              RFC 4303, DOI 10.17487/RFC4303, December 2005,
-              <https://www.rfc-editor.org/rfc/rfc4303>.
 
    [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
               Languages", RFC 4646, DOI 10.17487/RFC4646, September
