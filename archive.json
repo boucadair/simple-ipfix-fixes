@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-06T00:33:29.324166+00:00",
+  "timestamp": "2024-02-08T00:33:31.836652+00:00",
   "repo": "boucadair/simple-ipfix-fixes",
   "labels": [
     {
@@ -218,6 +218,34 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "cbe2afc71ac7adbb1926c612ac045d86004f3094"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOIcnmwM5mHXVl",
+      "title": "remove eh and tcpoption",
+      "url": "https://github.com/boucadair/simple-ipfix-fixes/pull/8",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-02-06T08:47:07Z",
+      "updatedAt": "2024-02-06T08:55:03Z",
+      "baseRepository": "boucadair/simple-ipfix-fixes",
+      "baseRefName": "main",
+      "baseRefOid": "852aa5a7a557bfafb349f682408d16fb116d7657",
+      "headRepository": "boucadair/simple-ipfix-fixes",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "7aa3cb7b30681ce186a63f5eae2ee045a951298e",
+      "closedAt": "2024-02-06T08:55:02Z",
+      "mergedAt": "2024-02-06T08:55:02Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "08c9f1f6129a49c8299e5be46b65bda8dda05e52"
       },
       "comments": [],
       "reviews": []
