@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 9 August 2024                                            Huawei
-                                                         6 February 2024
+Expires: 17 October 2024                                          Huawei
+                                                           15 April 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 August 2024.
+   This Internet-Draft will expire on 17 October 2024.
 
 Copyright Notice
 
@@ -177,14 +177,11 @@ Table of Contents
 
 1.  Introduction
 
-   When OPSAWG was considering [I-D.ietf-opsawg-rfc7125-update] which
-   updates [RFC7125], the WG realized that some other parts of the IANA
-   IP Flow Information Export (IPFIX) registry [IANA-IPFIX] were not up-
-   to-date.  Indeed, since its initial creation in 2007, some IPFIX
-   Information Elements (IEs) are no longer adequately specified (while
-   they were at some point in time in the past).  This document intends
-   to update the IANA registry and bring some consistency among the
-   entries of the registry.
+   When OPSAWG was considering [RFC9565] which updates [RFC7125], the WG
+   realized that some other parts of the IANA IP Flow Information Export
+   (IPFIX) registry [IANA-IPFIX] were not up-to-date.  This document
+   intends to update the IANA registry and bring some consistency among
+   the entries of the registry.
 
    As discussed with IANA during the publication process of [RFC9487],
    the "Additional Information" entry in [IANA-IPFIX] should contain a
@@ -264,73 +261,73 @@ Table of Contents
 
 4.1.1.  OLD
 
-   - Description:  This Information Element describes the forwarding
-                   status of the flow and any attached reasons.
+    - Description:  This Information Element describes the forwarding
+                    status of the flow and any attached reasons.
 
-                   The layout of the encoding is as follows:
+                    The layout of the encoding is as follows:
 
-                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
-                         +---+---+---+---+---+---+---+---+
-                         | Status|  Reason code or flags |
-                         +---+---+---+---+---+---+---+---+
+                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                          +---+---+---+---+---+---+---+---+
+                          | Status|  Reason code or flags |
+                          +---+---+---+---+---+---+---+---+
 
-                   See the Forwarding Status sub-registries at
-     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+                    See the Forwarding Status sub-registries at
+                    [Forwarding-Status].
 
-                   Examples:
+                    Examples:
 
-                   value : 0x40 = 64
-                   binary: 01000000
-                   decode: 01        -> Forward
-                             000000  -> No further information
+                    value : 0x40 = 64
+                    binary: 01000000
+                    decode: 01        -> Forward
+                              000000  -> No further information
 
-                   value : 0x89 = 137
-                   binary: 10001001
-                   decode: 10        -> Drop
-                             001001  -> Bad TTL
+                    value : 0x89 = 137
+                    binary: 10001001
+                    decode: 10        -> Drop
+                              001001  -> Bad TTL
 
-   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT].
+    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+              [CCO-NF9FMT].
 
-   - Abstract Data Type: unsigned8
+    - Abstract Data Type: unsigned8
 
 4.1.2.  NEW
 
-   - Description:  This Information Element describes the forwarding
-                   status of the flow and any attached reasons.
-                   IPFIX reduced-size encoding is used as required.
+    - Description:  This Information Element describes the forwarding
+                    status of the flow and any attached reasons.
+                    IPFIX reduced-size encoding is used as required.
 
-                   A structure is currently associated with the first
-                   byte. Future versions may be defined to associate
-                   meanings with the remaining bits.
+                    A structure is currently associated with the first
+                    byte. Future versions may be defined to associate
+                    meanings with the remaining bits.
 
-                   The current version of the Information Element
-                   should be exported as unsigned8.
+                    The current version of the Information Element
+                    should be exported as unsigned8.
 
-                   The layout of the encoding is as follows:
+                    The layout of the encoding is as follows:
 
-                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
-                         +---+---+---+---+---+---+---+---+
-                         | Status|  Reason code or flags |
-                         +---+---+---+---+---+---+---+---+
+                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                          +---+---+---+---+---+---+---+---+
+                          | Status|  Reason code or flags |
+                          +---+---+---+---+---+---+---+---+
 
-                   Examples:
+                    Examples:
 
-                   value : 0x40 = 64
-                   binary: 01000000
-                   decode: 01        -> Forward
-                             000000  -> No further information
+                    value : 0x40 = 64
+                    binary: 01000000
+                    decode: 01        -> Forward
+                              000000  -> No further information
 
-                   value : 0x89 = 137
-                   binary: 10001001
-                   decode: 10        -> Drop
-                             001001  -> Bad TTL
+                    value : 0x89 = 137
+                    binary: 10001001
+                    decode: 10        -> Drop
+                              001001  -> Bad TTL
 
-   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-             [CCO-NF9FMT]. See the Forwarding Status sub-registries
-       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+              [CCO-NF9FMT]. See the Forwarding Status sub-registries
+              at [Forwarding-Status].
 
-   - Abstract Data Type: unsigned32
+    - Abstract Data Type: unsigned32
 
 5.  Point to An Existing IANA Registry
 
@@ -654,7 +651,7 @@ Table of Contents
 
       See [RFC3022] for the definition of NAT.
 
-      See [RFC1631] for the definition of NAT44.
+      See [RFC3022] for the definition of NAT44.
 
       See [RFC6144] for the definition of NAT46.
 
@@ -1328,19 +1325,9 @@ Table of Contents
 
 10.1.  Normative References
 
-   [IANA-EH]  "Internet Protocol Version 6 (IPv6) Parameters, IPv6
-              Extension Header Types", n.d.,
-              <https://www.iana.org/assignments/ipv6-parameters/
-              ipv6-parameters.xhtml#ipv6-parameters-1>.
-
    [IANA-IPFIX]
-              "IP Flow Information Export (IPFIX) Entities", n.d.,
+              IANA, "IP Flow Information Export (IPFIX) Entities",
               <https://www.iana.org/assignments/ipfix/ipfix.xhtml>.
-
-   [IANA-Protocols]
-              "Protocol Numbers", n.d.,
-              <https://www.iana.org/assignments/protocol-numbers/
-              protocol-numbers.xhtml>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -1371,17 +1358,14 @@ Table of Contents
 10.2.  Informative References
 
    [CCO-NF9FMT]
-              "NetFlow Version 9 Flow-Record Format", n.d.,
+              Cisco, "NetFlow Version 9 Flow-Record Format", May 2011,
               <https://www.cisco.com/en/US/technologies/tk648/tk362/
               technologies_white_paper09186a00800a3db9.html>.
 
-   [I-D.ietf-opsawg-rfc7125-update]
-              Boucadair, M., "An Update to the tcpControlBits IP Flow
-              Information Export (IPFIX) Information Element", Work in
-              Progress, Internet-Draft, draft-ietf-opsawg-rfc7125-
-              update-07, 29 November 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              rfc7125-update-07>.
+   [Forwarding-Status]
+              IANA, "Forwarding Status (Value 89)",
+              <https://www.iana.org/assignments/ipfix/
+              ipfix.xhtml#forwarding-status>.
 
    [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
@@ -1420,18 +1404,6 @@ Table of Contents
    [RFC3629]  Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/rfc/rfc3629>.
-
-   [RFC3775]  Johnson, D., Perkins, C., and J. Arkko, "Mobility Support
-              in IPv6", RFC 3775, DOI 10.17487/RFC3775, June 2004,
-              <https://www.rfc-editor.org/rfc/rfc3775>.
-
-   [RFC4302]  Kent, S., "IP Authentication Header", RFC 4302,
-              DOI 10.17487/RFC4302, December 2005,
-              <https://www.rfc-editor.org/rfc/rfc4302>.
-
-   [RFC4303]  Kent, S., "IP Encapsulating Security Payload (ESP)",
-              RFC 4303, DOI 10.17487/RFC4303, December 2005,
-              <https://www.rfc-editor.org/rfc/rfc4303>.
 
    [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
               Languages", RFC 4646, DOI 10.17487/RFC4646, September
@@ -1546,13 +1518,10 @@ Table of Contents
               Export (IPFIX)", RFC 9487, DOI 10.17487/RFC9487, November
               2023, <https://www.rfc-editor.org/rfc/rfc9487>.
 
-   [RFC_Errata_1738]
-              "RFC Errata 1738", n.d.,
-              <http://www.rfc-editor.org/errata_search.php?eid=1738>.
-
-   [RFC_Errata_1739]
-              "RFC Errata 1739", n.d.,
-              <http://www.rfc-editor.org/errata_search.php?eid=1739>.
+   [RFC9565]  Boucadair, M., "An Update to the tcpControlBits IP Flow
+              Information Export (IPFIX) Information Element", RFC 9565,
+              DOI 10.17487/RFC9565, March 2024,
+              <https://www.rfc-editor.org/rfc/rfc9565>.
 
 Acknowledgments
 
@@ -1567,6 +1536,8 @@ Acknowledgments
 
    Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the
    genart review.
+
+   Thanks to Mahesh Jethanandani for the AD review.
 
 Authors' Addresses
 

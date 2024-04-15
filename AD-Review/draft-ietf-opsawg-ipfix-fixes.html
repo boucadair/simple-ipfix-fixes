@@ -10,12 +10,12 @@
 <meta content="
        This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry. 
     " name="description">
-<meta content="xml2rfc 3.19.2" name="generator">
+<meta content="xml2rfc 3.20.1" name="generator">
 <meta content="IPFIX" name="keyword">
 <meta content="draft-ietf-opsawg-ipfix-fixes-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.2
-    Python 3.11.6
+  xml2rfc 3.20.1
+    Python 3.11.8
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
@@ -1026,11 +1026,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">IPFIX IANA Fixes</td>
-<td class="right">February 2024</td>
+<td class="right">April 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Claise</td>
-<td class="center">Expires 9 August 2024</td>
+<td class="center">Expires 17 October 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1043,12 +1043,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-opsawg-ipfix-fixes-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-02-06" class="published">6 February 2024</time>
+<time datetime="2024-04-15" class="published">15 April 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-08-09">9 August 2024</time></dd>
+<dd class="expires"><time datetime="2024-10-17">17 October 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1097,7 +1097,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 17 October 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1526,7 +1526,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">When OPSAWG was considering <span>[<a href="#I-D.ietf-opsawg-rfc7125-update" class="cite xref">I-D.ietf-opsawg-rfc7125-update</a>]</span> which updates <span>[<a href="#RFC7125" class="cite xref">RFC7125</a>]</span>, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are no longer adequately specified  (while they were at some point in time in the past). This document intends to update the IANA registry and bring some consistency among the entries of the registry.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">When OPSAWG was considering <span>[<a href="#RFC9565" class="cite xref">RFC9565</a>]</span> which updates <span>[<a href="#RFC7125" class="cite xref">RFC7125</a>]</span>, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">As discussed with IANA during the publication process of <span>[<a href="#RFC9487" class="cite xref">RFC9487</a>]</span>, the "Additional Information" entry in <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> should contain a link to an existing registry, when applicable, as opposed to having:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-3.1">
@@ -1614,7 +1614,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
                          +---+---+---+---+---+---+---+---+
 
                    See the Forwarding Status sub-registries at
-     https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+                   [Forwarding-Status].
 
                    Examples:
 
@@ -1675,7 +1675,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 
    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
              [CCO-NF9FMT]. See the Forwarding Status sub-registries
-       at https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status.
+             at [Forwarding-Status].
 
    - Abstract Data Type: unsigned32
 </pre><a href="#section-4.1.2-1" class="pilcrow">¶</a>
@@ -2273,7 +2273,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <dd class="break"></dd>
 <dt id="section-6.10.2-1.9"></dt>
             <dd style="margin-left: 1.5em" id="section-6.10.2-1.10">
-              <p id="section-6.10.2-1.10.1">See <span>[<a href="#RFC1631" class="cite xref">RFC1631</a>]</span> for the definition of NAT44.<a href="#section-6.10.2-1.10.1" class="pilcrow">¶</a></p>
+              <p id="section-6.10.2-1.10.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT44.<a href="#section-6.10.2-1.10.1" class="pilcrow">¶</a></p>
 </dd>
             <dd class="break"></dd>
 <dt id="section-6.10.2-1.11"></dt>
@@ -3342,17 +3342,9 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
-<dt id="IANA-EH">[IANA-EH]</dt>
-        <dd>
-<span class="refTitle">"Internet Protocol Version 6 (IPv6) Parameters, IPv6 Extension Header Types"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1">https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-1</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="IANA-IPFIX">[IANA-IPFIX]</dt>
         <dd>
-<span class="refTitle">"IP Flow Information Export (IPFIX) Entities"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/ipfix/ipfix.xhtml">https://www.iana.org/assignments/ipfix/ipfix.xhtml</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="IANA-Protocols">[IANA-Protocols]</dt>
-        <dd>
-<span class="refTitle">"Protocol Numbers"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</a>&gt;</span>. </dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"IP Flow Information Export (IPFIX) Entities"</span>, <span>&lt;<a href="https://www.iana.org/assignments/ipfix/ipfix.xhtml">https://www.iana.org/assignments/ipfix/ipfix.xhtml</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
@@ -3385,11 +3377,11 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <dl class="references">
 <dt id="CCO-NF9FMT">[CCO-NF9FMT]</dt>
         <dd>
-<span class="refTitle">"NetFlow Version 9 Flow-Record Format"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html">https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html</a>&gt;</span>. </dd>
+<span class="refAuthor">Cisco</span>, <span class="refTitle">"NetFlow Version 9 Flow-Record Format"</span>, <time datetime="2011-05" class="refDate">May 2011</time>, <span>&lt;<a href="https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html">https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="I-D.ietf-opsawg-rfc7125-update">[I-D.ietf-opsawg-rfc7125-update]</dt>
+<dt id="Forwarding-Status">[Forwarding-Status]</dt>
         <dd>
-<span class="refAuthor">Boucadair, M.</span>, <span class="refTitle">"An Update to the tcpControlBits IP Flow Information Export (IPFIX) Information Element"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-rfc7125-update-07</span>, <time datetime="2023-11-29" class="refDate">29 November 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-rfc7125-update-07">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-rfc7125-update-07</a>&gt;</span>. </dd>
+<span class="refAuthor">IANA</span>, <span class="refTitle">"Forwarding Status (Value 89)"</span>, <span>&lt;<a href="https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status">https://www.iana.org/assignments/ipfix/ipfix.xhtml#forwarding-status</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC0791">[RFC0791]</dt>
         <dd>
@@ -3426,18 +3418,6 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <dt id="RFC3629">[RFC3629]</dt>
         <dd>
 <span class="refAuthor">Yergeau, F.</span>, <span class="refTitle">"UTF-8, a transformation format of ISO 10646"</span>, <span class="seriesInfo">STD 63</span>, <span class="seriesInfo">RFC 3629</span>, <span class="seriesInfo">DOI 10.17487/RFC3629</span>, <time datetime="2003-11" class="refDate">November 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3629">https://www.rfc-editor.org/rfc/rfc3629</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC3775">[RFC3775]</dt>
-        <dd>
-<span class="refAuthor">Johnson, D.</span>, <span class="refAuthor">Perkins, C.</span>, and <span class="refAuthor">J. Arkko</span>, <span class="refTitle">"Mobility Support in IPv6"</span>, <span class="seriesInfo">RFC 3775</span>, <span class="seriesInfo">DOI 10.17487/RFC3775</span>, <time datetime="2004-06" class="refDate">June 2004</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3775">https://www.rfc-editor.org/rfc/rfc3775</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC4302">[RFC4302]</dt>
-        <dd>
-<span class="refAuthor">Kent, S.</span>, <span class="refTitle">"IP Authentication Header"</span>, <span class="seriesInfo">RFC 4302</span>, <span class="seriesInfo">DOI 10.17487/RFC4302</span>, <time datetime="2005-12" class="refDate">December 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4302">https://www.rfc-editor.org/rfc/rfc4302</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC4303">[RFC4303]</dt>
-        <dd>
-<span class="refAuthor">Kent, S.</span>, <span class="refTitle">"IP Encapsulating Security Payload (ESP)"</span>, <span class="seriesInfo">RFC 4303</span>, <span class="seriesInfo">DOI 10.17487/RFC4303</span>, <time datetime="2005-12" class="refDate">December 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4303">https://www.rfc-editor.org/rfc/rfc4303</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC4646">[RFC4646]</dt>
         <dd>
@@ -3531,13 +3511,9 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
         <dd>
 <span class="refAuthor">Graf, T.</span>, <span class="refAuthor">Claise, B.</span>, and <span class="refAuthor">P. Francois</span>, <span class="refTitle">"Export of Segment Routing over IPv6 Information in IP Flow Information Export (IPFIX)"</span>, <span class="seriesInfo">RFC 9487</span>, <span class="seriesInfo">DOI 10.17487/RFC9487</span>, <time datetime="2023-11" class="refDate">November 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9487">https://www.rfc-editor.org/rfc/rfc9487</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC_Errata_1738">[RFC_Errata_1738]</dt>
-        <dd>
-<span class="refTitle">"RFC Errata 1738"</span>, <span>n.d.</span>, <span>&lt;<a href="http://www.rfc-editor.org/errata_search.php?eid=1738">http://www.rfc-editor.org/errata_search.php?eid=1738</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC_Errata_1739">[RFC_Errata_1739]</dt>
+<dt id="RFC9565">[RFC9565]</dt>
       <dd>
-<span class="refTitle">"RFC Errata 1739"</span>, <span>n.d.</span>, <span>&lt;<a href="http://www.rfc-editor.org/errata_search.php?eid=1739">http://www.rfc-editor.org/errata_search.php?eid=1739</a>&gt;</span>. </dd>
+<span class="refAuthor">Boucadair, M.</span>, <span class="refTitle">"An Update to the tcpControlBits IP Flow Information Export (IPFIX) Information Element"</span>, <span class="seriesInfo">RFC 9565</span>, <span class="seriesInfo">DOI 10.17487/RFC9565</span>, <time datetime="2024-03" class="refDate">March 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9565">https://www.rfc-editor.org/rfc/rfc9565</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -3552,6 +3528,7 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <p id="appendix-A-2">Thomas Graf tagged an issue with the forwardingStatus Information Element and for the Shepherd review.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 <p id="appendix-A-3">Thanks to Eric Vyncke for the review and comments.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
 <p id="appendix-A-4">Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the genart review.<a href="#appendix-A-4" class="pilcrow">¶</a></p>
+<p id="appendix-A-5">Thanks to Mahesh Jethanandani for the AD review.<a href="#appendix-A-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
