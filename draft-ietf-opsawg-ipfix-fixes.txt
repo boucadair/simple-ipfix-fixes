@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 9 August 2024                                            Huawei
-                                                         6 February 2024
+Expires: 18 October 2024                                          Huawei
+                                                           16 April 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 August 2024.
+   This Internet-Draft will expire on 18 October 2024.
 
 Copyright Notice
 
@@ -177,14 +177,11 @@ Table of Contents
 
 1.  Introduction
 
-   When OPSAWG was considering [I-D.ietf-opsawg-rfc7125-update] which
-   updates [RFC7125], the WG realized that some other parts of the IANA
-   IP Flow Information Export (IPFIX) registry [IANA-IPFIX] were not up-
-   to-date.  Indeed, since its initial creation in 2007, some IPFIX
-   Information Elements (IEs) are no longer adequately specified (while
-   they were at some point in time in the past).  This document intends
-   to update the IANA registry and bring some consistency among the
-   entries of the registry.
+   When OPSAWG was considering [RFC9565] which updates [RFC7125], the WG
+   realized that some other parts of the IANA IP Flow Information Export
+   (IPFIX) registry [IANA-IPFIX] were not up-to-date.  This document
+   intends to update the IANA registry and bring some consistency among
+   the entries of the registry.
 
    As discussed with IANA during the publication process of [RFC9487],
    the "Additional Information" entry in [IANA-IPFIX] should contain a
@@ -654,7 +651,7 @@ Table of Contents
 
       See [RFC3022] for the definition of NAT.
 
-      See [RFC1631] for the definition of NAT44.
+      See [RFC3022] for the definition of NAT44.
 
       See [RFC6144] for the definition of NAT46.
 
@@ -1239,7 +1236,7 @@ Table of Contents
    |        |          | consistent within a record (i.e., if a        |
    |        |          | source- Information Element has this flag     |
    |        |          | set, the corresponding destination- element   |
-   |        |          | SHOULD have this flag set, and vice-versa.)   |
+   |        |          | SHOULD have this flag set, and vice versa.)   |
    +--------+----------+-----------------------------------------------+
 
 7.4.  informationElementDescription
@@ -1369,14 +1366,6 @@ Table of Contents
               IANA, "Forwarding Status (Value 89)",
               <https://www.iana.org/assignments/ipfix/
               ipfix.xhtml#forwarding-status>.
-
-   [I-D.ietf-opsawg-rfc7125-update]
-              Boucadair, M., "An Update to the tcpControlBits IP Flow
-              Information Export (IPFIX) Information Element", Work in
-              Progress, Internet-Draft, draft-ietf-opsawg-rfc7125-
-              update-07, 29 November 2023,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-
-              rfc7125-update-07>.
 
    [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
@@ -1529,13 +1518,10 @@ Table of Contents
               Export (IPFIX)", RFC 9487, DOI 10.17487/RFC9487, November
               2023, <https://www.rfc-editor.org/rfc/rfc9487>.
 
-   [RFC_Errata_1738]
-              "RFC Errata 1738", n.d.,
-              <http://www.rfc-editor.org/errata_search.php?eid=1738>.
-
-   [RFC_Errata_1739]
-              "RFC Errata 1739", n.d.,
-              <http://www.rfc-editor.org/errata_search.php?eid=1739>.
+   [RFC9565]  Boucadair, M., "An Update to the tcpControlBits IP Flow
+              Information Export (IPFIX) Information Element", RFC 9565,
+              DOI 10.17487/RFC9565, March 2024,
+              <https://www.rfc-editor.org/rfc/rfc9565>.
 
 Acknowledgments
 
@@ -1550,6 +1536,8 @@ Acknowledgments
 
    Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the
    genart review.
+
+   Thanks to Mahesh Jethanandani for the AD review.
 
 Authors' Addresses
 
