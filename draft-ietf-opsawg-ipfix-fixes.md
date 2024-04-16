@@ -731,7 +731,7 @@ Description:
 |        |          | consistent within a record (i.e., if a        |
 |        |          | source- Information Element has this flag     |
 |        |          | set, the corresponding destination- element   |
-|        |          | SHOULD have this flag set, and vice-versa.)   |
+|        |          | SHOULD have this flag set, and vice versa.)   |
 +--------+----------+-----------------------------------------------+
 ~~~
 
