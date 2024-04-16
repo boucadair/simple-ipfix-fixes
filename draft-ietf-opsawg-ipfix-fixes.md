@@ -43,12 +43,6 @@ informative:
           organization: "Cisco"
        target: https://www.cisco.com/en/US/technologies/tk648/tk362/technologies_white_paper09186a00800a3db9.html
        date: May 2011
-     RFC_Errata_1738:
-        title: RFC Errata 1738
-        target: http://www.rfc-editor.org/errata_search.php?eid=1738
-     RFC_Errata_1739:
-        title: RFC Errata 1739
-        target: http://www.rfc-editor.org/errata_search.php?eid=1739
      Forwarding-Status:
         title: Forwarding Status (Value 89)
         author:
@@ -67,7 +61,7 @@ This document provides simple fixes to the IANA IP Flow Information Export (IPFI
 
 # Introduction
 
-When OPSAWG was considering {{?I-D.ietf-opsawg-rfc7125-update}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. Indeed, since its initial creation in 2007, some IPFIX Information Elements (IEs) are no longer adequately specified  (while they were at some point in time in the past). This document intends to update the IANA registry and bring some consistency among the entries of the registry.
+When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
 
 As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
@@ -388,7 +382,7 @@ Description:
 Additional Information:
 : See the assigned NAT types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type].
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC1631}} for the definition of NAT44.
+: See {{?RFC3022}} for the definition of NAT44.
 : See {{?RFC6144}} for the definition of NAT46.
 : See {{?RFC6146}} for the definition of NAT64.
 : See {{?RFC6296}} for the definition of NPTv6.
@@ -737,7 +731,7 @@ Description:
 |        |          | consistent within a record (i.e., if a        |
 |        |          | source- Information Element has this flag     |
 |        |          | set, the corresponding destination- element   |
-|        |          | SHOULD have this flag set, and vice-versa.)   |
+|        |          | SHOULD have this flag set, and vice versa.)   |
 +--------+----------+-----------------------------------------------+
 ~~~
 
@@ -806,3 +800,5 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element and fo
 Thanks to Eric Vyncke for the review and comments.
 
 Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the genart review.
+
+Thanks to Mahesh Jethanandani for the AD review.
