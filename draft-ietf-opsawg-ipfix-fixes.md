@@ -471,7 +471,7 @@ Description:
 : The port number identifying the start of a range of port numbers. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## portRangeEnd
 
@@ -486,7 +486,7 @@ Description:
 : The port number identifying the end of a range of port numbers. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## ingressInterfaceType
 
