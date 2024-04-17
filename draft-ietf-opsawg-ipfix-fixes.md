@@ -468,10 +468,10 @@ Description:
 ### NEW
 
 Description:
-: The port number identifying the start of a range of ports. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.
+: The port number identifying the start of a range of port numbers. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## portRangeEnd
 
@@ -483,10 +483,10 @@ Description:
 ### NEW
 
 Description:
-: The port number identifying the end of a range of ports. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
+: The port number identifying the end of a range of port numbers. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: Additional information on defined TCP port numbers can be found at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## ingressInterfaceType
 
@@ -799,6 +799,6 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element and fo
 
 Thanks to Eric Vyncke for the review and comments.
 
-Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the genart review.
+Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, and Martin Duke for the tsvart review.
 
 Thanks to Mahesh Jethanandani for the AD review.
