@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 18 October 2024                                          Huawei
-                                                           16 April 2024
+Expires: 19 October 2024                                          Huawei
+                                                           17 April 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 October 2024.
+   This Internet-Draft will expire on 19 October 2024.
 
 Copyright Notice
 
@@ -825,12 +825,12 @@ Table of Contents
 6.15.2.  NEW
 
    Description:  The port number identifying the start of a range of
-      ports.  A value of zero indicates that the range start is not
-      specified, i.e., the range is defined in some other way.
+      port numbers.  A value of zero indicates that the range start is
+      not specified, i.e., the range is defined in some other way.
 
-   Additional Information:  Additional information on defined TCP port
-      numbers can be found at https://www.iana.org/assignments/service-
-      names-port-numbers.
+   Additional Information:  See the assigned transport protocol (e.g.,
+      TCP, UDP, DCCP, and SCTP) port numbers at
+      https://www.iana.org/assignments/service-names-port-numbers.
 
 6.16.  portRangeEnd
 
@@ -844,13 +844,13 @@ Table of Contents
 
 6.16.2.  NEW
 
-   Description:  The port number identifying the end of a range of
-      ports.  A value of zero indicates that the range end is not
+   Description:  The port number identifying the end of a range of port
+      numbers.  A value of zero indicates that the range end is not
       specified, i.e., the range is defined in some other way.
 
-   Additional Information:  Additional information on defined TCP port
-      numbers can be found at https://www.iana.org/assignments/service-
-      names-port-numbers.
+   Additional Information:  See the assigned transport protocol (e.g.,
+      TCP, UDP, DCCP, and SCTP) port numbers at
+      https://www.iana.org/assignments/service-names-port-numbers.
 
 6.17.  ingressInterfaceType
 
@@ -1534,8 +1534,8 @@ Acknowledgments
 
    Thanks to Eric Vyncke for the review and comments.
 
-   Thanks to Qin Wu for the opsdir review and Behcet Sarikay for the
-   genart review.
+   Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart
+   review, and Martin Duke for the tsvart review.
 
    Thanks to Mahesh Jethanandani for the AD review.
 
