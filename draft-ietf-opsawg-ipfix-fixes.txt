@@ -71,9 +71,21 @@ Table of Contents
    2.  Conventions and Definitions
    3.  Why An RFC is Needed for These Updates?
    4.  Update the Description
-     4.1.  forwardingStatus
+     4.1.  sourceTransportPort
        4.1.1.  OLD
        4.1.2.  NEW
+     4.2.  destinationTransportPort
+       4.2.1.  OLD
+       4.2.2.  NEW
+     4.3.  forwardingStatus
+       4.3.1.  OLD
+       4.3.2.  NEW
+     4.4.  collectorTransportPort
+       4.4.1.  OLD
+       4.4.2.  NEW
+     4.5.  exporterTransportPort
+       4.5.1.  OLD
+       4.5.2.  NEW
    5.  Point to An Existing IANA Registry
    6.  Consistent Citation of IANA Registries
      6.1.  mplsTopLabelType
@@ -251,7 +263,95 @@ Table of Contents
 
 4.  Update the Description
 
-4.1.  forwardingStatus
+4.1.  sourceTransportPort
+
+4.1.1.  OLD
+
+   Description:  The source port identifier in the transport header.
+      For the transport protocols UDP, TCP, and SCTP, this is the source
+      port number given in the respective header.  This field MAY also
+      be used for future transport protocols that have 16-bit source
+      port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of SCTP.
+
+      Additional information on defined UDP and TCP port numbers can be
+      found at [https://www.iana.org/assignments/service-names-port-
+      numbers].
+
+4.1.2.  NEW
+
+   Description:  The source port identifier in the transport protocol
+      header.  For transport protocols such as UDP, TCP, SCTP, and DCCP,
+      this is the source port number given in the respective header.
+      This field MAY also be used for future transport protocols that
+      have 16-bit source port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of the SCTP source port number
+      field.
+
+      See [RFC4340] for the definition of the DCCP source port field.
+
+      See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and
+      SCTP) port numbers at https://www.iana.org/assignments/service-
+      names-port-numbers.
+
+4.2.  destinationTransportPort
+
+4.2.1.  OLD
+
+   Description:  The destination port identifier in the transport
+      header.  For the transport protocols UDP, TCP, and SCTP, this is
+      the destination port number given in the respective header.  This
+      field MAY also be used for future transport protocols that have
+      16-bit destination port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of SCTP.
+
+      Additional information on defined UDP and TCP port numbers can be
+      found at [https://www.iana.org/assignments/service-names-port-
+      numbers].
+
+4.2.2.  NEW
+
+   Description:  The destination port identifier in the transport
+      protocol header.  For transport protocols such as UDP, TCP, SCTP,
+      and DCCP, this is the source port number given in the respective
+      header.  This field MAY also be used for future transport
+      protocols that have 16-bit source port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      destination port field.
+
+      See [RFC9293] for the definition of the TCP destination port
+      field.
+
+      See [RFC9260] for the definition of the SCTP destination port
+      number field.
+
+      See [RFC4340] for the definition of the DCCP destination port
+      field.
+
+      See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
+      SCTP) port numbers at https://www.iana.org/assignments/service-
+      names-port-numbers.
+
+4.3.  forwardingStatus
 
    The current forwardingStatus entry in [IANA-IPFIX] deviates from what
    is provided in [RFC7270].  In particular, the registered Abstract
@@ -259,7 +359,7 @@ Table of Contents
    update fixes that issue.  The description is also updated to clarify
    the use of the reduced-size encoding as per Section 6.2 of [RFC7011].
 
-4.1.1.  OLD
+4.3.1.  OLD
 
     - Description:  This Information Element describes the forwarding
                     status of the flow and any attached reasons.
@@ -291,7 +391,7 @@ Table of Contents
 
     - Abstract Data Type: unsigned8
 
-4.1.2.  NEW
+4.3.2.  NEW
 
     - Description:  This Information Element describes the forwarding
                     status of the flow and any attached reasons.
@@ -328,6 +428,91 @@ Table of Contents
               at [Forwarding-Status].
 
     - Abstract Data Type: unsigned32
+
+4.4.  collectorTransportPort
+
+4.4.1.  OLD
+
+   Description:  The destination port identifier to which the Exporting
+      Process sends Flow information.  For the transport protocols UDP,
+      TCP, and SCTP, this is the destination port number.  This field
+      MAY also be used for future transport protocols that have 16-bit
+      source port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of SCTP.
+
+      Additional information on defined UDP and TCP port numbers can be
+      found at [https://www.iana.org/assignments/service-names-port-
+      numbers].
+
+4.4.2.  NEW
+
+   Description:  The destination port identifier to which the Exporting
+      Process sends Flow information.  For transport protocols such as
+      UDP, TCP, and SCTP, this is the destination port number.  This
+      field MAY also be used for future transport protocols that have
+      16-bit source port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      destination port field.
+
+      See [RFC9293] for the definition of the TCP destination port
+      field.
+
+      See [RFC9260] for the definition of the SCTP destination port
+      number field.
+
+      See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
+      SCTP) port numbers at https://www.iana.org/assignments/service-
+      names-port-numbers.
+
+4.5.  exporterTransportPort
+
+4.5.1.  OLD
+
+   Description:  The source port identifier from which the Exporting
+      Process sends Flow information.  For the transport protocols UDP,
+      TCP, and SCTP, this is the source port number.  This field MAY
+      also be used for future transport protocols that have 16-bit
+      source port identifiers.  This field may be useful for
+      distinguishing multiple Exporting Processes that use the same IP
+      address.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of SCTP.
+
+      Additional information on defined UDP and TCP port numbers can be
+      found at [https://www.iana.org/assignments/service-names-port-
+      numbers].
+
+4.5.2.  NEW
+
+   Description:  The source port identifier to which the Exporting
+      Process sends Flow information.  For transport protocols such as
+      UDP, TCP, and SCTP, this is the source port number.  This field
+      MAY also be used for future transport protocols that have 16-bit
+      source port identifiers.
+
+   Additional Information:  See [RFC0768] for the definition of the UDP
+      source port field.
+
+      See [RFC9293] for the definition of the TCP source port field.
+
+      See [RFC9260] for the definition of the SCTP source port number
+      field.
+
+      See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
+      SCTP) port numbers at https://www.iana.org/assignments/service-
+      names-port-numbers.
 
 5.  Point to An Existing IANA Registry
 
@@ -474,8 +659,9 @@ Table of Contents
 
    Additional Information:  See the assigned NAT originating address
       realm at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-originating-address-realm].  See [RFC3022]
-      for the definition of NAT.
+      ipfix.xhtml#ipfix-nat-originating-address-realm].
+
+      See [RFC3022] for the definition of NAT.
 
 6.5.  natEvent
 
@@ -1321,6 +1507,17 @@ Table of Contents
    the "IPFIX Information Elements" registry [IANA-IPFIX] with the
    reference to this document.
 
+   Also, this document requests IANA to consistently reference the
+   "Service Name and Transport Protocol Port Number" through the
+   registry as follows
+
+   OLD:  Additional information on defined UDP and TCP port numbers can
+      be found at http://www.iana.org/assignments/port-numbers.
+
+   NEW:  See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
+      SCTP) port numbers at https://www.iana.org/assignments/service-
+      names-port-numbers.
+
 10.  References
 
 10.1.  Normative References
@@ -1367,6 +1564,10 @@ Table of Contents
               <https://www.iana.org/assignments/ipfix/
               ipfix.xhtml#forwarding-status>.
 
+   [RFC0768]  Postel, J., "User Datagram Protocol", STD 6, RFC 768,
+              DOI 10.17487/RFC0768, August 1980,
+              <https://www.rfc-editor.org/rfc/rfc768>.
+
    [RFC0791]  Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
               <https://www.rfc-editor.org/rfc/rfc791>.
@@ -1404,6 +1605,11 @@ Table of Contents
    [RFC3629]  Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/rfc/rfc3629>.
+
+   [RFC4340]  Kohler, E., Handley, M., and S. Floyd, "Datagram
+              Congestion Control Protocol (DCCP)", RFC 4340,
+              DOI 10.17487/RFC4340, March 2006,
+              <https://www.rfc-editor.org/rfc/rfc4340>.
 
    [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
               Languages", RFC 4646, DOI 10.17487/RFC4646, September
@@ -1512,6 +1718,14 @@ Table of Contents
               (IPv6) Specification", STD 86, RFC 8200,
               DOI 10.17487/RFC8200, July 2017,
               <https://www.rfc-editor.org/rfc/rfc8200>.
+
+   [RFC9260]  Stewart, R., Tüxen, M., and K. Nielsen, "Stream Control
+              Transmission Protocol", RFC 9260, DOI 10.17487/RFC9260,
+              June 2022, <https://www.rfc-editor.org/rfc/rfc9260>.
+
+   [RFC9293]  Eddy, W., Ed., "Transmission Control Protocol (TCP)",
+              STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
+              <https://www.rfc-editor.org/rfc/rfc9293>.
 
    [RFC9487]  Graf, T., Claise, B., and P. Francois, "Export of Segment
               Routing over IPv6 Information in IP Flow Information
