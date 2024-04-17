@@ -147,7 +147,7 @@ Additional Information:
 : See {{?RFC9293}} for the definition of the TCP destination port field.
 : See {{?RFC9260}} for the definition of the SCTP destination port number field.
 : See {{?RFC4340}} for the definition of the DCCP destination port field.
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 
 ## forwardingStatus
@@ -250,7 +250,7 @@ Additional Information:
 : See {{?RFC0768}} for the definition of the UDP destination port field.
 : See {{?RFC9293}} for the definition of the TCP destination port field.
 : See {{?RFC9260}} for the definition of the SCTP destination port number field.
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## exporterTransportPort
 
@@ -274,7 +274,7 @@ Additional Information:
 : See {{?RFC0768}} for the definition of the UDP source port field.
 : See {{?RFC9293}} for the definition of the TCP source port field.
 : See {{?RFC9260}} for the definition of the SCTP source port number field.
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 # Point to An Existing IANA Registry {#to-iana}
 
