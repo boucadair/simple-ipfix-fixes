@@ -99,6 +99,57 @@ Many of the edits in this document may be handled by the IPFIX Experts (informal
 
 # Update the Description {#desc}
 
+## sourceTransportPort
+
+### OLD
+
+Description:
+: The source port identifier in the transport header. For the transport protocols UDP, TCP, and SCTP, this is the source port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of SCTP.
+: Additional information on defined UDP and TCP port numbers can be found at [https://www.iana.org/assignments/service-names-port-numbers].
+
+### NEW
+
+Description:
+: The source port identifier in the transport protocol header. For transport protocols such as UDP, TCP, SCTP, and DCCP, this is the source port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of the SCTP source port number field.
+: See {{?RFC4340}} for the definition of the DCCP source port field.
+: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+
+## destinationTransportPort
+
+### OLD
+
+Description:
+: The destination port identifier in the transport header. For the transport protocols UDP, TCP, and SCTP, this is the destination port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit destination port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of SCTP.
+: Additional information on defined UDP and TCP port numbers can be found at [https://www.iana.org/assignments/service-names-port-numbers].
+
+### NEW
+
+Description:
+: The destination port identifier in the transport protocol header. For transport protocols such as UDP, TCP, SCTP, and DCCP, this is the source port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP destination port field.
+: See {{?RFC9293}} for the definition of the TCP destination port field.
+: See {{?RFC9260}} for the definition of the SCTP destination port number field.
+: See {{?RFC4340}} for the definition of the DCCP destination port field.
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
+
+
 ## forwardingStatus
 
 The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provided in {{?RFC7270}}. In particular, the registered Abstract Data Type is unsigned8, while it must be unsigned32. The following update fixes that issue. The description is also updated to clarify the use of the reduced-size encoding as per {{Section 6.2 of !RFC7011}}.
@@ -177,6 +228,53 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
    - Abstract Data Type: unsigned32
 ~~~
 
+## collectorTransportPort
+
+### OLD
+
+Description:
+: The destination port identifier to which the Exporting Process sends Flow information. For the transport protocols UDP, TCP, and SCTP, this is the destination port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of SCTP.
+: Additional information on defined UDP and TCP port numbers can be found at [https://www.iana.org/assignments/service-names-port-numbers].
+
+### NEW
+
+Description:
+: The destination port identifier to which the Exporting Process sends Flow information. For transport protocols such as UDP, TCP, and SCTP, this is the destination port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP destination port field.
+: See {{?RFC9293}} for the definition of the TCP destination port field.
+: See {{?RFC9260}} for the definition of the SCTP destination port number field.
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
+
+## exporterTransportPort
+
+### OLD
+
+Description:
+: The source port identifier from which the Exporting Process sends Flow information. For the transport protocols UDP, TCP, and SCTP, this is the source port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers. This field may be useful for distinguishing multiple Exporting Processes that use the same IP address.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of SCTP.
+: Additional information on defined UDP and TCP port numbers can be found at [https://www.iana.org/assignments/service-names-port-numbers].
+
+### NEW
+
+Description:
+: The source port identifier to which the Exporting Process sends Flow information. For transport protocols such as UDP, TCP, and SCTP, this is the source port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+
+Additional Information:
+: See {{?RFC0768}} for the definition of the UDP source port field.
+: See {{?RFC9293}} for the definition of the TCP source port field.
+: See {{?RFC9260}} for the definition of the SCTP source port number field.
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers. 
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -269,7 +367,8 @@ Description:
 : Values are listed in the natOriginatingAddressRealm registry.
 
 Additional Information:
-: See the assigned NAT originating address realm at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm]. See {{?RFC3022}} for the definition of NAT.
+: See the assigned NAT originating address realm at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
+: See {{?RFC3022}} for the definition of NAT.
 
 ## natEvent
 
@@ -787,6 +886,15 @@ already discussed for IPFIX in {{Section 8 of !RFC7012}}.
 Sections 4 to 7 include actions for IANA. These actions are not repeated here.
 
 This document also requests IANA to update the reference clause of the "IPFIX Information Elements" registry {{IANA-IPFIX}} with the reference to this document.
+
+Also, this document requests IANA to consistently reference the "Service Name and Transport Protocol Port Number" through the registry as follows
+
+OLD:
+: Additional information on defined UDP and TCP port numbers can be found at http://www.iana.org/assignments/port-numbers.
+
+NEW:
+: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+
 
 --- back
 
