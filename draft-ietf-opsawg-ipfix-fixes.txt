@@ -658,7 +658,7 @@ Table of Contents
       Values are listed in the natOriginatingAddressRealm registry.
 
    Additional Information:  See the assigned NAT originating address
-      realm registry at [https://www.iana.org/assignments/ipfix/
+      realm values at [https://www.iana.org/assignments/ipfix/
       ipfix.xhtml#ipfix-nat-originating-address-realm].
 
       See [RFC3022] for the definition of NAT.
@@ -690,7 +690,7 @@ Table of Contents
       Values for this Information Element are listed in the "NAT Event
       Type" registry.
 
-   Additional Information:  See the assigned NAT Event Types registry at
+   Additional Information:  See the assigned NAT Event Types at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
       event-type].
 
@@ -715,7 +715,7 @@ Table of Contents
    Description:  Indicates a firewall event.  Allowed values are listed
       in the firewallEvent registry.
 
-   Additional Information:  See the assigned firewall events registry at
+   Additional Information:  See the assigned firewall events at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       firewall-event].
 
@@ -773,7 +773,7 @@ Table of Contents
    Description:  Type of observation point.  Values are listed in the
       observationPointType registry.
 
-   Additional Information:  See the assigned observation point type at
+   Additional Information:  See the assigned observation point types at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       observation-point-type].
 
