@@ -61,7 +61,7 @@ This document provides simple fixes to the IANA IP Flow Information Export (IPFI
 
 # Introduction
 
-When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some other parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
+When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
 
 As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
@@ -122,7 +122,7 @@ Additional Information:
 : See {{?RFC9293}} for the definition of the TCP source port field.
 : See {{?RFC9260}} for the definition of the SCTP source port number field.
 : See {{?RFC4340}} for the definition of the DCCP source port field.
-: See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## destinationTransportPort
 
@@ -140,14 +140,14 @@ Additional Information:
 ### NEW
 
 Description:
-: The destination port identifier in the transport protocol header. For transport protocols such as UDP, TCP, SCTP, and DCCP, this is the source port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+: The destination port identifier in the transport protocol header. For transport protocols such as UDP, TCP, SCTP, and DCCP, this is the destination port number given in the respective header. This field MAY also be used for future transport protocols that have 16-bit destination port identifiers.
 
 Additional Information:
 : See {{?RFC0768}} for the definition of the UDP destination port field.
 : See {{?RFC9293}} for the definition of the TCP destination port field.
 : See {{?RFC9260}} for the definition of the SCTP destination port number field.
 : See {{?RFC4340}} for the definition of the DCCP destination port field.
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 
 ## forwardingStatus
@@ -268,13 +268,14 @@ Additional Information:
 ### NEW
 
 Description:
-: The source port identifier to which the Exporting Process sends Flow information. For transport protocols such as UDP, TCP, and SCTP, this is the source port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
+: The source port identifier from which the Exporting Process sends Flow information. For transport protocols such as UDP, TCP, and SCTP, this is the source port number. This field MAY also be used for future transport protocols that have 16-bit source port identifiers.
 
 Additional Information:
 : See {{?RFC0768}} for the definition of the UDP source port field.
 : See {{?RFC9293}} for the definition of the TCP source port field.
 : See {{?RFC9260}} for the definition of the SCTP source port number field.
-: See the assigned transport protocol (e.g., TCP, UDP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -347,7 +348,7 @@ Description:
 : The reason for Flow termination. Values are listed in the flowEndReason registry.
 
 Additional Information:
-: See the Classification Engine IDs registry available at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason].
+: See the flowEndReason registry available at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-end-reason].
 
 ## natOriginatingAddressRealm
 
@@ -367,7 +368,7 @@ Description:
 : Values are listed in the natOriginatingAddressRealm registry.
 
 Additional Information:
-: See the assigned NAT originating address realm at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
+: See the assigned NAT originating address realm registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
 : See {{?RFC3022}} for the definition of NAT.
 
 ## natEvent
@@ -388,7 +389,7 @@ Description:
 : This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.
 
 Additional Information:
-: See the assigned NAT Event Types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
+: See the assigned NAT Event Types registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
 : See {{?RFC3022}} for the definition of NAT.
 : See {{?RFC3234}} for the definition of middleboxes.
 : See {{?RFC8158}} for the definitions of values 4-16.
@@ -407,7 +408,7 @@ Description:
 : Indicates a firewall event. Allowed values are listed in the firewallEvent registry.
 
 Additional Information:
-: See the assigned firewall events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
+: See the assigned firewall events registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
 
 ## biflowDirection
 
@@ -501,7 +502,7 @@ Description:
 ### NEW
 
 Description:
-: This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. For the methods parameters, Information Elements are defined in the information model document. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters.
+: This Information Element identifies the packet selection methods (e.g., Filtering, Sampling) that are applied by the Selection Process. Most of these methods have parameters. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. For the methods parameters, Information Elements are defined in the information model document {{?RFC5102}}. The names of these Information Elements are listed for each method identifier. Further method identifiers may be added to the list. It might be necessary to define new Information Elements to specify their parameters.
 : There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.
 
 Additional Information:
@@ -521,7 +522,7 @@ Description:
 : The [informationElementDataType] subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
 Additional Information:
-: See the assigned emelement data types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types].
+: See the assigned element data types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types].
 
 ## informationElementSemantics
 
@@ -533,7 +534,7 @@ Description:
 ### NEW
 
 Description:
-: A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in Section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the [IPFIX Information Element Semantics] subregistry; the special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori.
+: A description of the semantics of an IPFIX Information Element. These are taken from the data type semantics defined in Section 3.2 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types defined in the [IPFIX Information Element Semantics] subregistry. This field may take the values in the [IPFIX Information Element Semantics] subregistry. The special value 0x00 (default) is used to note that no semantics apply to the field; it cannot be manipulated by a Collecting Process or File Reader that does not understand it a priori.
 : The [IPFIX Information Element Semantics] subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
 Additional Information:
@@ -569,7 +570,7 @@ Description:
 : The port number identifying the start of a range of port numbers. A value of zero indicates that the range start is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## portRangeEnd
 
@@ -584,7 +585,7 @@ Description:
 : The port number identifying the end of a range of port numbers. A value of zero indicates that the range end is not specified, i.e., the range is defined in some other way.
 
 Additional Information:
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## ingressInterfaceType
 
@@ -892,7 +893,7 @@ OLD:
 : Additional information on defined UDP and TCP port numbers can be found at http://www.iana.org/assignments/port-numbers.
 
 NEW:
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 
 --- back
