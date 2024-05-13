@@ -657,9 +657,9 @@ Table of Contents
 
       Values are listed in the natOriginatingAddressRealm registry.
 
-   Additional Information:  See the assigned NAT originating address
-      realm values at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-originating-address-realm].
+   Additional Information:  See the natOriginatingAddressRealm registry
+      at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      originating-address-realm].
 
       See [RFC3022] for the definition of NAT.
 
@@ -690,7 +690,7 @@ Table of Contents
       Values for this Information Element are listed in the "NAT Event
       Type" registry.
 
-   Additional Information:  See the assigned NAT Event Types at
+   Additional Information:  See the NAT Event Type registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
       event-type].
 
@@ -715,7 +715,7 @@ Table of Contents
    Description:  Indicates a firewall event.  Allowed values are listed
       in the firewallEvent registry.
 
-   Additional Information:  See the assigned firewall events at
+   Additional Information:  See the firewallEvent registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       firewall-event].
 
@@ -755,7 +755,7 @@ Table of Contents
       this Information Element SHOULD appear in each Flow Record.
       Values are listed in the biflowDirection registry.
 
-   Additional Information:  See the assigned biflow direction values at
+   Additional Information:  See the biflowDirection registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-
       direction].
 
@@ -773,7 +773,7 @@ Table of Contents
    Description:  Type of observation point.  Values are listed in the
       observationPointType registry.
 
-   Additional Information:  See the assigned observation point types at
+   Additional Information:  See the observationPointType registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       observation-point-type].
 
@@ -797,7 +797,7 @@ Table of Contents
       Elements and recommended only for certain Information Elements.
       Values are listed in the anonymizationTechnique registry.
 
-   Additional Information:  See the assigned anonymization techniques at
+   Additional Information:  See the anonymizationTechnique registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       anonymization-technique].
 
@@ -831,7 +831,7 @@ Table of Contents
 
       Values are listed in the natType registry.
 
-   Additional Information:  See the assigned NAT types at
+   Additional Information:  See the natType registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
       type].
 
@@ -891,8 +891,8 @@ Table of Contents
       for Property match Filtering (5) but currently there are no agreed
       parameters specified.
 
-   Additional Information:  See the assigned PSAMP parameters at
-      [https://www.iana.org/assignments/psamp-parameters].
+   Additional Information:  See the Packet Sampling (PSAMP) Parameters
+      registry at [https://www.iana.org/assignments/psamp-parameters].
 
 6.12.  informationElementDataType
 
@@ -924,9 +924,9 @@ Table of Contents
       types to the IPFIX Protocol, and as such requires a Standards
       Action [RFC8126] to modify.
 
-   Additional Information:  See the assigned element data types at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      information-element-data-types].
+   Additional Information:  See the IPFIX Information Element Data Types
+      registry at [https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-information-element-data-types].
 
 6.13.  informationElementSemantics
 
@@ -964,8 +964,8 @@ Table of Contents
       for adding semantics to the IPFIX Protocol, and as such requires a
       Standards Action [RFC8126] to modify.
 
-   Additional Information:  See the assigned semantics of an IPFIX
-      Information Element at [https://www.iana.org/assignments/ipfix/
+   Additional Information:  See the IP Flow Information Export (IPFIX)
+      Entities registry at [https://www.iana.org/assignments/ipfix/
       ipfix.xhtml#ipfix-information-element-semantic].
 
 6.14.  informationElementUnits
@@ -993,8 +993,8 @@ Table of Contents
       Information Element Units] subregistry.  The special value 0x00
       (none) is used to note that the field is unitless.
 
-   Additional Information:  See the assigned units of an IPFIX
-      Information Element at [IANA IPFIX Information Element Units].
+   Additional Information:  See the IPFIX Information Element Units
+      registry at [IANA IPFIX Information Element Units].
 
 6.15.  portRangeStart
 
@@ -1055,7 +1055,7 @@ Table of Contents
       being received.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the assigned ingress interface types at
+   Additional Information:  See the IANAifType-MIB registry at
       [https://www.iana.org/assignments/ianaiftype-mib].
 
 6.18.  egressInterfaceType
@@ -1076,7 +1076,7 @@ Table of Contents
       being sent.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the assigned egress interface types at
+   Additional Information:  See the IANAifType-MIB registry at
       [https://www.iana.org/assignments/ianaiftype-mib].
 
 6.19.  valueDistributionMethod
@@ -1112,9 +1112,9 @@ Table of Contents
       valueDistributionMethod registry is intended to list a complete
       set of possible value distribution methods.
 
-   Additional Information:  See the assigned value distribution methods
-      at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      value-distribution-method].
+   Additional Information:  See the valueDistributionMethod registry at
+      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
+      distribution-method].
 
 6.20.  flowSelectorAlgorithm
 
@@ -1150,7 +1150,7 @@ Table of Contents
       the flowSelectorAlgorithm registry.  It might be necessary to
       define new Information Elements to specify their parameters.
 
-   Additional Information:  See the assigned flow selector algorithms at
+   Additional Information:  See the flowSelectorAlgorithm registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
       flowselectoralgorithm].
 
@@ -1181,7 +1181,7 @@ Table of Contents
       values are bits so that multiple observations can be OR'd
       together.
 
-   Additional Information:  See the assigned data link frame types at
+   Additional Information:  See the dataLinkFrameType registry at
       [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
       link-frame-type].
 
@@ -1236,9 +1236,9 @@ Table of Contents
 
       Values are listed in the mibCaptureTimeSemantics registry.
 
-   Additional Information:  See the assigned values for the MIB capture
-      time semantics at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-mib-capture-time-semantics].
+   Additional Information:  See mibCaptureTimeSemanticsat registry at
+      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
+      capture-time-semantics].
 
 6.23.  natQuotaExceededEvent
 
@@ -1263,8 +1263,8 @@ Table of Contents
       Quota Exceeded event.  Values for this Information Element are
       listed in the "NAT Quota Exceeded Event Type" registry.
 
-   Additional Information:  See the assigned events for exceeded NAT
-      quota at [https://www.iana.org/assignments/ipfix/
+   Additional Information:  See the NAT Quota Exceeded Event Type
+      registry at [https://www.iana.org/assignments/ipfix/
       ipfix.xhtml#ipfix-nat-quota-exceeded-event].
 
       See [RFC0791] for the definition of the IPv4 source address field.
@@ -1296,9 +1296,9 @@ Table of Contents
       Threshold event.  Values for this Information Element are listed
       in the "NAT Threshold Event Type" registry.
 
-   Additional Information:  See the assigned values for the NAT
-      Threshold events at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-threshold-event].
+   Additional Information:  See the NAT Threshold Event Type registry at
+      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      threshold-event].
 
       See [RFC0791] for the definition of the IPv4 source address field.
 
