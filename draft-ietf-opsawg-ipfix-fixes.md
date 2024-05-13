@@ -54,7 +54,7 @@ informative:
 
 --- abstract
 
-This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix a shortcoming in the description of some Information Elements (IE), updates to ensure a consistent structure when calling an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
+This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
 
 
 --- middle
@@ -93,7 +93,7 @@ This document uses the IPFIX-specific terminology (Information Element, Template
 
 # Why An RFC is Needed for These Updates?
 
-Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from {{Section 5.1 of !RFC7013}} should be followed:
+Many of the edits in this document may be handled by the IPFIX Experts (informally called the IE-DOCTORS {{!RFC7013}}). However, and given that many of the impacted IEs were created via the IETF stream, the following from {{Section 5.1 of !RFC7013}} is followed:
 
    > This process should not in any way be construed as allowing the IE-DOCTORS to overrule IETF consensus.  Specifically, Information Elements in the IANA IE registry that were added with IETF consensus require IETF consensus for revision or deprecation.
 
@@ -250,7 +250,7 @@ Additional Information:
 : See {{?RFC0768}} for the definition of the UDP destination port field.
 : See {{?RFC9293}} for the definition of the TCP destination port field.
 : See {{?RFC9260}} for the definition of the SCTP destination port number field.
-: See the assigned transport protocol (e.g., TCP, UDP, DCCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., TCP, UDP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## exporterTransportPort
 
@@ -275,6 +275,7 @@ Additional Information:
 : See {{?RFC9293}} for the definition of the TCP source port field.
 : See {{?RFC9260}} for the definition of the SCTP source port number field.
 : See the assigned transport protocol (e.g., UDP, TCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+
 
 # Point to An Existing IANA Registry {#to-iana}
 
@@ -480,8 +481,7 @@ Description:
 
 Additional Information:
 : See the assigned NAT types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type].
-: See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3022}} for the definition of NAT44.
+: See {{?RFC3022}} for the definition of NAT and NAT44.
 : See {{?RFC6144}} for the definition of NAT46.
 : See {{?RFC6146}} for the definition of NAT64.
 : See {{?RFC6296}} for the definition of NPTv6.
@@ -885,7 +885,7 @@ already discussed for IPFIX in {{Section 8 of !RFC7012}}.
 
 Sections 4 to 7 include actions for IANA. These actions are not repeated here.
 
-This document also requests IANA to update the reference clause of the "IPFIX Information Elements" registry {{IANA-IPFIX}} with the reference to this document.
+This document also requests IANA to add the RFC number to be assigned to this document to the reference clause of the "IPFIX Information Elements" registry {{IANA-IPFIX}}.
 
 Also, this document requests IANA to consistently reference the "Service Name and Transport Protocol Port Number" through the registry as follows
 
@@ -907,6 +907,6 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element and fo
 
 Thanks to Eric Vyncke for the review and comments.
 
-Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, and Martin Duke for the tsvart review.
+Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, Martin Duke for the tsvart review, and Donald Eastlake for the intdir review.
 
 Thanks to Mahesh Jethanandani for the AD review.
