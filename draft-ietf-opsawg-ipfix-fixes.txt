@@ -467,7 +467,7 @@ Table of Contents
       See [RFC9260] for the definition of the SCTP destination port
       number field.
 
-      See the assigned transport protocol (e.g., TCP, UDP, and SCTP)
+      See the assigned transport protocol (e.g., UDP, TCP, and SCTP)
       port numbers at https://www.iana.org/assignments/service-names-
       port-numbers.
 
