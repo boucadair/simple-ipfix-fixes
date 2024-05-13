@@ -250,7 +250,7 @@ Additional Information:
 : See {{?RFC0768}} for the definition of the UDP destination port field.
 : See {{?RFC9293}} for the definition of the TCP destination port field.
 : See {{?RFC9260}} for the definition of the SCTP destination port number field.
-: See the assigned transport protocol (e.g., TCP, UDP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
+: See the assigned transport protocol (e.g., UDP, TCP, and SCTP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
 
 ## exporterTransportPort
 
