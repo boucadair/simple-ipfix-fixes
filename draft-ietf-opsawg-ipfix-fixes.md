@@ -368,7 +368,7 @@ Description:
 : Values are listed in the natOriginatingAddressRealm registry.
 
 Additional Information:
-: See the assigned NAT originating address realm registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
+: See the assigned NAT originating address realm values at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
 : See {{?RFC3022}} for the definition of NAT.
 
 ## natEvent
@@ -389,7 +389,7 @@ Description:
 : This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.
 
 Additional Information:
-: See the assigned NAT Event Types registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
+: See the assigned NAT Event Types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
 : See {{?RFC3022}} for the definition of NAT.
 : See {{?RFC3234}} for the definition of middleboxes.
 : See {{?RFC8158}} for the definitions of values 4-16.
@@ -408,7 +408,7 @@ Description:
 : Indicates a firewall event. Allowed values are listed in the firewallEvent registry.
 
 Additional Information:
-: See the assigned firewall events registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
+: See the assigned firewall events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
 
 ## biflowDirection
 
@@ -439,7 +439,7 @@ Description:
 : Type of observation point. Values are listed in the observationPointType registry.
 
 Additional Information:
-: See the assigned observation point type at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type].
+: See the assigned observation point types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type].
 
 ## anonymizationTechnique
 
