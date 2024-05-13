@@ -61,7 +61,7 @@ This document provides simple fixes to the IANA IP Flow Information Export (IPFI
 
 # Introduction
 
-When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some other entries of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
+When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
 
 As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
