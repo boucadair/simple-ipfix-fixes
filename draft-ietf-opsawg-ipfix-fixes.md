@@ -368,7 +368,7 @@ Description:
 : Values are listed in the natOriginatingAddressRealm registry.
 
 Additional Information:
-: See the assigned NAT originating address realm values at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
+: See the natOriginatingAddressRealm registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-originating-address-realm].
 : See {{?RFC3022}} for the definition of NAT.
 
 ## natEvent
@@ -389,7 +389,7 @@ Description:
 : This Information Element identifies a NAT event. This IE identifies the type of a NAT event. Examples of NAT events include, but are not limited to, NAT translation create, NAT translation delete, Threshold Reached, or Threshold Exceeded, etc. Values for this Information Element are listed in the "NAT Event Type" registry.
 
 Additional Information:
-: See the assigned NAT Event Types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
+: See the NAT Event Type registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type].
 : See {{?RFC3022}} for the definition of NAT.
 : See {{?RFC3234}} for the definition of middleboxes.
 : See {{?RFC8158}} for the definitions of values 4-16.
@@ -408,7 +408,7 @@ Description:
 : Indicates a firewall event. Allowed values are listed in the firewallEvent registry.
 
 Additional Information:
-: See the assigned firewall events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
+: See the firewallEvent registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-firewall-event].
 
 ## biflowDirection
 
@@ -423,7 +423,7 @@ Description:
 : A description of the direction assignment method used to assign the Biflow Source and Destination. This Information Element MAY be present in a Flow Data Record, or applied to all flows exported from an Exporting Process or Observation Domain using IPFIX Options. If this Information Element is not present in a Flow Record or associated with a Biflow via scope, it is assumed that the configuration of the direction assignment method is done out-of-band. Note that when using IPFIX Options to apply this Information Element to all flows within an Observation Domain or from an Exporting Process, the Option SHOULD be sent reliably. If reliable transport is not available (i.e., when using UDP), this Information Element SHOULD appear in each Flow Record. Values are listed in the biflowDirection registry.
 
 Additional Information:
-: See the assigned biflow direction values at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction].
+: See the biflowDirection registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-direction].
 
 
 ## observationPointType
@@ -439,7 +439,7 @@ Description:
 : Type of observation point. Values are listed in the observationPointType registry.
 
 Additional Information:
-: See the assigned observation point types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type].
+: See the observationPointType registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-observation-point-type].
 
 ## anonymizationTechnique
 
@@ -454,7 +454,7 @@ Description:
 : A description of the anonymization technique applied to a referenced Information Element within a referenced Template. Each technique may be applicable only to certain Information Elements and recommended only for certain Information Elements. Values are listed in the anonymizationTechnique registry.
 
 Additional Information:
-: See the assigned anonymization techniques at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique].
+: See the anonymizationTechnique registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-anonymization-technique].
 
 ## natType
 
@@ -480,7 +480,7 @@ Description:
 : Values are listed in the natType registry.
 
 Additional Information:
-: See the assigned NAT types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type].
+: See the natType registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type].
 : See {{?RFC3022}} for the definition of NAT and NAT44.
 : See {{?RFC6144}} for the definition of NAT46.
 : See {{?RFC6146}} for the definition of NAT64.
@@ -506,7 +506,7 @@ Description:
 : There is a broad variety of possible parameters that could be used for Property match Filtering (5) but currently there are no agreed parameters specified.
 
 Additional Information:
-: See the assigned PSAMP parameters at [https://www.iana.org/assignments/psamp-parameters].
+: See the Packet Sampling (PSAMP) Parameters registry at [https://www.iana.org/assignments/psamp-parameters].
 
 ## informationElementDataType
 
@@ -522,7 +522,7 @@ Description:
 : The [informationElementDataType] subregistry is intended to assign numbers for type names, not to provide a mechanism for adding data types to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
 Additional Information:
-: See the assigned element data types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types].
+: See the IPFIX Information Element Data Types registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-data-types].
 
 ## informationElementSemantics
 
@@ -538,7 +538,7 @@ Description:
 : The [IPFIX Information Element Semantics] subregistry is intended to assign numbers for semantics names, not to provide a mechanism for adding semantics to the IPFIX Protocol, and as such requires a Standards Action {{?RFC8126}} to modify.
 
 Additional Information:
-: See the assigned semantics of an IPFIX Information Element at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantic].
+: See the IP Flow Information Export (IPFIX) Entities registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-information-element-semantic].
 
 ## informationElementUnits
 
@@ -553,7 +553,7 @@ Description:
 : A description of the units of an IPFIX Information Element. These correspond to the units implicitly defined in the Information Element definitions in Section 5 of the IPFIX Information Model {{?RFC5102}}; see that section for more information on the types described in the informationElementsUnits subregistry. These types can take the values in the [IANA IPFIX Information Element Units] subregistry. The special value 0x00 (none) is used to note that the field is unitless.
 
 Additional Information:
-: See the assigned units of an IPFIX Information Element at [IANA IPFIX Information Element Units].
+: See the IPFIX Information Element Units registry at [IANA IPFIX Information Element Units].
 
 
 ## portRangeStart
@@ -603,7 +603,7 @@ Description:
 : The type of interface where packets of this Flow are being received. The value matches the value of managed object 'ifType'.
 
 Additional Information:
-: See the assigned ingress interface types at [https://www.iana.org/assignments/ianaiftype-mib].
+: See the IANAifType-MIB registry at [https://www.iana.org/assignments/ianaiftype-mib].
 
 ## egressInterfaceType
 
@@ -621,7 +621,7 @@ Description:
 : The type of interface where packets of this Flow are being sent. The value matches the value of managed object 'ifType'.
 
 Additional Information:
-: See the assigned egress interface types at [https://www.iana.org/assignments/ianaiftype-mib].
+: See the IANAifType-MIB registry at [https://www.iana.org/assignments/ianaiftype-mib].
 
 
 ## valueDistributionMethod
@@ -638,7 +638,7 @@ Description:
 : A description of the method used to distribute the counters from Contributing Flows into the Aggregated Flow records described by an associated scope, generally a Template. The method is deemed to apply to all the non-key Information Elements in the referenced scope for which value distribution is a valid operation; if the originalFlowsInitiated and/or originalFlowsCompleted Information Elements appear in the Template, they are not subject to this distribution method, as they each infer their own distribution method. The valueDistributionMethod registry is intended to list a complete set of possible value distribution methods.
 
 Additional Information:
-: See the assigned value distribution methods at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method].
+: See the valueDistributionMethod registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-distribution-method].
 
 ## flowSelectorAlgorithm
 
@@ -655,7 +655,7 @@ Description:
 : This Information Element identifies the Intermediate Flow Selection Process technique (e.g., Filtering, Sampling) that is applied by the Intermediate Flow Selection Process. Most of these techniques have parameters. Its configuration parameter(s) MUST be clearly specified. Further Information Elements are needed to fully specify packet selection with these methods and all their parameters. Further method identifiers may be added to the flowSelectorAlgorithm registry. It might be necessary to define new Information Elements to specify their parameters.
 
 Additional Information:
-: See the assigned flow selector algorithms at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm].
+: See the flowSelectorAlgorithm registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flowselectoralgorithm].
 
 ## dataLinkFrameType
 
@@ -675,7 +675,7 @@ Description:
 : Further values may be assigned by IANA. Note that the assigned values are bits so that multiple observations can be OR'd together.
 
 Additional Information:
-: See the assigned data link frame types at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type].
+: See the dataLinkFrameType registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-link-frame-type].
 : More information about the data link layer can be found in (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994).
 
 ## mibCaptureTimeSemantics
@@ -695,7 +695,7 @@ Description:
 : Values are listed in the mibCaptureTimeSemantics registry.
 
 Additional Information:
-: See the assigned values for the MIB capture time semantics at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics].
+: See mibCaptureTimeSemanticsat registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics].
 
 ## natQuotaExceededEvent
 
@@ -715,7 +715,7 @@ Description:
 : This Information Element identifies the type of a NAT Quota Exceeded event. Values for this Information Element are listed in the "NAT Quota Exceeded Event Type" registry.
 
 Additional Information:
-: See the assigned events for exceeded NAT quota at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event].
+: See the NAT Quota Exceeded Event Type registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event].
 : See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
 : See {{?RFC3234}} for the definition of middleboxes.
@@ -738,7 +738,7 @@ Description:
 : This Information Element identifies a type of a NAT Threshold event. Values for this Information Element are listed in the "NAT Threshold Event Type" registry.
 
 Additional Information:
-: See the assigned values for the NAT Threshold events at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event].
+: See the NAT Threshold Event Type registry at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event].
 : See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
 : See {{?RFC3234}} for the definition of middleboxes.
