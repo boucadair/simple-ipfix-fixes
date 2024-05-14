@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-12T00:39:27.736264+00:00",
+  "timestamp": "2024-05-14T00:36:11.013738+00:00",
   "repo": "boucadair/simple-ipfix-fixes",
   "labels": [
     {
@@ -339,24 +339,54 @@
       "id": "PR_kwDOIcnmwM5uoTFw",
       "title": "Donald's Review",
       "url": "https://github.com/boucadair/simple-ipfix-fixes/pull/12",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-05-06T12:12:44Z",
-      "updatedAt": "2024-05-06T12:12:44Z",
+      "updatedAt": "2024-05-13T11:50:37Z",
       "baseRepository": "boucadair/simple-ipfix-fixes",
       "baseRefName": "main",
       "baseRefOid": "a5d6b8e900c20568d8516197a24467c5d2a5ce9f",
       "headRepository": "boucadair/simple-ipfix-fixes",
       "headRefName": "Donald-Eastlake",
       "headRefOid": "2b26eb2a42724bd3b0a657a9bfe37edd9f41da40",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-05-13T11:50:36Z",
+      "mergedAt": "2024-05-13T11:50:36Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "0ce8d8f3c06fc19d4bff338cc7baee3d200b2d84"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOIcnmwM5vP7fT",
+      "title": "Paul's Review",
+      "url": "https://github.com/boucadair/simple-ipfix-fixes/pull/13",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-05-13T12:05:45Z",
+      "updatedAt": "2024-05-13T12:51:35Z",
+      "baseRepository": "boucadair/simple-ipfix-fixes",
+      "baseRefName": "main",
+      "baseRefOid": "0ce8d8f3c06fc19d4bff338cc7baee3d200b2d84",
+      "headRepository": "boucadair/simple-ipfix-fixes",
+      "headRefName": "Paul's-Review",
+      "headRefOid": "e46ee3ccfdc7aa1223a1d370462a4445d5857921",
+      "closedAt": "2024-05-13T12:51:35Z",
+      "mergedAt": "2024-05-13T12:51:35Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "5bd5f0bbbef7ece58c931cd01be3137b3d04a1a4"
+      },
       "comments": [],
       "reviews": []
     }
