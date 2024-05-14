@@ -17,7 +17,7 @@ keyword:
  - Network Providers
  - Network Managment
  - Anomaly detection
- - Telemetry 
+ - Telemetry
 author:
  -
     fullname: Mohamed Boucadair
