@@ -13,6 +13,11 @@ area: "Operations and Management"
 workgroup: "OPSAWG"
 keyword:
  - IPFIX
+ - Operations
+ - Network Providers
+ - Network Managment
+ - Anomaly detection
+ - Telemetry 
 author:
  -
     fullname: Mohamed Boucadair
