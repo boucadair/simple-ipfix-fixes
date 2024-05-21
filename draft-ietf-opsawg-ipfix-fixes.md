@@ -912,6 +912,6 @@ Thomas Graf tagged an issue with the forwardingStatus Information Element and fo
 
 Thanks to Eric Vyncke for the review and comments.
 
-Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, Martin Duke for the tsvart review, and Donald Eastlake for the intdir review.
+Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, Martin Duke for the tsvart review, Donald Eastlake for the intdir review, and Hilarie Orman for the secdir review.
 
 Thanks to Mahesh Jethanandani for the AD review.
