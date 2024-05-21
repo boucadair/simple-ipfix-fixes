@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 15 November 2024                                         Huawei
-                                                             14 May 2024
+Expires: 22 November 2024                                         Huawei
+                                                             21 May 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 November 2024.
+   This Internet-Draft will expire on 22 November 2024.
 
 Copyright Notice
 
@@ -1748,8 +1748,8 @@ Acknowledgments
    Thanks to Eric Vyncke for the review and comments.
 
    Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart
-   review, Martin Duke for the tsvart review, and Donald Eastlake for
-   the intdir review.
+   review, Martin Duke for the tsvart review, Donald Eastlake for the
+   intdir review, and Hilarie Orman for the secdir review.
 
    Thanks to Mahesh Jethanandani for the AD review.
 
