@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 22 November 2024                                         Huawei
-                                                             21 May 2024
+Expires: 23 November 2024                                         Huawei
+                                                             22 May 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 November 2024.
+   This Internet-Draft will expire on 23 November 2024.
 
 Copyright Notice
 
@@ -581,9 +581,8 @@ Table of Contents
       allocated the top-of-stack label.  Values for this field are
       listed in the MPLS label type registry.
 
-   Additional Information:  See the list of MPLS label types assigned by
-      IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      mpls-label-type].
+   Additional Information:  See the IPFIX MPLS label type registry
+      ([https://www.iana.org/assignments/mpls-label-values]).
 
       See [RFC3031] for the MPLS label structure.
 
@@ -610,8 +609,9 @@ Table of Contents
       Values for this field are listed in the Classification Engine IDs
       registry.
 
-   Additional Information:  See https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#classification-engine-ids.
+   Additional Information:  See the Classification Engine IDs registry
+      ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#classification-engine-ids]).
 
 6.3.  flowEndReason
 
@@ -627,9 +627,9 @@ Table of Contents
    Description:  The reason for Flow termination.  Values are listed in
       the flowEndReason registry.
 
-   Additional Information:  See the flowEndReason registry available at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
-      end-reason].
+   Additional Information:  See the flowEndReason registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
+      end-reason]).
 
 6.4.  natOriginatingAddressRealm
 
@@ -658,8 +658,8 @@ Table of Contents
       Values are listed in the natOriginatingAddressRealm registry.
 
    Additional Information:  See the natOriginatingAddressRealm registry
-      at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      originating-address-realm].
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      originating-address-realm]).
 
       See [RFC3022] for the definition of NAT.
 
@@ -690,9 +690,9 @@ Table of Contents
       Values for this Information Element are listed in the "NAT Event
       Type" registry.
 
-   Additional Information:  See the NAT Event Type registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      event-type].
+   Additional Information:  See the NAT Event Type registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      event-type]).
 
       See [RFC3022] for the definition of NAT.
 
@@ -715,9 +715,9 @@ Table of Contents
    Description:  Indicates a firewall event.  Allowed values are listed
       in the firewallEvent registry.
 
-   Additional Information:  See the firewallEvent registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      firewall-event].
+   Additional Information:  See the firewallEvent registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      firewall-event]).
 
 6.7.  biflowDirection
 
@@ -755,9 +755,9 @@ Table of Contents
       this Information Element SHOULD appear in each Flow Record.
       Values are listed in the biflowDirection registry.
 
-   Additional Information:  See the biflowDirection registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-
-      direction].
+   Additional Information:  See the biflowDirection registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-
+      direction]).
 
 6.8.  observationPointType
 
@@ -773,9 +773,9 @@ Table of Contents
    Description:  Type of observation point.  Values are listed in the
       observationPointType registry.
 
-   Additional Information:  See the observationPointType registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      observation-point-type].
+   Additional Information:  See the observationPointType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      observation-point-type]).
 
 6.9.  anonymizationTechnique
 
@@ -797,9 +797,9 @@ Table of Contents
       Elements and recommended only for certain Information Elements.
       Values are listed in the anonymizationTechnique registry.
 
-   Additional Information:  See the anonymizationTechnique registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      anonymization-technique].
+   Additional Information:  See the anonymizationTechnique registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      anonymization-technique]).
 
 6.10.  natType
 
@@ -831,9 +831,9 @@ Table of Contents
 
       Values are listed in the natType registry.
 
-   Additional Information:  See the natType registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      type].
+   Additional Information:  See the natType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      type]).
 
       See [RFC3022] for the definition of NAT and NAT44.
 
@@ -880,19 +880,18 @@ Table of Contents
       the Selection Process.  Most of these methods have parameters.
       Further Information Elements are needed to fully specify packet
       selection with these methods and all their parameters.  For the
-      methods parameters, Information Elements are defined in the
-      information model document [RFC5102].  The names of these
-      Information Elements are listed for each method identifier.
-      Further method identifiers may be added to the list.  It might be
-      necessary to define new Information Elements to specify their
-      parameters.
+      methods parameters, Information Elements are defined in the IPFIX
+      IANA registry [IANA-IPFIX].  The names of these Information
+      Elements are listed for each method identifier.  Further method
+      identifiers may be added to the list.  It might be necessary to
+      define new Information Elements to specify their parameters.
 
       There is a broad variety of possible parameters that could be used
       for Property match Filtering (5) but currently there are no agreed
       parameters specified.
 
    Additional Information:  See the Packet Sampling (PSAMP) Parameters
-      registry at [https://www.iana.org/assignments/psamp-parameters].
+      registry ([https://www.iana.org/assignments/psamp-parameters]).
 
 6.12.  informationElementDataType
 
@@ -925,8 +924,8 @@ Table of Contents
       Action [RFC8126] to modify.
 
    Additional Information:  See the IPFIX Information Element Data Types
-      registry at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-information-element-data-types].
+      registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-information-element-data-types]).
 
 6.13.  informationElementSemantics
 
@@ -965,8 +964,8 @@ Table of Contents
       Standards Action [RFC8126] to modify.
 
    Additional Information:  See the IP Flow Information Export (IPFIX)
-      Entities registry at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-information-element-semantic].
+      Entities registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-information-element-semantic]).
 
 6.14.  informationElementUnits
 
@@ -994,7 +993,7 @@ Table of Contents
       (none) is used to note that the field is unitless.
 
    Additional Information:  See the IPFIX Information Element Units
-      registry at [IANA IPFIX Information Element Units].
+      registry ([IANA IPFIX Information Element Units]).
 
 6.15.  portRangeStart
 
@@ -1055,8 +1054,8 @@ Table of Contents
       being received.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the IANAifType-MIB registry at
-      [https://www.iana.org/assignments/ianaiftype-mib].
+   Additional Information:  See the IANAifType-MIB registry
+      ([https://www.iana.org/assignments/ianaiftype-mib]).
 
 6.18.  egressInterfaceType
 
@@ -1076,8 +1075,8 @@ Table of Contents
       being sent.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the IANAifType-MIB registry at
-      [https://www.iana.org/assignments/ianaiftype-mib].
+   Additional Information:  See the IANAifType-MIB registry
+      ([https://www.iana.org/assignments/ianaiftype-mib]).
 
 6.19.  valueDistributionMethod
 
@@ -1112,9 +1111,9 @@ Table of Contents
       valueDistributionMethod registry is intended to list a complete
       set of possible value distribution methods.
 
-   Additional Information:  See the valueDistributionMethod registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
-      distribution-method].
+   Additional Information:  See the valueDistributionMethod registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
+      distribution-method]).
 
 6.20.  flowSelectorAlgorithm
 
@@ -1150,9 +1149,9 @@ Table of Contents
       the flowSelectorAlgorithm registry.  It might be necessary to
       define new Information Elements to specify their parameters.
 
-   Additional Information:  See the flowSelectorAlgorithm registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      flowselectoralgorithm].
+   Additional Information:  See the flowSelectorAlgorithm registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      flowselectoralgorithm]).
 
 6.21.  dataLinkFrameType
 
@@ -1181,9 +1180,9 @@ Table of Contents
       values are bits so that multiple observations can be OR'd
       together.
 
-   Additional Information:  See the dataLinkFrameType registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
-      link-frame-type].
+   Additional Information:  See the dataLinkFrameType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
+      link-frame-type]).
 
       More information about the data link layer can be found in
       (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994).
@@ -1236,9 +1235,9 @@ Table of Contents
 
       Values are listed in the mibCaptureTimeSemantics registry.
 
-   Additional Information:  See mibCaptureTimeSemanticsat registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
-      capture-time-semantics].
+   Additional Information:  See the mibCaptureTimeSemanticsat registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
+      capture-time-semantics]).
 
 6.23.  natQuotaExceededEvent
 
@@ -1264,8 +1263,8 @@ Table of Contents
       listed in the "NAT Quota Exceeded Event Type" registry.
 
    Additional Information:  See the NAT Quota Exceeded Event Type
-      registry at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-quota-exceeded-event].
+      registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-nat-quota-exceeded-event]).
 
       See [RFC0791] for the definition of the IPv4 source address field.
 
@@ -1296,9 +1295,9 @@ Table of Contents
       Threshold event.  Values for this Information Element are listed
       in the "NAT Threshold Event Type" registry.
 
-   Additional Information:  See the NAT Threshold Event Type registry at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      threshold-event].
+   Additional Information:  See the NAT Threshold Event Type registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      threshold-event]).
 
       See [RFC0791] for the definition of the IPv4 source address field.
 
