@@ -708,7 +708,7 @@ Description:
 : Values are listed in the mibCaptureTimeSemantics registry.
 
 Additional Information:
-: See the mibCaptureTimeSemanticsat registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics]).
+: See the mibCaptureTimeSemantics registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-capture-time-semantics]).
 
 ## natQuotaExceededEvent
 
