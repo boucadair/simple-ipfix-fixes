@@ -3,6 +3,14 @@ title: "Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry"
 abbrev: "IPFIX IANA Fixes"
 category: std
 
+pi:
+  toc: yes
+  tocdepth: 2
+  sortrefs: yes
+  symrefs: yes
+  compact: yes
+  comments: yes
+
 docname: draft-ietf-opsawg-ipfix-fixes-latest
 submissiontype: IETF
 number:
