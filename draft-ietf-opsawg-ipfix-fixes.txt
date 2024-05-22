@@ -72,113 +72,43 @@ Table of Contents
    3.  Why An RFC is Needed for These Updates?
    4.  Update the Description
      4.1.  sourceTransportPort
-       4.1.1.  OLD
-       4.1.2.  NEW
      4.2.  destinationTransportPort
-       4.2.1.  OLD
-       4.2.2.  NEW
      4.3.  forwardingStatus
-       4.3.1.  OLD
-       4.3.2.  NEW
      4.4.  collectorTransportPort
-       4.4.1.  OLD
-       4.4.2.  NEW
      4.5.  exporterTransportPort
-       4.5.1.  OLD
-       4.5.2.  NEW
    5.  Point to An Existing IANA Registry
    6.  Consistent Citation of IANA Registries
      6.1.  mplsTopLabelType
-       6.1.1.  OLD
-       6.1.2.  NEW
      6.2.  classificationEngineId
-       6.2.1.  OLD
-       6.2.2.  NEW
      6.3.  flowEndReason
-       6.3.1.  OLD
-       6.3.2.  NEW
      6.4.  natOriginatingAddressRealm
-       6.4.1.  OLD
-       6.4.2.  NEW
      6.5.  natEvent
-       6.5.1.  OLD
-       6.5.2.  NEW
      6.6.  firewallEvent
-       6.6.1.  OLD
-       6.6.2.  NEW
      6.7.  biflowDirection
-       6.7.1.  OLD
-       6.7.2.  NEW
      6.8.  observationPointType
-       6.8.1.  OLD
-       6.8.2.  NEW
      6.9.  anonymizationTechnique
-       6.9.1.  OLD
-       6.9.2.  NEW
      6.10. natType
-       6.10.1.  OLD
-       6.10.2.  NEW
      6.11. selectorAlgorithm
-       6.11.1.  OLD
-       6.11.2.  NEW
      6.12. informationElementDataType
-       6.12.1.  OLD
-       6.12.2.  NEW
      6.13. informationElementSemantics
-       6.13.1.  OLD
-       6.13.2.  NEW
      6.14. informationElementUnits
-       6.14.1.  OLD
-       6.14.2.  NEW
      6.15. portRangeStart
-       6.15.1.  OLD
-       6.15.2.  NEW
      6.16. portRangeEnd
-       6.16.1.  OLD
-       6.16.2.  NEW
      6.17. ingressInterfaceType
-       6.17.1.  OLD
-       6.17.2.  NEW
      6.18. egressInterfaceType
-       6.18.1.  OLD
-       6.18.2.  NEW
      6.19. valueDistributionMethod
-       6.19.1.  OLD
-       6.19.2.  NEW
      6.20. flowSelectorAlgorithm
-       6.20.1.  OLD
-       6.20.2.  NEW
      6.21. dataLinkFrameType
-       6.21.1.  OLD
-       6.21.2.  NEW
      6.22. mibCaptureTimeSemantics
-       6.22.1.  OLD
-       6.22.2.  NEW
      6.23. natQuotaExceededEvent
-       6.23.1.  OLD
-       6.23.2.  NEW
      6.24. natThresholdEvent
-       6.24.1.  OLD
-       6.24.2.  NEW
    7.  Misc
      7.1.  collectionTimeMilliseconds
-       7.1.1.  OLD
-       7.1.2.  NEW
      7.2.  messageMD5Checksum
-       7.2.1.  OLD
-       7.2.2.  NEW
      7.3.  anonymizationFlags
-       7.3.1.  OLD
-       7.3.2.  NEW
      7.4.  informationElementDescription
-       7.4.1.  OLD
-       7.4.2.  NEW
      7.5.  distinctCountOfDestinationIPAddress
-       7.5.1.  OLD
-       7.5.2.  NEW
      7.6.  externalAddressRealm
-       7.6.1.  OLD
-       7.6.2.  NEW
    8.  Security Considerations
    9.  IANA Considerations
    10. References
