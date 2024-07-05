@@ -5,22 +5,23 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 7 November 2024                                          Huawei
-                                                              6 May 2024
+Expires: 6 January 2025                                           Huawei
+                                                             5 July 2024
 
 
-  Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry
+  Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA
+                                Registry
                   draft-ietf-opsawg-ipfix-fixes-latest
 
 Abstract
 
    This document provides simple fixes to the IANA IP Flow Information
-   Export (IPFIX) registry.  Specifically, this document provides
-   updates to fix shortcomings in the description of some Information
-   Elements (IE), updates to ensure a consistent structure when citing
-   an existing IANA registry, and updates to fix broken pointers,
-   orphaned section references, etc.  The updates are also meant to
-   bring some consistency among the entries of the registry.
+   Export (IPFIX) Entities registry.  Specifically, this document
+   provides updates to fix shortcomings in the description of some
+   Information Elements (IE), updates to ensure a consistent structure
+   when citing an existing IANA registry, and updates to fix broken
+   pointers, orphaned section references, etc.  The updates are also
+   meant to bring some consistency among the entries of the registry.
 
 Discussion Venues
 
@@ -49,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 November 2024.
+   This Internet-Draft will expire on 6 January 2025.
 
 Copyright Notice
 
@@ -72,113 +73,43 @@ Table of Contents
    3.  Why An RFC is Needed for These Updates?
    4.  Update the Description
      4.1.  sourceTransportPort
-       4.1.1.  OLD
-       4.1.2.  NEW
      4.2.  destinationTransportPort
-       4.2.1.  OLD
-       4.2.2.  NEW
      4.3.  forwardingStatus
-       4.3.1.  OLD
-       4.3.2.  NEW
      4.4.  collectorTransportPort
-       4.4.1.  OLD
-       4.4.2.  NEW
      4.5.  exporterTransportPort
-       4.5.1.  OLD
-       4.5.2.  NEW
    5.  Point to An Existing IANA Registry
    6.  Consistent Citation of IANA Registries
      6.1.  mplsTopLabelType
-       6.1.1.  OLD
-       6.1.2.  NEW
      6.2.  classificationEngineId
-       6.2.1.  OLD
-       6.2.2.  NEW
      6.3.  flowEndReason
-       6.3.1.  OLD
-       6.3.2.  NEW
      6.4.  natOriginatingAddressRealm
-       6.4.1.  OLD
-       6.4.2.  NEW
      6.5.  natEvent
-       6.5.1.  OLD
-       6.5.2.  NEW
      6.6.  firewallEvent
-       6.6.1.  OLD
-       6.6.2.  NEW
      6.7.  biflowDirection
-       6.7.1.  OLD
-       6.7.2.  NEW
      6.8.  observationPointType
-       6.8.1.  OLD
-       6.8.2.  NEW
      6.9.  anonymizationTechnique
-       6.9.1.  OLD
-       6.9.2.  NEW
      6.10. natType
-       6.10.1.  OLD
-       6.10.2.  NEW
      6.11. selectorAlgorithm
-       6.11.1.  OLD
-       6.11.2.  NEW
      6.12. informationElementDataType
-       6.12.1.  OLD
-       6.12.2.  NEW
      6.13. informationElementSemantics
-       6.13.1.  OLD
-       6.13.2.  NEW
      6.14. informationElementUnits
-       6.14.1.  OLD
-       6.14.2.  NEW
      6.15. portRangeStart
-       6.15.1.  OLD
-       6.15.2.  NEW
      6.16. portRangeEnd
-       6.16.1.  OLD
-       6.16.2.  NEW
      6.17. ingressInterfaceType
-       6.17.1.  OLD
-       6.17.2.  NEW
      6.18. egressInterfaceType
-       6.18.1.  OLD
-       6.18.2.  NEW
      6.19. valueDistributionMethod
-       6.19.1.  OLD
-       6.19.2.  NEW
      6.20. flowSelectorAlgorithm
-       6.20.1.  OLD
-       6.20.2.  NEW
      6.21. dataLinkFrameType
-       6.21.1.  OLD
-       6.21.2.  NEW
      6.22. mibCaptureTimeSemantics
-       6.22.1.  OLD
-       6.22.2.  NEW
      6.23. natQuotaExceededEvent
-       6.23.1.  OLD
-       6.23.2.  NEW
      6.24. natThresholdEvent
-       6.24.1.  OLD
-       6.24.2.  NEW
    7.  Misc
      7.1.  collectionTimeMilliseconds
-       7.1.1.  OLD
-       7.1.2.  NEW
      7.2.  messageMD5Checksum
-       7.2.1.  OLD
-       7.2.2.  NEW
      7.3.  anonymizationFlags
-       7.3.1.  OLD
-       7.3.2.  NEW
      7.4.  informationElementDescription
-       7.4.1.  OLD
-       7.4.2.  NEW
      7.5.  distinctCountOfDestinationIPAddress
-       7.5.1.  OLD
-       7.5.2.  NEW
      7.6.  externalAddressRealm
-       7.6.1.  OLD
-       7.6.2.  NEW
    8.  Security Considerations
    9.  IANA Considerations
    10. References
@@ -190,10 +121,10 @@ Table of Contents
 1.  Introduction
 
    When OPSAWG was considering [RFC9565] which updates [RFC7125], the WG
-   realized that some other parts of the IANA IP Flow Information Export
+   realized that some parts of the IANA IP Flow Information Export
    (IPFIX) registry [IANA-IPFIX] were not up-to-date.  This document
-   intends to update the IANA registry and bring some consistency among
-   the entries of the registry.
+   updates the IANA registry and bring some consistency among the
+   entries of the registry.
 
    As discussed with IANA during the publication process of [RFC9487],
    the "Additional Information" entry in [IANA-IPFIX] should contain a
@@ -302,8 +233,8 @@ Table of Contents
 
       See [RFC4340] for the definition of the DCCP source port field.
 
-      See the assigned tranport protocol (e.g., TCP, UDP, DCCP, and
-      SCTP) port numbers at https://www.iana.org/assignments/service-
+      See the assigned transport protocol (e.g., UDP, TCP, SCTP, and
+      DCCP) port numbers at https://www.iana.org/assignments/service-
       names-port-numbers.
 
 4.2.  destinationTransportPort
@@ -331,9 +262,9 @@ Table of Contents
 
    Description:  The destination port identifier in the transport
       protocol header.  For transport protocols such as UDP, TCP, SCTP,
-      and DCCP, this is the source port number given in the respective
-      header.  This field MAY also be used for future transport
-      protocols that have 16-bit source port identifiers.
+      and DCCP, this is the destination port number given in the
+      respective header.  This field MAY also be used for future
+      transport protocols that have 16-bit destination port identifiers.
 
    Additional Information:  See [RFC0768] for the definition of the UDP
       destination port field.
@@ -347,8 +278,8 @@ Table of Contents
       See [RFC4340] for the definition of the DCCP destination port
       field.
 
-      See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
-      SCTP) port numbers at https://www.iana.org/assignments/service-
+      See the assigned transport protocol (e.g., UDP, TCP, SCTP, and
+      DCCP) port numbers at https://www.iana.org/assignments/service-
       names-port-numbers.
 
 4.3.  forwardingStatus
@@ -393,41 +324,41 @@ Table of Contents
 
 4.3.2.  NEW
 
-    - Description:  This Information Element describes the forwarding
-                    status of the flow and any attached reasons.
-                    IPFIX reduced-size encoding is used as required.
+   - Description:  This Information Element describes the forwarding
+                   status of the flow and any attached reasons.
+                   IPFIX reduced-size encoding is used as required.
 
-                    A structure is currently associated with the first
-                    byte. Future versions may be defined to associate
-                    meanings with the remaining bits.
+                   A structure is currently associated with the least-significant
+                   byte. Future versions may be defined to associate
+                   meanings with the remaining bits.
 
-                    The current version of the Information Element
-                    should be exported as unsigned8.
+                   The current version of the Information Element
+                   should be exported as unsigned8.
 
-                    The layout of the encoding is as follows:
+                   The layout of the encoding is as follows:
 
-                    MSB  -  0   1   2   3   4   5   6   7  -  LSB
-                          +---+---+---+---+---+---+---+---+
-                          | Status|  Reason code or flags |
-                          +---+---+---+---+---+---+---+---+
+                   MSB  -  0   1   2   3   4   5   6   7  -  LSB
+                         +---+---+---+---+---+---+---+---+
+                         | Status|  Reason code or flags |
+                         +---+---+---+---+---+---+---+---+
 
-                    Examples:
+                   Examples:
 
-                    value : 0x40 = 64
-                    binary: 01000000
-                    decode: 01        -> Forward
-                              000000  -> No further information
+                   value : 0x40 = 64
+                   binary: 01000000
+                   decode: 01        -> Forward
+                             000000  -> No further information
 
-                    value : 0x89 = 137
-                    binary: 10001001
-                    decode: 10        -> Drop
-                              001001  -> Bad TTL
+                   value : 0x89 = 137
+                   binary: 10001001
+                   decode: 10        -> Drop
+                             001001  -> Bad TTL
 
-    - Additional Information: See "NetFlow Version 9 Flow-Record Format"
-              [CCO-NF9FMT]. See the Forwarding Status sub-registries
-              at [Forwarding-Status].
+   - Additional Information: See "NetFlow Version 9 Flow-Record Format"
+             [CCO-NF9FMT]. See the Forwarding Status sub-registries
+             at [Forwarding-Status].
 
-    - Abstract Data Type: unsigned32
+   - Abstract Data Type: unsigned32
 
 4.4.  collectorTransportPort
 
@@ -467,7 +398,7 @@ Table of Contents
       See [RFC9260] for the definition of the SCTP destination port
       number field.
 
-      See the assigned transport protocol (e.g., TCP, UDP, and SCTP)
+      See the assigned transport protocol (e.g., UDP, TCP, and SCTP)
       port numbers at https://www.iana.org/assignments/service-names-
       port-numbers.
 
@@ -496,7 +427,7 @@ Table of Contents
 
 4.5.2.  NEW
 
-   Description:  The source port identifier to which the Exporting
+   Description:  The source port identifier from which the Exporting
       Process sends Flow information.  For transport protocols such as
       UDP, TCP, and SCTP, this is the source port number.  This field
       MAY also be used for future transport protocols that have 16-bit
@@ -510,7 +441,7 @@ Table of Contents
       See [RFC9260] for the definition of the SCTP source port number
       field.
 
-      See the assigned transport protocol (e.g., TCP, UDP, and SCTP)
+      See the assigned transport protocol (e.g., UDP, TCP, and SCTP)
       port numbers at https://www.iana.org/assignments/service-names-
       port-numbers.
 
@@ -519,38 +450,45 @@ Table of Contents
    This document requests IANA to update the following entries by adding
    the indicated "Additional Information" to the [IANA-IPFIX] registry:
 
-   +=======================+===========================================+
-   |IE                     |Additional Information                     |
-   +=======================+===========================================+
-   |icmpTypeCodeIPv4       |https://www.iana.org/assignments/icmp-     |
-   |                       |parameters/icmp-parameters.xhtml           |
-   +-----------------------+-------------------------------------------+
-   |igmpType               |https://www.iana.org/assignments/igmp-type-|
-   |                       |numbers/igmp-type-numbers.xhtml#igmp-type- |
-   |                       |numbers-1                                  |
-   +-----------------------+-------------------------------------------+
-   |icmpTypeCodeIPv6       |https://www.iana.org/assignments/icmpv6-   |
-   |                       |parameters/icmpv6-parameters.xhtml         |
-   +-----------------------+-------------------------------------------+
-   |icmpTypeIPv4           |https://www.iana.org/assignments/icmp-     |
-   |                       |parameters/icmp-parameters.xhtml#icmp-     |
-   |                       |parameters-types                           |
-   +-----------------------+-------------------------------------------+
-   |icmpCodeIPv4           |https://www.iana.org/assignments/icmp-     |
-   |                       |parameters/icmp-parameters.xhtml#icmp-     |
-   |                       |parameters-codes                           |
-   +-----------------------+-------------------------------------------+
-   |icmpTypeIPv6           |https://www.iana.org/assignments/icmpv6-   |
-   |                       |parameters/                                |
-   |                       |icmpv6-parameters.xhtml#icmpv6-parameters-2|
-   +-----------------------+-------------------------------------------+
-   |icmpCodeIPv6           |https://www.iana.org/assignments/icmpv6-   |
-   |                       |parameters/                                |
-   |                       |icmpv6-parameters.xhtml#icmpv6-parameters-3|
-   +-----------------------+-------------------------------------------+
-   |privateEnterpriseNumber|https://www.iana.org/assignments/          |
-   |                       |enterprise-numbers/enterprise-numbers      |
-   +-----------------------+-------------------------------------------+
+   +=========+=======================+=================================+
+   |ElementID|Name                   |Additional Information           |
+   +=========+=======================+=================================+
+   |32       |icmpTypeCodeIPv4       |https://www.iana.org/assignments/|
+   |         |                       |icmp-parameters/icmp-            |
+   |         |                       |parameters.xhtml                 |
+   +---------+-----------------------+---------------------------------+
+   |33       |igmpType               |https://www.iana.org/assignments/|
+   |         |                       |igmp-type-numbers/igmp-type-     |
+   |         |                       |numbers.xhtml#igmp-type-numbers-1|
+   +---------+-----------------------+---------------------------------+
+   |139      |icmpTypeCodeIPv6       |https://www.iana.org/assignments/|
+   |         |                       |icmpv6-parameters/               |
+   |         |                       |icmpv6-parameters.xhtml          |
+   +---------+-----------------------+---------------------------------+
+   |176      |icmpTypeIPv4           |https://www.iana.org/assignments/|
+   |         |                       |icmp-parameters/icmp-            |
+   |         |                       |parameters.xhtml#icmp-parameters-|
+   |         |                       |types                            |
+   +---------+-----------------------+---------------------------------+
+   |177      |icmpCodeIPv4           |https://www.iana.org/assignments/|
+   |         |                       |icmp-parameters/icmp-            |
+   |         |                       |parameters.xhtml#icmp-parameters-|
+   |         |                       |codes                            |
+   +---------+-----------------------+---------------------------------+
+   |178      |icmpTypeIPv6           |https://www.iana.org/assignments/|
+   |         |                       |icmpv6-parameters/icmpv6-        |
+   |         |                       |parameters.xhtml#icmpv6-         |
+   |         |                       |parameters-2                     |
+   +---------+-----------------------+---------------------------------+
+   |179      |icmpCodeIPv6           |https://www.iana.org/assignments/|
+   |         |                       |icmpv6-parameters/icmpv6-        |
+   |         |                       |parameters.xhtml#icmpv6-         |
+   |         |                       |parameters-3                     |
+   +---------+-----------------------+---------------------------------+
+   |346      |privateEnterpriseNumber|https://www.iana.org/assignments/|
+   |         |                       |enterprise-numbers/enterprise-   |
+   |         |                       |numbers                          |
+   +---------+-----------------------+---------------------------------+
 
         Table 1: Cite an IANA Registry under Additional Information
 
@@ -581,9 +519,8 @@ Table of Contents
       allocated the top-of-stack label.  Values for this field are
       listed in the MPLS label type registry.
 
-   Additional Information:  See the list of MPLS label types assigned by
-      IANA at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      mpls-label-type].
+   Additional Information:  See the IPFIX MPLS label type registry
+      ([https://www.iana.org/assignments/mpls-label-values]).
 
       See [RFC3031] for the MPLS label structure.
 
@@ -610,8 +547,9 @@ Table of Contents
       Values for this field are listed in the Classification Engine IDs
       registry.
 
-   Additional Information:  See https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#classification-engine-ids.
+   Additional Information:  See the Classification Engine IDs registry
+      ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#classification-engine-ids]).
 
 6.3.  flowEndReason
 
@@ -627,9 +565,9 @@ Table of Contents
    Description:  The reason for Flow termination.  Values are listed in
       the flowEndReason registry.
 
-   Additional Information:  See the Classification Engine IDs registry
-      available at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-flow-end-reason].
+   Additional Information:  See the flowEndReason registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-flow-
+      end-reason]).
 
 6.4.  natOriginatingAddressRealm
 
@@ -657,9 +595,9 @@ Table of Contents
 
       Values are listed in the natOriginatingAddressRealm registry.
 
-   Additional Information:  See the assigned NAT originating address
-      realm at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-originating-address-realm].
+   Additional Information:  See the natOriginatingAddressRealm registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      originating-address-realm]).
 
       See [RFC3022] for the definition of NAT.
 
@@ -690,9 +628,9 @@ Table of Contents
       Values for this Information Element are listed in the "NAT Event
       Type" registry.
 
-   Additional Information:  See the assigned NAT Event Types at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      event-type].
+   Additional Information:  See the NAT Event Type registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      event-type]).
 
       See [RFC3022] for the definition of NAT.
 
@@ -715,9 +653,9 @@ Table of Contents
    Description:  Indicates a firewall event.  Allowed values are listed
       in the firewallEvent registry.
 
-   Additional Information:  See the assigned firewall events at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      firewall-event].
+   Additional Information:  See the firewallEvent registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      firewall-event]).
 
 6.7.  biflowDirection
 
@@ -755,9 +693,9 @@ Table of Contents
       this Information Element SHOULD appear in each Flow Record.
       Values are listed in the biflowDirection registry.
 
-   Additional Information:  See the assigned biflow direction values at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-
-      direction].
+   Additional Information:  See the biflowDirection registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-biflow-
+      direction]).
 
 6.8.  observationPointType
 
@@ -773,9 +711,9 @@ Table of Contents
    Description:  Type of observation point.  Values are listed in the
       observationPointType registry.
 
-   Additional Information:  See the assigned observation point type at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      observation-point-type].
+   Additional Information:  See the observationPointType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      observation-point-type]).
 
 6.9.  anonymizationTechnique
 
@@ -797,9 +735,9 @@ Table of Contents
       Elements and recommended only for certain Information Elements.
       Values are listed in the anonymizationTechnique registry.
 
-   Additional Information:  See the assigned anonymization techniques at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      anonymization-technique].
+   Additional Information:  See the anonymizationTechnique registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      anonymization-technique]).
 
 6.10.  natType
 
@@ -831,11 +769,11 @@ Table of Contents
 
       Values are listed in the natType registry.
 
-   Additional Information:  See the assigned NAT types at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
-      type].
+   Additional Information:  See the natType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      type]).
 
-      See [RFC3022] for the definition of NAT and NAT44.
+      See [RFC3022] for the definition of NAT (commonly named NAT44).
 
       See [RFC6144] for the definition of NAT46.
 
@@ -880,8 +818,8 @@ Table of Contents
       the Selection Process.  Most of these methods have parameters.
       Further Information Elements are needed to fully specify packet
       selection with these methods and all their parameters.  For the
-      methods parameters, Information Elements are defined in the
-      information model document.  The names of these Information
+      methods parameters, Information Elements are defined in the IPFIX
+      IANA registry [IANA-IPFIX].  The names of these Information
       Elements are listed for each method identifier.  Further method
       identifiers may be added to the list.  It might be necessary to
       define new Information Elements to specify their parameters.
@@ -890,8 +828,8 @@ Table of Contents
       for Property match Filtering (5) but currently there are no agreed
       parameters specified.
 
-   Additional Information:  See the assigned PSAMP parameters at
-      [https://www.iana.org/assignments/psamp-parameters].
+   Additional Information:  See the Packet Sampling (PSAMP) Parameters
+      registry ([https://www.iana.org/assignments/psamp-parameters]).
 
 6.12.  informationElementDataType
 
@@ -923,9 +861,9 @@ Table of Contents
       types to the IPFIX Protocol, and as such requires a Standards
       Action [RFC8126] to modify.
 
-   Additional Information:  See the assigned emelement data types at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      information-element-data-types].
+   Additional Information:  See the IPFIX Information Element Data Types
+      registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-information-element-data-types]).
 
 6.13.  informationElementSemantics
 
@@ -953,9 +891,9 @@ Table of Contents
       section for more information on the types defined in the [IPFIX
       Information Element Semantics] subregistry.  This field may take
       the values in the [IPFIX Information Element Semantics]
-      subregistry; the special value 0x00 (default) is used to note that
-      no semantics apply to the field; it cannot be manipulated by a
-      Collecting Process or File Reader that does not understand it a
+      subregistry.  The special value 0x00 (default) is used to note
+      that no semantics apply to the field; it cannot be manipulated by
+      a Collecting Process or File Reader that does not understand it a
       priori.
 
       The [IPFIX Information Element Semantics] subregistry is intended
@@ -963,9 +901,9 @@ Table of Contents
       for adding semantics to the IPFIX Protocol, and as such requires a
       Standards Action [RFC8126] to modify.
 
-   Additional Information:  See the assigned semantics of an IPFIX
-      Information Element at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-information-element-semantic].
+   Additional Information:  See the IP Flow Information Export (IPFIX)
+      Entities registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-information-element-semantic]).
 
 6.14.  informationElementUnits
 
@@ -992,8 +930,8 @@ Table of Contents
       Information Element Units] subregistry.  The special value 0x00
       (none) is used to note that the field is unitless.
 
-   Additional Information:  See the assigned units of an IPFIX
-      Information Element at [IANA IPFIX Information Element Units].
+   Additional Information:  See the IPFIX Information Element Units
+      registry ([IANA IPFIX Information Element Units]).
 
 6.15.  portRangeStart
 
@@ -1013,7 +951,7 @@ Table of Contents
       not specified, i.e., the range is defined in some other way.
 
    Additional Information:  See the assigned transport protocol (e.g.,
-      TCP, UDP, DCCP, and SCTP) port numbers at
+      UDP, TCP, SCTP, and DCCP) port numbers at
       https://www.iana.org/assignments/service-names-port-numbers.
 
 6.16.  portRangeEnd
@@ -1033,7 +971,7 @@ Table of Contents
       specified, i.e., the range is defined in some other way.
 
    Additional Information:  See the assigned transport protocol (e.g.,
-      TCP, UDP, DCCP, and SCTP) port numbers at
+      UDP, TCP, SCTP, and DCCP) port numbers at
       https://www.iana.org/assignments/service-names-port-numbers.
 
 6.17.  ingressInterfaceType
@@ -1054,8 +992,8 @@ Table of Contents
       being received.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the assigned ingress interface types at
-      [https://www.iana.org/assignments/ianaiftype-mib].
+   Additional Information:  See the IANAifType-MIB registry
+      ([https://www.iana.org/assignments/ianaiftype-mib]).
 
 6.18.  egressInterfaceType
 
@@ -1075,8 +1013,8 @@ Table of Contents
       being sent.  The value matches the value of managed object
       'ifType'.
 
-   Additional Information:  See the assigned egress interface types at
-      [https://www.iana.org/assignments/ianaiftype-mib].
+   Additional Information:  See the IANAifType-MIB registry
+      ([https://www.iana.org/assignments/ianaiftype-mib]).
 
 6.19.  valueDistributionMethod
 
@@ -1111,9 +1049,9 @@ Table of Contents
       valueDistributionMethod registry is intended to list a complete
       set of possible value distribution methods.
 
-   Additional Information:  See the assigned value distribution methods
-      at [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      value-distribution-method].
+   Additional Information:  See the valueDistributionMethod registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-value-
+      distribution-method]).
 
 6.20.  flowSelectorAlgorithm
 
@@ -1149,9 +1087,9 @@ Table of Contents
       the flowSelectorAlgorithm registry.  It might be necessary to
       define new Information Elements to specify their parameters.
 
-   Additional Information:  See the assigned flow selector algorithms at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
-      flowselectoralgorithm].
+   Additional Information:  See the flowSelectorAlgorithm registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-
+      flowselectoralgorithm]).
 
 6.21.  dataLinkFrameType
 
@@ -1180,9 +1118,9 @@ Table of Contents
       values are bits so that multiple observations can be OR'd
       together.
 
-   Additional Information:  See the assigned data link frame types at
-      [https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
-      link-frame-type].
+   Additional Information:  See the dataLinkFrameType registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-data-
+      link-frame-type]).
 
       More information about the data link layer can be found in
       (IEEE802.3)(IEEE802.11)(ISO/IEC.7498-1:1994).
@@ -1235,9 +1173,9 @@ Table of Contents
 
       Values are listed in the mibCaptureTimeSemantics registry.
 
-   Additional Information:  See the assigned values for the MIB capture
-      time semantics at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-mib-capture-time-semantics].
+   Additional Information:  See the mibCaptureTimeSemantics registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-mib-
+      capture-time-semantics]).
 
 6.23.  natQuotaExceededEvent
 
@@ -1262,9 +1200,9 @@ Table of Contents
       Quota Exceeded event.  Values for this Information Element are
       listed in the "NAT Quota Exceeded Event Type" registry.
 
-   Additional Information:  See the assigned events for exceeded NAT
-      quota at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-quota-exceeded-event].
+   Additional Information:  See the NAT Quota Exceeded Event Type
+      registry ([https://www.iana.org/assignments/ipfix/
+      ipfix.xhtml#ipfix-nat-quota-exceeded-event]).
 
       See [RFC0791] for the definition of the IPv4 source address field.
 
@@ -1295,9 +1233,9 @@ Table of Contents
       Threshold event.  Values for this Information Element are listed
       in the "NAT Threshold Event Type" registry.
 
-   Additional Information:  See the assigned values for the NAT
-      Threshold events at [https://www.iana.org/assignments/ipfix/
-      ipfix.xhtml#ipfix-nat-threshold-event].
+   Additional Information:  See the NAT Threshold Event Type registry
+      ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-
+      threshold-event]).
 
       See [RFC0791] for the definition of the IPv4 source address field.
 
@@ -1512,8 +1450,8 @@ Table of Contents
    OLD:  Additional information on defined UDP and TCP port numbers can
       be found at http://www.iana.org/assignments/port-numbers.
 
-   NEW:  See the assigned transport protocol (e.g., TCP, UDP, DCCP, and
-      SCTP) port numbers at https://www.iana.org/assignments/service-
+   NEW:  See the assigned transport protocol (e.g., UDP, TCP, SCTP, and
+      DCCP) port numbers at https://www.iana.org/assignments/service-
       names-port-numbers.
 
 10.  References
@@ -1747,10 +1685,12 @@ Acknowledgments
    Thanks to Eric Vyncke for the review and comments.
 
    Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart
-   review, Martin Duke for the tsvart review, and Donald Eastlake for
-   the intdir review.
+   review, Martin Duke for the tsvart review, Donald Eastlake for the
+   intdir review, and Hilarie Orman for the secdir review.
 
    Thanks to Mahesh Jethanandani for the AD review.
+
+   Thanks to Éric Vyncke for the IESG review.
 
 Authors' Addresses
 
