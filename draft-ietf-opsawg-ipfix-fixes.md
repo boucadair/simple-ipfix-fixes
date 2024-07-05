@@ -208,9 +208,10 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
                    status of the flow and any attached reasons.
                    IPFIX reduced-size encoding is used as required.
 
-                   A structure is currently associated with the least-significant
-                   byte. Future versions may be defined to associate
-                   meanings with the remaining bits.
+                   A structure is currently associated with the
+                   least-significant byte. Future versions may be
+                   defined to associate meanings with the remaining
+                   bits.
 
                    The current version of the Information Element
                    should be exported as unsigned8.
@@ -404,7 +405,6 @@ Description:
 Additional Information:
 : See the NAT Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type]).
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 : See {{?RFC8158}} for the definitions of values 4-16.
 
 ## firewallEvent
@@ -729,9 +729,7 @@ Description:
 
 Additional Information:
 : See the NAT Quota Exceeded Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event]).
-: See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 
 ## natThresholdEvent
 
@@ -752,9 +750,7 @@ Description:
 
 Additional Information:
 : See the NAT Threshold Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event]).
-: See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 
 # Misc {#misc}
 
