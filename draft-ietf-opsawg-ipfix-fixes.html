@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry</title>
+<title>Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA Registry</title>
 <meta content="Mohamed Boucadair" name="author">
 <meta content="Benoit Claise" name="author">
 <meta content="
-       This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry. 
+       This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) Entities registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry. 
     " name="description">
-<meta content="xml2rfc 3.21.0" name="generator">
+<meta content="xml2rfc 3.22.0" name="generator">
 <meta content="IPFIX" name="keyword">
 <meta content="Operations" name="keyword">
 <meta content="Network Providers" name="keyword">
@@ -19,19 +19,18 @@
 <meta content="Telemetry" name="keyword">
 <meta content="draft-ietf-opsawg-ipfix-fixes-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.21.0
-    Python 3.11.9
+  xml2rfc 3.22.0
+    Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
-    Jinja2 3.1.2
-    lxml 4.9.3
-    platformdirs 4.2.1
+    Jinja2 3.1.4
+    lxml 4.9.4
+    platformdirs 4.2.2
     pycountry 22.3.5
     PyYAML 6.0.1
-    requests 2.31.0
-    setuptools 68.2.2
-    six 1.16.0
+    requests 2.32.3
+    setuptools 69.5.1
     wcwidth 0.2.13
 -->
 <link href="draft-ietf-opsawg-ipfix-fixes.xml" rel="alternate" type="application/rfc+xml">
@@ -1031,11 +1030,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">IPFIX IANA Fixes</td>
-<td class="right">May 2024</td>
+<td class="right">July 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Boucadair &amp; Claise</td>
-<td class="center">Expires 23 November 2024</td>
+<td class="center">Expires 6 January 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1048,12 +1047,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-opsawg-ipfix-fixes-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-05-22" class="published">22 May 2024</time>
+<time datetime="2024-07-05" class="published">5 July 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-11-23">23 November 2024</time></dd>
+<dd class="expires"><time datetime="2025-01-06">6 January 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1067,10 +1066,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry</h1>
+<h1 id="title">Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA Registry</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) Entities registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1102,7 +1101,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 23 November 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 January 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1295,7 +1294,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">When OPSAWG was considering <span>[<a href="#RFC9565" class="cite xref">RFC9565</a>]</span> which updates <span>[<a href="#RFC7125" class="cite xref">RFC7125</a>]</span>, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">When OPSAWG was considering <span>[<a href="#RFC9565" class="cite xref">RFC9565</a>]</span> which updates <span>[<a href="#RFC7125" class="cite xref">RFC7125</a>]</span>, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> were not up-to-date. This document updates the IANA registry and bring some consistency among the entries of the registry.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">As discussed with IANA during the publication process of <span>[<a href="#RFC9487" class="cite xref">RFC9487</a>]</span>, the "Additional Information" entry in <span>[<a href="#IANA-IPFIX" class="cite xref">IANA-IPFIX</a>]</span> should contain a link to an existing registry, when applicable, as opposed to having:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-3.1">
@@ -1576,9 +1575,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
                    status of the flow and any attached reasons.
                    IPFIX reduced-size encoding is used as required.
 
-                   A structure is currently associated with the first
-                   byte. Future versions may be defined to associate
-                   meanings with the remaining bits.
+                   A structure is currently associated with the
+                   least-significant byte. Future versions may be
+                   defined to associate meanings with the remaining
+                   bits.
 
                    The current version of the Information Element
                    should be exported as unsigned8.
@@ -1778,40 +1778,49 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         </caption>
 <thead>
           <tr>
-            <th class="text-left" rowspan="1" colspan="1">IE</th>
+            <th class="text-left" rowspan="1" colspan="1">ElementID</th>
+            <th class="text-left" rowspan="1" colspan="1">Name</th>
             <th class="text-left" rowspan="1" colspan="1">Additional Information</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">32</td>
             <td class="text-left" rowspan="1" colspan="1">icmpTypeCodeIPv4</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">33</td>
             <td class="text-left" rowspan="1" colspan="1">igmpType</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">139</td>
             <td class="text-left" rowspan="1" colspan="1">icmpTypeCodeIPv6</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">176</td>
             <td class="text-left" rowspan="1" colspan="1">icmpTypeIPv4</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">177</td>
             <td class="text-left" rowspan="1" colspan="1">icmpCodeIPv4</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">178</td>
             <td class="text-left" rowspan="1" colspan="1">icmpTypeIPv6</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">179</td>
             <td class="text-left" rowspan="1" colspan="1">icmpCodeIPv6</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3</td>
           </tr>
           <tr>
+            <td class="text-left" rowspan="1" colspan="1">346</td>
             <td class="text-left" rowspan="1" colspan="1">privateEnterpriseNumber</td>
             <td class="text-left" rowspan="1" colspan="1">https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers</td>
           </tr>
@@ -2092,12 +2101,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <dd class="break"></dd>
 <dt id="section-6.5.2-1.7"></dt>
             <dd style="margin-left: 1.5em" id="section-6.5.2-1.8">
-              <p id="section-6.5.2-1.8.1">See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-6.5.2-1.8.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-6.5.2-1.9"></dt>
-            <dd style="margin-left: 1.5em" id="section-6.5.2-1.10">
-              <p id="section-6.5.2-1.10.1">See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.<a href="#section-6.5.2-1.10.1" class="pilcrow">¶</a></p>
+              <p id="section-6.5.2-1.8.1">See <span>[<a href="#RFC8158" class="cite xref">RFC8158</a>]</span> for the definitions of values 4-16.<a href="#section-6.5.2-1.8.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 </dl>
@@ -2352,7 +2356,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <dd class="break"></dd>
 <dt id="section-6.10.2-1.7"></dt>
             <dd style="margin-left: 1.5em" id="section-6.10.2-1.8">
-              <p id="section-6.10.2-1.8.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT and NAT44.<a href="#section-6.10.2-1.8.1" class="pilcrow">¶</a></p>
+              <p id="section-6.10.2-1.8.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT (commonly named NAT44).<a href="#section-6.10.2-1.8.1" class="pilcrow">¶</a></p>
 </dd>
             <dd class="break"></dd>
 <dt id="section-6.10.2-1.9"></dt>
@@ -3017,17 +3021,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <dd class="break"></dd>
 <dt id="section-6.23.2-1.5"></dt>
             <dd style="margin-left: 1.5em" id="section-6.23.2-1.6">
-              <p id="section-6.23.2-1.6.1">See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field.<a href="#section-6.23.2-1.6.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-6.23.2-1.7"></dt>
-            <dd style="margin-left: 1.5em" id="section-6.23.2-1.8">
-              <p id="section-6.23.2-1.8.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-6.23.2-1.8.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-6.23.2-1.9"></dt>
-            <dd style="margin-left: 1.5em" id="section-6.23.2-1.10">
-              <p id="section-6.23.2-1.10.1">See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-6.23.2-1.10.1" class="pilcrow">¶</a></p>
+              <p id="section-6.23.2-1.6.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-6.23.2-1.6.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 </dl>
@@ -3087,17 +3081,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
             <dd class="break"></dd>
 <dt id="section-6.24.2-1.5"></dt>
             <dd style="margin-left: 1.5em" id="section-6.24.2-1.6">
-              <p id="section-6.24.2-1.6.1">See <span>[<a href="#RFC0791" class="cite xref">RFC0791</a>]</span> for the definition of the IPv4 source address field.<a href="#section-6.24.2-1.6.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-6.24.2-1.7"></dt>
-            <dd style="margin-left: 1.5em" id="section-6.24.2-1.8">
-              <p id="section-6.24.2-1.8.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-6.24.2-1.8.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="section-6.24.2-1.9"></dt>
-            <dd style="margin-left: 1.5em" id="section-6.24.2-1.10">
-              <p id="section-6.24.2-1.10.1">See <span>[<a href="#RFC3234" class="cite xref">RFC3234</a>]</span> for the definition of middleboxes.<a href="#section-6.24.2-1.10.1" class="pilcrow">¶</a></p>
+              <p id="section-6.24.2-1.6.1">See <span>[<a href="#RFC3022" class="cite xref">RFC3022</a>]</span> for the definition of NAT.<a href="#section-6.24.2-1.6.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 </dl>
@@ -3637,6 +3621,7 @@ already discussed for IPFIX in <span><a href="https://rfc-editor.org/rfc/rfc7012
 <p id="appendix-A-3">Thanks to Eric Vyncke for the review and comments.<a href="#appendix-A-3" class="pilcrow">¶</a></p>
 <p id="appendix-A-4">Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, Martin Duke for the tsvart review, Donald Eastlake for the intdir review, and Hilarie Orman for the secdir review.<a href="#appendix-A-4" class="pilcrow">¶</a></p>
 <p id="appendix-A-5">Thanks to Mahesh Jethanandani for the AD review.<a href="#appendix-A-5" class="pilcrow">¶</a></p>
+<p id="appendix-A-6">Thanks to Éric Vyncke for the IESG review.<a href="#appendix-A-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
