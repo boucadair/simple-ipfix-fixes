@@ -1,5 +1,5 @@
 ---
-title: "Simple Fixes to the IP Flow Information Export (IPFIX) IANA Registry"
+title: "Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA Registry"
 abbrev: "IPFIX IANA Fixes"
 category: std
 
@@ -67,14 +67,14 @@ informative:
 
 --- abstract
 
-This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
+This document provides simple fixes to the IANA IP Flow Information Export (IPFIX) Entities registry. Specifically, this document provides updates to fix shortcomings in the description of some Information Elements (IE), updates to ensure a consistent structure when citing an existing IANA registry, and updates to fix broken pointers, orphaned section references, etc. The updates are also meant to bring some consistency among the entries of the registry.
 
 
 --- middle
 
 # Introduction
 
-When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document intends to update the IANA registry and bring some consistency among the entries of the registry.
+When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document updates the IANA registry and bring some consistency among the entries of the registry.
 
 As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
@@ -208,9 +208,10 @@ The current forwardingStatus entry in {{IANA-IPFIX}} deviates from what is provi
                    status of the flow and any attached reasons.
                    IPFIX reduced-size encoding is used as required.
 
-                   A structure is currently associated with the first
-                   byte. Future versions may be defined to associate
-                   meanings with the remaining bits.
+                   A structure is currently associated with the
+                   least-significant byte. Future versions may be
+                   defined to associate meanings with the remaining
+                   bits.
 
                    The current version of the Information Element
                    should be exported as unsigned8.
@@ -294,15 +295,15 @@ Additional Information:
 
 This document requests IANA to update the following entries by adding the indicated "Additional Information" to the {{IANA-IPFIX}} registry:
 
-| IE                     | Additional Information |
-| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
-| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
-| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
-| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
-| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
-| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
-| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
-| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
+|ElementID| Name                     | Additional Information |
+|32| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
+|33| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
+|139| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
+|176| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
+|177| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
+|178| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
+|179| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
+|346| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
 # Consistent Citation of IANA Registries {#consistent}
@@ -404,7 +405,6 @@ Description:
 Additional Information:
 : See the NAT Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-event-type]).
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 : See {{?RFC8158}} for the definitions of values 4-16.
 
 ## firewallEvent
@@ -494,7 +494,7 @@ Description:
 
 Additional Information:
 : See the natType registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-type]).
-: See {{?RFC3022}} for the definition of NAT and NAT44.
+: See {{?RFC3022}} for the definition of NAT (commonly named NAT44).
 : See {{?RFC6144}} for the definition of NAT46.
 : See {{?RFC6146}} for the definition of NAT64.
 : See {{?RFC6296}} for the definition of NPTv6.
@@ -729,9 +729,7 @@ Description:
 
 Additional Information:
 : See the NAT Quota Exceeded Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-quota-exceeded-event]).
-: See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 
 ## natThresholdEvent
 
@@ -752,9 +750,7 @@ Description:
 
 Additional Information:
 : See the NAT Threshold Event Type registry ([https://www.iana.org/assignments/ipfix/ipfix.xhtml#ipfix-nat-threshold-event]).
-: See {{?RFC0791}} for the definition of the IPv4 source address field.
 : See {{?RFC3022}} for the definition of NAT.
-: See {{?RFC3234}} for the definition of middleboxes.
 
 # Misc {#misc}
 
@@ -923,3 +919,5 @@ Thanks to Eric Vyncke for the review and comments.
 Thanks to Qin Wu for the opsdir review, Behcet Sarikay for the genart review, Martin Duke for the tsvart review, Donald Eastlake for the intdir review, and Hilarie Orman for the secdir review.
 
 Thanks to Mahesh Jethanandani for the AD review.
+
+Thanks to Éric Vyncke for the IESG review.
