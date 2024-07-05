@@ -74,7 +74,7 @@ This document provides simple fixes to the IANA IP Flow Information Export (IPFI
 
 # Introduction
 
-When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) registry {{IANA-IPFIX}} were not up-to-date. This document updates the IANA registry and bring some consistency among the entries of the registry.
+When OPSAWG was considering {{?RFC9565}} which updates {{?RFC7125}}, the WG realized that some parts of the IANA IP Flow Information Export (IPFIX) Entities registry {{IANA-IPFIX}} were not up-to-date. This document updates the IANA registry and brings some consistency among the entries of the registry.
 
 As discussed with IANA during the publication process of {{?RFC9487}}, the "Additional Information" entry in {{IANA-IPFIX}} should contain a link to an existing registry, when applicable, as opposed to having:
 
@@ -894,7 +894,7 @@ already discussed for IPFIX in {{Section 8 of !RFC7012}}.
 
 Sections 4 to 7 include actions for IANA. These actions are not repeated here.
 
-This document also requests IANA to add the RFC number to be assigned to this document to the reference clause of the "IPFIX Information Elements" registry {{IANA-IPFIX}}.
+This document also requests IANA to add the RFC number to be assigned to this document to the reference clause of the "IPFIX Information Elements" registry under the  "IP Flow Information Export (IPFIX) Entities" registry group {{IANA-IPFIX}}.
 
 Also, this document requests IANA to consistently reference the "Service Name and Transport Protocol Port Number" through the registry as follows
 
