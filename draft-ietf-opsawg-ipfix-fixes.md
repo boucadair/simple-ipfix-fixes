@@ -894,6 +894,15 @@ already discussed for IPFIX in {{Section 8 of !RFC7012}}.
 
 Sections 4 to 7 include actions for IANA. These actions are not repeated here.
 
+This document requests IANA to update the note in the "IPFIX Information Elements" registry under the "IP Flow Information Export (IPFIX) Entities" registry group {{IANA-IPFIX}} as follows:
+
+OLD:
+: The columns previously titled "References" and "Requester" have been renamed "Additional Information" and "Reference", respectively.
+
+NEW:
+: The columns previously titled "References" and "Requester" have been renamed "Additional Information" and "Reference", respectively.
+: The initial values for this registry were provided in {{?RFC5102}}. {{!RFC7012}} has obsoleted {{?RFC5102}} and specifies that the current registry is the normative reference for these Information Elements.
+
 This document also requests IANA to add the RFC number to be assigned to this document to the reference clause of the "IPFIX Information Elements" registry under the  "IP Flow Information Export (IPFIX) Entities" registry group {{IANA-IPFIX}}.
 
 Also, this document requests IANA to consistently reference the "Service Name and Transport Protocol Port Number" through the registry as follows
@@ -903,7 +912,6 @@ OLD:
 
 NEW:
 : See the assigned transport protocol (e.g., UDP, TCP, SCTP, and DCCP) port numbers at https://www.iana.org/assignments/service-names-port-numbers.
-
 
 --- back
 
