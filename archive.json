@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-12T00:42:49.284449+00:00",
+  "timestamp": "2024-09-19T00:43:32.630596+00:00",
   "repo": "boucadair/simple-ipfix-fixes",
   "labels": [
     {
@@ -414,6 +414,34 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "d8922c25fe19a617de2cd8d8bd3d16f9e455f35b"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOIcnmwM57tJHW",
+      "title": "fix deprecacy",
+      "url": "https://github.com/boucadair/simple-ipfix-fixes/pull/15",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-09-17T05:34:38Z",
+      "updatedAt": "2024-09-17T05:36:05Z",
+      "baseRepository": "boucadair/simple-ipfix-fixes",
+      "baseRefName": "main",
+      "baseRefOid": "959ea787eec72475b897930260d6253a691062d5",
+      "headRepository": "boucadair/simple-ipfix-fixes",
+      "headRefName": "boucadair-patch-3",
+      "headRefOid": "5ff0a70c4d3bde33a13d0068d4d01722a61cee89",
+      "closedAt": "2024-09-17T05:36:04Z",
+      "mergedAt": "2024-09-17T05:36:04Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "575316d37d61fcd408822f520bcf6c5568ee9d71"
       },
       "comments": [],
       "reviews": []
