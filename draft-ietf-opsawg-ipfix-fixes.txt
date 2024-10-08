@@ -5,8 +5,8 @@
 OPSAWG                                                      M. Boucadair
 Internet-Draft                                                    Orange
 Intended status: Standards Track                               B. Claise
-Expires: 21 March 2025                                            Huawei
-                                                       17 September 2024
+Expires: 11 April 2025                                            Huawei
+                                                          8 October 2024
 
 
   Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 March 2025.
+   This Internet-Draft will expire on 11 April 2025.
 
 Copyright Notice
 
@@ -454,39 +454,49 @@ Table of Contents
    +=========+=======================+=================================+
    |ElementID|Name                   |Additional Information           |
    +=========+=======================+=================================+
-   |32       |icmpTypeCodeIPv4       |https://www.iana.org/assignments/|
+   |32       |icmpTypeCodeIPv4       |See the assigned ICMP types at   |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmp-parameters/icmp-            |
    |         |                       |parameters.xhtml                 |
    +---------+-----------------------+---------------------------------+
-   |33       |igmpType               |https://www.iana.org/assignments/|
+   |33       |igmpType               |See the assigned IGMP type       |
+   |         |                       |numbers at                       |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |igmp-type-numbers/igmp-type-     |
    |         |                       |numbers.xhtml#igmp-type-numbers-1|
    +---------+-----------------------+---------------------------------+
-   |139      |icmpTypeCodeIPv6       |https://www.iana.org/assignments/|
+   |139      |icmpTypeCodeIPv6       |See the assigned ICMPv6 types and|
+   |         |                       |codes at                         |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmpv6-parameters/               |
    |         |                       |icmpv6-parameters.xhtml          |
    +---------+-----------------------+---------------------------------+
-   |176      |icmpTypeIPv4           |https://www.iana.org/assignments/|
+   |176      |icmpTypeIPv4           |See the assigned ICMP types at   |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmp-parameters/icmp-            |
    |         |                       |parameters.xhtml#icmp-parameters-|
    |         |                       |types                            |
    +---------+-----------------------+---------------------------------+
-   |177      |icmpCodeIPv4           |https://www.iana.org/assignments/|
+   |177      |icmpCodeIPv4           |See the assigned ICMP codes at   |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmp-parameters/icmp-            |
    |         |                       |parameters.xhtml#icmp-parameters-|
    |         |                       |codes                            |
    +---------+-----------------------+---------------------------------+
-   |178      |icmpTypeIPv6           |https://www.iana.org/assignments/|
+   |178      |icmpTypeIPv6           |See the assigned ICMPv6 types at |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmpv6-parameters/icmpv6-        |
    |         |                       |parameters.xhtml#icmpv6-         |
    |         |                       |parameters-2                     |
    +---------+-----------------------+---------------------------------+
-   |179      |icmpCodeIPv6           |https://www.iana.org/assignments/|
+   |179      |icmpCodeIPv6           |See the assigned ICMPv6 codes at |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |icmpv6-parameters/icmpv6-        |
    |         |                       |parameters.xhtml#icmpv6-         |
    |         |                       |parameters-3                     |
    +---------+-----------------------+---------------------------------+
-   |346      |privateEnterpriseNumber|https://www.iana.org/assignments/|
+   |346      |privateEnterpriseNumber|See the registered PENs at       |
+   |         |                       |https://www.iana.org/assignments/|
    |         |                       |enterprise-numbers/enterprise-   |
    |         |                       |numbers                          |
    +---------+-----------------------+---------------------------------+
