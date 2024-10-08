@@ -296,14 +296,14 @@ Additional Information:
 This document requests IANA to update the following entries by adding the indicated "Additional Information" to the {{IANA-IPFIX}} registry:
 
 |ElementID| Name                     | Additional Information |
-|32| icmpTypeCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
-|33| igmpType      | https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
-|139| icmpTypeCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
-|176| icmpTypeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
-|177| icmpCodeIPv4       | https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
-|178| icmpTypeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
-|179| icmpCodeIPv6       | https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
-|346| privateEnterpriseNumber       |https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
+|32| icmpTypeCodeIPv4       | See the assigned ICMP types at https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml     |
+|33| igmpType      | See the assigned IGMP type numbers at https://www.iana.org/assignments/igmp-type-numbers/igmp-type-numbers.xhtml#igmp-type-numbers-1     |
+|139| icmpTypeCodeIPv6       | See the assigned ICMPv6 types and codes at  https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml    |
+|176| icmpTypeIPv4       | See the assigned ICMP types at https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types    |
+|177| icmpCodeIPv4       |See the assigned ICMP codes at https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-codes    |
+|178| icmpTypeIPv6       | See the assigned ICMPv6 types at https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-2  |
+|179| icmpCodeIPv6       | See the assigned ICMPv6 codes at https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-3  |
+|346| privateEnterpriseNumber       |See the registered PENs at https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers    |
 {: title="Cite an IANA Registry under Additional Information"}
 
 # Consistent Citation of IANA Registries {#consistent}
